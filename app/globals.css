@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-ink: #1A2332;
+  --color-paper: #F5F2EB;
+  --color-copper: #B87333;
+  --color-steel: #6B7A8A;
+  --color-charcoal: #202020;
+  --color-sage: #B87333;
+  --color-cream: #F5F2EB;
+  --color-forest: #1A2332;
+  --color-terracotta: #B87333;
+}
+
+html {
+  font-family: "Inter Tight", "Inter", system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+::selection { background: var(--color-copper); color: var(--color-paper); }
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.prose p { margin-bottom: 1.1em; line-height: 1.75; }
+.prose h2 { font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-ink); }
+.prose h3 { font-size: 1.375rem; margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--color-ink); }
+.prose ul, .prose ol { margin: 1em 0; padding-left: 1.5em; }
+.prose ul { list-style: disc; } .prose ol { list-style: decimal; }
+.prose a { color: var(--color-copper); text-decoration: underline; text-underline-offset: 2px; }
+
+.font-mono, code, pre, .numeric { font-family: "IBM Plex Mono", ui-monospace, monospace; }
