@@ -37,14 +37,13 @@ export default function NotFound() {
 
               <div className="mt-8 max-w-2xl space-y-5 text-charcoal/85 text-[17px] leading-[1.65]">
                 <p>
-                  Either the URL was typed incorrectly, the post was renamed in
-                  a revision, or the page was never filed. Nothing unusual — a
-                  404 is a routing result, not a failure state.
+                  The URL was typed incorrectly, the post was renamed in a
+                  revision, or the page was never filed. A 404 is a routing
+                  result.
                 </p>
                 <p>
-                  Pick a hub below, open the Macro Calculator, or head back to
-                  the index. Every live post is reachable from one of the five
-                  hubs.
+                  Pick a hub below, open the Macro Calculator, or return to the
+                  index. Every live post is reachable from one of the 5 hubs.
                 </p>
               </div>
 
@@ -91,7 +90,7 @@ export default function NotFound() {
             <div>
               <Eyebrow tone="copper">Hub index</Eyebrow>
               <h2 className="font-sans text-2xl md:text-[2rem] text-ink mt-3 leading-tight tracking-tight">
-                Try one of the five hubs.
+                Jump to one of the 5 hubs.
               </h2>
             </div>
           </div>

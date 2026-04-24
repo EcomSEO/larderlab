@@ -53,9 +53,9 @@ export default function HomePage() {
                 larder.
               </h1>
               <p className="mt-7 text-lg md:text-xl text-charcoal/85 max-w-2xl leading-[1.55] fade-up-delay-3">
-                Macro calculators, pantry architecture, ingredient deep-dives,
-                and supplement comparisons — cited, priced, and engineered.
-                No recipes. No grandmothers. Just the data.
+                Macro calculators, pantry frameworks, ingredient analyses, and
+                supplement comparisons. Every claim cited, every price dated,
+                every ranking methodology published. No recipes.
               </p>
               <div className="mt-9 flex flex-wrap gap-3 fade-up-delay-4">
                 <Link href="/macro-calculator" className="btn-primary">
@@ -169,7 +169,7 @@ export default function HomePage() {
             <div>
               <Eyebrow tone="copper">Hub index</Eyebrow>
               <h2 className="font-sans text-3xl md:text-[2.3rem] text-ink mt-3 leading-tight tracking-tight">
-                Five hubs. One hundred and fifty posts on spec.
+                5 hubs. 150 posts planned. Wave 1 is live.
               </h2>
             </div>
             <Link
@@ -217,7 +217,7 @@ export default function HomePage() {
             <div>
               <Eyebrow tone="copper">Latest revisions</Eyebrow>
               <h2 className="font-sans text-3xl md:text-[2.3rem] text-ink mt-3 leading-tight tracking-tight">
-                Freshly cited, freshly priced.
+                Revisions, in publish order.
               </h2>
             </div>
           </div>

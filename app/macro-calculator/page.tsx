@@ -78,13 +78,13 @@ export default function MacroCalculatorPage() {
           </h2>
           <p className="text-charcoal/90 leading-relaxed">
             The spread between the RDA (0.8 g/kg) and the ISSN ceiling (2.0
-            g/kg) is 2.5×. That isn&apos;t confusion in the literature — it&apos;s
-            different populations answering different questions. The RDA is the
-            minimum to prevent deficiency in sedentary adults. Phillips 2017 is
-            the target for senior adults preserving muscle. Morton 2018 is the
-            target for resistance-trained adults building or maintaining lean
-            mass. ISSN 2.0 g/kg is the upper practical limit during aggressive
-            cutting phases. All four are correct — for different readers.
+            g/kg) is 2.5×. The four ranges answer four different questions.
+            The RDA is the minimum to prevent deficiency in sedentary adults.
+            Phillips 2017 is the target for senior adults preserving muscle.
+            Morton 2018 is the target for resistance-trained adults building
+            or maintaining lean mass. ISSN 2.0 g/kg is the upper practical
+            limit during aggressive cutting phases. Each range applies to a
+            specific reader.
           </p>
         </section>
 
