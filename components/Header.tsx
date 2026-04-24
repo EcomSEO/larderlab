@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { hubs } from "@/lib/content/hubs";
 import { Wordmark } from "./editorial/Wordmark";
-import { Dateline } from "./editorial/Dateline";
+import { SpecRevisionClock } from "./editorial/SpecRevisionClock";
+import { ReadingProgress } from "./editorial/ReadingProgress";
 
 /**
  * Engineering-wiki masthead: spec-revision-log strip on top, wordmark +
@@ -17,10 +18,18 @@ export function Header() {
 
   return (
     <header className="bg-paper/95 backdrop-blur sticky top-0 z-40 border-b border-ink/10">
-      {/* Masthead strip — revision-log cue */}
+      {/* Reading progress — thin copper telemetry bar at the very top. */}
+      <div className="hidden md:block bg-ink px-6 pt-1.5 pb-1">
+        <div className="mx-auto max-w-wiki">
+          <ReadingProgress />
+        </div>
+      </div>
+
+      {/* Masthead strip — live revision-log cue. Clock ticks every minute,
+          so the page feels like a working engineering document. */}
       <div className="border-b border-ink/10 hidden md:block bg-ink text-paper">
         <div className="mx-auto max-w-wiki px-6 py-1.5 flex items-center justify-between">
-          <Dateline className="!text-paper/80" />
+          <SpecRevisionClock className="!text-paper/80" />
           <div className="flex items-center gap-5 text-[11px] tracking-[0.14em] uppercase text-paper/75 font-mono">
             <Link href="/methodology" className="hover:text-copper transition">
               Methodology

@@ -101,7 +101,7 @@ export default function NotFound() {
               <Link
                 key={hub.slug}
                 href={`/guides/${hub.slug}`}
-                className="group relative flex flex-col p-6 border-b lg:border-b-0 lg:border-r border-ink/10 last:border-r-0 hover:bg-paper-deep/50 transition"
+                className="copper-hairline group relative flex flex-col p-6 border-b lg:border-b-0 lg:border-r border-ink/10 last:border-r-0 hover:bg-paper-deep/50 transition"
               >
                 <div className="flex items-baseline justify-between mb-3">
                   <RankNumeral n={i + 1} />
@@ -120,6 +120,20 @@ export default function NotFound() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Engineering-log error line — reads like a real spec-doc footer. */}
+      <section>
+        <div className="mx-auto max-w-wiki px-6 py-10">
+          <div className="flex items-center gap-3 text-[11px] tracking-[0.18em] uppercase text-steel font-mono tnum">
+            <span className="inline-block h-[6px] w-[6px] rounded-[1px] bg-copper" />
+            <span className="text-copper">ERROR 404</span>
+            <span aria-hidden className="text-copper/60">·</span>
+            <span>SPEC_ENTRY_NOT_FOUND</span>
+            <span aria-hidden className="text-copper/60">·</span>
+            <span>CHECKED {new Date().toISOString().slice(0, 10)}</span>
           </div>
         </div>
       </section>

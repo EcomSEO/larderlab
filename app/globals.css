@@ -38,7 +38,7 @@ body {
 
 /* Engineering-notebook body: a whisper of grid in the background so the
    eye reads "spec sheet" before the copy starts. Absolutely faint — never
-   compete with tables. */
+   compete with tables. 56px is the signature engineering grid. */
 body::before {
   content: "";
   position: fixed;
@@ -46,11 +46,34 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background-image:
-    linear-gradient(to right, rgba(26, 35, 50, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(26, 35, 50, 0.035) 1px, transparent 1px);
+    linear-gradient(to right, rgba(107, 122, 138, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(107, 122, 138, 0.055) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 body > * { position: relative; z-index: 1; }
+
+/* Explicit utility mirror — components that want the signature grid can
+   apply .grid-bg directly (e.g. an inverted ink panel or a card). */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(107, 122, 138, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(107, 122, 138, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Custom scrollbar — thin copper-on-paper. Engineering-instrument feel. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-copper) var(--color-paper-deep);
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: var(--color-paper-deep); }
+*::-webkit-scrollbar-thumb {
+  background: var(--color-copper);
+  border: 2px solid var(--color-paper-deep);
+  border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--color-copper-deep); }
 
 h1, h2, h3, h4, h5 {
   font-family: "Inter Tight", "Söhne Breit", "Inter", system-ui, sans-serif;
@@ -200,7 +223,8 @@ h1, h2, h3, h4, h5 {
   margin: 1.6em 0;
 }
 
-/* Nav link underline — copper, bottom-aligned. Engineering hover. */
+/* Nav link underline — copper, bottom-aligned, draws in from the left.
+   Current-page gets a small copper `[·]` specimen mark as a prefix. */
 .nav-link {
   position: relative;
   color: var(--color-ink);
@@ -217,12 +241,21 @@ h1, h2, h3, h4, h5 {
   background: var(--color-copper);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 .nav-link:hover::after,
 .nav-link[aria-current="page"]::after {
   transform: scaleX(1);
+}
+
+.nav-link[aria-current="page"]::before {
+  content: "[·]";
+  margin-right: 0.4em;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--color-copper);
+  font-size: 0.7em;
+  letter-spacing: 0;
 }
 
 /* Buttons — bordered, sharp corners, engineering-panel cue. */
@@ -342,11 +375,76 @@ h1, h2, h3, h4, h5 {
   vertical-align: top;
 }
 
+.data-table tbody tr {
+  position: relative;
+  transition: background 0.18s ease;
+}
+
 .data-table tbody tr:hover {
-  background: rgba(184, 115, 51, 0.05);
+  background: rgba(235, 229, 213, 0.6); /* paper-deep */
+}
+
+/* Copper "·" specimen mark in the first cell of a hovered row.
+   Rendered as a pseudo-element so it costs nothing until the row is
+   inspected. Draws from 0 to full opacity over 150ms. */
+.data-table tbody tr td:first-child {
+  position: relative;
+}
+
+.data-table tbody tr td:first-child::before {
+  content: "·";
+  position: absolute;
+  left: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-copper);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 1.25rem;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.data-table tbody tr:hover td:first-child::before {
+  opacity: 1;
 }
 
 .data-table tbody tr:last-child td { border-bottom: 0; }
+
+/* Confidence pill glow on hovered row — color matches level. */
+.data-table tbody tr:hover .conf-pill.conf-high {
+  box-shadow: 0 0 0 3px rgba(26, 35, 50, 0.12);
+}
+.data-table tbody tr:hover .conf-pill.conf-med {
+  box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.22);
+}
+.data-table tbody tr:hover .conf-pill.conf-low {
+  box-shadow: 0 0 0 3px rgba(107, 122, 138, 0.18);
+}
+.conf-pill { transition: box-shadow 0.2s ease; }
+
+/* Copper-hairline accent that extends left-to-right on hover. Drop this
+   on any container that should feel "measurable": cards, table wrappers,
+   breadcrumbs. Default width 0 → 100% over 250ms. */
+.copper-hairline {
+  position: relative;
+}
+.copper-hairline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 0;
+  background: var(--color-copper);
+  transition: width 0.25s ease;
+  pointer-events: none;
+}
+.copper-hairline:hover::after,
+.copper-hairline:focus-within::after {
+  width: 100%;
+}
 
 .data-table .cell-name {
   font-weight: 500;
@@ -424,7 +522,8 @@ h1, h2, h3, h4, h5 {
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
 
-/* Fade-in for hero */
+/* Fade-in for hero — staggered page load: Dateline → Wordmark → headline
+   → sidebar → table → hub cards. Delays hand-tuned for readability. */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
@@ -432,6 +531,97 @@ h1, h2, h3, h4, h5 {
 .fade-up { animation: fadeUp 0.5s ease-out both; }
 .fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.08s both; }
 .fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.16s both; }
+.fade-up-delay-3 { animation: fadeUp 0.5s ease-out 0.24s both; }
+.fade-up-delay-4 { animation: fadeUp 0.55s ease-out 0.32s both; }
+.fade-up-delay-5 { animation: fadeUp 0.55s ease-out 0.40s both; }
+.fade-up-delay-6 { animation: fadeUp 0.55s ease-out 0.48s both; }
+
+/* Scroll-triggered section reveal — a RevealOnScroll wrapper toggles
+   [data-reveal="on"] once the section enters the viewport. Default state
+   assumes visible so no-JS / pre-hydration users see content; the "off"
+   state is only applied explicitly by the client component. */
+.reveal {
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+  will-change: opacity, transform;
+}
+.reveal[data-reveal="off"] {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.reveal[data-reveal="on"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Spec rule draw-in — a .spec-rule (or SpecRule) draws from left to
+   full width over 400ms when it enters the viewport. A small copper
+   tick dot appears at the far end on completion. */
+@keyframes specRuleDraw {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+.spec-rule-anim {
+  animation: specRuleDraw 0.42s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.spec-rule-anim[data-reveal="on"] { /* no-op, reveal wrapper toggles */ }
+
+/* Rank-numeral hover flicker — two fast opacity dips over 120ms.
+   Suggests a reading from a terminal. */
+@keyframes rankFlicker {
+  0%   { opacity: 1; }
+  25%  { opacity: 0.55; }
+  50%  { opacity: 1; }
+  75%  { opacity: 0.65; }
+  100% { opacity: 1; }
+}
+.rank-numeral {
+  transition: color 0.15s ease;
+}
+.rank-numeral:hover {
+  animation: rankFlicker 0.12s steps(4, end);
+}
+
+/* Email input — focus: thick ink underline + copper focus ring glow.
+   Submit :active presses 1px down for tactile feedback. */
+.email-input {
+  background: var(--color-paper);
+  border: 1px solid rgba(26, 35, 50, 0.25);
+  border-bottom: 2px solid var(--color-ink);
+  padding: 0.8rem 1rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 14px;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.email-input:focus {
+  outline: none;
+  border-color: var(--color-ink);
+  border-bottom-color: var(--color-ink);
+  box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.3);
+}
+.btn-primary:active, .btn-secondary:active { transform: translateY(1px); }
+
+/* Reading progress bar — thin copper fill on the top of the masthead. */
+.reading-progress-bar {
+  height: 2px;
+  background: var(--color-copper);
+  transform-origin: left;
+  width: 100%;
+  transition: transform 0.08s linear;
+}
 
 /* Legacy class aliases used by still-shared template chrome */
 .font-mono, code, pre, .numeric { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+/* Respect reduced motion — disable every non-essential animation. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .rank-numeral:hover { animation: none; }
+  .spec-rule-anim { animation: none; clip-path: none; }
+  .reading-progress-bar { transition: none; }
+}

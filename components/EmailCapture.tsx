@@ -58,7 +58,7 @@ export function EmailCapture({
               placeholder="you@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 border border-ink/25 px-4 py-3 bg-paper font-mono text-[14px] focus:outline-none focus:border-copper"
+              className="email-input flex-1"
             />
             <button
               type="submit"

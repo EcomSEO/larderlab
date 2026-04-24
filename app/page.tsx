@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/editorial/Eyebrow";
 import { DotRule, SpecRule } from "@/components/editorial/DotRule";
 import { RankNumeral } from "@/components/editorial/RankNumeral";
 import { ProductsSystemsTable } from "@/components/editorial/SystemsTable";
+import { Reveal } from "@/components/editorial/Reveal";
 import { EmailCapture } from "@/components/EmailCapture";
 import { SITE } from "@/lib/content/site";
 
@@ -32,12 +33,12 @@ export default function HomePage() {
       {/* === HERO: This issue's spec === */}
       <section className="border-b border-ink/10">
         <div className="mx-auto max-w-wiki px-6 pt-12 md:pt-16 pb-14 md:pb-20">
-          <div className="mb-8">
+          <div className="mb-8 fade-up">
             <SpecRule />
           </div>
           <div className="grid md:grid-cols-12 gap-10 items-start">
-            <div className="md:col-span-8 fade-up">
-              <div className="flex items-center gap-4 flex-wrap">
+            <div className="md:col-span-8">
+              <div className="flex items-center gap-4 flex-wrap fade-up-delay-1">
                 <Eyebrow tone="copper">
                   This issue&apos;s spec
                 </Eyebrow>
@@ -45,18 +46,18 @@ export default function HomePage() {
                   {SITE.specCode} · {SITE.specRevision}
                 </span>
               </div>
-              <h1 className="display-headline mt-5 text-[2.75rem] sm:text-5xl md:text-[4rem] leading-[1.02]">
+              <h1 className="display-headline mt-5 text-[2.75rem] sm:text-5xl md:text-[4rem] leading-[1.02] fade-up-delay-2">
                 The operating manual <br className="hidden md:inline" />
                 for the{" "}
                 <span className="font-accent italic text-copper">modern</span>{" "}
                 larder.
               </h1>
-              <p className="mt-7 text-lg md:text-xl text-charcoal/85 max-w-2xl leading-[1.55]">
+              <p className="mt-7 text-lg md:text-xl text-charcoal/85 max-w-2xl leading-[1.55] fade-up-delay-3">
                 Macro calculators, pantry architecture, ingredient deep-dives,
                 and supplement comparisons — cited, priced, and engineered.
                 No recipes. No grandmothers. Just the data.
               </p>
-              <div className="mt-9 flex flex-wrap gap-3">
+              <div className="mt-9 flex flex-wrap gap-3 fade-up-delay-4">
                 <Link href="/macro-calculator" className="btn-primary">
                   Open the Macro Calculator →
                 </Link>
@@ -66,8 +67,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Spec sheet sidebar — the editorial "in this issue" */}
-            <aside className="md:col-span-4 md:pl-8 md:border-l md:border-ink/15 fade-up-delay-1">
+            {/* Spec sheet sidebar — "Revision log" reveal. */}
+            <aside className="md:col-span-4 md:pl-8 md:border-l md:border-ink/15 fade-up-delay-5">
               <div className="caps-label text-copper mb-4">In this revision</div>
               <dl className="divide-y divide-ink/10 text-[13.5px]">
                 <div className="flex justify-between py-2.5 first:pt-0">
@@ -104,6 +105,7 @@ export default function HomePage() {
 
       {/* === FEATURED SPEC: SystemsTable hero === */}
       {tableFeature && tableRows.length > 0 && (
+        <Reveal className="fade-up-delay-6">
         <section className="border-b border-ink/10 bg-paper-deep/40">
           <div className="mx-auto max-w-wiki px-6 py-14 md:py-20">
             <div className="grid md:grid-cols-12 gap-8 items-end mb-8">
@@ -156,9 +158,11 @@ export default function HomePage() {
             />
           </div>
         </section>
+        </Reveal>
       )}
 
       {/* === HUB INDEX === */}
+      <Reveal>
       <section id="hub-index" className="border-b border-ink/10">
         <div className="mx-auto max-w-wiki px-6 py-16 md:py-20">
           <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
@@ -181,7 +185,7 @@ export default function HomePage() {
               <Link
                 key={hub.slug}
                 href={`/guides/${hub.slug}`}
-                className="group relative flex flex-col p-6 border-b lg:border-b-0 lg:border-r border-ink/10 last:border-r-0 hover:bg-paper-deep/50 transition"
+                className="copper-hairline group relative flex flex-col p-6 border-b lg:border-b-0 lg:border-r border-ink/10 last:border-r-0 hover:bg-paper-deep/50 transition"
               >
                 <div className="flex items-baseline justify-between mb-3">
                   <RankNumeral n={i + 1} />
@@ -203,8 +207,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* === LATEST — engineering log === */}
+      <Reveal>
       <section className="border-b border-ink/10">
         <div className="mx-auto max-w-wiki px-6 py-16 md:py-20">
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
@@ -279,8 +285,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      </Reveal>
+
       {/* === HOW WE SPEC — credo, inverted on ink === */}
-      <section className="border-b border-ink/10 bg-ink text-paper">
+      <Reveal>
+      <section className="border-b border-ink/10 bg-ink text-paper grid-bg">
         <div className="mx-auto max-w-wiki px-6 py-20 md:py-24">
           <div className="max-w-3xl">
             <Eyebrow tone="copper" className="!text-copper">How we spec</Eyebrow>
@@ -339,9 +348,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* === EXPLAINERS === */}
       {explainers.length > 0 && (
+        <Reveal>
         <section className="border-b border-ink/10">
           <div className="mx-auto max-w-wiki px-6 py-16 md:py-20">
             <div className="flex items-end justify-between mb-8 flex-wrap gap-3">
@@ -357,7 +368,7 @@ export default function HomePage() {
                 <Link
                   key={p.slug}
                   href={`/${p.slug}`}
-                  className="group p-6 border-b md:border-b-0 md:border-r border-ink/10 last:border-r-0 hover:bg-paper-deep/40 transition"
+                  className="copper-hairline group p-6 border-b md:border-b-0 md:border-r border-ink/10 last:border-r-0 hover:bg-paper-deep/40 transition"
                 >
                   <RankNumeral n={i + 1} />
                   <h3 className="font-sans font-semibold text-lg text-ink leading-tight mt-3 group-hover:text-copper transition tracking-tight">
@@ -371,9 +382,11 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        </Reveal>
       )}
 
       {/* === DISPATCH === */}
+      <Reveal>
       <section className="bg-paper-deep/60 border-b border-ink/10">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <div className="text-center mb-8">
@@ -390,6 +403,7 @@ export default function HomePage() {
           <EmailCapture />
         </div>
       </section>
+      </Reveal>
 
       {/* === CLOSING DATELINE === */}
       <section>

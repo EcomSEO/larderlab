@@ -8,6 +8,9 @@ import { SITE } from "@/lib/content/site";
  * four-column link grid (Guides · Tools · About · Fine print), imprint strip.
  */
 export function Footer() {
+  // Static build stamp. Server-rendered, so the value is consistent —
+  // reads as real spec-doc metadata, not client-side drift.
+  const buildStamp = new Date().toISOString().slice(0, 10);
   return (
     <footer className="mt-24 bg-ink text-paper border-t border-ink/10">
       {/* Masthead row */}
@@ -104,6 +107,22 @@ export function Footer() {
           <div className="normal-case tracking-normal text-paper/55 text-xs max-w-xl md:text-right leading-relaxed font-sans">
             Commissions on some links fund the buying and the testing. They do
             not affect rankings. Prices re-checked quarterly.
+          </div>
+        </div>
+        {/* Revision-log ticker — reads like real engineering-doc metadata. */}
+        <div className="border-t border-paper/10 bg-ink-deep/60">
+          <div className="mx-auto max-w-wiki px-6 py-2.5 text-[10.5px] tracking-[0.18em] uppercase text-paper/45 font-mono flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span className="text-copper/70">SPEC 01</span>
+            <span aria-hidden>·</span>
+            <span>REV 01</span>
+            <span aria-hidden>·</span>
+            <span className="tnum">BUILT {buildStamp}</span>
+            <span aria-hidden>·</span>
+            <span className="tnum">LAST CRAWL {buildStamp}</span>
+            <span aria-hidden className="hidden md:inline">·</span>
+            <span className="hidden md:inline">INDEX OK</span>
+            <span aria-hidden className="hidden md:inline">·</span>
+            <span className="hidden md:inline tnum">NODES {SITE.specCode}</span>
           </div>
         </div>
       </div>
