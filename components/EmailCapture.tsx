@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 
 export function EmailCapture({
   headline = "Get the Larderlab Macro Planner.",
-  subhead = "A Google Sheet (or Notion template) that calculates your protein target, splits it across 3-5 meals, and ranks 20 protein sources by $/gram. Free.",
+  subhead = "A Google Sheet that calculates your protein target, splits it across 3-5 meals, and ranks 20 protein sources by $/gram. Free. Copy-and-modify your own version.",
   variant = "inline",
   buttonLabel = "Send me the planner",
 }: {
@@ -25,43 +25,58 @@ export function EmailCapture({
 
   const wrapper =
     variant === "end-of-article"
-      ? "my-12 p-8 rounded-lg bg-copper/10 border border-copper/20 text-center"
-      : "my-12 p-8 rounded-lg bg-white/70 border border-ink/10 text-center";
+      ? "my-12 border border-copper/50 bg-copper/[0.05]"
+      : "my-12 border border-ink/20 bg-paper";
 
   return (
     <section id="email-capture" className={wrapper}>
-      <h2 className="font-serif text-2xl text-ink mb-2">{headline}</h2>
-      <p className="text-charcoal/80 max-w-xl mx-auto">{subhead}</p>
-      {status === "ok" ? (
-        <p className="mt-6 text-ink">Thanks — check your inbox.</p>
-      ) : (
-        <form
-          onSubmit={onSubmit}
-          className="mt-6 flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto"
-        >
-          <label htmlFor="email" className="sr-only">Email address</label>
-          <input
-            id="email"
-            type="email"
-            required
-            placeholder="you@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 rounded-md border border-ink/20 px-4 py-3 bg-white"
-          />
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="rounded-md bg-ink px-6 py-3 text-paper hover:bg-copper transition disabled:opacity-50"
+      <div className="px-5 py-2 bg-ink text-paper border-b-2 border-copper flex items-center justify-between flex-wrap gap-3">
+        <span className="caps-label !text-paper">Dispatch · lead magnet</span>
+        <span className="caps-label !text-paper/60 tnum">~ 1 email / week</span>
+      </div>
+      <div className="px-6 md:px-8 py-7 md:py-9 text-center">
+        <h2 className="font-sans text-2xl md:text-[1.7rem] text-ink tracking-tight">
+          {headline}
+        </h2>
+        <p className="mt-3 text-charcoal/80 max-w-xl mx-auto text-[15px] leading-relaxed">
+          {subhead}
+        </p>
+        {status === "ok" ? (
+          <p className="mt-6 font-mono text-ink text-sm uppercase tracking-[0.1em]">
+            ✓ Thanks — check your inbox.
+          </p>
+        ) : (
+          <form
+            onSubmit={onSubmit}
+            className="mt-6 flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto"
           >
-            {status === "loading" ? "Sending…" : buttonLabel}
-          </button>
-        </form>
-      )}
-      <p className="mt-4 text-xs text-charcoal/50 max-w-md mx-auto">
-        By subscribing, you agree to our <a href="/privacy" className="underline">Privacy Policy</a>.
-        One useful email a week. Unsubscribe anytime.
-      </p>
+            <label htmlFor="email" className="sr-only">Email address</label>
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 border border-ink/25 px-4 py-3 bg-paper font-mono text-[14px] focus:outline-none focus:border-copper"
+            />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="btn-primary disabled:opacity-50"
+            >
+              {status === "loading" ? "Sending…" : buttonLabel}
+            </button>
+          </form>
+        )}
+        <p className="mt-4 caps-label text-steel max-w-md mx-auto">
+          By subscribing, you agree to our{" "}
+          <a href="/privacy" className="underline hover:text-copper">
+            Privacy Policy
+          </a>
+          . Unsubscribe anytime.
+        </p>
+      </div>
     </section>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const STORAGE_KEY = "pfl:cookie-consent";
+const STORAGE_KEY = "ll:cookie-consent";
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
@@ -30,29 +30,34 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-live="polite"
-      className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm z-50 bg-cream border border-forest/20 rounded-lg shadow-lg p-4"
+      className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm z-50 bg-paper border border-ink/25 rounded-sm shadow-spec"
     >
-      <p className="text-sm text-charcoal/90">
-        We use a small number of cookies for analytics and session continuity.
-        No advertising cookies. See our{" "}
-        <a href="/privacy" className="underline">
-          Privacy Policy
-        </a>
-        .
-      </p>
-      <div className="mt-3 flex gap-2 justify-end">
-        <button
-          onClick={() => accept("reject")}
-          className="text-sm px-3 py-2 text-charcoal/70 hover:text-forest"
-        >
-          Reject
-        </button>
-        <button
-          onClick={() => accept("accept")}
-          className="text-sm px-3 py-2 rounded-md bg-forest text-cream hover:bg-sage"
-        >
-          Accept
-        </button>
+      <div className="px-4 py-2 bg-ink text-paper border-b-2 border-copper">
+        <span className="caps-label !text-paper">Cookies</span>
+      </div>
+      <div className="p-4">
+        <p className="text-[13.5px] text-charcoal/90 leading-relaxed">
+          We use a small set of cookies for analytics and session continuity.
+          No advertising cookies. See our{" "}
+          <a href="/privacy" className="underline text-copper">
+            Privacy Policy
+          </a>
+          .
+        </p>
+        <div className="mt-3 flex gap-2 justify-end">
+          <button
+            onClick={() => accept("reject")}
+            className="caps-label text-steel hover:text-ink px-2 py-2"
+          >
+            Reject
+          </button>
+          <button
+            onClick={() => accept("accept")}
+            className="btn-primary !py-2 !px-3 !text-[11px]"
+          >
+            Accept
+          </button>
+        </div>
       </div>
     </div>
   );

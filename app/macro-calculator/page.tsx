@@ -25,7 +25,19 @@ export default function MacroCalculatorPage() {
       <main className="mx-auto max-w-5xl px-6 py-10 md:py-14">
         <Breadcrumbs crumbs={crumbs} />
 
-        <h1 className="font-serif text-4xl md:text-5xl text-ink mt-4 leading-tight">
+        <div className="mt-5">
+          <div className="relative h-[3px] w-full">
+            <span className="absolute inset-y-0 left-0 w-12 bg-copper" />
+            <span className="absolute inset-y-[1px] left-12 right-0 bg-ink/15" />
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <span className="eyebrow text-copper">Tool · calculator</span>
+          <span className="caps-label text-steel tnum">LL-TOOL-001</span>
+        </div>
+
+        <h1 className="display-headline text-[2.2rem] md:text-[3rem] mt-4 leading-[1.05]">
           The Larderlab Macro Calculator
         </h1>
         <p className="mt-4 text-lg text-charcoal/85 max-w-2xl leading-relaxed">
@@ -38,7 +50,7 @@ export default function MacroCalculatorPage() {
         <MacroCalculator />
 
         <section className="mt-12">
-          <h2 className="font-serif text-2xl text-ink mb-4">
+          <h2 className="font-sans font-semibold text-2xl text-ink mb-4 tracking-tight">
             Where the 1.6g/kg target comes from
           </h2>
           <p className="text-charcoal/90 leading-relaxed">
@@ -61,7 +73,7 @@ export default function MacroCalculatorPage() {
         </section>
 
         <section className="mt-10">
-          <h2 className="font-serif text-2xl text-ink mb-4">
+          <h2 className="font-sans font-semibold text-2xl text-ink mb-4 tracking-tight">
             Why four ranges, not one
           </h2>
           <p className="text-charcoal/90 leading-relaxed">
@@ -77,7 +89,7 @@ export default function MacroCalculatorPage() {
         </section>
 
         <section className="mt-10">
-          <h2 className="font-serif text-2xl text-ink mb-4">
+          <h2 className="font-sans font-semibold text-2xl text-ink mb-4 tracking-tight">
             How to hit the target economically
           </h2>
           <p className="text-charcoal/90 leading-relaxed">
@@ -98,7 +110,7 @@ export default function MacroCalculatorPage() {
         </section>
 
         <section className="mt-10">
-          <h2 className="font-serif text-2xl text-ink mb-4">
+          <h2 className="font-sans font-semibold text-2xl text-ink mb-4 tracking-tight">
             What the calculator assumes
           </h2>
           <ul className="list-disc pl-6 text-charcoal/90 leading-relaxed space-y-2">
@@ -127,7 +139,7 @@ export default function MacroCalculatorPage() {
         </section>
 
         <section className="mt-10 pt-10 border-t border-ink/10">
-          <h2 className="font-serif text-2xl text-ink mb-4">Related reading</h2>
+          <h2 className="font-sans font-semibold text-2xl text-ink mb-4 tracking-tight">Related reading</h2>
           <ul className="space-y-2">
             <li>
               <Link href="/how-much-protein-per-day" className="text-copper underline">

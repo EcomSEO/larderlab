@@ -1,49 +1,109 @@
 import Link from "next/link";
 import { hubs } from "@/lib/content/hubs";
+import { Wordmark } from "./editorial/Wordmark";
+import { SITE } from "@/lib/content/site";
 
+/**
+ * Footer — editorial masthead, hub index with copper rank numerals,
+ * four-column link grid (Guides · Tools · About · Fine print), imprint strip.
+ */
 export function Footer() {
   return (
-    <footer className="border-t border-ink/10 mt-20 bg-cream">
-      <div className="mx-auto max-w-6xl px-6 py-12 grid md:grid-cols-3 gap-10 text-sm">
-        <div>
-          <h4 className="font-serif text-ink text-lg mb-4">Guides</h4>
-          <ul className="space-y-2">
-            {hubs.map((hub) => (
-              <li key={hub.slug}>
-                <Link href={`/guides/${hub.slug}`} className="text-charcoal/80 hover:text-sage">
-                  {hub.name}
+    <footer className="mt-24 bg-ink text-paper border-t border-ink/10">
+      {/* Masthead row */}
+      <div className="mx-auto max-w-wiki px-6 pt-14 pb-10">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-10 border-b border-paper/15">
+          <div>
+            <div className="text-paper">
+              <Wordmark size="lg" asLink={false} />
+            </div>
+            <p className="mt-3 font-accent italic text-lg text-paper/90 max-w-md">
+              {SITE.tagline}
+            </p>
+          </div>
+          <div className="max-w-md text-sm text-paper/70 leading-relaxed">
+            A small team reading the literature, the labels, and the COAs —
+            publishing the frameworks we use ourselves. No paid rankings.
+            No sample-pack compensation.
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-12 gap-10 mt-10">
+          <div className="md:col-span-4">
+            <h4 className="caps-label !text-paper/60 mb-4">Guides</h4>
+            <ul className="space-y-2.5">
+              {hubs.map((hub, i) => (
+                <li key={hub.slug}>
+                  <Link
+                    href={`/guides/${hub.slug}`}
+                    className="group flex items-baseline gap-3 text-paper hover:text-copper transition"
+                  >
+                    <span className="font-mono text-[0.75rem] text-copper tnum shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-[15px]">{hub.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-3">
+            <h4 className="caps-label !text-paper/60 mb-4">Tools</h4>
+            <ul className="space-y-2.5 text-[15px]">
+              <li>
+                <Link href="/macro-calculator" className="text-paper hover:text-copper transition">
+                  Macro Calculator
                 </Link>
               </li>
-            ))}
-          </ul>
-        </div>
+              <li>
+                <span className="text-paper/40">
+                  Shelf-Life Calculator <span className="caps-label !text-paper/30">[soon]</span>
+                </span>
+              </li>
+              <li>
+                <span className="text-paper/40">
+                  Protein Cost Calculator <span className="caps-label !text-paper/30">[soon]</span>
+                </span>
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <h4 className="font-serif text-ink text-lg mb-4">About</h4>
-          <ul className="space-y-2">
-            <li><Link href="/about" className="text-charcoal/80 hover:text-sage">About Larderlab</Link></li>
-            <li><Link href="/editorial-standards" className="text-charcoal/80 hover:text-sage">Editorial Standards</Link></li>
-            <li><Link href="/contact" className="text-charcoal/80 hover:text-sage">Contact</Link></li>
-          </ul>
-        </div>
+          <div className="md:col-span-2">
+            <h4 className="caps-label !text-paper/60 mb-4">About</h4>
+            <ul className="space-y-2.5 text-[15px]">
+              <li><Link href="/about" className="text-paper hover:text-copper transition">About</Link></li>
+              <li><Link href="/methodology" className="text-paper hover:text-copper transition">Methodology</Link></li>
+              <li><Link href="/editorial-standards" className="text-paper hover:text-copper transition">Editorial</Link></li>
+              <li><Link href="/contact" className="text-paper hover:text-copper transition">Contact</Link></li>
+            </ul>
+          </div>
 
-        <div>
-          <h4 className="font-serif text-ink text-lg mb-4">Fine print</h4>
-          <ul className="space-y-2">
-            <li><Link href="/privacy" className="text-charcoal/80 hover:text-sage">Privacy Policy</Link></li>
-            <li><Link href="/terms" className="text-charcoal/80 hover:text-sage">Terms of Service</Link></li>
-            <li><Link href="/affiliate-disclosure" className="text-charcoal/80 hover:text-sage">Affiliate Disclosure</Link></li>
-          </ul>
+          <div className="md:col-span-3">
+            <h4 className="caps-label !text-paper/60 mb-4">Fine print</h4>
+            <ul className="space-y-2.5 text-[15px]">
+              <li><Link href="/affiliate-disclosure" className="text-paper hover:text-copper transition">Affiliate disclosure</Link></li>
+              <li><Link href="/privacy" className="text-paper hover:text-copper transition">Privacy policy</Link></li>
+              <li><Link href="/terms" className="text-paper hover:text-copper transition">Terms of service</Link></li>
+              <li><Link href="/newsletter" className="text-paper hover:text-copper transition">Dispatch</Link></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="border-t border-ink/10">
-        <div className="mx-auto max-w-6xl px-6 py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-charcoal/60">
-          <div>
-            © {new Date().getFullYear()} Larderlab
+      {/* Imprint strip */}
+      <div className="border-t border-paper/15">
+        <div className="mx-auto max-w-wiki px-6 py-6 flex flex-col md:flex-row justify-between gap-3 text-[11px] tracking-[0.14em] uppercase text-paper/60 font-mono">
+          <div className="flex items-center gap-3 flex-wrap">
+            <span>©&nbsp;{new Date().getFullYear()} Larderlab</span>
+            <span aria-hidden className="text-copper/60">·</span>
+            <span>{SITE.specVolume} · {SITE.specRevision}</span>
+            <span aria-hidden className="text-copper/60">·</span>
+            <span className="tnum">{SITE.specCode}</span>
           </div>
-          <div className="max-w-xl">
-            We sometimes earn a commission from links on this page. We never accept payment for placement.
+          <div className="normal-case tracking-normal text-paper/55 text-xs max-w-xl md:text-right leading-relaxed font-sans">
+            Commissions on some links fund the buying and the testing. They do
+            not affect rankings. Prices re-checked quarterly.
           </div>
         </div>
       </div>

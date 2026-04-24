@@ -1,3 +1,7 @@
+/**
+ * Review stamp — engineering-log line under an H1. Monospace,
+ * all-caps, steel. "Rev. · YYYY-MM-DD · N min · author."
+ */
 export function ReviewStamp({
   updatedAt,
   readingTime,
@@ -7,14 +11,10 @@ export function ReviewStamp({
   readingTime: number;
   author?: string;
 }) {
-  const formatted = new Date(updatedAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
   return (
-    <p className="text-sm text-charcoal/60">
-      By {author} · Updated {formatted} · {readingTime} min read
+    <p className="caps-label text-steel tnum">
+      Rev. · {updatedAt} · {String(readingTime).padStart(2, "0")} min ·{" "}
+      <span className="text-ink">{author}</span>
     </p>
   );
 }
