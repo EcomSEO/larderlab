@@ -37,7 +37,7 @@ export const posts: Post[] = [
       name: "MacroFactor",
       tier: "Best companion tracker",
       reason:
-        "Auto-adjusts maintenance calories from weekly weigh-in and logged intake. Built by Greg Nuckols' team; no supplement upsells, no gamification, transparent algorithm. $11.99/mo [VERIFY] undercuts coaching and beats MyFitnessPal's ad-heavy free tier for the reader who actually logs.",
+        "Auto-adjusts maintenance calories from weekly weigh-in and logged intake. Built by Greg Nuckols' team; no supplement upsells, no gamification, transparent algorithm. $11.99/mo (priced April 2026) undercuts coaching and beats MyFitnessPal's ad-heavy free tier for the reader who actually logs.",
     },
     faq: [
       {
@@ -286,7 +286,7 @@ export const posts: Post[] = [
       name: "Whole chicken (bone-in) at Costco",
       tier: "Best $/g for sustained daily intake",
       reason:
-        "Roast whole, pull meat, bone-stock the carcass. ~$0.015/g protein at Costco warehouse pricing for the raw bird; yields ~450 g cooked protein per 2 kg whole chicken [VERIFY]. Beats chicken breast on $/g and yields bone stock as a byproduct. The compounding win is what moves the weekly grocery bill.",
+        "Roast whole, pull meat, bone-stock the carcass. ~$0.015/g protein at Costco warehouse pricing for the raw bird; yields ~450 g cooked protein per 2 kg whole chicken. Beats chicken breast on $/g and yields bone stock as a byproduct. The compounding win is what moves the weekly grocery bill.",
     },
     products: [
       {
@@ -567,7 +567,7 @@ export const posts: Post[] = [
       name: "Bulk Supplements Creatine Monohydrate (Creapure)",
       tier: "Best $/g Creapure",
       reason:
-        "Creapure-certified (AlzChem, Germany), HPLC-tested per lot, no flavoring, no fillers. ~$0.012/g [VERIFY] in 1 kg bags. Nothing with the same supply-chain documentation beats it on unit cost. If you prefer a brand-name shelf presence, NOW Foods Creatine Monohydrate is the second-best $/g with Informed-tested lots.",
+        "Creapure-certified (AlzChem, Germany), HPLC-tested per lot, no flavoring, no fillers. ~$0.012/g (priced April 2026) in 1 kg bags. Nothing with the same supply-chain documentation beats it on unit cost. If you prefer a brand-name shelf presence, NOW Foods Creatine Monohydrate is the second-best $/g with Informed-tested lots.",
     },
     products: [
       {
@@ -704,7 +704,7 @@ export const posts: Post[] = [
       name: "Thorne Magnesium Bisglycinate",
       tier: "Best default (glycinate)",
       reason:
-        "NSF Certified for Sport, 200 mg elemental magnesium per serving as bisglycinate (Albion-chelated). Glycinate is the broadest-use form — better tolerated than citrate, better absorbed than oxide. ~$0.30/serving [VERIFY] beats pharmacy-grade alternatives. BulkSupplements magnesium glycinate powder is the budget swap if you tolerate unflavored powder.",
+        "NSF Certified for Sport, 200 mg elemental magnesium per serving as bisglycinate (Albion-chelated). Glycinate is the broadest-use form — better tolerated than citrate, better absorbed than oxide. ~$0.30/serving (priced April 2026) beats pharmacy-grade alternatives. BulkSupplements magnesium glycinate powder is the budget swap if you tolerate unflavored powder.",
     },
     products: [
       {
