@@ -124,7 +124,12 @@ export function SystemsTable<R extends SystemsRow>({
                       <button
                         type="button"
                         onClick={() => onHeaderClick(col.key)}
-                        className="inline-flex items-center gap-1.5 hover:text-copper transition"
+                        aria-label={
+                          isSorted
+                            ? `Sort by ${col.label}, currently ${sortDir === "asc" ? "ascending" : "descending"}. Click to reverse.`
+                            : `Sort by ${col.label}`
+                        }
+                        className="inline-flex items-center gap-1.5 cursor-pointer hover:text-copper transition focus:outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-sm"
                       >
                         <span>{col.label}</span>
                         <span aria-hidden className="text-copper text-[0.55rem]">

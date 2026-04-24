@@ -142,22 +142,22 @@ export default function MacroCalculatorPage() {
           <h2 className="font-sans font-semibold text-2xl text-ink mb-4 tracking-tight">Related reading</h2>
           <ul className="space-y-2">
             <li>
-              <Link href="/how-much-protein-per-day" className="text-copper underline">
+              <Link href="/how-much-protein-per-day" className="text-ink underline decoration-copper underline-offset-[3px] decoration-[1.5px] hover:decoration-ink focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
                 How much protein per day, by bodyweight
               </Link>
             </li>
             <li>
-              <Link href="/best-protein-powders" className="text-copper underline">
+              <Link href="/best-protein-powders" className="text-ink underline decoration-copper underline-offset-[3px] decoration-[1.5px] hover:decoration-ink focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
                 Best protein powders, ranked by $/gram of leucine
               </Link>
             </li>
             <li>
-              <Link href="/best-whole-food-protein-sources" className="text-copper underline">
+              <Link href="/best-whole-food-protein-sources" className="text-ink underline decoration-copper underline-offset-[3px] decoration-[1.5px] hover:decoration-ink focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
                 Best whole-food protein sources, ranked by $/gram
               </Link>
             </li>
             <li>
-              <Link href="/12-high-protein-foods-by-cost" className="text-copper underline">
+              <Link href="/12-high-protein-foods-by-cost" className="text-ink underline decoration-copper underline-offset-[3px] decoration-[1.5px] hover:decoration-ink focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
                 12 high-protein foods ranked by $/gram
               </Link>
             </li>

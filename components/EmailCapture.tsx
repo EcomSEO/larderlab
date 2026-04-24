@@ -42,8 +42,26 @@ export function EmailCapture({
           {subhead}
         </p>
         {status === "ok" ? (
-          <p className="mt-6 font-mono text-ink text-sm uppercase tracking-[0.1em]">
-            ✓ Thanks — check your inbox.
+          <p
+            role="status"
+            aria-live="polite"
+            className="mt-6 font-mono text-ink text-sm uppercase tracking-[0.1em] inline-flex items-center gap-2 justify-center"
+          >
+            <svg
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+              className="text-copper-deep"
+            >
+              <polyline points="4 12 10 18 20 6" />
+            </svg>
+            Thanks — check your inbox.
           </p>
         ) : (
           <form
