@@ -6,7 +6,7 @@ export const SITE = {
     "Evidence-led nutrition systems, pantry architecture, ingredient deep-dives, and supplement comparisons. Calculators, frameworks, cited analyses. Not recipes.",
   author: "The Larderlab Team",
   email: "hello@larderlab.com",
-  launched: false,
+  launched: true,
   // Spec-revision-log vibe — surfaces in the masthead Dateline
   specRevision: "Rev. 01",
   specVolume: "Spec 01",
