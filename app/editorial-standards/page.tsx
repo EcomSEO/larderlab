@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
 import { pageMetadata } from "@/lib/seo";
 
@@ -115,7 +116,43 @@ export default function EditorialStandardsPage() {
         gets better.
       </p>
 
-      <p className="text-sm text-charcoal/60">Last updated: April 2026.</p>
+      <h2>Country-specific compliance</h2>
+      <p>
+        Larderlab serves an EU-and-adjacent readership. We follow the EU
+        Health Claims Regulation (EC 1924/2006), the Unfair Commercial
+        Practices Directive (2005/29/EC), the Omnibus Directive (2019/2161),
+        the GDPR, and the ePrivacy / TTDSG framework — together with the
+        national overlays each country adds to those baselines. The dedicated
+        compliance pages document how that applies in practice:
+      </p>
+      <ul>
+        <li>
+          <Link href="/cookies">Cookie policy</Link> — every cookie larderlab
+          uses, how to manage your choices, GPC honoured.
+        </li>
+        <li>
+          <Link href="/privacy">Privacy policy</Link> — comprehensive data
+          processing detail, retention schedule, Art. 15–22 GDPR rights, and
+          the EU/EEA supervisory authority list.
+        </li>
+        <li>
+          <Link href="/affiliate-disclosure">Affiliate disclosure</Link> — the
+          framework and the per-country disclosure label list (Werbung,
+          Publicité, Pubblicità, etc.).
+        </li>
+        <li>
+          <Link href="/impressum">Impressum</Link> — Anbieterkennzeichnung
+          gemäß § 5 TMG / § 18 Abs. 2 MStV for German visitors.
+        </li>
+      </ul>
+      <p>
+        Forbidden-claim language ("detox", "anti-ageing", "superfood",
+        "miracle cure", "fat-burning") is prohibited in our editorial style
+        guide regardless of context. An automated audit script
+        (<code>pnpm audit:claims</code>) scans content on every commit.
+      </p>
+
+      <p className="text-sm text-charcoal/60">Last updated: 27 April 2026.</p>
     </TrustPageTemplate>
   );
 }
