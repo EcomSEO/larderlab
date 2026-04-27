@@ -3,7 +3,7 @@ import "./globals.css";
 import { sourceSerif, inter, plexMono } from "./fonts";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CookieBanner } from "@/components/CookieBanner";
+import { CookieConsent } from "@/components/CookieConsent";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SITE } from "@/lib/content/site";
 import { robotsMeta } from "@/lib/seo";
@@ -55,7 +55,7 @@ export default async function RootLayout({
           <Header />
           {children}
           <Footer />
-          <CookieBanner />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>
