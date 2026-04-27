@@ -15,12 +15,11 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const nav = [
-    { href: "/guides/macros-protein", label: t("navLarder") },
+    { href: "/recipes", label: t("navRecipes") },
     { href: "/guides/pantry-systems", label: t("navPantry") },
-    { href: "/guides/ingredient-deep-dives", label: t("navRecipes") },
+    { href: "/guides/ingredient-deep-dives", label: t("navLarder") },
     { href: "/guides/meal-prep", label: t("navFeatures") },
     { href: "/methodology", label: t("navMethodology") },
-    { href: "/pipeline", label: t("navPipeline") },
   ];
 
   return (
@@ -43,12 +42,15 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Right indicator */}
+        {/* Right indicator + subscribe pill */}
         <div className="hidden md:flex items-center gap-4">
           <span className="byline-italic text-ink-soft hidden xl:inline">
             {t("issue")}
           </span>
-          <span className="dept-label tnum">{t("issueDate")}</span>
+          <span className="dept-label tnum hidden lg:inline">{t("issueDate")}</span>
+          <Link href="/newsletter" className="btn-pill">
+            Subscribe
+          </Link>
         </div>
 
         {/* Mobile open button */}

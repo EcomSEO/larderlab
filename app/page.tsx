@@ -1,23 +1,54 @@
-import { MagazineCover } from "@/components/magazine/MagazineCover";
-import { TableOfContents } from "@/components/magazine/TableOfContents";
-import { Department } from "@/components/magazine/Department";
-import { RecipeCard } from "@/components/magazine/RecipeCard";
-import { PullQuote } from "@/components/magazine/PullQuote";
+import { Hero } from "@/components/Hero";
+import { CategoryTileGrid } from "@/components/CategoryTileGrid";
+import { FeaturedRecipeCarousel } from "@/components/FeaturedRecipeCarousel";
+import { TableOfContents as MagazineToc } from "@/components/magazine/TableOfContents";
 import { EditorsNote } from "@/components/magazine/EditorsNote";
-import { EmailCapture } from "@/components/EmailCapture";
+import { PullQuote } from "@/components/magazine/PullQuote";
+import { NewsletterInline } from "@/components/NewsletterInline";
+import { recipes, getRecipe, featuredRecipeSlug } from "@/lib/content/recipes";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-/**
- * Home — the issue. Magazine cover, table of contents, editor's note,
- * a recipe card pulled from the cover dish, two department spreads and
- * the dispatch sign-up. Reads like the inside of a printed magazine,
- * not a content grid.
- */
+const tiles = [
+  {
+    href: "/recipes",
+    eyebrow: "Department",
+    title: "Pantry suppers",
+    dek: "Recipes a stocked pantry already wants to make.",
+    count: 12,
+    gradient: ["#E8DCC8", "#A8884E"] as [string, string],
+  },
+  {
+    href: "/recipes",
+    eyebrow: "Department",
+    title: "Pantry projects",
+    dek: "One afternoon, half a year of dinners. Confit, ferment, preserve.",
+    count: 7,
+    gradient: ["#F0D8B0", "#C4452D"] as [string, string],
+  },
+  {
+    href: "/guides/ingredient-deep-dives",
+    eyebrow: "Department",
+    title: "Ingredient deep-dives",
+    dek: "Olive oil, beans, salt, the literature behind a good shelf.",
+    count: 9,
+    gradient: ["#E0D0B5", "#5C6F3C"] as [string, string],
+  },
+  {
+    href: "/guides/pantry-systems",
+    eyebrow: "Department",
+    title: "Pantry systems",
+    dek: "Storage science, shelf-life math, the way a kitchen feeds itself.",
+    count: 8,
+    gradient: ["#D8B89A", "#3F4D27"] as [string, string],
+  },
+];
+
 export default function HomePage() {
   const tToc = useTranslations("toc");
-  const tDept = useTranslations("departments");
   const tNewsletter = useTranslations("newsletter");
+
+  const featured = getRecipe(featuredRecipeSlug)!;
 
   const tocSections = [
     {
@@ -32,7 +63,7 @@ export default function HomePage() {
         {
           href: "/guides/ingredient-deep-dives",
           title: "Olive oil, ageing in the bottle",
-          dek: "What the literature says about oxidation, dating, and what to keep on the counter.",
+          dek: "Oxidation, dating, and what the literature actually says.",
           page: "12",
         },
         {
@@ -44,199 +75,90 @@ export default function HomePage() {
       ],
     },
     {
-      label: tToc("section2"),
-      entries: [
-        {
-          href: "/macro-calculator",
-          title: "The macro calculator, redrawn",
-          dek: "Targets, protein cost-per-gram, and the math we use ourselves.",
-          page: "24",
-        },
-        {
-          href: "/guides/supplements",
-          title: "What we keep on the shelf",
-          dek: "Five jars worth their footprint — with the math on why.",
-          page: "28",
-        },
-      ],
-    },
-    {
       label: tToc("section3"),
-      entries: [
-        {
-          href: "#recipe",
-          title: "The one-pan beans",
-          dek: "Slow-cooked white beans, garlic confit, a bay leaf or three. The cover dish.",
-          page: "32",
-        },
-        {
-          href: "/guides/meal-prep",
-          title: "Tomato confit, twelve ways",
-          dek: "One pan, one afternoon, half a year of dinners.",
-          page: "36",
-        },
-      ],
+      entries: recipes.slice(0, 3).map((r, i) => ({
+        href: `/${r.slug}`,
+        title: r.title,
+        dek: r.dek,
+        page: String(32 + i * 4).padStart(2, "0"),
+      })),
     },
     {
       label: tToc("section4"),
       entries: [
         {
           href: "/methodology",
-          title: "Editorial standards",
-          dek: "How we test, how we cite, and what we won't print.",
+          title: "How we cook",
+          dek: "Three cooks, two cookware setups, the test-kitchen rubric.",
           page: "40",
         },
         {
           href: "/pipeline",
           title: "What's cooking",
-          dek: "The features, departments, and recipes already in the pipeline.",
+          dek: "An open log of features and recipes already in the pipeline.",
           page: "42",
         },
       ],
     },
   ];
 
-  const weekendItems = [
-    {
-      href: "/guides/meal-prep",
-      title: "Brothy beans, every other Sunday",
-      dek: "A pot you start before lunch and eat from for half a week.",
-    },
-    {
-      href: "/guides/pantry-systems",
-      title: "Roast a tray of alliums",
-      dek: "Onions, leeks, fennel — sweet enough to keep on the counter under a cloche.",
-    },
-    {
-      href: "/guides/ingredient-deep-dives",
-      title: "A loaf, started Friday night",
-      dek: "Long, cold ferment. Tuesday morning toast.",
-    },
-    {
-      href: "/guides/meal-prep",
-      title: "Vinegar your shallots",
-      dek: "Three jars, six weeks, the small joy of a forkful of pink rings.",
-    },
-    {
-      href: "/guides/ingredient-deep-dives",
-      title: "Brown butter the freezer",
-      dek: "An afternoon's noisette, frozen in tablespoons, weeks of small upgrades.",
-    },
-  ];
-
-  const pantryItems = [
-    {
-      href: "/guides/pantry-systems",
-      title: "A bottle of decent Sicilian",
-      dek: "Single-estate, harvest-dated, opened slowly.",
-    },
-    {
-      href: "/guides/ingredient-deep-dives",
-      title: "A jar of preserved lemons",
-      dek: "Salt, time, the rind only.",
-    },
-    {
-      href: "/guides/pantry-systems",
-      title: "Rancho Gordo runner beans",
-      dek: "Older year, longer cook, more flavour.",
-    },
-    {
-      href: "/guides/ingredient-deep-dives",
-      title: "A tin of oil-cured anchovies",
-      dek: "Six grams of seasoning per fillet, kept on the bottom shelf.",
-    },
-    {
-      href: "/guides/pantry-systems",
-      title: "A wide bowl of flaky salt",
-      dek: "Within reach of the cutting board, never measured.",
-    },
-  ];
-
   return (
     <main>
-      <MagazineCover />
+      <Hero
+        featured={featured}
+        h1Lead="A food magazine,"
+        h1Italic="well-tested."
+        h1Tail="for the cook who already runs the kitchen."
+        dek="Forty-two pages on pantry architecture, ingredient deep-dives, and a recipe card we cooked seven times before we let it leave the test kitchen."
+      />
 
-      <section className="border-b border-ink/15 bg-cream-soft">
+      <CategoryTileGrid
+        tiles={tiles}
+        eyebrow="Departments"
+        heading="Pick a shelf."
+        dek="Four ways into the issue. Pantry suppers, slower projects, ingredient deep-dives, and the pantry systems that feed all three."
+      />
+
+      <FeaturedRecipeCarousel
+        recipes={recipes}
+        eyebrow="The recipes"
+        heading="Five things to cook this weekend."
+        dek="Short list. No theatrics. Recipes a stocked pantry quietly wants to make."
+      />
+
+      <section className="border-b border-[--color-border-subtle] bg-[--color-cream-soft]">
         <div className="mx-auto max-w-spread px-6 py-14 md:py-20 grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5">
             <EditorsNote />
           </div>
           <div className="lg:col-span-7">
             <PullQuote
-              body="A magazine for the cook who already runs the kitchen — not a recipe a day, not a diet, not a hack. A pantry, a stove, a few cited paragraphs."
+              body="A good pantry is not a stockpile. It's a system that quietly cooks dinner before you've decided what dinner is."
               attrib="The opening note, Issue 04"
             />
           </div>
         </div>
       </section>
 
-      <TableOfContents sections={tocSections} />
+      <MagazineToc sections={tocSections} />
 
-      <section className="border-b border-ink/15">
-        <div className="mx-auto max-w-spread px-6 py-16 md:py-20 grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-7" id="recipe">
-            <RecipeCard />
-          </div>
-          <aside className="lg:col-span-5 lg:pl-6">
-            <div className="dept-label">From the cover</div>
-            <h2 className="font-display italic font-normal text-3xl md:text-4xl text-ink mt-3 leading-[1.06]">
-              The dish on the cover.
-            </h2>
-            <p className="dek mt-4 max-w-[44ch]">
-              A pan of slow-cooked white beans — garlic, bay, a finishing
-              spoon of olive oil. Plenty for four; better the next day.
-            </p>
-            <div className="mt-6 plate aspect-[4/3] w-full rounded-sm" aria-hidden="true" />
-            <p className="plate-caption">
-              Photographed in the test kitchen, late afternoon.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section className="border-b border-ink/15 bg-cream-soft">
-        <div className="mx-auto max-w-spread px-6 py-16 md:py-20 grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-6">
-            <Department
-              eyebrow={tDept("weekendHeading").toUpperCase()}
-              heading={tDept("weekendHeading")}
-              dek={tDept("weekendDek")}
-              items={weekendItems}
-            />
-          </div>
-          <div className="lg:col-span-6">
-            <Department
-              eyebrow={tDept("pantryHeading").toUpperCase()}
-              heading={tDept("pantryHeading")}
-              dek={tDept("pantryDek")}
-              items={pantryItems}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-ink text-cream">
-        <div className="mx-auto max-w-spread px-6 py-16 md:py-20 grid lg:grid-cols-12 gap-10 items-end">
+      <section className="border-b border-[--color-border-subtle]">
+        <div className="mx-auto max-w-spread px-6 py-14 md:py-20 grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
-            <div className="dept-label !text-tomato">{tNewsletter("eyebrow")}</div>
-            <h2 className="font-display italic font-normal text-4xl md:text-[3.2rem] text-cream mt-4 leading-[1.04]">
+            <div className="dept-label">{tNewsletter("eyebrow")}</div>
+            <h2 className="font-display italic font-medium text-3xl md:text-[2.6rem] leading-[1.06] mt-3">
               {tNewsletter("heading")}
             </h2>
-            <p className="mt-5 text-cream/80 text-[15.5px] leading-relaxed max-w-[52ch]">
-              {tNewsletter("body")}
-            </p>
+            <p className="dek mt-4 max-w-[52ch]">{tNewsletter("body")}</p>
           </div>
           <div className="lg:col-span-5">
-            <EmailCapture />
-            <p className="mt-4 byline-italic text-cream/65">
-              Sunday morning, eleven o'clock. One short editorial letter — that's all.
-            </p>
+            <NewsletterInline cta={tNewsletter("submit")} />
           </div>
         </div>
       </section>
 
       <section>
-        <div className="mx-auto max-w-spread px-6 py-12 md:py-16 text-center">
+        <div className="mx-auto max-w-spread px-6 py-12 md:py-14 text-center">
           <Link href="/about" className="dept-label">
             Read the masthead →
           </Link>

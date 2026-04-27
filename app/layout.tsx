@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { fraunces, inter, plexMono } from "./fonts";
 import { Header } from "@/components/Header";
 import { MastheadFooter } from "@/components/magazine/MastheadFooter";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -36,15 +37,10 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang={locale}
+      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
+    >
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <OrganizationJsonLd />
