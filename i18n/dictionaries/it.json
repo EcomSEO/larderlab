@@ -1,0 +1,365 @@
+{
+  "common": {
+    "openMenu": "Apri menù",
+    "closeMenu": "Chiudi menù",
+    "skipToContent": "Vai al contenuto",
+    "minRead": "{n} min di lettura",
+    "min": "{n} min",
+    "by": "Di",
+    "updated": "Aggiornato il {date}",
+    "lastUpdated": "Ultimo aggiornamento · {date}",
+    "openHub": "Leggi la rubrica",
+    "readMore": "Continua",
+    "backToHome": "Torna alla copertina",
+    "tryAgain": "Riprova",
+    "more": "Altro"
+  },
+  "header": {
+    "logoAria": "Larderlab — la copertina",
+    "issue": "Numero 04",
+    "issueDate": "Aprile 2026",
+    "navLarder": "La dispensa",
+    "navRecipes": "Ricette",
+    "navPantry": "Scorte",
+    "navFeatures": "Reportage",
+    "navMethodology": "Linea editoriale",
+    "navPipeline": "In cottura",
+    "navAbout": "Colofone"
+  },
+  "cover": {
+    "masthead": "Larderlab",
+    "issueLine": "Numero 04 · Aprile 2026 · Vol. 1",
+    "kicker": "Il numero della dispensa",
+    "h1Lead": "Una",
+    "h1Lead2": "ben pensata",
+    "h1End": "per la cucina di oggi.",
+    "h1Mid": "dispensa",
+    "lede": "Quarantadue pagine sulla scienza della conservazione, sul riordino della dispensa, sulle dodici salse che ogni mensola si guadagna — e una ricetta di fagioli in tegame da mangiare per un mese.",
+    "ctaPrimary": "Apri la scheda-ricetta",
+    "ctaSecondary": "Sfoglia il numero",
+    "alsoInside": "Anche in questo numero",
+    "coverLine1": "Riordinare la dispensa in cinque minuti",
+    "coverLine2": "Le dodici salse che ogni mensola si guadagna",
+    "coverLine3": "Perché l'olio d'oliva invecchia, e cosa fare",
+    "coverLine4": "Piccolo manuale delle regole di fermentazione",
+    "coverLine5": "Il calcolatore dei macro, ridisegnato",
+    "stampLabel": "Numero",
+    "stampNum": "04"
+  },
+  "toc": {
+    "section1": "Reportage",
+    "section2": "Rubriche",
+    "section3": "Ricette",
+    "section4": "Dispensa",
+    "heading": "Sommario",
+    "subheading": "Quarantadue pagine, sei rubriche, una copertina, dodici ricette da una dispensa ben tenuta."
+  },
+  "departments": {
+    "weekendHeading": "Cinque cose da cucinare nel fine settimana",
+    "weekendDek": "Lista corta. Niente effetti. Cinque ricette che una dispensa fornita ha già voglia di fare.",
+    "pantryHeading": "Cosa teniamo in dispensa questo mese",
+    "pantryDek": "Cinque vasi, bottiglie e sacchetti che meritano lo scaffale — coi conti dietro."
+  },
+  "editorsNote": {
+    "label": "Editoriale",
+    "body": "Larderlab nasce perché internet di cucina aveva due voci — la ricetta del giorno e il rumore delle diete — e quasi nulla nel mezzo. Allora abbiamo costruito il mezzo. Una rivista per chi la cucina già la guida. Benvenuti nel numero quattro.",
+    "signature": "— Helena, direttrice"
+  },
+  "feature": {
+    "byline": "Di {author}",
+    "issueRef": "Numero 04 · Aprile 2026",
+    "lastReviewed": "Ultima revisione il {date}",
+    "sources": "Da leggere ancora",
+    "alsoFromIssue": "Anche in questo numero",
+    "drophead": "Una storia di dispensa, ben cotta.",
+    "leadCaption": "Un piatto di fagioli a cottura lenta, la portata di copertina — fotografata nella nostra cucina di prova, tardo pomeriggio.",
+    "translationBanner": "Questo articolo è disponibile per ora in inglese. La traduzione italiana è in redazione. Sotto il testo originale."
+  },
+  "recipeCard": {
+    "title": "I fagioli in tegame",
+    "yieldLabel": "Per",
+    "yieldValue": "4 persone",
+    "activeLabel": "Tempo attivo",
+    "activeValue": "20 minuti",
+    "totalLabel": "Tempo totale",
+    "totalValue": "1 ora e 30",
+    "difficultyLabel": "Difficoltà",
+    "difficultyValue": "Facile",
+    "ingredientsHeading": "Ingredienti",
+    "methodHeading": "Procedimento",
+    "notesHeading": "Note",
+    "storageHeading": "Conservazione",
+    "ingredient1": "1 tazza di fagioli bianchi secchi, ammollati una notte",
+    "ingredient2": "2 cucchiai di olio extravergine buono",
+    "ingredient3": "1 cipolla bionda, tagliata a metà con la radice",
+    "ingredient4": "4 spicchi d'aglio schiacciati",
+    "ingredient5": "1 foglia di alloro secca",
+    "ingredient6": "1 striscia di scorza di limone, senza il bianco",
+    "ingredient7": "Sale marino, a piacere",
+    "ingredient8": "Una manciata di erbe tenere per finire",
+    "method1": "Scolare i fagioli e versarli in un tegame da forno pesante. Coprirli con acqua fredda fino a un dito sopra.",
+    "method2": "Sistemare la cipolla con il taglio in giù, distribuire intorno l'aglio e l'alloro, posare la scorza in superficie.",
+    "method3": "In forno a 150 °C, coperto, finché i fagioli non sono cremosi al centro. Controllare a 60 minuti, poi ogni 15.",
+    "method4": "Salare solo a fine cottura — prima la buccia s'indurisce.",
+    "method5": "Togliere cipolla e scorza. Filo d'olio, erbe sopra, servire con pane spesso.",
+    "notes": "Qui meglio un fagiolo bianco a cottura rapida — cannellini, alubia blanca o fagiolo di Sorana. Il liquido di cottura è il tesoro: non buttatelo.",
+    "storage": "Freddo, coperto, in frigo fino a quattro giorni. Si congela bene nel suo sugo, fino a due mesi."
+  },
+  "pullQuote": {
+    "body": "Una buona dispensa non è uno stoccaggio. È un sistema che cuoce la cena prima ancora che tu abbia deciso cosa sia.",
+    "attrib": "Helena Brookes, direttrice"
+  },
+  "newsletter": {
+    "eyebrow": "La Dispensa della domenica",
+    "heading": "Una lettera. Una scheda-ricetta. Domenica.",
+    "body": "Una breve lettera editoriale, una scheda-ricetta testata che si cucina da una dispensa ben tenuta e le scelte verificate al prezzo della settimana.",
+    "emailLabel": "Indirizzo e-mail",
+    "placeholder": "tu@esempio.it",
+    "submit": "Iscrivimi",
+    "submitLoading": "Invio…",
+    "success": "Grazie. Il prossimo numero è in arrivo.",
+    "consentBefore": "Iscrivendoti accetti la nostra",
+    "privacyLink": "informativa privacy",
+    "consentAfter": ". Una lettera la domenica. Disiscrizione in ogni momento."
+  },
+  "footer": {
+    "leadParagraph": "Larderlab è una piccola redazione che scrive di architettura della dispensa, ingredienti e l'artigianato lento di tenere bene una cucina. Indipendente. Citata. Non pagata dai produttori.",
+    "masthead": "Colofone",
+    "departments": "Rubriche",
+    "finePrint": "Note",
+    "disclaimer": "Larderlab è una rivista editoriale. Niente di ciò che pubblichiamo è consiglio medico o nutrizionale. Se un'alimentazione tocca la tua salute, parlane con un medico o una dietista.",
+    "imprintEdition": "{volume} · Numero 04 · Aprile 2026"
+  },
+  "trustPages": {
+    "about": {
+      "metaTitle": "Colofone — Larderlab",
+      "metaDescription": "Chi siamo, cosa pubblichiamo, perché esistiamo.",
+      "h1": "Il colofone",
+      "body": [
+        "Larderlab è una piccola rivista indipendente che parla di dispensa, ingredienti, tecnica e dell'artigianato lento di tenere bene una cucina.",
+        "L'abbiamo fatta perché internet di cucina era diviso fra ricetta del giorno e clamore dei regimi alimentari, con poco di mezzo. Allora abbiamo costruito il mezzo.",
+        "## Cosa pubblichiamo",
+        "Reportage, rubriche, schede-ricetta, saggi sulla dispensa, approfondimenti sugli ingredienti.",
+        "## Cosa non facciamo",
+        "Vendere piani-dieta. Stampare numeri di perdita di peso. Accettare denaro per copertura editoriale.",
+        "## Per scriverci",
+        "hello@larderlab.com. Le lettere si leggono ogni settimana."
+      ]
+    },
+    "editorialStandards": {
+      "metaTitle": "Linea editoriale — Larderlab",
+      "metaDescription": "Come lavoriamo, sourciamo, editiamo.",
+      "h1": "Linea editoriale",
+      "body": [
+        "Larderlab è giornalismo gastronomico indipendente. Seguiamo le regole tranquille che le riviste serie praticano da sempre.",
+        "## Fonti",
+        "Ogni affermazione con un numero ha una fonte. Per conservazione e sicurezza alimentare preferiamo letteratura peer-reviewed e linee guida pubbliche; per gusto e tecnica conta il lavoro nella nostra cucina di prova, firmato.",
+        "## Prezzi",
+        "Ogni prodotto consigliato porta prezzo, negozio, data. I prezzi cambiano. Riverifichiamo a ogni numero.",
+        "## Niente piazzamento a pagamento",
+        "Nessun denaro di marca, distribuzione o agenzia compra una menzione editoriale.",
+        "## Affiliati",
+        "Alcuni link guadagnano una commissione. Non cambiano mai i nostri ordini.",
+        "## Correzioni",
+        "Quando sbagliamo, correggiamo in chiaro e con la data."
+      ]
+    },
+    "methodology": {
+      "metaTitle": "Come cuciniamo — Larderlab",
+      "metaDescription": "Come sviluppiamo una ricetta, testiamo una strategia di dispensa, valutiamo un ingrediente.",
+      "h1": "Come cuciniamo",
+      "body": [
+        "Cosa testiamo, come citiamo, e cosa non comparirà mai sotto la nostra testata.",
+        "## Ricette",
+        "Ogni ricetta è cucinata almeno tre volte nella cucina di prova, da due cuochi diversi, su un piano cottura domestico. Pubblichiamo tempo attivo, totale, resa, difficoltà. Pubblichiamo le note quando qualcosa fallisce.",
+        "## Dispensa",
+        "I saggi si appoggiano a letteratura scientifica e al nostro registro vivo di cosa regge davvero in cucina.",
+        "## Ingredienti",
+        "Quattro tempi: cos'è, cosa dice la letteratura, come si usa davvero, dove ci collochiamo.",
+        "## Fotografia",
+        "Le foto-piatto vengono dalla nostra cucina, salvo diversa indicazione.",
+        "## Cosa non faremo",
+        "Vendere diete. Stampare numeri di peso. Vendere spazi editoriali. Usare «superfood», «detox», «clean»."
+      ]
+    },
+    "methodologyV12": {
+      "metaTitle": "Come cuciniamo · v1.2 — Larderlab",
+      "metaDescription": "Versione lunga del nostro metodo editoriale.",
+      "eyebrow": "Come cuciniamo · v1.2",
+      "h1": "La griglia di cucina, in dettaglio.",
+      "intro": "Cinque standard brevi che un pezzo deve superare prima di entrare nel numero. Li versioniamo come software.",
+      "step1Title": "Cucinata più volte",
+      "step1Body": "Ogni ricetta è cucinata almeno tre volte da due cuochi. Sulla pagina c'è la versione che ha passato il terzo giro.",
+      "step2Title": "Citata dove vivono i numeri",
+      "step2Body": "Temperature, ossidazioni, percentuali di sale — qualunque numero ha una fonte. I giudizi di gusto sono firmati.",
+      "step3Title": "Vera dispensa, non set",
+      "step3Body": "Cuciniamo su piani domestici. Pentole acquistabili. Le ricette poggiano sulla dispensa che descriviamo.",
+      "step4Title": "Editato con calore",
+      "step4Body": "Ogni bozza passa una revisione di tono. Niente lezioncine, niente parlata da dieta, niente vendite a sorpresa.",
+      "step5Title": "Errori corretti in chiaro",
+      "step5Body": "Quando sbagliamo, in fondo alla pagina c'è una nota datata e un link alla nuova versione.",
+      "changeLogTitle": "Storico modifiche",
+      "changeLog12": "v1.2 · aprile 2026 · Scheda-ricetta standardizzata. Provenienza foto in didascalia. Blocco conservazione obbligatorio.",
+      "changeLog11": "v1.1 · febbraio 2026 · Firma di cucina di prova. Quadro strategia dispensa documentato.",
+      "changeLog10": "v1.0 · gennaio 2026 · Prima versione — regola dei tre passaggi, fonti, quadro in quattro tempi."
+    },
+    "pipeline": {
+      "metaTitle": "In cottura — Larderlab",
+      "metaDescription": "Diario aperto di cosa stiamo testando, scrivendo e fotografando per il prossimo numero.",
+      "eyebrow": "In cottura",
+      "h1": "Cosa c'è sul fuoco.",
+      "intro": "Diario aperto di ciò che cuciniamo per il prossimo numero. Aggiornato ogni settimana. Lo condividiamo perché la segretezza appartiene alle agenzie.",
+      "researching": "Al banco di prova",
+      "drafted": "In bozza, in revisione",
+      "scheduled": "Programmato per il numero 05",
+      "items": [
+        { "title": "Le dodici salse che ogni mensola si guadagna", "status": "researching" },
+        { "title": "L'invecchiamento dell'olio d'oliva, spiegato", "status": "researching" },
+        { "title": "Manuale delle regole di fermentazione", "status": "drafted" },
+        { "title": "Perché i fagioli secchi induriscono col sale", "status": "drafted" },
+        { "title": "I risi, ordinati per costo a porzione", "status": "scheduled" },
+        { "title": "Il riordino della dispensa in cinque minuti", "status": "scheduled" }
+      ]
+    },
+    "privacy": {
+      "metaTitle": "Privacy — Larderlab",
+      "metaDescription": "Cosa raccogliamo, cosa no.",
+      "h1": "Informativa privacy",
+      "body": [
+        "Questa pagina descrive come Larderlab raccoglie, usa e condivide informazioni.",
+        "## Cosa raccogliamo",
+        "Analitica standard — pagine viste, URL di provenienza, regione approssimativa, dispositivo, browser. Se ti iscrivi alla domenica, l'indirizzo e-mail.",
+        "## Cosa non raccogliamo",
+        "Il tuo nome. La posizione precisa. Tutto ciò che ti identifica oltre quanto ci dai.",
+        "## Cookie",
+        "Pochi — sessione, analitica, memoria del consenso. Nessun cookie pubblicitario di terzi.",
+        "## I tuoi diritti",
+        "Accesso, rettifica, cancellazione, opposizione, portabilità. privacy@larderlab.com.",
+        "## Contatti",
+        "privacy@larderlab.com."
+      ]
+    },
+    "terms": {
+      "metaTitle": "Condizioni — Larderlab",
+      "metaDescription": "Le condizioni che si applicano all'uso di larderlab.com.",
+      "h1": "Condizioni d'uso",
+      "body": [
+        "Usando larderlab.com accetti queste condizioni.",
+        "## Editoriale, non consulenza",
+        "Larderlab pubblica giornalismo gastronomico. Niente è consulenza medica o nutrizionale.",
+        "## Accuratezza",
+        "Lavoriamo seriamente. Citiamo. Aggiorniamo. Non siamo infallibili.",
+        "## Affiliati",
+        "Alcuni link ci danno una commissione. Non influenzano le scelte editoriali.",
+        "## Proprietà intellettuale",
+        "Tutto il contenuto editoriale è di Larderlab o ci è concesso in licenza. Si possono condividere estratti con citazione.",
+        "## Contatti",
+        "hello@larderlab.com."
+      ]
+    },
+    "affiliateDisclosure": {
+      "metaTitle": "Affiliazione — Larderlab",
+      "metaDescription": "Come funzionano i link affiliati.",
+      "h1": "Affiliazione",
+      "body": [
+        "Larderlab partecipa a pochi programmi di affiliazione. Alcuni link ci danno una commissione, senza costi extra per te.",
+        "## Come li usiamo",
+        "Consigliamo prodotti per i loro meriti, non per la commissione. Lo segnaliamo su ogni pagina coinvolta.",
+        "## Programmi",
+        "Amazon Associates, ShareASale, Awin, accordi diretti con alcuni produttori.",
+        "## Contatti",
+        "hello@larderlab.com."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Lettere alla redazione — Larderlab",
+      "metaDescription": "Come scriverci — correzioni, idee, riscontri sulle ricette.",
+      "h1": "Lettere alla redazione",
+      "body": [
+        "## Generale",
+        "hello@larderlab.com — riscontri, idee, domande di dispensa.",
+        "## Correzioni",
+        "corrections@larderlab.com — vista un'inesattezza? Rispondiamo entro cinque giorni lavorativi e correggiamo in chiaro.",
+        "## Riscontri sulle ricette",
+        "recipes@larderlab.com — raccontaci come una ricetta si è comportata in casa tua.",
+        "## Privacy",
+        "privacy@larderlab.com.",
+        "## Tempi di risposta",
+        "Siamo una piccola redazione. Leggiamo tutto. Rispondiamo entro cinque giorni lavorativi."
+      ]
+    },
+    "newsletter": {
+      "metaTitle": "La Dispensa della domenica — Larderlab",
+      "metaDescription": "Una lettera editoriale, una scheda-ricetta, ogni domenica.",
+      "h1": "La Dispensa della domenica",
+      "body": [
+        "Una breve lettera editoriale, una scheda-ricetta testata e le scelte della settimana. La domenica, basta."
+      ]
+    }
+  },
+  "errorPage": {
+    "h1": "Qualcosa si è bruciato dalla nostra parte.",
+    "body": "La pagina è andata in errore. È annotato. Riprova o torna alla copertina.",
+    "tryAgain": "Riprova",
+    "backHome": "Torna alla copertina"
+  },
+  "notFound": {
+    "h1": "Fuori menù.",
+    "body": "Questa pagina non c'è. Forse si è persa fra due numeri. Prova la copertina o una rubrica qui sotto.",
+    "backHome": "Torna alla copertina"
+  },
+  "localeSwitcher": {
+    "label": "Lingua",
+    "en": "EN", "enFull": "English",
+    "de": "DE", "deFull": "Deutsch",
+    "fr": "FR", "frFull": "Français",
+    "it": "IT", "itFull": "Italiano",
+    "es": "ES", "esFull": "Español",
+    "nl": "NL", "nlFull": "Nederlands",
+    "pl": "PL", "plFull": "Polski",
+    "sv": "SV", "svFull": "Svenska",
+    "pt": "PT", "ptFull": "Português",
+    "ro": "RO", "roFull": "Română",
+    "cs": "CS", "csFull": "Čeština",
+    "no": "NO", "noFull": "Norsk"
+  },
+  "hubPage": {
+    "crumbHome": "Copertina",
+    "crumbGuides": "Rubriche",
+    "ourThesisLabel": "Dalla redazione",
+    "postsLive": "Reportage usciti",
+    "plannedInHub": "In preparazione",
+    "startHereEyebrow": "Inizia da qui",
+    "startHereTitle": "La guida completa.",
+    "guideEyebrow": "La guida",
+    "readPillar": "Leggi il reportage",
+    "comparisonsEyebrow": "I confronti",
+    "comparisonsTitle": "Cosa cambia davvero.",
+    "explainersEyebrow": "Le spiegazioni",
+    "explainersTitle": "In chiaro, ben editato.",
+    "checklistsEyebrow": "Le checklist",
+    "checklistsTitle": "Stampabili, pratiche.",
+    "emptyBefore": "I reportage arrivano qui dopo il caporedattore. Vedi la",
+    "emptyHomeLink": "copertina",
+    "emptyAfter": "per ciò che è già uscito."
+  },
+  "postType": {
+    "pillar": "Reportage",
+    "comparison": "Il confronto",
+    "cluster": "La spiegazione",
+    "listicle": "La lista"
+  },
+  "postChrome": {
+    "minRead": "{n} min di lettura",
+    "sourceCount": "{n} fonti",
+    "lastReviewed": "Ultima revisione il {date}",
+    "translationBanner": "Questo articolo è disponibile per ora in inglese. La traduzione italiana è in redazione. Sotto il testo originale."
+  },
+  "cookieBanner": {
+    "bodyBefore": "Usiamo pochi cookie per analitica e sessione. Nessun cookie pubblicitario. Vedi la nostra",
+    "privacyLink": "informativa privacy",
+    "bodyAfter": ".",
+    "reject": "Rifiuta",
+    "accept": "Accetta"
+  }
+}

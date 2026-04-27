@@ -1,0 +1,365 @@
+{
+  "common": {
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "skipToContent": "Aller au contenu",
+    "minRead": "{n} min de lecture",
+    "min": "{n} min",
+    "by": "Par",
+    "updated": "Mis à jour le {date}",
+    "lastUpdated": "Dernière mise à jour · {date}",
+    "openHub": "Lire la rubrique",
+    "readMore": "Lire la suite",
+    "backToHome": "Retour à la couverture",
+    "tryAgain": "Réessayer",
+    "more": "Plus"
+  },
+  "header": {
+    "logoAria": "Larderlab — la couverture",
+    "issue": "Numéro 04",
+    "issueDate": "Avril 2026",
+    "navLarder": "Le garde-manger",
+    "navRecipes": "Recettes",
+    "navPantry": "Provisions",
+    "navFeatures": "Reportages",
+    "navMethodology": "Charte éditoriale",
+    "navPipeline": "En cuisine",
+    "navAbout": "Ours"
+  },
+  "cover": {
+    "masthead": "Larderlab",
+    "issueLine": "Numéro 04 · Avril 2026 · Vol. 1",
+    "kicker": "Le numéro garde-manger",
+    "h1Lead": "Un",
+    "h1Lead2": "pensé",
+    "h1End": "pour la cuisine moderne.",
+    "h1Mid": "garde-manger",
+    "lede": "Quarante-deux pages sur la science du stockage, le tri du garde-manger, les douze sauces que toute étagère mérite — et une recette de haricots à la cocotte qu'on mangerait tout un mois.",
+    "ctaPrimary": "Ouvrir la fiche-recette",
+    "ctaSecondary": "Feuilleter le numéro",
+    "alsoInside": "Également dans ce numéro",
+    "coverLine1": "Trier son garde-manger en cinq minutes",
+    "coverLine2": "Les douze sauces que toute étagère mérite",
+    "coverLine3": "Pourquoi l'huile d'olive vieillit, et que faire",
+    "coverLine4": "Petit guide des règles de fermentation",
+    "coverLine5": "Le calculateur de macros, redessiné",
+    "stampLabel": "Numéro",
+    "stampNum": "04"
+  },
+  "toc": {
+    "section1": "Reportages",
+    "section2": "Rubriques",
+    "section3": "Recettes",
+    "section4": "Garde-manger",
+    "heading": "Sommaire",
+    "subheading": "Quarante-deux pages, six rubriques, une couverture, douze recettes à cuisiner depuis un garde-manger bien tenu."
+  },
+  "departments": {
+    "weekendHeading": "Cinq plats à cuisiner ce week-end",
+    "weekendDek": "Liste courte. Sans esbroufe. Cinq recettes qu'un garde-manger fourni veut déjà cuisiner.",
+    "pantryHeading": "Ce qu'on garde au garde-manger ce mois-ci",
+    "pantryDek": "Cinq bocaux, bouteilles et sachets qui méritent leur place — chiffres à l'appui."
+  },
+  "editorsNote": {
+    "label": "Édito",
+    "body": "Larderlab est né parce que l'internet culinaire ne connaissait que deux registres — la recette du jour et le bruit des régimes — et presque rien entre les deux. Alors on a fait l'entre-deux. Un magazine pour celles et ceux qui tiennent déjà leur cuisine. Bienvenue dans le numéro quatre.",
+    "signature": "— Helena, rédactrice en chef"
+  },
+  "feature": {
+    "byline": "Par {author}",
+    "issueRef": "Numéro 04 · Avril 2026",
+    "lastReviewed": "Dernière relecture le {date}",
+    "sources": "À lire ensuite",
+    "alsoFromIssue": "Aussi dans ce numéro",
+    "drophead": "Une enquête garde-manger, bien mijotée.",
+    "leadCaption": "Une assiette de haricots mijotés, le plat de couverture — photographié dans notre cuisine d'essai, fin d'après-midi.",
+    "translationBanner": "Cet article est pour l'instant disponible en anglais. La traduction française est en cours. Le texte original est ci-dessous."
+  },
+  "recipeCard": {
+    "title": "Les haricots à la cocotte",
+    "yieldLabel": "Pour",
+    "yieldValue": "4 personnes",
+    "activeLabel": "Temps actif",
+    "activeValue": "20 minutes",
+    "totalLabel": "Temps total",
+    "totalValue": "1 heure 30",
+    "difficultyLabel": "Difficulté",
+    "difficultyValue": "Facile",
+    "ingredientsHeading": "Ingrédients",
+    "methodHeading": "Méthode",
+    "notesHeading": "Notes",
+    "storageHeading": "Conservation",
+    "ingredient1": "1 tasse de haricots blancs secs, trempés une nuit",
+    "ingredient2": "2 c. à s. d'huile d'olive de qualité",
+    "ingredient3": "1 oignon jaune, coupé en deux racine intacte",
+    "ingredient4": "4 gousses d'ail écrasées",
+    "ingredient5": "1 feuille de laurier sèche",
+    "ingredient6": "1 zeste de citron, sans le blanc",
+    "ingredient7": "Fleur de sel, à votre goût",
+    "ingredient8": "Une poignée d'herbes tendres pour la finition",
+    "method1": "Égoutter les haricots et les déposer dans une cocotte qui passe au four. Couvrir d'eau froide jusqu'à 2 cm au-dessus.",
+    "method2": "Caler l'oignon face coupée vers le bas, glisser l'ail et le laurier autour, poser le zeste sur le dessus.",
+    "method3": "Enfourner à 150 °C, couvercle fermé, jusqu'à ce que les haricots soient crémeux à cœur. Vérifier à 60 minutes, puis toutes les 15.",
+    "method4": "Saler seulement quand les haricots sont presque tendres — sinon la peau durcit.",
+    "method5": "Retirer l'oignon et le zeste. Filer un trait d'huile d'olive, parsemer d'herbes, servir avec un toast épais.",
+    "notes": "On préfère ici un haricot blanc à cuisson rapide — cannellini, alubia blanca ou haricot tarbais. Le jus de cuisson est l'âme du plat ; ne le jetez surtout pas.",
+    "storage": "Refroidi, couvert, jusqu'à quatre jours au frigo. Se congèle bien dans son jus, jusqu'à deux mois."
+  },
+  "pullQuote": {
+    "body": "Un bon garde-manger n'est pas un stock. C'est un système qui mijote le dîner avant même qu'on ait décidé ce que sera le dîner.",
+    "attrib": "Helena Brookes, rédactrice en chef"
+  },
+  "newsletter": {
+    "eyebrow": "Le Garde-Manger du dimanche",
+    "heading": "Une lettre. Une fiche-recette. Le dimanche.",
+    "body": "Une courte lettre éditoriale, une fiche-recette testée que l'on cuisine d'un garde-manger bien tenu, et nos sélections vérifiées au prix du marché.",
+    "emailLabel": "Adresse e-mail",
+    "placeholder": "vous@exemple.fr",
+    "submit": "S'abonner",
+    "submitLoading": "Envoi…",
+    "success": "Merci. Le prochain numéro arrive.",
+    "consentBefore": "En vous abonnant, vous acceptez notre",
+    "privacyLink": "politique de confidentialité",
+    "consentAfter": ". Une lettre par dimanche. Désinscription à tout moment."
+  },
+  "footer": {
+    "leadParagraph": "Larderlab est une petite rédaction qui écrit sur l'architecture du garde-manger, les ingrédients, et l'artisanat lent qui consiste à bien tenir une cuisine. Indépendante. Sourcée. Pas payée par les marques.",
+    "masthead": "Ours",
+    "departments": "Rubriques",
+    "finePrint": "Mentions",
+    "disclaimer": "Larderlab est un magazine éditorial. Rien de ce qui est publié ici ne tient lieu d'avis médical ou diététique pour une condition particulière. Si un régime touche votre santé, parlez-en à un médecin ou à une diététicienne.",
+    "imprintEdition": "{volume} · Numéro 04 · Avril 2026"
+  },
+  "trustPages": {
+    "about": {
+      "metaTitle": "Ours — Larderlab",
+      "metaDescription": "Qui nous sommes, ce que nous publions, et pourquoi.",
+      "h1": "L'ours",
+      "body": [
+        "Larderlab est un petit magazine indépendant. Nous écrivons sur l'architecture du garde-manger, les ingrédients, la technique, et l'artisanat lent qui consiste à bien tenir une cuisine.",
+        "On l'a lancé parce que l'internet culinaire oscille entre la recette du jour et le bruit des régimes, sans grand-chose entre les deux. Alors on a fait l'entre-deux.",
+        "## Ce qu'on publie",
+        "Reportages, rubriques, fiches-recettes, essais sur le garde-manger, enquêtes sur les ingrédients. Chaque numéro a une couverture, plusieurs rubriques et une série de recettes qu'on cuisine d'un garde-manger bien tenu.",
+        "## Ce qu'on ne fait pas",
+        "Vendre des plans-régime. Imprimer des chiffres de perte de poids. Accepter de l'argent pour une mention éditoriale. Les liens d'affiliation n'influencent jamais nos choix.",
+        "## Pour nous écrire",
+        "hello@larderlab.com. Le courrier des lecteurs est lu chaque semaine."
+      ]
+    },
+    "editorialStandards": {
+      "metaTitle": "Charte éditoriale — Larderlab",
+      "metaDescription": "Comment nous enquêtons, sourçons et éditons.",
+      "h1": "Charte éditoriale",
+      "body": [
+        "Larderlab est un journalisme culinaire indépendant. Nous suivons les règles tranquilles que les bons magazines pratiquent depuis toujours.",
+        "## Sources",
+        "Toute affirmation chiffrée est sourcée. Pour la sécurité alimentaire et la conservation, on privilégie la littérature scientifique et les recommandations publiques ; pour le goût, la technique et la stratégie de garde-manger, c'est notre travail en cuisine d'essai, signé.",
+        "## Prix",
+        "Chaque produit recommandé porte le prix observé, l'enseigne, la date. Les prix bougent. On vérifie à chaque numéro.",
+        "## Pas d'achat de placement",
+        "Aucun argent de marque, distributeur ou agence ne vient acheter une mention éditoriale.",
+        "## Affiliation",
+        "Certains liens nous rapportent une commission. Cela ne change jamais nos classements.",
+        "## Corrections",
+        "Quand on se trompe, on corrige à la vue de tous, et on date."
+      ]
+    },
+    "methodology": {
+      "metaTitle": "Comment on cuisine — Larderlab",
+      "metaDescription": "Comment on développe une recette, teste une stratégie de garde-manger, juge un ingrédient.",
+      "h1": "Comment on cuisine",
+      "body": [
+        "Cette page dit ce que l'on teste, comment on source — et ce qui ne paraîtra jamais sous notre ours.",
+        "## Recettes",
+        "Toute recette est cuisinée au moins trois fois en cuisine d'essai, par deux cuisinier·ères, sur une plaque domestique. On publie le temps actif, le temps total, le rendement et la difficulté. On publie les notes quand quelque chose rate.",
+        "## Stratégie de garde-manger",
+        "Les essais s'appuient sur la littérature scientifique (températures, activité de l'eau, oxydation des matières grasses) et sur notre tableau de bord de ce qui tient vraiment dans une cuisine.",
+        "## Enquête ingrédient",
+        "Quatre temps : ce que c'est, ce que dit la littérature, l'usage réel, où l'on se range.",
+        "## Photographie",
+        "Chaque assiette photographiée vient de notre cuisine d'essai, sauf mention. Pas de stylisme déguisé.",
+        "## Ce qu'on ne fera jamais",
+        "Vendre des régimes. Imprimer des chiffres de perte de poids. Vendre des places éditoriales. Utiliser « superaliment », « détox », « clean »."
+      ]
+    },
+    "methodologyV12": {
+      "metaTitle": "Comment on cuisine · v1.2 — Larderlab",
+      "metaDescription": "La version longue de notre méthode éditoriale, datée et versionnée.",
+      "eyebrow": "Comment on cuisine · v1.2",
+      "h1": "La grille de cuisine, en détail.",
+      "intro": "Cinq petits standards qu'un texte doit franchir avant d'entrer dans le numéro. On les versionne comme un logiciel.",
+      "step1Title": "Cuisinée plusieurs fois",
+      "step1Body": "Chaque recette est cuisinée au moins trois fois, par deux cuisinier·ères. Sur la page, c'est la version qui a passé le troisième tour.",
+      "step2Title": "Sourcée là où vivent les chiffres",
+      "step2Body": "Températures de stockage, taux d'oxydation, pourcentages de sel — tout chiffre est sourcé. Les jugements de goût sont signés par celle ou celui qui les rend.",
+      "step3Title": "Vraie cuisine, pas de mise en scène",
+      "step3Body": "On cuisine sur une plaque domestique. Avec des casseroles que l'on peut acheter. Les recettes s'appuient sur le garde-manger qu'on décrit.",
+      "step4Title": "Édité avec chaleur",
+      "step4Body": "Tout brouillon passe une relecture de ton. Pas de leçon, pas de jargon de régime, pas de vente surprise.",
+      "step5Title": "Erreurs corrigées au grand jour",
+      "step5Body": "Quand on se trompe, la page porte une note datée en bas, et un lien vers la nouvelle version.",
+      "changeLogTitle": "Journal des modifications",
+      "changeLog12": "v1.2 · avril 2026 · Fiche-recette standardisée. Provenance des photos en légende. Bloc « conservation » dans toute recette.",
+      "changeLog11": "v1.1 · février 2026 · Signature de cuisine d'essai introduite. Cadre stratégie garde-manger documenté.",
+      "changeLog10": "v1.0 · janvier 2026 · Première version — règle des trois cuissons, sources, cadre en quatre temps."
+    },
+    "pipeline": {
+      "metaTitle": "En cuisine — Larderlab",
+      "metaDescription": "Le journal ouvert de ce qu'on teste, écrit et photographie pour le prochain numéro.",
+      "eyebrow": "En cuisine",
+      "h1": "Sur le feu en ce moment.",
+      "intro": "Le journal ouvert de ce qu'on prépare pour le prochain numéro. Mis à jour chaque semaine. On le partage parce que le secret appartient aux agences.",
+      "researching": "Au banc d'essai",
+      "drafted": "Écrit, en relecture",
+      "scheduled": "Programmé pour le numéro 05",
+      "items": [
+        { "title": "Les douze sauces que toute étagère mérite", "status": "researching" },
+        { "title": "Le vieillissement de l'huile d'olive, expliqué", "status": "researching" },
+        { "title": "Petit guide des règles de fermentation", "status": "drafted" },
+        { "title": "Pourquoi vos haricots durcissent au sel", "status": "drafted" },
+        { "title": "Les riz, classés au prix de la portion", "status": "scheduled" },
+        { "title": "Le tri du garde-manger en cinq minutes", "status": "scheduled" }
+      ]
+    },
+    "privacy": {
+      "metaTitle": "Politique de confidentialité — Larderlab",
+      "metaDescription": "Ce qu'on collecte, ce qu'on ne collecte pas.",
+      "h1": "Politique de confidentialité",
+      "body": [
+        "Cette page décrit comment Larderlab collecte, utilise et partage les informations.",
+        "## Ce que l'on collecte",
+        "Analytique standard — pages visitées, URL référente, région approximative, appareil, navigateur. Si vous vous abonnez, votre adresse e-mail.",
+        "## Ce que l'on ne collecte pas",
+        "Votre nom. Votre localisation précise. Tout ce qui vous identifie au-delà de ce que vous nous donnez.",
+        "## Cookies",
+        "Quelques-uns — continuité de session, analytique, mémoire de consentement. Pas de cookies publicitaires tiers.",
+        "## Vos droits",
+        "Accès, rectification, effacement, opposition, portabilité. privacy@larderlab.com.",
+        "## Contact",
+        "privacy@larderlab.com."
+      ]
+    },
+    "terms": {
+      "metaTitle": "Conditions d'utilisation — Larderlab",
+      "metaDescription": "Les conditions qui s'appliquent à l'usage de larderlab.com.",
+      "h1": "Conditions d'utilisation",
+      "body": [
+        "En utilisant larderlab.com, vous acceptez ces conditions.",
+        "## Éditorial, pas un avis",
+        "Larderlab publie de la presse culinaire. Rien sur ce site ne constitue un avis médical ou diététique pour une condition particulière. Si un régime touche votre santé, consultez un médecin ou une diététicienne.",
+        "## Exactitude",
+        "On travaille sérieusement. On source. On met à jour. Mais nous ne sommes pas infaillibles.",
+        "## Affiliation",
+        "Certains liens nous rapportent une commission. Cela n'influence pas nos choix.",
+        "## Propriété intellectuelle",
+        "Tout le contenu éditorial appartient à Larderlab ou nous est licencié. Les extraits peuvent être partagés avec attribution.",
+        "## Contact",
+        "hello@larderlab.com."
+      ]
+    },
+    "affiliateDisclosure": {
+      "metaTitle": "Mentions d'affiliation — Larderlab",
+      "metaDescription": "Comment fonctionnent les liens affiliés sur Larderlab et ce qu'ils ne changent pas.",
+      "h1": "Mentions d'affiliation",
+      "body": [
+        "Larderlab participe à quelques programmes d'affiliation. Certains liens nous rapportent une commission, sans surcoût pour vous.",
+        "## Comment on les utilise",
+        "On recommande des produits sur leurs mérites, pas sur leur taux de commission. On le mentionne sur chaque page concernée.",
+        "## Programmes",
+        "Amazon Associates, ShareASale, Awin et programmes directs avec quelques fournisseurs.",
+        "## Contact",
+        "hello@larderlab.com."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Courrier de la rédaction — Larderlab",
+      "metaDescription": "Comment nous écrire — corrections, idées, retours sur recettes.",
+      "h1": "Courrier de la rédaction",
+      "body": [
+        "## Général",
+        "hello@larderlab.com — retours, idées, questions garde-manger.",
+        "## Corrections",
+        "corrections@larderlab.com — vu une erreur ? On répond sous cinq jours ouvrés et on corrige au grand jour.",
+        "## Retours sur recettes",
+        "recipes@larderlab.com — racontez-nous comment une recette est tombée chez vous. Le bloc « notes » du prochain numéro vit de ce courrier.",
+        "## Confidentialité",
+        "privacy@larderlab.com.",
+        "## Délais",
+        "On est une petite équipe. On lit tout. On répond à la plupart des lettres en cinq jours ouvrés."
+      ]
+    },
+    "newsletter": {
+      "metaTitle": "Le Garde-Manger du dimanche — Larderlab",
+      "metaDescription": "Une courte lettre éditoriale, une fiche-recette testée, chaque dimanche.",
+      "h1": "Le Garde-Manger du dimanche",
+      "body": [
+        "Une courte lettre éditoriale, une fiche-recette testée que l'on cuisine d'un garde-manger bien tenu, et nos sélections de la semaine. Le dimanche, et c'est tout."
+      ]
+    }
+  },
+  "errorPage": {
+    "h1": "Quelque chose a brûlé chez nous.",
+    "body": "La page a déclenché une erreur. C'est noté chez nous. Réessayez ou revenez à la couverture.",
+    "tryAgain": "Réessayer",
+    "backHome": "Retour à la couverture"
+  },
+  "notFound": {
+    "h1": "Hors menu.",
+    "body": "Cette page reste introuvable. Elle a peut-être glissé entre deux numéros. Essayez la couverture ou une rubrique ci-dessous.",
+    "backHome": "Retour à la couverture"
+  },
+  "localeSwitcher": {
+    "label": "Langue",
+    "en": "EN", "enFull": "English",
+    "de": "DE", "deFull": "Deutsch",
+    "fr": "FR", "frFull": "Français",
+    "it": "IT", "itFull": "Italiano",
+    "es": "ES", "esFull": "Español",
+    "nl": "NL", "nlFull": "Nederlands",
+    "pl": "PL", "plFull": "Polski",
+    "sv": "SV", "svFull": "Svenska",
+    "pt": "PT", "ptFull": "Português",
+    "ro": "RO", "roFull": "Română",
+    "cs": "CS", "csFull": "Čeština",
+    "no": "NO", "noFull": "Norsk"
+  },
+  "hubPage": {
+    "crumbHome": "Couverture",
+    "crumbGuides": "Rubriques",
+    "ourThesisLabel": "Le mot de la rédaction",
+    "postsLive": "Reportages parus",
+    "plannedInHub": "En préparation",
+    "startHereEyebrow": "Commencer ici",
+    "startHereTitle": "Le guide complet.",
+    "guideEyebrow": "Le guide",
+    "readPillar": "Lire la reportage",
+    "comparisonsEyebrow": "Les comparatifs",
+    "comparisonsTitle": "Ce qui change vraiment.",
+    "explainersEyebrow": "Les explications",
+    "explainersTitle": "En clair, bien édité.",
+    "checklistsEyebrow": "Les checklists",
+    "checklistsTitle": "Imprimables, pratiques.",
+    "emptyBefore": "Les reportages atterrissent ici quand elles passent le secrétariat de rédaction. Voir la",
+    "emptyHomeLink": "couverture",
+    "emptyAfter": "pour ce qui est déjà paru."
+  },
+  "postType": {
+    "pillar": "Reportage",
+    "comparison": "Le comparatif",
+    "cluster": "L'explication",
+    "listicle": "La liste"
+  },
+  "postChrome": {
+    "minRead": "{n} min de lecture",
+    "sourceCount": "{n} sources",
+    "lastReviewed": "Dernière relecture le {date}",
+    "translationBanner": "Cet article est pour l'instant disponible en anglais. La traduction française est en cours. Le texte original est ci-dessous."
+  },
+  "cookieBanner": {
+    "bodyBefore": "Nous utilisons quelques cookies pour l'analytique et la continuité de session. Pas de cookies publicitaires. Voir notre",
+    "privacyLink": "politique de confidentialité",
+    "bodyAfter": ".",
+    "reject": "Refuser",
+    "accept": "Accepter"
+  }
+}

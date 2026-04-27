@@ -1,0 +1,396 @@
+{
+  "common": {
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "skipToContent": "Sari la conținut",
+    "minRead": "{n} min de citit",
+    "min": "{n} min",
+    "by": "De",
+    "updated": "Actualizat la {date}",
+    "lastUpdated": "Ultima actualizare · {date}",
+    "openHub": "Citește rubrica",
+    "readMore": "Citește mai departe",
+    "backToHome": "Înapoi la copertă",
+    "tryAgain": "Încearcă din nou",
+    "more": "Mai mult"
+  },
+  "header": {
+    "logoAria": "Larderlab — coperta",
+    "issue": "Numărul 04",
+    "issueDate": "Aprilie 2026",
+    "navLarder": "Cămara",
+    "navRecipes": "Rețete",
+    "navPantry": "Provizii",
+    "navFeatures": "Reportaje",
+    "navMethodology": "Standarde editoriale",
+    "navPipeline": "Ce fierbe",
+    "navAbout": "Caseta redacțională"
+  },
+  "cover": {
+    "masthead": "Larderlab",
+    "issueLine": "Numărul 04 · Aprilie 2026 · An I",
+    "kicker": "Numărul despre cămară",
+    "h1Lead": "O",
+    "h1Lead2": "bine gândită",
+    "h1End": "pentru bucătăria de azi.",
+    "h1Mid": "cămară",
+    "lede": "Patruzeci și două de pagini despre știința păstrării, ordinea în cămară, cele douăsprezece sosuri pe care le merită orice raft — și o fișă de rețetă pentru fasolea într-o singură oală pe care am mânca-o o lună întreagă.",
+    "ctaPrimary": "Deschide fișa de rețetă",
+    "ctaSecondary": "Răsfoiește numărul",
+    "alsoInside": "Și mai ai în număr",
+    "coverLine1": "Ordine în cămară în cinci minute",
+    "coverLine2": "Cele douăsprezece sosuri pe care le merită orice raft",
+    "coverLine3": "De ce îmbătrânește uleiul de măsline — și ce faci",
+    "coverLine4": "Ghid de teren al regulilor de fermentație",
+    "coverLine5": "Calculatorul de macronutrienți, redesenat",
+    "stampLabel": "Nr.",
+    "stampNum": "04"
+  },
+  "toc": {
+    "section1": "Reportaje",
+    "section2": "Rubrici",
+    "section3": "Rețete",
+    "section4": "Cămară",
+    "heading": "Cuprins",
+    "subheading": "Patruzeci și două de pagini, șase rubrici, o copertă și douăsprezece rețete dintr-o cămară bine ținută."
+  },
+  "departments": {
+    "weekendHeading": "Cinci lucruri de gătit la sfârșitul săptămânii",
+    "weekendDek": "Listă scurtă. Fără spectacol. Cinci rețete pe care o cămară bine ținută vrea oricum să le facă.",
+    "pantryHeading": "Ce ținem în cămară luna asta",
+    "pantryDek": "Cinci borcane, sticle și pungi care își merită raftul — cu cifrele în spate."
+  },
+  "editorsNote": {
+    "label": "Editorial",
+    "body": "Larderlab a apărut pentru că internetul culinar avea doar două registre — rețeta zilei și zgomotul dietelor — și aproape nimic la mijloc. Așa că am construit mijlocul. O revistă pentru cei care își țin deja bucătăria. Bun venit la numărul patru.",
+    "signature": "— Helena, redactor-șef"
+  },
+  "feature": {
+    "byline": "De {author}",
+    "issueRef": "Numărul 04 · Aprilie 2026",
+    "lastReviewed": "Ultima ediție pe {date}",
+    "sources": "De citit mai departe",
+    "alsoFromIssue": "Și din acest număr",
+    "drophead": "Un reportaj de cămară, bine gătit.",
+    "leadCaption": "O farfurie de fasole gătită încet, felul de pe copertă — fotografiat în bucătăria noastră de probă, după-amiaza târziu.",
+    "translationBanner": "Reportajul este pentru moment în engleză. Traducerea în română este în redacție. Originalul este mai jos."
+  },
+  "recipeCard": {
+    "title": "Fasolea într-o singură oală",
+    "yieldLabel": "Pentru",
+    "yieldValue": "4 persoane",
+    "activeLabel": "Timp activ",
+    "activeValue": "20 de minute",
+    "totalLabel": "Timp total",
+    "totalValue": "1 oră 30 minute",
+    "difficultyLabel": "Dificultate",
+    "difficultyValue": "Ușor",
+    "ingredientsHeading": "Ingrediente",
+    "methodHeading": "Mod de preparare",
+    "notesHeading": "Note",
+    "storageHeading": "Păstrare",
+    "ingredient1": "1 cană de fasole albă uscată, hidratată peste noapte",
+    "ingredient2": "2 linguri de ulei de măsline bun",
+    "ingredient3": "1 ceapă galbenă, tăiată în jumătate cu rădăcina",
+    "ingredient4": "4 căței de usturoi, zdrobiți",
+    "ingredient5": "1 frunză de dafin uscată",
+    "ingredient6": "1 fâșie de coajă de lămâie, fără albitură",
+    "ingredient7": "Sare de mare, după gust",
+    "ingredient8": "Un mănunchi de verdețuri pentru final",
+    "method1": "Scurge fasolea și pune-o într-o oală grea, care merge la cuptor. Acoperă cu apă rece până la 2 cm peste fasole.",
+    "method2": "Așază jumătățile de ceapă cu partea tăiată în jos, distribuie usturoiul și dafinul, pune coaja de lămâie deasupra.",
+    "method3": "Bagă la cuptor la 150 °C, cu capac, până când fasolea e cremoasă pe dinăuntru. Verifică la 60 de minute, apoi din 15 în 15.",
+    "method4": "Sărează abia la sfârșit — altfel se întărește coaja.",
+    "method5": "Scoate ceapa și coaja de lămâie. Stropește cu ulei, presară verdeață, servește cu pâine prăjită groasă.",
+    "notes": "Aici merge cel mai bine o fasole albă cu fierbere rapidă — cannellini, alubia blanca sau fasole bătută. Zeama e comoara; nu o arunca.",
+    "storage": "Răcită, cu capac, la frigider până la patru zile. Se congelează bine în propria zeamă, până la două luni."
+  },
+  "pullQuote": {
+    "body": "O cămară bună nu e un depozit. E un sistem care gătește cina în liniște înainte să fi decis ce e cina.",
+    "attrib": "Helena Brookes, redactor-șef"
+  },
+  "newsletter": {
+    "eyebrow": "Cămara de duminică",
+    "heading": "O scrisoare. O fișă de rețetă. Duminica.",
+    "body": "O scurtă scrisoare editorială, o fișă de rețetă testată dintr-o cămară bine ținută și alegerile săptămânii cu prețul verificat.",
+    "emailLabel": "Adresa de e-mail",
+    "placeholder": "tu@exemplu.ro",
+    "submit": "Mă abonez",
+    "submitLoading": "Se trimite…",
+    "success": "Mulțumim. Următoarea ediție e pe drum.",
+    "consentBefore": "Prin abonare accepți",
+    "privacyLink": "politica noastră de confidențialitate",
+    "consentAfter": ". O scrisoare duminica. Te dezabonezi când vrei."
+  },
+  "footer": {
+    "leadParagraph": "Larderlab este o redacție mică ce scrie despre arhitectura cămării, ingrediente și meșteșugul lent de a ține o bucătărie bine. Independentă. Citată. Neplătită de producători.",
+    "masthead": "Caseta",
+    "departments": "Rubrici",
+    "finePrint": "Mărunțișuri",
+    "disclaimer": "Larderlab este o revistă editorială. Nimic din ce publicăm nu este sfat medical ori dietetic. Dacă un plan alimentar îți afectează sănătatea, vorbește cu medicul sau nutriționistul tău.",
+    "imprintEdition": "{volume} · Numărul 04 · Aprilie 2026"
+  },
+  "trustPages": {
+    "about": {
+      "metaTitle": "Masthead — Larderlab",
+      "metaDescription": "Who we are, what we publish, and why we built a magazine for cooks who already run the kitchen.",
+      "h1": "The masthead",
+      "body": [
+        "Larderlab is a small, independent food magazine. We write about pantry architecture, ingredients, technique, and the slow craft of stocking a kitchen well.",
+        "We started Larderlab because the cooking internet had two registers — chase-the-trend recipe blogs and shouty diet talk — and almost nothing in between. So we built the in-between. A magazine for the cook who already runs the kitchen.",
+        "## What we publish",
+        "We publish features, departments, recipe cards, pantry essays, and ingredient deep-dives. Every issue closes with one cover story, several departments, and a sealed-shut envelope of recipes you can cook from a stocked pantry.",
+        "## What we don't do",
+        "We don't sell diet plans. We don't publish weight-loss numbers. We don't accept payment for editorial coverage. Our affiliate links never affect rankings.",
+        "## How to reach us",
+        "Email hello@larderlab.com. Letters to the editor are read every week."
+      ]
+    },
+    "editorialStandards": {
+      "metaTitle": "Editorial standards — Larderlab",
+      "metaDescription": "How Larderlab reports, sources, and edits.",
+      "h1": "Editorial standards",
+      "body": [
+        "Larderlab is independent food writing. The reader trust we want to earn is built on the same boring habits the best magazines have always practised.",
+        "## Sourcing",
+        "Every claim with a number behind it is cited. We prefer peer-reviewed papers and government food-safety guidance for shelf-life and storage; for taste, technique, and pantry strategy we rely on our own test-kitchen work, named in the byline.",
+        "## Pricing",
+        "Every product recommendation shows the price we observed, the retailer, and the date. Prices drift. We re-check on each issue.",
+        "## No payment for placement",
+        "We do not accept money from manufacturers, distributors, or PR agencies in exchange for editorial coverage.",
+        "## Affiliate links",
+        "Some product links are affiliate links. They never affect our rankings, and we disclose on every page where they appear.",
+        "## Corrections",
+        "When we are wrong, we correct in the open and timestamp the change."
+      ]
+    },
+    "methodology": {
+      "metaTitle": "How we cook — Larderlab",
+      "metaDescription": "How Larderlab develops a recipe, tests a pantry strategy, and rates an ingredient.",
+      "h1": "How we cook",
+      "body": [
+        "This is the editorial standards page for Larderlab — what we test, how we cite, and what we'll never do under the byline.",
+        "## Recipes",
+        "Every recipe in Larderlab is cooked at least three times in our test kitchen, by at least two different cooks, on a domestic range — not a restaurant burner. We publish active time, total time, yield, and difficulty. We publish notes when something fails.",
+        "## Pantry strategy",
+        "Pantry essays are built from food-science literature (storage temperatures, water activity, oxidation kinetics for fats) and from our own running record of what actually keeps in a real kitchen.",
+        "## Ingredient deep-dives",
+        "When we write about an ingredient — olive oil, dried beans, garam masala, a particular variety of rice — we follow a four-part frame: what is it, what's the literature on it, what's the real-world exposure or use case, and where do we land.",
+        "## Photography",
+        "Every plate photo on Larderlab is shot in our own test kitchen unless otherwise captioned. We don't dress food. We don't hide what didn't work.",
+        "## What we will not do",
+        "Sell diet plans. Publish weight-loss numbers. Accept payment for editorial placement. Use 'superfood', 'detox', 'clean', or 'miracle' under our masthead."
+      ]
+    },
+    "methodologyV12": {
+      "metaTitle": "How we cook · v1.2 — Larderlab",
+      "metaDescription": "The long-form spec for Larderlab's editorial method, versioned and dated.",
+      "eyebrow": "How we cook · v1.2",
+      "h1": "The kitchen rubric, in detail.",
+      "intro": "Five short standards a feature has to clear before it goes into the issue. We version them like software. The page below is the long-form one.",
+      "step1Title": "Cooked, more than once",
+      "step1Body": "Every recipe in Larderlab is cooked at least three times by two cooks. The recipe card on the page is the version that survived round three.",
+      "step2Title": "Cited where numbers live",
+      "step2Body": "Storage temperatures, oxidation rates, salt percentages — anything with a number behind it is sourced. Taste calls are signed by the cook who made them.",
+      "step3Title": "Pantry-real, not staged",
+      "step3Body": "We cook on a domestic range. Pots and pans you can buy. We test recipes against the pantry we describe — if the cover story names twelve sauces, the recipes lean on those twelve.",
+      "step4Title": "Edited for warmth",
+      "step4Body": "Every draft passes a voice review. No hectoring, no diet talk, no surprise upsells. The reader is a cook, not a target.",
+      "step5Title": "Errors corrected in the open",
+      "step5Body": "When we're wrong, the page carries a dated note at the bottom and we link to the new version.",
+      "changeLogTitle": "Change log",
+      "changeLog12": "v1.2 · April 2026 · Recipe-card structure standardised. Plate-photo provenance now visible in caption. Added storage block to every recipe.",
+      "changeLog11": "v1.1 · February 2026 · Test-kitchen sign-off line introduced. Pantry strategy frame documented.",
+      "changeLog10": "v1.0 · January 2026 · Initial public spec — three-cook rule, sourcing requirements, the four-part ingredient frame."
+    },
+    "pipeline": {
+      "metaTitle": "What's cooking — Larderlab",
+      "metaDescription": "An open log of what we're testing, drafting, and shooting for the next issue.",
+      "eyebrow": "What's cooking",
+      "h1": "What's on the burner.",
+      "intro": "An open log of every feature, recipe card, and ingredient deep-dive we're testing for the next issue. Updated each week. We share this because secrecy belongs to ad agencies.",
+      "researching": "On the test bench",
+      "drafted": "Drafted, in copy edit",
+      "scheduled": "Scheduled for issue 05",
+      "items": [
+        {
+          "title": "The twelve sauces every pantry earns",
+          "status": "researching"
+        },
+        {
+          "title": "Olive oil ageing, in plain English",
+          "status": "researching"
+        },
+        {
+          "title": "A field guide to fermentation rules",
+          "status": "drafted"
+        },
+        {
+          "title": "Why your dried beans get tougher with salt",
+          "status": "drafted"
+        },
+        {
+          "title": "Rice, ranked by cost-per-portion",
+          "status": "scheduled"
+        },
+        {
+          "title": "The five-minute pantry triage",
+          "status": "scheduled"
+        }
+      ]
+    },
+    "privacy": {
+      "metaTitle": "Privacy policy — Larderlab",
+      "metaDescription": "What we collect, what we don't, and how we handle reader data.",
+      "h1": "Privacy policy",
+      "body": [
+        "This page describes how Larderlab collects, uses, and shares information when you visit larderlab.com.",
+        "## What we collect",
+        "Standard server analytics — pages visited, referring URL, approximate location, device, browser. If you subscribe to our Sunday letter, your email address.",
+        "## What we don't collect",
+        "Your name. Your precise location. Anything that identifies you personally beyond what you give us.",
+        "## Cookies",
+        "A small number — session continuity, analytics, and a consent record. No third-party advertising cookies.",
+        "## Your rights",
+        "Access, correction, deletion, objection, portability. Email privacy@larderlab.com.",
+        "## Contact",
+        "privacy@larderlab.com."
+      ]
+    },
+    "terms": {
+      "metaTitle": "Terms of service — Larderlab",
+      "metaDescription": "The terms that apply when you use larderlab.com.",
+      "h1": "Terms of service",
+      "body": [
+        "By using larderlab.com you agree to these terms.",
+        "## Editorial, not advice",
+        "Larderlab publishes editorial food writing. Nothing on this site is medical or nutrition advice for a specific condition. If a meal plan is going to interact with your health, talk to a doctor or registered dietitian.",
+        "## Accuracy",
+        "We work hard to be accurate. We cite. We update. But we are not infallible. Content is provided as-is.",
+        "## Affiliate links",
+        "Some links earn us a commission. They never affect our editorial rankings.",
+        "## Intellectual property",
+        "All editorial content is owned by Larderlab or licensed to us. You may share excerpts with attribution.",
+        "## Contact",
+        "hello@larderlab.com."
+      ]
+    },
+    "affiliateDisclosure": {
+      "metaTitle": "Affiliate disclosure — Larderlab",
+      "metaDescription": "How affiliate links work on Larderlab and what they do — and don't — affect.",
+      "h1": "Affiliate disclosure",
+      "body": [
+        "Larderlab participates in a small number of affiliate programs. Some product links earn us a commission when you buy through them, at no additional cost to you.",
+        "## How we use them",
+        "We link to products we recommend on their merits, not their commission rate. We disclose on every page that includes affiliate links. We test top picks against alternatives we don't earn commission from.",
+        "## Programs",
+        "Amazon Associates, ShareASale, Awin, and direct programs with selected suppliers.",
+        "## Why we're OK with it",
+        "Affiliate links align our interests with yours: we only earn when we recommend something you actually buy and find useful.",
+        "If you have concerns, email hello@larderlab.com."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Letters to the editor — Larderlab",
+      "metaDescription": "How to reach us — corrections, story tips, recipe feedback.",
+      "h1": "Letters to the editor",
+      "body": [
+        "## General",
+        "hello@larderlab.com — feedback, story tips, pantry questions, everything else.",
+        "## Corrections",
+        "corrections@larderlab.com — spotted something wrong? We want to know. We respond within five working days and publish corrections in the open.",
+        "## Recipe feedback",
+        "recipes@larderlab.com — cooked one of ours? Tell us how it landed in your kitchen. The next issue's notes block is built on letters from this address.",
+        "## Privacy",
+        "privacy@larderlab.com — anything GDPR or CCPA-related.",
+        "## Response times",
+        "We are a small team. We read everything. We answer most letters within five working days."
+      ]
+    },
+    "newsletter": {
+      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaDescription": "One short editorial letter, one tested recipe card, every Sunday.",
+      "h1": "The Sunday Larder",
+      "body": [
+        "One short editorial letter, one tested recipe card you can cook from a stocked pantry, and the picks we'd put on the shelf this week. No fire-hose, no hype, no upsells. Sundays only."
+      ]
+    }
+  },
+  "errorPage": {
+    "h1": "S-a ars ceva la noi.",
+    "body": "Pagina a dat eroare. Avem ce s-a întâmplat în jurnal. Încearcă din nou sau întoarce-te la copertă.",
+    "tryAgain": "Încearcă din nou",
+    "backHome": "Înapoi la copertă"
+  },
+  "notFound": {
+    "h1": "În afara meniului.",
+    "body": "Pagina asta n-o găsim. Poate s-a pierdut între două numere. Încearcă coperta sau o rubrică de mai jos.",
+    "backHome": "Înapoi la copertă"
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
+  },
+  "hubPage": {
+    "crumbHome": "Coperta",
+    "crumbGuides": "Rubrici",
+    "ourThesisLabel": "De la redacție",
+    "postsLive": "Reportaje publicate",
+    "plannedInHub": "În pregătire",
+    "startHereEyebrow": "Începe aici",
+    "startHereTitle": "Ghidul complet.",
+    "guideEyebrow": "Ghidul",
+    "readPillar": "Citește reportajul",
+    "comparisonsEyebrow": "Comparațiile",
+    "comparisonsTitle": "Ce face cu adevărat diferența.",
+    "explainersEyebrow": "Explicațiile",
+    "explainersTitle": "În română clară, bine redactat.",
+    "checklistsEyebrow": "Listele",
+    "checklistsTitle": "Tipăribile, practice.",
+    "emptyBefore": "Reportajele apar aici după ce trec corectura. Vezi",
+    "emptyHomeLink": "coperta",
+    "emptyAfter": "pentru ce e deja publicat."
+  },
+  "postType": {
+    "pillar": "Reportaj",
+    "comparison": "Comparația",
+    "cluster": "Explicația",
+    "listicle": "Lista"
+  },
+  "postChrome": {
+    "minRead": "{n} min de citit",
+    "sourceCount": "{n} surse",
+    "lastReviewed": "Ultima ediție pe {date}",
+    "translationBanner": "Reportajul este pentru moment în engleză. Traducerea în română este în redacție. Originalul este mai jos."
+  },
+  "cookieBanner": {
+    "bodyBefore": "Folosim puține cookie-uri pentru analiză și sesiune. Fără cookie-uri publicitare. Vezi",
+    "privacyLink": "politica de confidențialitate",
+    "bodyAfter": ".",
+    "reject": "Refuză",
+    "accept": "Accept"
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "common": {
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "skipToContent": "Zum Inhalt springen",
+    "minRead": "{n} Min. Lesezeit",
+    "min": "{n} Min.",
+    "by": "Von",
+    "updated": "Aktualisiert {date}",
+    "lastUpdated": "Zuletzt aktualisiert · {date}",
+    "openHub": "Zum Ressort",
+    "readMore": "Weiterlesen",
+    "backToHome": "Zurück zum Cover",
+    "tryAgain": "Erneut versuchen",
+    "more": "Mehr"
+  },
+  "header": {
+    "logoAria": "Larderlab — Cover",
+    "issue": "Heft 04",
+    "issueDate": "April 2026",
+    "navLarder": "Vorratskammer",
+    "navRecipes": "Rezepte",
+    "navPantry": "Pantry",
+    "navFeatures": "Reportagen",
+    "navMethodology": "Redaktionsstandards",
+    "navPipeline": "Was kocht",
+    "navAbout": "Impressum"
+  },
+  "cover": {
+    "masthead": "Larderlab",
+    "issueLine": "Heft 04 · April 2026 · Jg. 1",
+    "kicker": "Das Vorratskammer-Heft",
+    "h1Lead": "Eine",
+    "h1Lead2": "durchdachte",
+    "h1End": "für die moderne Küche.",
+    "h1Mid": "Vorratskammer",
+    "lede": "Zweiundvierzig Seiten über Lagerwissenschaft, Vorratstriagen, die zwölf Saucen, die jedes Regal verdient — und ein Rezept für die eintopfigen Bohnen, von denen wir uns gern einen Monat lang ernähren würden.",
+    "ctaPrimary": "Rezeptkarte öffnen",
+    "ctaSecondary": "Heft durchblättern",
+    "alsoInside": "Außerdem im Heft",
+    "coverLine1": "Vorratstriage in fünf Minuten",
+    "coverLine2": "Die zwölf Saucen, die jedes Regal verdient",
+    "coverLine3": "Warum Olivenöl altert — und was zu tun ist",
+    "coverLine4": "Ein Feldführer durch die Fermentationsregeln",
+    "coverLine5": "Der Makro-Rechner, neu gezeichnet",
+    "stampLabel": "Heft",
+    "stampNum": "04"
+  },
+  "toc": {
+    "section1": "Reportagen",
+    "section2": "Ressorts",
+    "section3": "Rezepte",
+    "section4": "Vorratskammer",
+    "heading": "Inhaltsverzeichnis",
+    "subheading": "Zweiundvierzig Seiten, sechs Ressorts, eine Titelgeschichte und zwölf Rezepte aus einer gut sortierten Vorratskammer."
+  },
+  "departments": {
+    "weekendHeading": "Fünf Dinge, die sich am Wochenende lohnen",
+    "weekendDek": "Kurze Liste. Ohne Theater. Fünf Rezepte, die eine gute Vorratskammer ohnehin schon machen will.",
+    "pantryHeading": "Was diesen Monat in die Vorratskammer kommt",
+    "pantryDek": "Fünf Gläser, Flaschen und Beutel, die ihren Platz im Regal verdienen — mit der Rechnung dahinter."
+  },
+  "editorsNote": {
+    "label": "Editorial",
+    "body": "Wir haben Larderlab gegründet, weil das Koch-Internet zwei Tonlagen kannte — Rezept-des-Tages und laute Diätrhetorik — und kaum etwas dazwischen. Also haben wir das Dazwischen gebaut. Ein Magazin für die, die ihre Küche schon im Griff haben. Willkommen zu Heft vier.",
+    "signature": "— Helena, Chefredakteurin"
+  },
+  "feature": {
+    "byline": "Von {author}",
+    "issueRef": "Heft 04 · April 2026",
+    "lastReviewed": "Zuletzt redigiert {date}",
+    "sources": "Weiterlesen",
+    "alsoFromIssue": "Auch in diesem Heft",
+    "drophead": "Eine Vorratsgeschichte, gut gekocht.",
+    "leadCaption": "Ein Teller langsam geschmorter Bohnen, das Titelgericht — fotografiert in unserer Versuchsküche, später Nachmittag.",
+    "translationBanner": "Diese Reportage erscheint zunächst auf Englisch. Die deutsche Übersetzung steht in der Redaktion. Das Original lesen Sie unten."
+  },
+  "recipeCard": {
+    "title": "Die eintopfigen Bohnen",
+    "yieldLabel": "Ergibt",
+    "yieldValue": "4 Portionen",
+    "activeLabel": "Arbeitszeit",
+    "activeValue": "20 Minuten",
+    "totalLabel": "Gesamtzeit",
+    "totalValue": "1 Stunde 30 Minuten",
+    "difficultyLabel": "Schwierigkeit",
+    "difficultyValue": "Vorratskammer-leicht",
+    "ingredientsHeading": "Zutaten",
+    "methodHeading": "Zubereitung",
+    "notesHeading": "Notizen",
+    "storageHeading": "Aufbewahrung",
+    "ingredient1": "1 Tasse weiße Bohnen, getrocknet, über Nacht eingeweicht",
+    "ingredient2": "2 EL gutes Olivenöl",
+    "ingredient3": "1 gelbe Zwiebel, mit Wurzel halbiert",
+    "ingredient4": "4 Knoblauchzehen, angedrückt",
+    "ingredient5": "1 getrocknetes Lorbeerblatt",
+    "ingredient6": "1 Streifen Zitronenschale, ohne Weißes",
+    "ingredient7": "Meersalz, nach Geschmack",
+    "ingredient8": "Eine Handvoll weicher Kräuter zum Anrichten",
+    "method1": "Die eingeweichten Bohnen abgießen und in einen schweren, ofenfesten Topf geben. Mit kaltem Wasser bedecken, bis die Bohnen einen Zoll unter Wasser stehen.",
+    "method2": "Die Zwiebelhälften mit der Schnittfläche nach unten in die Bohnen drücken, Knoblauch und Lorbeerblatt darum verteilen, die Zitronenschale obenauf legen.",
+    "method3": "Im Ofen bei 150 °C zugedeckt garen, bis die Bohnen innen cremig sind. Nach 60 Minuten prüfen, dann alle 15 Minuten.",
+    "method4": "Erst salzen, wenn die Bohnen fast weich sind — sonst wird die Haut zäh.",
+    "method5": "Zwiebel und Zitronenschale herausnehmen. Mit Olivenöl beträufeln, Kräuter darüber, mit dickem Toast servieren.",
+    "notes": "Wir mögen hier eine schnellgare weiße Bohne — Cannellini, Alubia Blanca oder Käferbohne. Der Sud ist das Beste daran; bitte nicht weggießen.",
+    "storage": "Abgekühlt, zugedeckt, bis zu vier Tage im Kühlschrank. Friert in seinem Sud bis zu zwei Monate gut ein."
+  },
+  "pullQuote": {
+    "body": "Eine gute Vorratskammer ist kein Lager. Sie ist ein System, das leise das Abendessen kocht, bevor man entschieden hat, was Abendessen ist.",
+    "attrib": "Helena Brookes, Chefredakteurin"
+  },
+  "newsletter": {
+    "eyebrow": "Sonntagsvorrat",
+    "heading": "Ein Brief. Eine Rezeptkarte. Sonntags.",
+    "body": "Ein kurzer redaktioneller Brief, eine getestete Rezeptkarte aus einer gut bestückten Vorratskammer und die Empfehlungen, die wir diese Woche ins Regal stellen würden. Kein Lärm.",
+    "emailLabel": "E-Mail-Adresse",
+    "placeholder": "sie@beispiel.de",
+    "submit": "Abonnieren",
+    "submitLoading": "Wird gesendet…",
+    "success": "Danke. Der nächste Sonntagsvorrat ist auf dem Weg.",
+    "consentBefore": "Mit dem Abonnement stimmen Sie unseren",
+    "privacyLink": "Datenschutzhinweisen",
+    "consentAfter": " zu. Ein Brief jeden Sonntag. Jederzeit kündbar."
+  },
+  "footer": {
+    "leadParagraph": "Larderlab ist eine kleine Redaktion, die über Vorratskammer-Architektur, Zutaten und das langsame Handwerk schreibt, eine Küche gut zu bestücken. Unabhängig. Belegt. Nicht von Herstellern bezahlt.",
+    "masthead": "Impressum",
+    "departments": "Ressorts",
+    "finePrint": "Kleingedrucktes",
+    "disclaimer": "Larderlab ist redaktionelle Esskultur. Nichts hier ist medizinische oder ernährungsmedizinische Beratung. Bei gesundheitlich relevanten Ernährungsfragen sprechen Sie bitte mit einer Ärztin oder einer zertifizierten Ernährungsberatung.",
+    "imprintEdition": "{volume} · Heft 04 · April 2026"
+  },
+  "trustPages": {
+    "about": {
+      "metaTitle": "Impressum — Larderlab",
+      "metaDescription": "Wer wir sind, was wir veröffentlichen — und warum es uns gibt.",
+      "h1": "Das Impressum",
+      "body": [
+        "Larderlab ist ein kleines, unabhängiges Food-Magazin. Wir schreiben über Vorratskammer-Architektur, Zutaten, Technik und das langsame Handwerk, eine Küche gut zu bestücken.",
+        "Wir haben Larderlab gegründet, weil das Koch-Internet zwei Tonlagen kannte — Rezept-des-Tages und Diätlärm — und fast nichts dazwischen. Also haben wir das Dazwischen gemacht.",
+        "## Was wir veröffentlichen",
+        "Reportagen, Ressorts, Rezeptkarten, Vorratsessays und Zutaten-Deep-Dives. Jedes Heft hat eine Titelgeschichte, mehrere Ressorts und eine Reihe Rezepte, die sich aus einer gut sortierten Vorratskammer kochen lassen.",
+        "## Was wir nicht tun",
+        "Diätpläne verkaufen. Abnehmzahlen drucken. Geld für redaktionelle Erwähnungen nehmen. Affiliate-Links beeinflussen unsere Empfehlungen nicht.",
+        "## Kontakt",
+        "hello@larderlab.com. Leserbriefe lesen wir wöchentlich."
+      ]
+    },
+    "editorialStandards": {
+      "metaTitle": "Redaktionsstandards — Larderlab",
+      "metaDescription": "Wie wir recherchieren, belegen und redigieren.",
+      "h1": "Redaktionsstandards",
+      "body": [
+        "Larderlab ist unabhängiges Food-Journalismus. Wir folgen den unaufgeregten Regeln, die guten Magazinen seit jeher Vertrauen verschaffen.",
+        "## Quellen",
+        "Jede Behauptung mit einer Zahl ist belegt. Für Lagerung und Lebensmittelsicherheit bevorzugen wir begutachtete Forschung und behördliche Empfehlungen; für Geschmack, Technik und Vorratsstrategie zählt unsere Arbeit in der Versuchsküche, mit Namen unter dem Text.",
+        "## Preise",
+        "Bei jeder Produktempfehlung steht der beobachtete Preis, der Händler und das Datum. Preise wandern. Wir prüfen pro Heft.",
+        "## Keine Bezahlung für Platzierung",
+        "Wir nehmen kein Geld von Herstellern, Vertrieben oder PR-Agenturen für redaktionelle Erwähnungen.",
+        "## Affiliate-Links",
+        "Manche Produktlinks sind Affiliate-Links. Sie ändern unsere Reihenfolge nie, und wir weisen darauf hin.",
+        "## Korrekturen",
+        "Wenn wir uns irren, korrigieren wir offen und mit Datum."
+      ]
+    },
+    "methodology": {
+      "metaTitle": "Wie wir kochen — Larderlab",
+      "metaDescription": "Wie wir Rezepte entwickeln, Vorratsstrategien testen und Zutaten bewerten.",
+      "h1": "Wie wir kochen",
+      "body": [
+        "Diese Seite beschreibt, was wir testen, wie wir belegen — und was unter unserem Impressum nie steht.",
+        "## Rezepte",
+        "Jedes Rezept wird in unserer Versuchsküche mindestens dreimal gekocht, von zwei verschiedenen Köchen, auf einem Haushaltsherd. Wir drucken Arbeitszeit, Gesamtzeit, Ergebnis und Schwierigkeit. Wir drucken Notizen, wenn etwas misslingt.",
+        "## Vorratsstrategie",
+        "Vorrats-Essays stehen auf zwei Beinen: lebensmittelchemische Literatur und unsere eigene Aufzeichnung dessen, was in einer realen Küche tatsächlich hält.",
+        "## Zutaten-Deep-Dives",
+        "Vier Teile: was es ist, was die Forschung sagt, wie der reale Gebrauch aussieht — und wo wir landen.",
+        "## Fotografie",
+        "Tellerfotos entstehen in unserer Versuchsküche, sofern nicht anders vermerkt. Wir richten kein Essen her. Wir kaschieren keine misslungenen Versuche.",
+        "## Was wir nie tun",
+        "Diätpläne verkaufen, Abnehmzahlen drucken, redaktionelle Plätze verkaufen, Wörter wie „Superfood\" oder „Detox\" benutzen."
+      ]
+    },
+    "methodologyV12": {
+      "metaTitle": "Wie wir kochen · v1.2 — Larderlab",
+      "metaDescription": "Die Langfassung unserer redaktionellen Methode, datiert und versioniert.",
+      "eyebrow": "Wie wir kochen · v1.2",
+      "h1": "Die Küchen-Rubrik im Detail.",
+      "intro": "Fünf kurze Standards, die ein Beitrag passieren muss, bevor er ins Heft kommt. Wir versionieren sie wie Software.",
+      "step1Title": "Mehrfach gekocht",
+      "step1Body": "Jedes Rezept wird mindestens dreimal gekocht, von zwei Köchen. Auf der Seite steht die Fassung, die Runde drei überstanden hat.",
+      "step2Title": "Belegt, wo Zahlen wohnen",
+      "step2Body": "Lagerungstemperaturen, Oxidationsraten, Salzanteile — alles mit einer Zahl ist belegt. Geschmacksurteile signiert die Köchin.",
+      "step3Title": "Vorratstauglich, nicht inszeniert",
+      "step3Body": "Wir kochen auf einem Haushaltsherd. Geschirr, das man kaufen kann. Die Rezepte stützen sich auf die Vorratskammer, die wir beschreiben.",
+      "step4Title": "Auf Wärme redigiert",
+      "step4Body": "Jeder Entwurf passiert eine Tonlagenprüfung. Kein Belehren, keine Diätsprache, keine Überraschungs-Verkäufe.",
+      "step5Title": "Fehler offen korrigiert",
+      "step5Body": "Wenn wir uns irren, steht unten auf der Seite eine datierte Korrekturnotiz, mit Link zur neuen Fassung.",
+      "changeLogTitle": "Änderungsprotokoll",
+      "changeLog12": "v1.2 · April 2026 · Rezeptkarte standardisiert. Tellerfoto-Herkunft sichtbar in der Bildunterschrift. Aufbewahrungsblock in jedem Rezept.",
+      "changeLog11": "v1.1 · Februar 2026 · Versuchsküchen-Signatur eingeführt. Vorratsstrategie-Rahmen dokumentiert.",
+      "changeLog10": "v1.0 · Januar 2026 · Erstausgabe — Drei-Köche-Regel, Quellen, Vier-Teile-Rahmen für Zutaten."
+    },
+    "pipeline": {
+      "metaTitle": "Was kocht — Larderlab",
+      "metaDescription": "Ein offenes Logbuch dessen, was wir für das nächste Heft testen, schreiben und fotografieren.",
+      "eyebrow": "Was kocht",
+      "h1": "Was auf dem Herd steht.",
+      "intro": "Ein offenes Logbuch dessen, was wir für das nächste Heft testen. Wöchentlich aktualisiert. Wir teilen das, weil Geheimhaltung den Werbeagenturen gehört.",
+      "researching": "Auf dem Prüfstand",
+      "drafted": "Entwurf, in der Schlussredaktion",
+      "scheduled": "Eingeplant für Heft 05",
+      "items": [
+        { "title": "Die zwölf Saucen, die jedes Regal verdient", "status": "researching" },
+        { "title": "Olivenöl altert — auf Deutsch erklärt", "status": "researching" },
+        { "title": "Ein Feldführer durch die Fermentationsregeln", "status": "drafted" },
+        { "title": "Warum getrocknete Bohnen mit Salz zäher werden", "status": "drafted" },
+        { "title": "Reis, sortiert nach Kosten pro Portion", "status": "scheduled" },
+        { "title": "Die Fünf-Minuten-Vorratstriage", "status": "scheduled" }
+      ]
+    },
+    "privacy": {
+      "metaTitle": "Datenschutz — Larderlab",
+      "metaDescription": "Was wir erheben, was nicht — und wie wir mit Leserdaten umgehen.",
+      "h1": "Datenschutzhinweise",
+      "body": [
+        "Diese Seite erklärt, wie Larderlab Daten erhebt, nutzt und teilt.",
+        "## Was wir erheben",
+        "Standard-Server-Analytik — besuchte Seiten, Verweisende URL, ungefähre Region, Gerät, Browser. Wenn Sie unseren Sonntagsbrief abonnieren, Ihre E-Mail-Adresse.",
+        "## Was wir nicht erheben",
+        "Ihren Namen. Ihren genauen Standort. Alles darüber Hinausgehende, was Sie persönlich identifiziert.",
+        "## Cookies",
+        "Wenige — Sitzungskontinuität, Analytik, Einwilligungsspeicher. Keine Werbe-Cookies Dritter.",
+        "## Ihre Rechte",
+        "Auskunft, Berichtigung, Löschung, Widerspruch, Übertragbarkeit. privacy@larderlab.com.",
+        "## Kontakt",
+        "privacy@larderlab.com."
+      ]
+    },
+    "terms": {
+      "metaTitle": "Nutzungsbedingungen — Larderlab",
+      "metaDescription": "Die Bedingungen, die für die Nutzung von larderlab.com gelten.",
+      "h1": "Nutzungsbedingungen",
+      "body": [
+        "Mit der Nutzung von larderlab.com stimmen Sie diesen Bedingungen zu.",
+        "## Redaktion, keine Beratung",
+        "Larderlab veröffentlicht redaktionelle Esskultur. Nichts auf dieser Seite ist medizinische oder ernährungsmedizinische Beratung. Wenn ein Speiseplan in Ihre Gesundheit eingreift, sprechen Sie bitte mit einer Ärztin oder Ernährungsberatung.",
+        "## Genauigkeit",
+        "Wir arbeiten sorgfältig. Wir belegen. Wir aktualisieren. Aber wir sind nicht unfehlbar. Inhalte werden as-is bereitgestellt.",
+        "## Affiliate-Links",
+        "Manche Links sind provisioniert. Sie beeinflussen unsere Auswahl nicht.",
+        "## Geistiges Eigentum",
+        "Alle redaktionellen Inhalte gehören Larderlab oder sind an uns lizenziert. Auszüge dürfen mit Quellenangabe geteilt werden.",
+        "## Kontakt",
+        "hello@larderlab.com."
+      ]
+    },
+    "affiliateDisclosure": {
+      "metaTitle": "Affiliate-Hinweis — Larderlab",
+      "metaDescription": "Wie Affiliate-Links bei Larderlab funktionieren — und was sie nicht ändern.",
+      "h1": "Affiliate-Hinweis",
+      "body": [
+        "Larderlab nimmt an einigen wenigen Affiliate-Programmen teil. Manche Produktlinks bringen uns eine Provision, ohne Aufpreis für Sie.",
+        "## Wie wir sie nutzen",
+        "Wir verlinken Produkte nach ihren Verdiensten, nicht nach ihrer Provision. Wir weisen auf jeder Seite darauf hin. Wir testen Spitzenreiter gegen Alternativen ohne Provisionsbindung.",
+        "## Programme",
+        "Amazon Associates, ShareASale, Awin sowie direkte Programme einzelner Hersteller.",
+        "## Kontakt",
+        "Bedenken? hello@larderlab.com."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Leserbriefe — Larderlab",
+      "metaDescription": "So erreichen Sie uns — Korrekturen, Themenhinweise, Rezeptrückmeldungen.",
+      "h1": "Leserbriefe an die Redaktion",
+      "body": [
+        "## Allgemein",
+        "hello@larderlab.com — Rückmeldungen, Themenhinweise, Vorratskammerfragen.",
+        "## Korrekturen",
+        "corrections@larderlab.com — etwas falsch entdeckt? Wir antworten innerhalb von fünf Werktagen und korrigieren offen.",
+        "## Rezeptrückmeldungen",
+        "recipes@larderlab.com — schreiben Sie, wie ein Rezept in Ihrer Küche gelandet ist. Daraus speist sich der Notizen-Block des nächsten Heftes.",
+        "## Datenschutz",
+        "privacy@larderlab.com.",
+        "## Antwortzeiten",
+        "Wir sind ein kleines Team. Wir lesen alles. Wir antworten auf die meisten Briefe innerhalb von fünf Werktagen."
+      ]
+    },
+    "newsletter": {
+      "metaTitle": "Sonntagsvorrat — Larderlab",
+      "metaDescription": "Ein kurzer redaktioneller Brief, eine getestete Rezeptkarte, jeden Sonntag.",
+      "h1": "Sonntagsvorrat",
+      "body": [
+        "Ein kurzer redaktioneller Brief, eine getestete Rezeptkarte aus einer gut bestückten Vorratskammer und die Empfehlungen, die wir diese Woche ins Regal stellen würden. Sonntags. Sonst nichts."
+      ]
+    }
+  },
+  "errorPage": {
+    "h1": "Etwas ist auf unserer Seite angebrannt.",
+    "body": "Die Seite hat einen Fehler. Wir haben es protokolliert. Versuchen Sie es erneut oder gehen Sie zurück zum Cover.",
+    "tryAgain": "Erneut versuchen",
+    "backHome": "Zurück zum Cover"
+  },
+  "notFound": {
+    "h1": "Nicht auf der Karte.",
+    "body": "Diese Seite haben wir nicht gefunden. Vielleicht ist sie zwischen zwei Heften verschwunden. Versuchen Sie das Cover oder eines der Ressorts unten.",
+    "backHome": "Zurück zum Cover"
+  },
+  "localeSwitcher": {
+    "label": "Sprache",
+    "en": "EN", "enFull": "English",
+    "de": "DE", "deFull": "Deutsch",
+    "fr": "FR", "frFull": "Français",
+    "it": "IT", "itFull": "Italiano",
+    "es": "ES", "esFull": "Español",
+    "nl": "NL", "nlFull": "Nederlands",
+    "pl": "PL", "plFull": "Polski",
+    "sv": "SV", "svFull": "Svenska",
+    "pt": "PT", "ptFull": "Português",
+    "ro": "RO", "roFull": "Română",
+    "cs": "CS", "csFull": "Čeština",
+    "no": "NO", "noFull": "Norsk"
+  },
+  "hubPage": {
+    "crumbHome": "Cover",
+    "crumbGuides": "Ressorts",
+    "ourThesisLabel": "Aus der Redaktion",
+    "postsLive": "Erschienene Reportagen",
+    "plannedInHub": "In Planung",
+    "startHereEyebrow": "Hier anfangen",
+    "startHereTitle": "Der vollständige Leitfaden.",
+    "guideEyebrow": "Der Leitfaden",
+    "readPillar": "Reportage lesen",
+    "comparisonsEyebrow": "Die Vergleiche",
+    "comparisonsTitle": "Was wirklich anders ist.",
+    "explainersEyebrow": "Die Erklärstücke",
+    "explainersTitle": "Klarsprache, gut redigiert.",
+    "checklistsEyebrow": "Die Checklisten",
+    "checklistsTitle": "Druckbar, praktisch.",
+    "emptyBefore": "Reportagen erscheinen hier, sobald sie die Schlussredaktion passiert haben. Auf dem",
+    "emptyHomeLink": "Cover",
+    "emptyAfter": "steht, was schon erschienen ist."
+  },
+  "postType": {
+    "pillar": "Reportage",
+    "comparison": "Der Vergleich",
+    "cluster": "Das Erklärstück",
+    "listicle": "Die Liste"
+  },
+  "postChrome": {
+    "minRead": "{n} Min. Lesezeit",
+    "sourceCount": "{n} Quellen",
+    "lastReviewed": "Zuletzt redigiert {date}",
+    "translationBanner": "Diese Reportage erscheint zunächst auf Englisch. Die deutsche Übersetzung steht in der Redaktion. Das Original lesen Sie unten."
+  },
+  "cookieBanner": {
+    "bodyBefore": "Wir verwenden wenige Cookies für Analytik und Sitzungskontinuität. Keine Werbe-Cookies. Siehe",
+    "privacyLink": "Datenschutzhinweise",
+    "bodyAfter": ".",
+    "reject": "Ablehnen",
+    "accept": "Akzeptieren"
+  }
+}

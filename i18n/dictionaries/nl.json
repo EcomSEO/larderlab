@@ -1,0 +1,396 @@
+{
+  "common": {
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "skipToContent": "Naar inhoud",
+    "minRead": "{n} min leestijd",
+    "min": "{n} min",
+    "by": "Door",
+    "updated": "Bijgewerkt op {date}",
+    "lastUpdated": "Laatst bijgewerkt · {date}",
+    "openHub": "Naar de rubriek",
+    "readMore": "Lees verder",
+    "backToHome": "Terug naar de cover",
+    "tryAgain": "Opnieuw",
+    "more": "Meer"
+  },
+  "header": {
+    "logoAria": "Larderlab — de cover",
+    "issue": "Nummer 04",
+    "issueDate": "April 2026",
+    "navLarder": "De voorraadkast",
+    "navRecipes": "Recepten",
+    "navPantry": "Voorraad",
+    "navFeatures": "Reportages",
+    "navMethodology": "Redactiestatuut",
+    "navPipeline": "Wat er kookt",
+    "navAbout": "Colofon"
+  },
+  "cover": {
+    "masthead": "Larderlab",
+    "issueLine": "Nummer 04 · April 2026 · Jrg. 1",
+    "kicker": "Het voorraadkast-nummer",
+    "h1Lead": "Een",
+    "h1Lead2": "doordachte",
+    "h1End": "voor de moderne keuken.",
+    "h1Mid": "voorraadkast",
+    "lede": "Tweeënveertig pagina's over bewaarwetenschap, voorraadtriage, de twaalf sauzen die elke plank verdient — en een receptkaart voor de eenpansbonen waarvan we een maand lang zouden eten.",
+    "ctaPrimary": "Receptkaart openen",
+    "ctaSecondary": "Door het nummer bladeren",
+    "alsoInside": "Ook in dit nummer",
+    "coverLine1": "Voorraadtriage in vijf minuten",
+    "coverLine2": "De twaalf sauzen die elke plank verdient",
+    "coverLine3": "Waarom olijfolie veroudert, en wat te doen",
+    "coverLine4": "Een veldgids voor fermentatieregels",
+    "coverLine5": "De macrocalculator, opnieuw getekend",
+    "stampLabel": "Nummer",
+    "stampNum": "04"
+  },
+  "toc": {
+    "section1": "Reportages",
+    "section2": "Rubrieken",
+    "section3": "Recepten",
+    "section4": "Voorraadkast",
+    "heading": "Inhoud",
+    "subheading": "Tweeënveertig pagina's, zes rubrieken, één coververhaal, twaalf recepten uit een goed gevulde voorraadkast."
+  },
+  "departments": {
+    "weekendHeading": "Vijf dingen om dit weekend te koken",
+    "weekendDek": "Korte lijst. Zonder bombarie. Vijf recepten die een goede voorraadkast toch al wil maken.",
+    "pantryHeading": "Wat we deze maand in de voorraadkast houden",
+    "pantryDek": "Vijf potten, flessen en zakken die hun plek verdienen — met de rekenkunde erachter."
+  },
+  "editorsNote": {
+    "label": "Van de redactie",
+    "body": "We zijn met Larderlab begonnen omdat het kookinternet maar twee tonen had — recept-van-de-dag en luide dieet-praat — en bijna niets daartussen. Dus hebben we dat tussen gemaakt. Een blad voor wie de keuken al runt. Welkom bij nummer vier.",
+    "signature": "— Helena, hoofdredacteur"
+  },
+  "feature": {
+    "byline": "Door {author}",
+    "issueRef": "Nummer 04 · April 2026",
+    "lastReviewed": "Laatst geredigeerd op {date}",
+    "sources": "Verder lezen",
+    "alsoFromIssue": "Ook uit dit nummer",
+    "drophead": "Een voorraadkast-verhaal, goed gegaard.",
+    "leadCaption": "Een bord langzaam gegaarde bonen, het cover-gerecht — gefotografeerd in onze testkeuken, laat in de middag.",
+    "translationBanner": "Deze reportage is voorlopig in het Engels. De Nederlandse vertaling staat in de redactie. Lees het origineel hieronder."
+  },
+  "recipeCard": {
+    "title": "De eenpansbonen",
+    "yieldLabel": "Voor",
+    "yieldValue": "4 personen",
+    "activeLabel": "Werktijd",
+    "activeValue": "20 minuten",
+    "totalLabel": "Totaal",
+    "totalValue": "1 uur 30",
+    "difficultyLabel": "Moeilijkheid",
+    "difficultyValue": "Voorraadkast-makkelijk",
+    "ingredientsHeading": "Ingrediënten",
+    "methodHeading": "Bereiding",
+    "notesHeading": "Notities",
+    "storageHeading": "Bewaren",
+    "ingredient1": "1 kop gedroogde witte bonen, een nacht geweekt",
+    "ingredient2": "2 el goede olijfolie",
+    "ingredient3": "1 gele ui, met wortelaanzet doormidden",
+    "ingredient4": "4 teentjes geplette knoflook",
+    "ingredient5": "1 gedroogd laurierblaadje",
+    "ingredient6": "1 reepje citroenrasp, zonder wit",
+    "ingredient7": "Zeezout, naar smaak",
+    "ingredient8": "Een handvol zachte kruiden ter afwerking",
+    "method1": "Giet de bonen af en doe ze in een zware ovenvaste pan. Schenk koud water tot twee centimeter boven de bonen.",
+    "method2": "Druk de uihelften met de snijkant naar beneden, leg knoflook en laurier eromheen, citroenrasp boven op.",
+    "method3": "Met deksel in de oven op 150 °C tot de bonen romig zijn vanbinnen. Controleer na 60 minuten, daarna elke 15.",
+    "method4": "Pas zouten aan het einde — anders worden de schillen taai.",
+    "method5": "Haal ui en citroenrasp eruit. Olie erover, kruiden erbij, opdienen met dik geroosterd brood.",
+    "notes": "Een snel garende witte boon is hier het beste — cannellini, alubia blanca of een prinsessenboon. Het kookvocht is het mooiste van het gerecht; gooi het niet weg.",
+    "storage": "Afgekoeld, met deksel, vier dagen in de koelkast. Vriest goed in zijn vocht, tot twee maanden."
+  },
+  "pullQuote": {
+    "body": "Een goede voorraadkast is geen voorraad. Het is een systeem dat avondeten kookt nog voor je hebt besloten wat avondeten is.",
+    "attrib": "Helena Brookes, hoofdredacteur"
+  },
+  "newsletter": {
+    "eyebrow": "Zondags Voorraadbericht",
+    "heading": "Eén brief. Eén receptkaart. Zondag.",
+    "body": "Een korte redactionele brief, een geteste receptkaart die je uit een goed gevulde voorraadkast kookt, en de prijscheck van de week.",
+    "emailLabel": "E-mailadres",
+    "placeholder": "jij@voorbeeld.nl",
+    "submit": "Aanmelden",
+    "submitLoading": "Bezig…",
+    "success": "Bedankt. Het volgende bericht is onderweg.",
+    "consentBefore": "Door je aan te melden ga je akkoord met ons",
+    "privacyLink": "privacybeleid",
+    "consentAfter": ". Eén brief op zondag. Op elk moment opzegbaar."
+  },
+  "footer": {
+    "leadParagraph": "Larderlab is een kleine redactie die schrijft over voorraadkast-architectuur, ingrediënten en het langzame ambacht van een goed bevoorrade keuken. Onafhankelijk. Onderbouwd. Niet betaald door fabrikanten.",
+    "masthead": "Colofon",
+    "departments": "Rubrieken",
+    "finePrint": "Kleine lettertjes",
+    "disclaimer": "Larderlab is een redactioneel blad. Niets hier is medisch of voedingsadvies. Als een eetpatroon je gezondheid raakt, vraag het je arts of diëtist.",
+    "imprintEdition": "{volume} · Nummer 04 · April 2026"
+  },
+  "trustPages": {
+    "about": {
+      "metaTitle": "Masthead — Larderlab",
+      "metaDescription": "Who we are, what we publish, and why we built a magazine for cooks who already run the kitchen.",
+      "h1": "The masthead",
+      "body": [
+        "Larderlab is a small, independent food magazine. We write about pantry architecture, ingredients, technique, and the slow craft of stocking a kitchen well.",
+        "We started Larderlab because the cooking internet had two registers — chase-the-trend recipe blogs and shouty diet talk — and almost nothing in between. So we built the in-between. A magazine for the cook who already runs the kitchen.",
+        "## What we publish",
+        "We publish features, departments, recipe cards, pantry essays, and ingredient deep-dives. Every issue closes with one cover story, several departments, and a sealed-shut envelope of recipes you can cook from a stocked pantry.",
+        "## What we don't do",
+        "We don't sell diet plans. We don't publish weight-loss numbers. We don't accept payment for editorial coverage. Our affiliate links never affect rankings.",
+        "## How to reach us",
+        "Email hello@larderlab.com. Letters to the editor are read every week."
+      ]
+    },
+    "editorialStandards": {
+      "metaTitle": "Editorial standards — Larderlab",
+      "metaDescription": "How Larderlab reports, sources, and edits.",
+      "h1": "Editorial standards",
+      "body": [
+        "Larderlab is independent food writing. The reader trust we want to earn is built on the same boring habits the best magazines have always practised.",
+        "## Sourcing",
+        "Every claim with a number behind it is cited. We prefer peer-reviewed papers and government food-safety guidance for shelf-life and storage; for taste, technique, and pantry strategy we rely on our own test-kitchen work, named in the byline.",
+        "## Pricing",
+        "Every product recommendation shows the price we observed, the retailer, and the date. Prices drift. We re-check on each issue.",
+        "## No payment for placement",
+        "We do not accept money from manufacturers, distributors, or PR agencies in exchange for editorial coverage.",
+        "## Affiliate links",
+        "Some product links are affiliate links. They never affect our rankings, and we disclose on every page where they appear.",
+        "## Corrections",
+        "When we are wrong, we correct in the open and timestamp the change."
+      ]
+    },
+    "methodology": {
+      "metaTitle": "How we cook — Larderlab",
+      "metaDescription": "How Larderlab develops a recipe, tests a pantry strategy, and rates an ingredient.",
+      "h1": "How we cook",
+      "body": [
+        "This is the editorial standards page for Larderlab — what we test, how we cite, and what we'll never do under the byline.",
+        "## Recipes",
+        "Every recipe in Larderlab is cooked at least three times in our test kitchen, by at least two different cooks, on a domestic range — not a restaurant burner. We publish active time, total time, yield, and difficulty. We publish notes when something fails.",
+        "## Pantry strategy",
+        "Pantry essays are built from food-science literature (storage temperatures, water activity, oxidation kinetics for fats) and from our own running record of what actually keeps in a real kitchen.",
+        "## Ingredient deep-dives",
+        "When we write about an ingredient — olive oil, dried beans, garam masala, a particular variety of rice — we follow a four-part frame: what is it, what's the literature on it, what's the real-world exposure or use case, and where do we land.",
+        "## Photography",
+        "Every plate photo on Larderlab is shot in our own test kitchen unless otherwise captioned. We don't dress food. We don't hide what didn't work.",
+        "## What we will not do",
+        "Sell diet plans. Publish weight-loss numbers. Accept payment for editorial placement. Use 'superfood', 'detox', 'clean', or 'miracle' under our masthead."
+      ]
+    },
+    "methodologyV12": {
+      "metaTitle": "How we cook · v1.2 — Larderlab",
+      "metaDescription": "The long-form spec for Larderlab's editorial method, versioned and dated.",
+      "eyebrow": "How we cook · v1.2",
+      "h1": "The kitchen rubric, in detail.",
+      "intro": "Five short standards a feature has to clear before it goes into the issue. We version them like software. The page below is the long-form one.",
+      "step1Title": "Cooked, more than once",
+      "step1Body": "Every recipe in Larderlab is cooked at least three times by two cooks. The recipe card on the page is the version that survived round three.",
+      "step2Title": "Cited where numbers live",
+      "step2Body": "Storage temperatures, oxidation rates, salt percentages — anything with a number behind it is sourced. Taste calls are signed by the cook who made them.",
+      "step3Title": "Pantry-real, not staged",
+      "step3Body": "We cook on a domestic range. Pots and pans you can buy. We test recipes against the pantry we describe — if the cover story names twelve sauces, the recipes lean on those twelve.",
+      "step4Title": "Edited for warmth",
+      "step4Body": "Every draft passes a voice review. No hectoring, no diet talk, no surprise upsells. The reader is a cook, not a target.",
+      "step5Title": "Errors corrected in the open",
+      "step5Body": "When we're wrong, the page carries a dated note at the bottom and we link to the new version.",
+      "changeLogTitle": "Change log",
+      "changeLog12": "v1.2 · April 2026 · Recipe-card structure standardised. Plate-photo provenance now visible in caption. Added storage block to every recipe.",
+      "changeLog11": "v1.1 · February 2026 · Test-kitchen sign-off line introduced. Pantry strategy frame documented.",
+      "changeLog10": "v1.0 · January 2026 · Initial public spec — three-cook rule, sourcing requirements, the four-part ingredient frame."
+    },
+    "pipeline": {
+      "metaTitle": "What's cooking — Larderlab",
+      "metaDescription": "An open log of what we're testing, drafting, and shooting for the next issue.",
+      "eyebrow": "What's cooking",
+      "h1": "What's on the burner.",
+      "intro": "An open log of every feature, recipe card, and ingredient deep-dive we're testing for the next issue. Updated each week. We share this because secrecy belongs to ad agencies.",
+      "researching": "On the test bench",
+      "drafted": "Drafted, in copy edit",
+      "scheduled": "Scheduled for issue 05",
+      "items": [
+        {
+          "title": "The twelve sauces every pantry earns",
+          "status": "researching"
+        },
+        {
+          "title": "Olive oil ageing, in plain English",
+          "status": "researching"
+        },
+        {
+          "title": "A field guide to fermentation rules",
+          "status": "drafted"
+        },
+        {
+          "title": "Why your dried beans get tougher with salt",
+          "status": "drafted"
+        },
+        {
+          "title": "Rice, ranked by cost-per-portion",
+          "status": "scheduled"
+        },
+        {
+          "title": "The five-minute pantry triage",
+          "status": "scheduled"
+        }
+      ]
+    },
+    "privacy": {
+      "metaTitle": "Privacy policy — Larderlab",
+      "metaDescription": "What we collect, what we don't, and how we handle reader data.",
+      "h1": "Privacy policy",
+      "body": [
+        "This page describes how Larderlab collects, uses, and shares information when you visit larderlab.com.",
+        "## What we collect",
+        "Standard server analytics — pages visited, referring URL, approximate location, device, browser. If you subscribe to our Sunday letter, your email address.",
+        "## What we don't collect",
+        "Your name. Your precise location. Anything that identifies you personally beyond what you give us.",
+        "## Cookies",
+        "A small number — session continuity, analytics, and a consent record. No third-party advertising cookies.",
+        "## Your rights",
+        "Access, correction, deletion, objection, portability. Email privacy@larderlab.com.",
+        "## Contact",
+        "privacy@larderlab.com."
+      ]
+    },
+    "terms": {
+      "metaTitle": "Terms of service — Larderlab",
+      "metaDescription": "The terms that apply when you use larderlab.com.",
+      "h1": "Terms of service",
+      "body": [
+        "By using larderlab.com you agree to these terms.",
+        "## Editorial, not advice",
+        "Larderlab publishes editorial food writing. Nothing on this site is medical or nutrition advice for a specific condition. If a meal plan is going to interact with your health, talk to a doctor or registered dietitian.",
+        "## Accuracy",
+        "We work hard to be accurate. We cite. We update. But we are not infallible. Content is provided as-is.",
+        "## Affiliate links",
+        "Some links earn us a commission. They never affect our editorial rankings.",
+        "## Intellectual property",
+        "All editorial content is owned by Larderlab or licensed to us. You may share excerpts with attribution.",
+        "## Contact",
+        "hello@larderlab.com."
+      ]
+    },
+    "affiliateDisclosure": {
+      "metaTitle": "Affiliate disclosure — Larderlab",
+      "metaDescription": "How affiliate links work on Larderlab and what they do — and don't — affect.",
+      "h1": "Affiliate disclosure",
+      "body": [
+        "Larderlab participates in a small number of affiliate programs. Some product links earn us a commission when you buy through them, at no additional cost to you.",
+        "## How we use them",
+        "We link to products we recommend on their merits, not their commission rate. We disclose on every page that includes affiliate links. We test top picks against alternatives we don't earn commission from.",
+        "## Programs",
+        "Amazon Associates, ShareASale, Awin, and direct programs with selected suppliers.",
+        "## Why we're OK with it",
+        "Affiliate links align our interests with yours: we only earn when we recommend something you actually buy and find useful.",
+        "If you have concerns, email hello@larderlab.com."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Letters to the editor — Larderlab",
+      "metaDescription": "How to reach us — corrections, story tips, recipe feedback.",
+      "h1": "Letters to the editor",
+      "body": [
+        "## General",
+        "hello@larderlab.com — feedback, story tips, pantry questions, everything else.",
+        "## Corrections",
+        "corrections@larderlab.com — spotted something wrong? We want to know. We respond within five working days and publish corrections in the open.",
+        "## Recipe feedback",
+        "recipes@larderlab.com — cooked one of ours? Tell us how it landed in your kitchen. The next issue's notes block is built on letters from this address.",
+        "## Privacy",
+        "privacy@larderlab.com — anything GDPR or CCPA-related.",
+        "## Response times",
+        "We are a small team. We read everything. We answer most letters within five working days."
+      ]
+    },
+    "newsletter": {
+      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaDescription": "One short editorial letter, one tested recipe card, every Sunday.",
+      "h1": "The Sunday Larder",
+      "body": [
+        "One short editorial letter, one tested recipe card you can cook from a stocked pantry, and the picks we'd put on the shelf this week. No fire-hose, no hype, no upsells. Sundays only."
+      ]
+    }
+  },
+  "errorPage": {
+    "h1": "Bij ons is iets aangebrand.",
+    "body": "De pagina liep op een fout. We hebben het genoteerd. Probeer het opnieuw of ga terug naar de cover.",
+    "tryAgain": "Opnieuw",
+    "backHome": "Terug naar de cover"
+  },
+  "notFound": {
+    "h1": "Niet op de kaart.",
+    "body": "Die pagina vinden we niet. Misschien is hij tussen twee nummers verdwenen. Probeer de cover of een rubriek hieronder.",
+    "backHome": "Terug naar de cover"
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
+  },
+  "hubPage": {
+    "crumbHome": "Cover",
+    "crumbGuides": "Rubrieken",
+    "ourThesisLabel": "Van de redactie",
+    "postsLive": "Reportages verschenen",
+    "plannedInHub": "In voorbereiding",
+    "startHereEyebrow": "Begin hier",
+    "startHereTitle": "De volledige gids.",
+    "guideEyebrow": "De gids",
+    "readPillar": "Lees de reportage",
+    "comparisonsEyebrow": "De vergelijkingen",
+    "comparisonsTitle": "Wat echt anders is.",
+    "explainersEyebrow": "De uitleg",
+    "explainersTitle": "In klare taal, goed geredigeerd.",
+    "checklistsEyebrow": "De checklists",
+    "checklistsTitle": "Afdrukbaar, praktisch.",
+    "emptyBefore": "Reportages komen hier zodra de eindredactie ze vrijgeeft. Zie de",
+    "emptyHomeLink": "cover",
+    "emptyAfter": "voor wat al verschenen is."
+  },
+  "postType": {
+    "pillar": "Reportage",
+    "comparison": "De vergelijking",
+    "cluster": "De uitleg",
+    "listicle": "De lijst"
+  },
+  "postChrome": {
+    "minRead": "{n} min leestijd",
+    "sourceCount": "{n} bronnen",
+    "lastReviewed": "Laatst geredigeerd op {date}",
+    "translationBanner": "Deze reportage is voorlopig in het Engels. De Nederlandse vertaling staat in de redactie. Lees het origineel hieronder."
+  },
+  "cookieBanner": {
+    "bodyBefore": "We gebruiken een paar cookies voor analytics en sessie. Geen advertentie-cookies. Zie ons",
+    "privacyLink": "privacybeleid",
+    "bodyAfter": ".",
+    "reject": "Weigeren",
+    "accept": "Accepteren"
+  }
+}

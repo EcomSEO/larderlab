@@ -1,0 +1,396 @@
+{
+  "common": {
+    "openMenu": "Öppna meny",
+    "closeMenu": "Stäng meny",
+    "skipToContent": "Hoppa till innehåll",
+    "minRead": "{n} min läsning",
+    "min": "{n} min",
+    "by": "Av",
+    "updated": "Uppdaterad {date}",
+    "lastUpdated": "Senast uppdaterad · {date}",
+    "openHub": "Läs avdelningen",
+    "readMore": "Läs vidare",
+    "backToHome": "Tillbaka till omslaget",
+    "tryAgain": "Försök igen",
+    "more": "Mer"
+  },
+  "header": {
+    "logoAria": "Larderlab — omslaget",
+    "issue": "Nummer 04",
+    "issueDate": "April 2026",
+    "navLarder": "Skafferiet",
+    "navRecipes": "Recept",
+    "navPantry": "Förråd",
+    "navFeatures": "Reportage",
+    "navMethodology": "Redaktionell linje",
+    "navPipeline": "Vad kokar",
+    "navAbout": "Stab"
+  },
+  "cover": {
+    "masthead": "Larderlab",
+    "issueLine": "Nummer 04 · April 2026 · Årg. 1",
+    "kicker": "Skafferinumret",
+    "h1Lead": "Ett",
+    "h1Lead2": "genomtänkt",
+    "h1End": "för det moderna köket.",
+    "h1Mid": "skafferi",
+    "lede": "Fyrtiotvå sidor om förvaringsvetenskap, skafferiordning, de tolv såser varje hylla förtjänar — och ett receptkort för engryts­bönor vi gärna åt en hel månad.",
+    "ctaPrimary": "Öppna receptkortet",
+    "ctaSecondary": "Bläddra i numret",
+    "alsoInside": "Också i numret",
+    "coverLine1": "Skafferi-triage på fem minuter",
+    "coverLine2": "De tolv såser varje hylla förtjänar",
+    "coverLine3": "Varför olivolja åldras — och vad du gör",
+    "coverLine4": "En fältguide till fermenteringsregler",
+    "coverLine5": "Makrokalkylatorn, omritad",
+    "stampLabel": "Nummer",
+    "stampNum": "04"
+  },
+  "toc": {
+    "section1": "Reportage",
+    "section2": "Avdelningar",
+    "section3": "Recept",
+    "section4": "Skafferiet",
+    "heading": "Innehåll",
+    "subheading": "Fyrtiotvå sidor, sex avdelningar, ett omslag, tolv recept ur ett välhållet skafferi."
+  },
+  "departments": {
+    "weekendHeading": "Fem saker att laga i helgen",
+    "weekendDek": "Kort lista. Utan teater. Fem recept ett välhållet skafferi redan vill laga.",
+    "pantryHeading": "Vad vi håller i skafferiet den här månaden",
+    "pantryDek": "Fem burkar, flaskor och påsar som förtjänar hyllan — med räkningen bakom."
+  },
+  "editorsNote": {
+    "label": "Från redaktionen",
+    "body": "Vi startade Larderlab för att matinternet bara hade två tonlägen — dagens recept och dietbruset — och nästan inget däremellan. Så vi byggde däremellan. En tidskrift för den som redan håller i köket. Välkommen till nummer fyra.",
+    "signature": "— Helena, chefredaktör"
+  },
+  "feature": {
+    "byline": "Av {author}",
+    "issueRef": "Nummer 04 · April 2026",
+    "lastReviewed": "Senast redigerad {date}",
+    "sources": "Vidare läsning",
+    "alsoFromIssue": "Också ur numret",
+    "drophead": "Ett skafferireportage, väl tillagat.",
+    "leadCaption": "En tallrik långsamt kokta bönor, omslagsrätten — fotograferad i vår testkök, sen eftermiddag.",
+    "translationBanner": "Reportaget finns just nu på engelska. Svensk översättning ligger i redaktionen. Originalet finns nedan."
+  },
+  "recipeCard": {
+    "title": "Engrytsbönorna",
+    "yieldLabel": "Räcker till",
+    "yieldValue": "4 personer",
+    "activeLabel": "Aktiv tid",
+    "activeValue": "20 minuter",
+    "totalLabel": "Total tid",
+    "totalValue": "1 timme 30 minuter",
+    "difficultyLabel": "Svårighet",
+    "difficultyValue": "Skafferi-enkelt",
+    "ingredientsHeading": "Ingredienser",
+    "methodHeading": "Gör så här",
+    "notesHeading": "Anteckningar",
+    "storageHeading": "Förvaring",
+    "ingredient1": "1 dl torkade vita bönor, blötlagda över natten",
+    "ingredient2": "2 msk god olivolja",
+    "ingredient3": "1 gul lök, halverad med roten kvar",
+    "ingredient4": "4 vitlöksklyftor, lätt krossade",
+    "ingredient5": "1 torkat lagerblad",
+    "ingredient6": "1 strimla citronskal, utan det vita",
+    "ingredient7": "Havssalt efter smak",
+    "ingredient8": "En näve mjuka örter att avsluta med",
+    "method1": "Häll av bönorna och lägg dem i en tung ugnsfast gryta. Häll på kallt vatten så att det täcker bönorna med 2 cm.",
+    "method2": "Tryck ner lökhalvorna med snittytan nedåt, fördela vitlöken och lagerbladet runtomkring, lägg citronskalet ovanpå.",
+    "method3": "Sätt in i 150 °C ugn med lock på tills bönorna är krämiga inuti. Kolla efter 60 minuter, sedan var 15:e.",
+    "method4": "Salta först när bönorna nästan är mjuka — annars hårdnar skalen.",
+    "method5": "Plocka ur löken och citronskalet. Ringla över olivolja, strö örter, servera med tjock rostat bröd.",
+    "notes": "En snabbkokande vit böna passar bäst — cannellini, alubia blanca eller blomman. Spadet är finessen; häll inte ut det.",
+    "storage": "Avsvalnad, med lock, i kylen upp till fyra dagar. Frys bra i sitt eget spad i upp till två månader."
+  },
+  "pullQuote": {
+    "body": "Ett bra skafferi är inte ett lager. Det är ett system som tyst kokar middag innan du har bestämt vad middag är.",
+    "attrib": "Helena Brookes, chefredaktör"
+  },
+  "newsletter": {
+    "eyebrow": "Söndagsskafferiet",
+    "heading": "Ett brev. Ett receptkort. Söndag.",
+    "body": "Ett kort redaktionellt brev, ett provlagat receptkort och våra prischeckade val för veckan.",
+    "emailLabel": "E-postadress",
+    "placeholder": "du@exempel.se",
+    "submit": "Prenumerera",
+    "submitLoading": "Skickar…",
+    "success": "Tack. Nästa söndagsbrev är på väg.",
+    "consentBefore": "Genom att prenumerera godkänner du vår",
+    "privacyLink": "integritetspolicy",
+    "consentAfter": ". Ett brev varje söndag. Avsluta när du vill."
+  },
+  "footer": {
+    "leadParagraph": "Larderlab är en liten redaktion som skriver om skafferi-arkitektur, råvaror och det långsamma hantverket att hålla ett kök väl. Oberoende. Källad. Inte betald av tillverkare.",
+    "masthead": "Stab",
+    "departments": "Avdelningar",
+    "finePrint": "Finstilt",
+    "disclaimer": "Larderlab är en redaktionell tidskrift. Inget vi publicerar är medicinsk eller näringsmässig rådgivning. Om en kosthållning påverkar din hälsa, prata med din läkare eller dietist.",
+    "imprintEdition": "{volume} · Nummer 04 · April 2026"
+  },
+  "trustPages": {
+    "about": {
+      "metaTitle": "Masthead — Larderlab",
+      "metaDescription": "Who we are, what we publish, and why we built a magazine for cooks who already run the kitchen.",
+      "h1": "The masthead",
+      "body": [
+        "Larderlab is a small, independent food magazine. We write about pantry architecture, ingredients, technique, and the slow craft of stocking a kitchen well.",
+        "We started Larderlab because the cooking internet had two registers — chase-the-trend recipe blogs and shouty diet talk — and almost nothing in between. So we built the in-between. A magazine for the cook who already runs the kitchen.",
+        "## What we publish",
+        "We publish features, departments, recipe cards, pantry essays, and ingredient deep-dives. Every issue closes with one cover story, several departments, and a sealed-shut envelope of recipes you can cook from a stocked pantry.",
+        "## What we don't do",
+        "We don't sell diet plans. We don't publish weight-loss numbers. We don't accept payment for editorial coverage. Our affiliate links never affect rankings.",
+        "## How to reach us",
+        "Email hello@larderlab.com. Letters to the editor are read every week."
+      ]
+    },
+    "editorialStandards": {
+      "metaTitle": "Editorial standards — Larderlab",
+      "metaDescription": "How Larderlab reports, sources, and edits.",
+      "h1": "Editorial standards",
+      "body": [
+        "Larderlab is independent food writing. The reader trust we want to earn is built on the same boring habits the best magazines have always practised.",
+        "## Sourcing",
+        "Every claim with a number behind it is cited. We prefer peer-reviewed papers and government food-safety guidance for shelf-life and storage; for taste, technique, and pantry strategy we rely on our own test-kitchen work, named in the byline.",
+        "## Pricing",
+        "Every product recommendation shows the price we observed, the retailer, and the date. Prices drift. We re-check on each issue.",
+        "## No payment for placement",
+        "We do not accept money from manufacturers, distributors, or PR agencies in exchange for editorial coverage.",
+        "## Affiliate links",
+        "Some product links are affiliate links. They never affect our rankings, and we disclose on every page where they appear.",
+        "## Corrections",
+        "When we are wrong, we correct in the open and timestamp the change."
+      ]
+    },
+    "methodology": {
+      "metaTitle": "How we cook — Larderlab",
+      "metaDescription": "How Larderlab develops a recipe, tests a pantry strategy, and rates an ingredient.",
+      "h1": "How we cook",
+      "body": [
+        "This is the editorial standards page for Larderlab — what we test, how we cite, and what we'll never do under the byline.",
+        "## Recipes",
+        "Every recipe in Larderlab is cooked at least three times in our test kitchen, by at least two different cooks, on a domestic range — not a restaurant burner. We publish active time, total time, yield, and difficulty. We publish notes when something fails.",
+        "## Pantry strategy",
+        "Pantry essays are built from food-science literature (storage temperatures, water activity, oxidation kinetics for fats) and from our own running record of what actually keeps in a real kitchen.",
+        "## Ingredient deep-dives",
+        "When we write about an ingredient — olive oil, dried beans, garam masala, a particular variety of rice — we follow a four-part frame: what is it, what's the literature on it, what's the real-world exposure or use case, and where do we land.",
+        "## Photography",
+        "Every plate photo on Larderlab is shot in our own test kitchen unless otherwise captioned. We don't dress food. We don't hide what didn't work.",
+        "## What we will not do",
+        "Sell diet plans. Publish weight-loss numbers. Accept payment for editorial placement. Use 'superfood', 'detox', 'clean', or 'miracle' under our masthead."
+      ]
+    },
+    "methodologyV12": {
+      "metaTitle": "How we cook · v1.2 — Larderlab",
+      "metaDescription": "The long-form spec for Larderlab's editorial method, versioned and dated.",
+      "eyebrow": "How we cook · v1.2",
+      "h1": "The kitchen rubric, in detail.",
+      "intro": "Five short standards a feature has to clear before it goes into the issue. We version them like software. The page below is the long-form one.",
+      "step1Title": "Cooked, more than once",
+      "step1Body": "Every recipe in Larderlab is cooked at least three times by two cooks. The recipe card on the page is the version that survived round three.",
+      "step2Title": "Cited where numbers live",
+      "step2Body": "Storage temperatures, oxidation rates, salt percentages — anything with a number behind it is sourced. Taste calls are signed by the cook who made them.",
+      "step3Title": "Pantry-real, not staged",
+      "step3Body": "We cook on a domestic range. Pots and pans you can buy. We test recipes against the pantry we describe — if the cover story names twelve sauces, the recipes lean on those twelve.",
+      "step4Title": "Edited for warmth",
+      "step4Body": "Every draft passes a voice review. No hectoring, no diet talk, no surprise upsells. The reader is a cook, not a target.",
+      "step5Title": "Errors corrected in the open",
+      "step5Body": "When we're wrong, the page carries a dated note at the bottom and we link to the new version.",
+      "changeLogTitle": "Change log",
+      "changeLog12": "v1.2 · April 2026 · Recipe-card structure standardised. Plate-photo provenance now visible in caption. Added storage block to every recipe.",
+      "changeLog11": "v1.1 · February 2026 · Test-kitchen sign-off line introduced. Pantry strategy frame documented.",
+      "changeLog10": "v1.0 · January 2026 · Initial public spec — three-cook rule, sourcing requirements, the four-part ingredient frame."
+    },
+    "pipeline": {
+      "metaTitle": "What's cooking — Larderlab",
+      "metaDescription": "An open log of what we're testing, drafting, and shooting for the next issue.",
+      "eyebrow": "What's cooking",
+      "h1": "What's on the burner.",
+      "intro": "An open log of every feature, recipe card, and ingredient deep-dive we're testing for the next issue. Updated each week. We share this because secrecy belongs to ad agencies.",
+      "researching": "On the test bench",
+      "drafted": "Drafted, in copy edit",
+      "scheduled": "Scheduled for issue 05",
+      "items": [
+        {
+          "title": "The twelve sauces every pantry earns",
+          "status": "researching"
+        },
+        {
+          "title": "Olive oil ageing, in plain English",
+          "status": "researching"
+        },
+        {
+          "title": "A field guide to fermentation rules",
+          "status": "drafted"
+        },
+        {
+          "title": "Why your dried beans get tougher with salt",
+          "status": "drafted"
+        },
+        {
+          "title": "Rice, ranked by cost-per-portion",
+          "status": "scheduled"
+        },
+        {
+          "title": "The five-minute pantry triage",
+          "status": "scheduled"
+        }
+      ]
+    },
+    "privacy": {
+      "metaTitle": "Privacy policy — Larderlab",
+      "metaDescription": "What we collect, what we don't, and how we handle reader data.",
+      "h1": "Privacy policy",
+      "body": [
+        "This page describes how Larderlab collects, uses, and shares information when you visit larderlab.com.",
+        "## What we collect",
+        "Standard server analytics — pages visited, referring URL, approximate location, device, browser. If you subscribe to our Sunday letter, your email address.",
+        "## What we don't collect",
+        "Your name. Your precise location. Anything that identifies you personally beyond what you give us.",
+        "## Cookies",
+        "A small number — session continuity, analytics, and a consent record. No third-party advertising cookies.",
+        "## Your rights",
+        "Access, correction, deletion, objection, portability. Email privacy@larderlab.com.",
+        "## Contact",
+        "privacy@larderlab.com."
+      ]
+    },
+    "terms": {
+      "metaTitle": "Terms of service — Larderlab",
+      "metaDescription": "The terms that apply when you use larderlab.com.",
+      "h1": "Terms of service",
+      "body": [
+        "By using larderlab.com you agree to these terms.",
+        "## Editorial, not advice",
+        "Larderlab publishes editorial food writing. Nothing on this site is medical or nutrition advice for a specific condition. If a meal plan is going to interact with your health, talk to a doctor or registered dietitian.",
+        "## Accuracy",
+        "We work hard to be accurate. We cite. We update. But we are not infallible. Content is provided as-is.",
+        "## Affiliate links",
+        "Some links earn us a commission. They never affect our editorial rankings.",
+        "## Intellectual property",
+        "All editorial content is owned by Larderlab or licensed to us. You may share excerpts with attribution.",
+        "## Contact",
+        "hello@larderlab.com."
+      ]
+    },
+    "affiliateDisclosure": {
+      "metaTitle": "Affiliate disclosure — Larderlab",
+      "metaDescription": "How affiliate links work on Larderlab and what they do — and don't — affect.",
+      "h1": "Affiliate disclosure",
+      "body": [
+        "Larderlab participates in a small number of affiliate programs. Some product links earn us a commission when you buy through them, at no additional cost to you.",
+        "## How we use them",
+        "We link to products we recommend on their merits, not their commission rate. We disclose on every page that includes affiliate links. We test top picks against alternatives we don't earn commission from.",
+        "## Programs",
+        "Amazon Associates, ShareASale, Awin, and direct programs with selected suppliers.",
+        "## Why we're OK with it",
+        "Affiliate links align our interests with yours: we only earn when we recommend something you actually buy and find useful.",
+        "If you have concerns, email hello@larderlab.com."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Letters to the editor — Larderlab",
+      "metaDescription": "How to reach us — corrections, story tips, recipe feedback.",
+      "h1": "Letters to the editor",
+      "body": [
+        "## General",
+        "hello@larderlab.com — feedback, story tips, pantry questions, everything else.",
+        "## Corrections",
+        "corrections@larderlab.com — spotted something wrong? We want to know. We respond within five working days and publish corrections in the open.",
+        "## Recipe feedback",
+        "recipes@larderlab.com — cooked one of ours? Tell us how it landed in your kitchen. The next issue's notes block is built on letters from this address.",
+        "## Privacy",
+        "privacy@larderlab.com — anything GDPR or CCPA-related.",
+        "## Response times",
+        "We are a small team. We read everything. We answer most letters within five working days."
+      ]
+    },
+    "newsletter": {
+      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaDescription": "One short editorial letter, one tested recipe card, every Sunday.",
+      "h1": "The Sunday Larder",
+      "body": [
+        "One short editorial letter, one tested recipe card you can cook from a stocked pantry, and the picks we'd put on the shelf this week. No fire-hose, no hype, no upsells. Sundays only."
+      ]
+    }
+  },
+  "errorPage": {
+    "h1": "Något brände hos oss.",
+    "body": "Sidan gav ett fel. Vi har det i loggen. Försök igen eller gå tillbaka till omslaget.",
+    "tryAgain": "Försök igen",
+    "backHome": "Tillbaka till omslaget"
+  },
+  "notFound": {
+    "h1": "Utanför menyn.",
+    "body": "Sidan kan vi inte hitta. Den kanske försvann mellan två nummer. Prova omslaget eller en avdelning nedan.",
+    "backHome": "Tillbaka till omslaget"
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
+  },
+  "hubPage": {
+    "crumbHome": "Omslag",
+    "crumbGuides": "Avdelningar",
+    "ourThesisLabel": "Från redaktionen",
+    "postsLive": "Utgivna reportage",
+    "plannedInHub": "Under arbete",
+    "startHereEyebrow": "Börja här",
+    "startHereTitle": "Hela guiden.",
+    "guideEyebrow": "Guiden",
+    "readPillar": "Läs reportaget",
+    "comparisonsEyebrow": "Jämförelserna",
+    "comparisonsTitle": "Vad som faktiskt skiljer.",
+    "explainersEyebrow": "Förklaringarna",
+    "explainersTitle": "Klarspråk, väl redigerat.",
+    "checklistsEyebrow": "Checklistor",
+    "checklistsTitle": "Utskrivbara, praktiska.",
+    "emptyBefore": "Reportagen landar här när de passerat slutredigeringen. Se",
+    "emptyHomeLink": "omslaget",
+    "emptyAfter": "för det som redan publicerats."
+  },
+  "postType": {
+    "pillar": "Reportage",
+    "comparison": "Jämförelsen",
+    "cluster": "Förklaringen",
+    "listicle": "Listan"
+  },
+  "postChrome": {
+    "minRead": "{n} min läsning",
+    "sourceCount": "{n} källor",
+    "lastReviewed": "Senast redigerad {date}",
+    "translationBanner": "Reportaget finns just nu på engelska. Svensk översättning ligger i redaktionen. Originalet finns nedan."
+  },
+  "cookieBanner": {
+    "bodyBefore": "Vi använder få cookies för analys och session. Inga annonscookies. Se vår",
+    "privacyLink": "integritetspolicy",
+    "bodyAfter": ".",
+    "reject": "Avvisa",
+    "accept": "Acceptera"
+  }
+}

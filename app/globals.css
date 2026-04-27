@@ -2,23 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================================================================
+   LARDERLAB — Warm Magazine system
+   Cream paper. Olive. Tomato red. Editorial serif first.
+   Inspired by Bon Appétit, NYT Cooking, Saveur, Cherry Bombe.
+================================================================= */
+
 :root {
   color-scheme: light;
-  --color-ink: #1A2332;
-  --color-ink-deep: #0F1724;
-  --color-paper: #F5F2EB;
-  --color-paper-deep: #EBE5D5;
-  --color-copper: #B87333;
-  --color-copper-deep: #96551E;
-  --color-steel: #6B7A8A;
-  --color-steel-light: #9BA8B4;
-  --color-charcoal: #202020;
+  --color-cream: #F4EAD5;
+  --color-cream-deep: #EADBBE;
+  --color-cream-soft: #F8F1E1;
+  --color-olive: #5C6F3C;
+  --color-olive-deep: #3F4D27;
+  --color-tomato: #C4452D;
+  --color-tomato-deep: #9C2F1C;
+  --color-ink: #2A1A12;
+  --color-ink-soft: #4A3A2E;
+  --color-ash: #8A7A6E;
+  --color-ledger: #FCF6E9;
 
-  /* Legacy aliases used by shared template classes */
-  --color-sage: #B87333;
-  --color-cream: #F5F2EB;
-  --color-forest: #1A2332;
-  --color-terracotta: #B87333;
+  /* Legacy aliases used by template chrome that still references the
+     engineering palette names. Mapped to the warm palette so nothing
+     looks out of place during the redesign. */
+  --color-sage: #5C6F3C;
+  --color-forest: #3F4D27;
+  --color-terracotta: #C4452D;
+  --color-copper: #C4452D;
+  --color-copper-deep: #9C2F1C;
+  --color-steel: #8A7A6E;
+  --color-paper: #F4EAD5;
+  --color-paper-deep: #EADBBE;
+  --color-charcoal: #2A1A12;
+  --color-ink-deep: #1B1009;
 }
 
 html {
@@ -28,17 +44,16 @@ html {
 }
 
 body {
-  background-color: var(--color-paper);
-  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 17px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-/* Engineering-notebook body: a whisper of grid in the background so the
-   eye reads "spec sheet" before the copy starts. Absolutely faint — never
-   compete with tables. 56px is the signature engineering grid. */
+/* Subtle paper-grain. Sits behind everything; never competes with
+   plate photography or pull quotes. */
 body::before {
   content: "";
   position: fixed;
@@ -46,54 +61,40 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background-image:
-    linear-gradient(to right, rgba(107, 122, 138, 0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(107, 122, 138, 0.055) 1px, transparent 1px);
-  background-size: 56px 56px;
+    radial-gradient(rgba(42, 26, 18, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
 }
 body > * { position: relative; z-index: 1; }
 
-/* Explicit utility mirror — components that want the signature grid can
-   apply .grid-bg directly (e.g. an inverted ink panel or a card). */
-.grid-bg {
-  background-image:
-    linear-gradient(to right, rgba(107, 122, 138, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(107, 122, 138, 0.08) 1px, transparent 1px);
-  background-size: 56px 56px;
-}
-
-/* Custom scrollbar — thin copper-on-paper. Engineering-instrument feel. */
+/* Custom scrollbar — tomato thumb on cream track. */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-copper) var(--color-paper-deep);
+  scrollbar-color: var(--color-tomato) var(--color-cream-deep);
 }
 *::-webkit-scrollbar { width: 10px; height: 10px; }
-*::-webkit-scrollbar-track { background: var(--color-paper-deep); }
+*::-webkit-scrollbar-track { background: var(--color-cream-deep); }
 *::-webkit-scrollbar-thumb {
-  background: var(--color-copper);
-  border: 2px solid var(--color-paper-deep);
-  border-radius: 2px;
+  background: var(--color-tomato);
+  border: 2px solid var(--color-cream-deep);
+  border-radius: 1px;
 }
-*::-webkit-scrollbar-thumb:hover { background: var(--color-copper-deep); }
+*::-webkit-scrollbar-thumb:hover { background: var(--color-tomato-deep); }
 
+/* Default heading family — editorial serif. Sans only when we
+   explicitly opt out via .font-sans. */
 h1, h2, h3, h4, h5 {
-  font-family: "Inter Tight", "Söhne Breit", "Inter", system-ui, sans-serif;
-  letter-spacing: -0.018em;
-  font-weight: 600;
+  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.012em;
   color: var(--color-ink);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
 }
 
-/* We reserve Fraunces for accent/editorial emphasis only (italic pull-quotes,
-   a "signature" note) — the default voice is geometric sans. */
-.font-accent {
-  font-family: "Fraunces", "Source Serif 4", Georgia, serif;
-  font-variation-settings: "opsz" 144;
-}
+::selection { background: var(--color-tomato); color: var(--color-cream); }
 
-::selection { background: var(--color-copper); color: var(--color-paper); }
-
-/* Global focus-visible — copper ring on every interactive element that
-   doesn't already define its own. Keyboard navigation gets a visible,
-   engineering-instrument cue without disturbing mouse users. */
+/* Focus ring — tomato, matches editorial accents. */
 :focus { outline: none; }
 a:focus-visible,
 button:focus-visible,
@@ -103,109 +104,140 @@ select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible,
 [tabindex]:not([tabindex="-1"]):focus-visible {
-  outline: 2px solid var(--color-copper);
+  outline: 2px solid var(--color-tomato);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
-/* Typographic utilities ------------------------------------------------ */
+/* ================================================================
+   TYPOGRAPHY UTILITIES
+================================================================= */
 
-.eyebrow {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-copper);
+.font-display {
+  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
 }
 
-.eyebrow-copper { color: var(--color-copper); }
-.eyebrow-ink { color: var(--color-ink); }
-.eyebrow-steel { color: var(--color-steel); }
-
-.caps-label {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-steel);
+.font-script {
+  font-family: "Caveat", "Homemade Apple", cursive;
+  letter-spacing: -0.01em;
 }
 
-.dateline {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-steel);
-}
-
-/* Display headline used on hero + hub mastheads. Geometric sans, tight. */
-.display-headline {
-  font-family: "Inter Tight", "Söhne Breit", "Inter", sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.02;
+/* The big magazine cover headline — generous, italic-friendly. */
+.cover-headline {
+  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
+  font-weight: 400;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  letter-spacing: -0.02em;
+  line-height: 0.96;
   color: var(--color-ink);
 }
 
-/* Tabular-number class — the table numerics are the content. */
+/* Smaller serif H1 used on feature pages. */
+.feature-headline {
+  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
+  font-weight: 450;
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+  letter-spacing: -0.014em;
+  line-height: 1.04;
+  color: var(--color-ink);
+}
+
+/* Italic dek — magazine subhead. */
+.dek {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.32rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+  letter-spacing: -0.005em;
+}
+
+/* Masthead — the LARDERLAB · ISSUE 04 · APR 2026 strip. */
+.masthead-line {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 0.74rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.dept-label {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-tomato);
+}
+
+.byline {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  font-weight: 500;
+}
+
+.byline-italic {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 0.96rem;
+  color: var(--color-ink-soft);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.page-number {
+  font-family: "Inter Tight", sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+}
+
 .tnum { font-variant-numeric: tabular-nums; }
 
-/* Monospace numerics in prose (inline) */
-.mono-num {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-variant-numeric: tabular-nums;
-  font-size: 0.95em;
-  color: var(--color-ink);
+/* ================================================================
+   PROSE — feature article body
+================================================================= */
+
+.prose { max-width: 62ch; color: var(--color-ink); }
+
+.prose p {
+  margin-bottom: 1.15em;
+  line-height: 1.72;
+  font-size: 1.08rem;
 }
 
-/* Rank numeral — copper, monospace, tight. Used in hub index + rankings. */
-.rank-numeral {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 2.25rem;
-  line-height: 1;
-  font-weight: 500;
-  color: var(--color-copper);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-}
-
-/* Drop cap — reserved for the occasional long-form explainer. */
-.drop-cap::first-letter {
+.prose > p:first-of-type::first-letter {
   font-family: "Fraunces", serif;
-  font-weight: 600;
-  font-size: 4.2rem;
-  line-height: 0.9;
+  font-weight: 500;
+  font-size: 4.6rem;
+  line-height: 0.88;
   float: left;
-  margin: 0.1em 0.08em 0 0;
-  color: var(--color-ink);
+  margin: 0.06em 0.1em 0 -0.04em;
+  color: var(--color-tomato);
   font-variation-settings: "opsz" 144;
 }
 
-/* Prose — long-form article body, slightly tighter than plasticfreelab. */
-.prose { max-width: 68ch; }
-
-.prose p {
-  margin-bottom: 1.1em;
-  line-height: 1.7;
-  font-size: 1.0625rem;
-}
-
 .prose h2 {
-  font-size: 1.7rem;
+  font-size: 1.85rem;
   margin-top: 2.6rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
   color: var(--color-ink);
-  letter-spacing: -0.02em;
 }
 
 .prose h3 {
-  font-size: 1.3rem;
-  margin-top: 1.8rem;
-  margin-bottom: 0.6rem;
-  color: var(--color-ink);
+  font-size: 1.32rem;
+  margin-top: 1.85rem;
+  margin-bottom: 0.55rem;
+  font-weight: 500;
 }
 
 .prose ul, .prose ol {
@@ -220,9 +252,9 @@ summary:focus-visible,
 .prose a {
   color: var(--color-ink);
   text-decoration: underline;
-  text-decoration-color: var(--color-copper);
+  text-decoration-color: var(--color-tomato);
   text-decoration-thickness: 1.5px;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   transition: text-decoration-color 0.15s ease;
 }
 
@@ -231,21 +263,28 @@ summary:focus-visible,
 }
 
 .prose blockquote {
-  border-left: 3px solid var(--color-copper);
+  border-left: 3px solid var(--color-tomato);
   padding-left: 1.2em;
   font-family: "Fraunces", serif;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   color: var(--color-ink);
   margin: 1.6em 0;
 }
 
-/* Nav link underline — copper, bottom-aligned, draws in from the left.
-   Current-page gets a small copper `[·]` specimen mark as a prefix. */
+/* ================================================================
+   NAV — paper bar header
+================================================================= */
+
 .nav-link {
   position: relative;
   color: var(--color-ink);
   transition: color 0.15s ease;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .nav-link::after {
@@ -253,284 +292,623 @@ summary:focus-visible,
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -5px;
+  bottom: -6px;
   height: 1.5px;
-  background: var(--color-copper);
+  background: var(--color-tomato);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s ease;
 }
 
+.nav-link:hover { color: var(--color-tomato); }
 .nav-link:hover::after,
 .nav-link[aria-current="page"]::after {
   transform: scaleX(1);
 }
 
-.nav-link[aria-current="page"]::before {
-  content: "[·]";
-  margin-right: 0.4em;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  color: var(--color-copper);
-  font-size: 0.7em;
-  letter-spacing: 0;
-}
+/* ================================================================
+   BUTTONS
+================================================================= */
 
-/* Buttons — bordered, sharp corners, engineering-panel cue. */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.8rem 1.35rem;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-weight: 500;
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
+  padding: 0.85rem 1.4rem;
+  background: var(--color-tomato);
+  color: var(--color-cream);
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-radius: 2px;
-  border: 1px solid var(--color-ink);
-  transition: background 0.15s ease, border-color 0.15s ease;
+  border-radius: 1px;
+  border: 1px solid var(--color-tomato);
+  transition: background 0.15s ease, transform 0.1s ease;
 }
 
 .btn-primary:hover {
-  background: var(--color-ink-deep);
-  border-color: var(--color-copper);
+  background: var(--color-tomato-deep);
+  border-color: var(--color-tomato-deep);
 }
 
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.8rem 1.35rem;
+  padding: 0.85rem 1.4rem;
   color: var(--color-ink);
   background: transparent;
   border: 1px solid var(--color-ink);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-weight: 500;
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 1px;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
 .btn-secondary:hover {
   background: var(--color-ink);
-  color: var(--color-paper);
+  color: var(--color-cream);
 }
 
-/* Tier badge on ranked products — monospace caps, copper dot. */
+.btn-primary:active, .btn-secondary:active { transform: translateY(1px); }
+
+/* ================================================================
+   RECIPE CARD
+   The signature unit. Printed-recipe-card feeling.
+================================================================= */
+
+.recipe-card {
+  background: var(--color-ledger);
+  border: 1px solid rgba(42, 26, 18, 0.16);
+  position: relative;
+  padding: 2.2rem 2rem;
+}
+
+.recipe-card::before {
+  content: "";
+  position: absolute;
+  left: 1.8rem;
+  right: 1.8rem;
+  top: 1rem;
+  height: 2px;
+  background: var(--color-tomato);
+}
+
+.recipe-card-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  border-top: 1px solid rgba(42, 26, 18, 0.18);
+  border-bottom: 1px solid rgba(42, 26, 18, 0.18);
+  padding: 0.9rem 0;
+  margin: 1rem 0 1.6rem;
+}
+
+@media (min-width: 640px) {
+  .recipe-card-meta { grid-template-columns: repeat(4, 1fr); }
+}
+
+.recipe-meta-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.recipe-meta-label {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+  font-weight: 600;
+}
+
+.recipe-meta-value {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-ink);
+}
+
+.recipe-section-title {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--color-ink);
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.recipe-section-title::before {
+  content: "·";
+  color: var(--color-tomato);
+  margin-right: 0.4rem;
+  font-style: normal;
+}
+
+.recipe-ingredients li {
+  position: relative;
+  list-style: none;
+  padding-left: 1.5rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px dotted rgba(42, 26, 18, 0.18);
+  margin-bottom: 0.55rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+.recipe-ingredients li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border: 1.5px solid var(--color-ink-soft);
+  border-radius: 1px;
+  background: transparent;
+}
+
+.recipe-method {
+  counter-reset: method;
+}
+
+.recipe-method li {
+  counter-increment: method;
+  list-style: none;
+  position: relative;
+  padding-left: 2.4rem;
+  padding-bottom: 1rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.recipe-method li::before {
+  content: counter(method);
+  position: absolute;
+  left: 0;
+  top: -0.05rem;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-tomato);
+  line-height: 1;
+}
+
+.recipe-notes,
+.recipe-storage {
+  background: rgba(244, 234, 213, 0.6);
+  border-left: 2px solid var(--color-olive);
+  padding: 0.8rem 1rem;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.8rem;
+}
+
+.recipe-storage {
+  border-left-color: var(--color-tomato);
+  font-style: normal;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.92rem;
+}
+
+/* ================================================================
+   PULL QUOTE — hangs slightly into margin
+================================================================= */
+
+.pull-quote {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: "opsz" 144;
+  font-size: 2.1rem;
+  line-height: 1.18;
+  color: var(--color-ink);
+  border-left: 3px solid var(--color-tomato);
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  margin: 2.2rem 0;
+}
+
+@media (min-width: 1024px) {
+  .pull-quote {
+    margin-left: -2.5rem;
+  }
+}
+
+.pull-quote-attrib {
+  display: block;
+  font-style: normal;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+  margin-top: 0.7rem;
+}
+
+/* ================================================================
+   COVER LINES (right column on the cover)
+================================================================= */
+
+.cover-lines {
+  border-top: 2px solid var(--color-ink);
+  padding-top: 1rem;
+}
+
+.cover-lines li {
+  list-style: none;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(42, 26, 18, 0.16);
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.cover-lines li .num {
+  font-family: "Inter Tight", sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  color: var(--color-tomato);
+  margin-right: 0.6rem;
+}
+
+/* ================================================================
+   TOC
+================================================================= */
+
+.toc-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.2rem;
+  align-items: baseline;
+  padding: 0.8rem 0;
+  border-bottom: 1px dotted rgba(42, 26, 18, 0.28);
+}
+
+.toc-row .title {
+  font-family: "Fraunces", serif;
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.toc-row .dek {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 0.96rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.18rem;
+  line-height: 1.4;
+}
+
+.toc-row .page-no {
+  font-family: "Inter Tight", sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+  color: var(--color-tomato);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ================================================================
+   EDITOR'S NOTE — script font block
+================================================================= */
+
+.editors-note {
+  background: var(--color-cream-soft);
+  border: 1px solid rgba(42, 26, 18, 0.12);
+  padding: 1.6rem 1.8rem;
+  position: relative;
+  font-family: "Caveat", cursive;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+.editors-note::before {
+  content: "Editor's note";
+  position: absolute;
+  top: -0.65rem;
+  left: 1.4rem;
+  background: var(--color-cream-soft);
+  padding: 0 0.5rem;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-tomato);
+}
+
+.editors-signature {
+  display: block;
+  margin-top: 0.8rem;
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  color: var(--color-tomato);
+}
+
+/* ================================================================
+   DEPARTMENT BLOCK — recurring 5-numbered list
+================================================================= */
+
+.department {
+  border-top: 2px solid var(--color-ink);
+  padding-top: 1.2rem;
+}
+
+.department-list li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  gap: 0.6rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(42, 26, 18, 0.12);
+  align-items: baseline;
+}
+
+.department-list .num {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--color-tomato);
+  line-height: 1;
+}
+
+.department-list .title {
+  font-family: "Fraunces", serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: 1.32;
+}
+
+.department-list .dek {
+  font-family: "Inter Tight", sans-serif;
+  font-style: normal;
+  font-size: 0.86rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.18rem;
+  line-height: 1.4;
+}
+
+/* ================================================================
+   PLATE PHOTO — full-bleed art-directed placeholder
+================================================================= */
+
+.plate {
+  position: relative;
+  background: linear-gradient(135deg, #C4452D 0%, #9C2F1C 38%, #5C6F3C 78%, #3F4D27 100%);
+  overflow: hidden;
+}
+
+.plate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 30% 35%, rgba(244, 234, 213, 0.18), transparent 38%),
+    radial-gradient(circle at 70% 65%, rgba(252, 246, 233, 0.12), transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(42, 26, 18, 0.4), transparent 70%);
+  mix-blend-mode: screen;
+}
+
+.plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(244, 234, 213, 0.06) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.5;
+}
+
+.plate-caption {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.7rem;
+  max-width: 56ch;
+}
+
+/* ================================================================
+   TABLE (kept for legacy comparison templates) — restyled warm.
+================================================================= */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: var(--color-ledger);
+  border: 1px solid rgba(42, 26, 18, 0.18);
+  font-variant-numeric: tabular-nums;
+}
+
+.data-table thead th {
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.85rem;
+  text-align: left;
+  border-bottom: 2px solid var(--color-tomato);
+}
+
+.data-table thead th.num,
+.data-table tbody td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-table tbody td {
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid rgba(42, 26, 18, 0.1);
+  color: var(--color-ink);
+  vertical-align: top;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.data-table tbody tr:hover { background: rgba(244, 234, 213, 0.7); }
+.data-table tbody tr:last-child td { border-bottom: 0; }
+.data-table .cell-name { font-weight: 600; color: var(--color-ink); font-family: "Fraunces", serif; font-size: 1rem; }
+.data-table .cell-sub { display: block; margin-top: 0.18rem; font-size: 0.8rem; color: var(--color-ash); font-family: "Inter Tight", sans-serif; }
+
+.data-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid rgba(42, 26, 18, 0.14);
+  background: var(--color-ledger);
+}
+
+.data-table-wrap .data-table { border: 0; }
+
+/* ================================================================
+   TIER BADGE / EYEBROW — softened to magazine register
+================================================================= */
+
+.eyebrow {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-tomato);
+}
+
+.eyebrow-copper { color: var(--color-tomato); }
+.eyebrow-ink { color: var(--color-ink); }
+.eyebrow-steel { color: var(--color-ash); }
+
+.caps-label {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+}
+
+.dateline {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+}
+
 .tier-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.22rem 0.6rem;
   background: var(--color-ink);
-  color: var(--color-paper);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  color: var(--color-cream);
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 .tier-badge::before {
   content: "";
   width: 5px;
   height: 5px;
-  background: var(--color-copper);
+  background: var(--color-tomato);
   border-radius: 1px;
 }
 
-.tier-badge-mid { background: var(--color-steel); }
-.tier-badge-mid::before { background: var(--color-paper); }
-.tier-badge-budget { background: var(--color-copper); }
-.tier-badge-budget::before { background: var(--color-ink); }
-.tier-badge-skip { background: #3a3a3a; }
-.tier-badge-skip::before { background: var(--color-paper); }
+.tier-badge-mid { background: var(--color-olive); }
+.tier-badge-budget { background: var(--color-tomato); }
+.tier-badge-budget::before { background: var(--color-cream); }
+.tier-badge-skip { background: var(--color-ash); }
 
-/* The signature engineering data table. Dense, monospace numerics,
-   sticky header, tnum, copper accent line on header row. */
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9375rem;
-  background: var(--color-paper);
-  border: 1px solid rgba(26, 35, 50, 0.15);
-  font-variant-numeric: tabular-nums;
-}
-
-.data-table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 0.75rem 0.85rem;
-  text-align: left;
-  border-bottom: 2px solid var(--color-copper);
-}
-
-.data-table thead th.num,
-.data-table tbody td.num {
-  text-align: right;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-variant-numeric: tabular-nums;
-}
-
-.data-table tbody td {
-  padding: 0.7rem 0.85rem;
-  border-bottom: 1px solid rgba(26, 35, 50, 0.08);
-  color: var(--color-charcoal);
-  vertical-align: top;
-}
-
-.data-table tbody tr {
-  position: relative;
-  transition: background 0.18s ease;
-}
-
-.data-table tbody tr:hover {
-  background: rgba(235, 229, 213, 0.6); /* paper-deep */
-}
-
-/* Copper "·" specimen mark in the first cell of a hovered row.
-   Rendered as a pseudo-element so it costs nothing until the row is
-   inspected. Draws from 0 to full opacity over 150ms. */
-.data-table tbody tr td:first-child {
-  position: relative;
-}
-
-.data-table tbody tr td:first-child::before {
-  content: "·";
-  position: absolute;
-  left: 0.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--color-copper);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 1.25rem;
-  line-height: 1;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  pointer-events: none;
-}
-
-.data-table tbody tr:hover td:first-child::before {
-  opacity: 1;
-}
-
-.data-table tbody tr:last-child td { border-bottom: 0; }
-
-/* Confidence pill glow on hovered row — color matches level. */
-.data-table tbody tr:hover .conf-pill.conf-high {
-  box-shadow: 0 0 0 3px rgba(26, 35, 50, 0.12);
-}
-.data-table tbody tr:hover .conf-pill.conf-med {
-  box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.22);
-}
-.data-table tbody tr:hover .conf-pill.conf-low {
-  box-shadow: 0 0 0 3px rgba(107, 122, 138, 0.18);
-}
-.conf-pill { transition: box-shadow 0.2s ease; }
-
-/* Copper-hairline accent that extends left-to-right on hover. Drop this
-   on any container that should feel "measurable": cards, table wrappers,
-   breadcrumbs. Default width 0 → 100% over 250ms. */
-.copper-hairline {
-  position: relative;
-}
-.copper-hairline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 1px;
-  width: 0;
-  background: var(--color-copper);
-  transition: width 0.25s ease;
-  pointer-events: none;
-}
-.copper-hairline:hover::after,
-.copper-hairline:focus-within::after {
-  width: 100%;
-}
-
-.data-table .cell-name {
-  font-weight: 500;
-  color: var(--color-ink);
-}
-
-.data-table .cell-sub {
-  display: block;
-  margin-top: 0.15rem;
-  font-size: 0.75rem;
-  color: var(--color-steel);
-  font-family: "Inter Tight", sans-serif;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-/* Confidence pill for SystemsTable */
 .conf-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.15rem 0.5rem;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: "Inter Tight", sans-serif;
   font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: 2px;
-  border: 1px solid rgba(26, 35, 50, 0.2);
-  background: var(--color-paper-deep);
+  border-radius: 1px;
+  border: 1px solid rgba(42, 26, 18, 0.2);
+  background: var(--color-cream-deep);
   color: var(--color-ink);
 }
-
-.conf-pill::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-}
-
+.conf-pill::before { content: ""; width: 5px; height: 5px; border-radius: 50%; }
 .conf-high { border-color: var(--color-ink); }
 .conf-high::before { background: var(--color-ink); }
-.conf-med { border-color: var(--color-copper); color: var(--color-copper-deep); }
-.conf-med::before { background: var(--color-copper); }
-.conf-low { border-color: var(--color-steel); color: var(--color-steel); }
-.conf-low::before { background: var(--color-steel); }
+.conf-med { border-color: var(--color-tomato); color: var(--color-tomato); }
+.conf-med::before { background: var(--color-tomato); }
+.conf-low { border-color: var(--color-ash); color: var(--color-ash); }
+.conf-low::before { background: var(--color-ash); }
 
-/* Horizontal scroll wrapper for dense tables on mobile */
-.data-table-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border: 1px solid rgba(26, 35, 50, 0.12);
-  border-radius: 2px;
-  background: var(--color-paper);
+/* ================================================================
+   COVER STAMP — issue circle / red dot
+================================================================= */
+
+.issue-stamp {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  background: var(--color-tomato);
+  color: var(--color-cream);
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  text-align: center;
+  line-height: 1;
+  transform: rotate(-6deg);
+  box-shadow: 0 6px 16px rgba(196, 69, 45, 0.35);
 }
 
-.data-table-wrap .data-table {
-  border: 0;
+.issue-stamp .label {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: normal;
 }
 
-/* Spec rule — the copper-over-steel hairline used as section divider. */
-.spec-rule {
-  height: 4px;
-  background:
-    linear-gradient(to right, var(--color-copper) 0, var(--color-copper) 48px, transparent 48px),
-    linear-gradient(to right, transparent 48px, rgba(26, 35, 50, 0.12) 48px);
+.issue-stamp .num {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-top: 0.1rem;
 }
 
-/* Line-clamp helpers */
+/* ================================================================
+   MAGAZINE GRID HELPERS
+================================================================= */
+
+.col-rule {
+  column-rule: 1px solid rgba(42, 26, 18, 0.18);
+}
+
 .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
@@ -539,97 +917,59 @@ summary:focus-visible,
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
 
-/* Fade-in for hero — staggered page load: Dateline → Wordmark → headline
-   → sidebar → table → hub cards. Delays hand-tuned for readability. */
+/* ================================================================
+   ANIMATIONS — soft, magazine. Nothing dynamic.
+================================================================= */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.fade-up { animation: fadeUp 0.5s ease-out both; }
-.fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.08s both; }
-.fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.16s both; }
-.fade-up-delay-3 { animation: fadeUp 0.5s ease-out 0.24s both; }
+.fade-up { animation: fadeUp 0.55s ease-out both; }
+.fade-up-delay-1 { animation: fadeUp 0.55s ease-out 0.08s both; }
+.fade-up-delay-2 { animation: fadeUp 0.55s ease-out 0.16s both; }
+.fade-up-delay-3 { animation: fadeUp 0.55s ease-out 0.24s both; }
 .fade-up-delay-4 { animation: fadeUp 0.55s ease-out 0.32s both; }
 .fade-up-delay-5 { animation: fadeUp 0.55s ease-out 0.40s both; }
 .fade-up-delay-6 { animation: fadeUp 0.55s ease-out 0.48s both; }
 
-/* Scroll-triggered section reveal — a RevealOnScroll wrapper toggles
-   [data-reveal="on"] once the section enters the viewport. Default state
-   assumes visible so no-JS / pre-hydration users see content; the "off"
-   state is only applied explicitly by the client component. */
 .reveal {
   transition: opacity 0.55s ease-out, transform 0.55s ease-out;
   will-change: opacity, transform;
 }
-.reveal[data-reveal="off"] {
-  opacity: 0;
-  transform: translateY(14px);
-}
-.reveal[data-reveal="on"] {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal[data-reveal="off"] { opacity: 0; transform: translateY(14px); }
+.reveal[data-reveal="on"] { opacity: 1; transform: translateY(0); }
 
-/* Spec rule draw-in — a .spec-rule (or SpecRule) draws from left to
-   full width over 400ms when it enters the viewport. A small copper
-   tick dot appears at the far end on completion. */
-@keyframes specRuleDraw {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0 0 0 0); }
-}
-.spec-rule-anim {
-  animation: specRuleDraw 0.42s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-.spec-rule-anim[data-reveal="on"] { /* no-op, reveal wrapper toggles */ }
-
-/* Rank-numeral hover flicker — two fast opacity dips over 120ms.
-   Suggests a reading from a terminal. */
-@keyframes rankFlicker {
-  0%   { opacity: 1; }
-  25%  { opacity: 0.55; }
-  50%  { opacity: 1; }
-  75%  { opacity: 0.65; }
-  100% { opacity: 1; }
-}
-.rank-numeral {
-  transition: color 0.15s ease;
-}
-.rank-numeral:hover {
-  animation: rankFlicker 0.12s steps(4, end);
-}
-
-/* Email input — focus: thick ink underline + copper focus ring glow.
-   Submit :active presses 1px down for tactile feedback. */
+/* Email input — warm magazine. */
 .email-input {
-  background: var(--color-paper);
-  border: 1px solid rgba(26, 35, 50, 0.25);
+  background: var(--color-cream-soft);
+  border: 1px solid rgba(42, 26, 18, 0.25);
   border-bottom: 2px solid var(--color-ink);
   padding: 0.8rem 1rem;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: "Inter Tight", sans-serif;
   font-size: 14px;
   transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  border-radius: 1px;
 }
 .email-input:focus {
   outline: none;
-  border-color: var(--color-ink);
-  border-bottom-color: var(--color-ink);
-  box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.3);
+  border-color: var(--color-tomato);
+  box-shadow: 0 0 0 3px rgba(196, 69, 45, 0.25);
 }
-.btn-primary:active, .btn-secondary:active { transform: translateY(1px); }
 
-/* Reading progress bar — thin copper fill on the top of the masthead. */
+/* Reading progress bar — tomato ribbon. */
 .reading-progress-bar {
   height: 2px;
-  background: var(--color-copper);
+  background: var(--color-tomato);
   transform-origin: left;
   width: 100%;
   transition: transform 0.08s linear;
 }
 
-/* Legacy class aliases used by still-shared template chrome */
+/* Legacy mono body classes still used by old templates */
 .font-mono, code, pre, .numeric { font-family: "IBM Plex Mono", ui-monospace, monospace; }
 
-/* Respect reduced motion — disable every non-essential animation. */
+/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -638,7 +978,4 @@ summary:focus-visible,
     scroll-behavior: auto !important;
   }
   .reveal { opacity: 1; transform: none; }
-  .rank-numeral:hover { animation: none; }
-  .spec-rule-anim { animation: none; clip-path: none; }
-  .reading-progress-bar { transition: none; }
 }
