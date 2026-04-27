@@ -1,16 +1,20 @@
 import Link from "next/link";
 import { hubs } from "@/lib/content/hubs";
 import { SITE } from "@/lib/content/site";
+import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
+import { RegulatoryAuthoritiesStrip } from "@/components/RegulatoryAuthoritiesStrip";
 
 const tools = [
   { slug: "macro-calculator", name: "Macro Calculator" },
 ];
 
 const sisterSites = [
-  { name: "InjectCompass", href: "https://injectcompass.com" },
-  { name: "PlasticFreeLab", href: "https://plasticfreelab.com" },
   { name: "PepTips", href: "https://peptips.com" },
+  { name: "PepVise", href: "https://pepvise.com" },
+  { name: "InjectCompass", href: "https://injectcompass.com" },
+  { name: "ThatCleanChef", href: "https://thatcleanchef.com" },
   { name: "CircadianStack", href: "https://circadianstack.com" },
+  { name: "PlasticFreeLab", href: "https://plasticfreelab.com" },
 ];
 
 /**
@@ -91,6 +95,9 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Regulatory authorities — per-locale food + DPA list */}
+        <RegulatoryAuthoritiesStrip />
+
         {/* Disclaimer block */}
         <div className="py-8 border-b border-rule">
           <div className="grid md:grid-cols-12 gap-6">
@@ -131,8 +138,11 @@ export function Footer() {
           <ul className="flex flex-wrap gap-x-4">
             <li><Link href="/editorial-standards" className="hover:text-olive-deep">Editorial standards</Link></li>
             <li><Link href="/privacy" className="hover:text-olive-deep">Privacy</Link></li>
+            <li><Link href="/cookies" className="hover:text-olive-deep">Cookies</Link></li>
+            <li><CookiePreferencesLink /></li>
             <li><Link href="/terms" className="hover:text-olive-deep">Terms</Link></li>
             <li><Link href="/affiliate-disclosure" className="hover:text-olive-deep">Affiliate disclosure</Link></li>
+            <li><Link href="/impressum" className="hover:text-olive-deep">Impressum</Link></li>
             <li><Link href="/contact" className="hover:text-olive-deep">Contact</Link></li>
             <li><Link href="/newsletter" className="hover:text-olive-deep">Newsletter</Link></li>
           </ul>
