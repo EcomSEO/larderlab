@@ -213,12 +213,30 @@
       "drafted": "Écrit, en relecture",
       "scheduled": "Programmé pour le numéro 05",
       "items": [
-        { "title": "Les douze sauces que toute étagère mérite", "status": "researching" },
-        { "title": "Le vieillissement de l'huile d'olive, expliqué", "status": "researching" },
-        { "title": "Petit guide des règles de fermentation", "status": "drafted" },
-        { "title": "Pourquoi vos haricots durcissent au sel", "status": "drafted" },
-        { "title": "Les riz, classés au prix de la portion", "status": "scheduled" },
-        { "title": "Le tri du garde-manger en cinq minutes", "status": "scheduled" }
+        {
+          "title": "Les douze sauces que toute étagère mérite",
+          "status": "researching"
+        },
+        {
+          "title": "Le vieillissement de l'huile d'olive, expliqué",
+          "status": "researching"
+        },
+        {
+          "title": "Petit guide des règles de fermentation",
+          "status": "drafted"
+        },
+        {
+          "title": "Pourquoi vos haricots durcissent au sel",
+          "status": "drafted"
+        },
+        {
+          "title": "Les riz, classés au prix de la portion",
+          "status": "scheduled"
+        },
+        {
+          "title": "Le tri du garde-manger en cinq minutes",
+          "status": "scheduled"
+        }
       ]
     },
     "privacy": {
@@ -310,18 +328,30 @@
   },
   "localeSwitcher": {
     "label": "Langue",
-    "en": "EN", "enFull": "English",
-    "de": "DE", "deFull": "Deutsch",
-    "fr": "FR", "frFull": "Français",
-    "it": "IT", "itFull": "Italiano",
-    "es": "ES", "esFull": "Español",
-    "nl": "NL", "nlFull": "Nederlands",
-    "pl": "PL", "plFull": "Polski",
-    "sv": "SV", "svFull": "Svenska",
-    "pt": "PT", "ptFull": "Português",
-    "ro": "RO", "roFull": "Română",
-    "cs": "CS", "csFull": "Čeština",
-    "no": "NO", "noFull": "Norsk"
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   },
   "hubPage": {
     "crumbHome": "Couverture",
@@ -361,5 +391,18 @@
     "bodyAfter": ".",
     "reject": "Refuser",
     "accept": "Accepter"
+  },
+  "peptide": {
+    "tagline": "Un garde-manger pensé pour les utilisateurs de peptides.",
+    "heroH1": "Un garde-manger pensé pour les utilisateurs de peptides.",
+    "heroDek": "Piles de compléments, architecture du garde-manger et calculs de coûts réels — pour les personnes en thérapie peptidique. Recherche citée. Aucune sponsorisation.",
+    "calloutHeading": "Contexte peptide",
+    "dietitianBadge": "Validé par Dr Maya Rao, RDN — nutrition en thérapie peptidique",
+    "educationalBanner": "Le contenu de Larderlab est à visée éducative. Les conseils sur le garde-manger, les macros et les compléments ne remplacent pas un avis médical. Consultez votre prescripteur avant de commencer, arrêter ou empiler un complément en parallèle d'une thérapie peptidique.",
+    "hubMacros": "Macros & protéines pour utilisateurs de peptides",
+    "hubPantry": "Systèmes de garde-manger pour protocoles peptidiques",
+    "hubIngredients": "Enquêtes ingrédients — proches des peptides",
+    "hubMealPrep": "Architecture meal-prep pour cycles peptidiques",
+    "hubStack": "Soutien de la stack peptidique"
   }
 }

@@ -392,5 +392,18 @@
     "bodyAfter": ".",
     "reject": "Weigeren",
     "accept": "Accepteren"
+  },
+  "peptide": {
+    "tagline": "Een doordachte voorraadkast voor peptide-gebruikers.",
+    "heroH1": "Een doordachte voorraadkast voor peptide-gebruikers.",
+    "heroDek": "Supplement-stacks, voorraadkast-architectuur en echte kostenberekening — voor mensen op peptide-therapie. Onderbouwd onderzoek. Geen sponsoring.",
+    "calloutHeading": "Peptide-context",
+    "dietitianBadge": "Beoordeeld door Dr. Maya Rao, RDN — voeding bij peptide-therapie",
+    "educationalBanner": "Larderlab-content is educatief. Voorraad-, macro- en supplementadvies vervangt geen medisch advies. Overleg met je voorschrijver voordat je een supplement start, stopt of combineert met een peptide-therapie.",
+    "hubMacros": "Macro's & eiwit voor peptide-gebruikers",
+    "hubPantry": "Voorraadkast-systemen voor peptide-protocollen",
+    "hubIngredients": "Ingrediënt-reportages — peptide-gerelateerd",
+    "hubMealPrep": "Meal-prep-architectuur voor peptide-cycli",
+    "hubStack": "Peptide-stack-ondersteuning"
   }
 }

@@ -392,5 +392,18 @@
     "bodyAfter": ".",
     "reject": "Odmítnout",
     "accept": "Přijmout"
+  },
+  "peptide": {
+    "tagline": "Promyšlená spižírna pro uživatele peptidů.",
+    "heroH1": "Promyšlená spižírna pro uživatele peptidů.",
+    "heroDek": "Stacky doplňků, architektura spižírny a reálná matematika nákladů — pro lidi na peptidové terapii. Citovaný výzkum. Žádné sponzorské vazby.",
+    "calloutHeading": "Peptidový kontext",
+    "dietitianBadge": "Posouzeno Dr. Mayou Rao, RDN — výživa při peptidové terapii",
+    "educationalBanner": "Obsah Larderlab je vzdělávací. Doporučení k spižírně, makrům a doplňkům nenahrazují lékařskou radu. Před zahájením, ukončením nebo kombinováním doplňku s peptidovou terapií se poraďte se svým lékařem.",
+    "hubMacros": "Makra a bílkovina pro uživatele peptidů",
+    "hubPantry": "Systémy spižírny pro peptidové protokoly",
+    "hubIngredients": "Reportáže o surovinách — peptidům blízké",
+    "hubMealPrep": "Architektura meal prepu pro peptidové cykly",
+    "hubStack": "Podpora peptidového stacku"
   }
 }

@@ -45,19 +45,19 @@ const tiles = [
 
 const trending = [
   {
-    category: "Pantry essentials",
-    title: "Why olive oil ages in the bottle — and how to slow it",
-    href: "/guides/ingredient-deep-dives",
+    category: "Peptide pantry",
+    title: "12 foods that pair with common peptide protocols",
+    href: "/peptide-pantry-essentials",
   },
   {
-    category: "Nutrition",
-    title: "Magnesium-rich foods, ranked by absorption",
-    href: "/guides/ingredient-deep-dives",
+    category: "GLP-1 support",
+    title: "Electrolyte strategy for GLP-1 days: sodium, potassium, magnesium",
+    href: "/electrolytes-on-glp1",
   },
   {
-    category: "Anti-inflammatory",
-    title: "A field guide to fermentation rules",
-    href: "/guides/meal-prep",
+    category: "Reconstitution",
+    title: "Bacteriostatic water buying guide",
+    href: "/bacteriostatic-water-buying-guide",
   },
 ];
 
@@ -108,8 +108,9 @@ export default function HomePage() {
       <Hero
         featured={featured}
         trending={trending}
-        headline="Cook from the pantry. Eat by the evidence."
-        dek="Larderlab is a nutrition + pantry information site. Every recipe is tested in our test kitchen and reviewed by a registered dietitian. USDA-cited nutrition tables on every page. No brand sponsorships."
+        eyebrow="Engineered pantry · for peptide users"
+        headline="An engineered pantry for peptide users."
+        dek="Supplement stacks, pantry architecture, and real-cost math built for people on peptide therapy. Cited research. USDA-sourced nutrition tables. Zero vendor sponsorships. Talk to your prescriber before stacking."
       />
 
       <CategoryTileGrid

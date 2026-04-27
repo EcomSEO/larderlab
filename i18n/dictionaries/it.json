@@ -213,12 +213,30 @@
       "drafted": "In bozza, in revisione",
       "scheduled": "Programmato per il numero 05",
       "items": [
-        { "title": "Le dodici salse che ogni mensola si guadagna", "status": "researching" },
-        { "title": "L'invecchiamento dell'olio d'oliva, spiegato", "status": "researching" },
-        { "title": "Manuale delle regole di fermentazione", "status": "drafted" },
-        { "title": "Perché i fagioli secchi induriscono col sale", "status": "drafted" },
-        { "title": "I risi, ordinati per costo a porzione", "status": "scheduled" },
-        { "title": "Il riordino della dispensa in cinque minuti", "status": "scheduled" }
+        {
+          "title": "Le dodici salse che ogni mensola si guadagna",
+          "status": "researching"
+        },
+        {
+          "title": "L'invecchiamento dell'olio d'oliva, spiegato",
+          "status": "researching"
+        },
+        {
+          "title": "Manuale delle regole di fermentazione",
+          "status": "drafted"
+        },
+        {
+          "title": "Perché i fagioli secchi induriscono col sale",
+          "status": "drafted"
+        },
+        {
+          "title": "I risi, ordinati per costo a porzione",
+          "status": "scheduled"
+        },
+        {
+          "title": "Il riordino della dispensa in cinque minuti",
+          "status": "scheduled"
+        }
       ]
     },
     "privacy": {
@@ -310,18 +328,30 @@
   },
   "localeSwitcher": {
     "label": "Lingua",
-    "en": "EN", "enFull": "English",
-    "de": "DE", "deFull": "Deutsch",
-    "fr": "FR", "frFull": "Français",
-    "it": "IT", "itFull": "Italiano",
-    "es": "ES", "esFull": "Español",
-    "nl": "NL", "nlFull": "Nederlands",
-    "pl": "PL", "plFull": "Polski",
-    "sv": "SV", "svFull": "Svenska",
-    "pt": "PT", "ptFull": "Português",
-    "ro": "RO", "roFull": "Română",
-    "cs": "CS", "csFull": "Čeština",
-    "no": "NO", "noFull": "Norsk"
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   },
   "hubPage": {
     "crumbHome": "Copertina",
@@ -361,5 +391,18 @@
     "bodyAfter": ".",
     "reject": "Rifiuta",
     "accept": "Accetta"
+  },
+  "peptide": {
+    "tagline": "Una dispensa progettata per chi usa peptidi.",
+    "heroH1": "Una dispensa progettata per chi usa peptidi.",
+    "heroDek": "Stack di integratori, architettura della dispensa e matematica dei costi reali — pensati per chi segue una terapia con peptidi. Ricerca citata. Zero sponsorizzazioni.",
+    "calloutHeading": "Contesto peptidi",
+    "dietitianBadge": "Validato dalla Dr.ssa Maya Rao, RDN — nutrizione nella terapia con peptidi",
+    "educationalBanner": "I contenuti di Larderlab sono educativi. Le indicazioni su dispensa, macro e integratori non sostituiscono il parere medico. Consulta il tuo medico prima di iniziare, sospendere o combinare integratori con una terapia peptidica.",
+    "hubMacros": "Macro e proteine per chi usa peptidi",
+    "hubPantry": "Sistemi di dispensa per protocolli peptidici",
+    "hubIngredients": "Approfondimenti su ingredienti vicini ai peptidi",
+    "hubMealPrep": "Architettura del meal prep per cicli peptidici",
+    "hubStack": "Supporto allo stack peptidico"
   }
 }

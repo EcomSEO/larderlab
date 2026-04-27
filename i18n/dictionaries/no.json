@@ -392,5 +392,18 @@
     "bodyAfter": ".",
     "reject": "Avslå",
     "accept": "Godta"
+  },
+  "peptide": {
+    "tagline": "Et gjennomtenkt spiskammer for peptidbrukere.",
+    "heroH1": "Et gjennomtenkt spiskammer for peptidbrukere.",
+    "heroDek": "Kosttilskudd-stacker, spiskammer-arkitektur og reell kostnadsmatte — bygd for folk på peptidterapi. Sitert forskning. Ingen sponsing.",
+    "calloutHeading": "Peptidkontekst",
+    "dietitianBadge": "Vurdert av Dr. Maya Rao, RDN — ernæring ved peptidterapi",
+    "educationalBanner": "Innholdet på Larderlab er informativt. Råd om spiskammer, makroer og kosttilskudd erstatter ikke medisinsk rådgivning. Snakk med forskriveren din før du starter, avslutter eller kombinerer et tilskudd med peptidterapi.",
+    "hubMacros": "Makroer og protein for peptidbrukere",
+    "hubPantry": "Spiskammer-systemer for peptidprotokoller",
+    "hubIngredients": "Råvare-reportasjer — peptidnære",
+    "hubMealPrep": "Meal-prep-arkitektur for peptidsykluser",
+    "hubStack": "Støtte for peptid-stacken"
   }
 }

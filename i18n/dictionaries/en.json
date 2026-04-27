@@ -213,12 +213,30 @@
       "drafted": "Drafted, in copy edit",
       "scheduled": "Scheduled for issue 05",
       "items": [
-        { "title": "The twelve sauces every pantry earns", "status": "researching" },
-        { "title": "Olive oil ageing, in plain English", "status": "researching" },
-        { "title": "A field guide to fermentation rules", "status": "drafted" },
-        { "title": "Why your dried beans get tougher with salt", "status": "drafted" },
-        { "title": "Rice, ranked by cost-per-portion", "status": "scheduled" },
-        { "title": "The five-minute pantry triage", "status": "scheduled" }
+        {
+          "title": "The twelve sauces every pantry earns",
+          "status": "researching"
+        },
+        {
+          "title": "Olive oil ageing, in plain English",
+          "status": "researching"
+        },
+        {
+          "title": "A field guide to fermentation rules",
+          "status": "drafted"
+        },
+        {
+          "title": "Why your dried beans get tougher with salt",
+          "status": "drafted"
+        },
+        {
+          "title": "Rice, ranked by cost-per-portion",
+          "status": "scheduled"
+        },
+        {
+          "title": "The five-minute pantry triage",
+          "status": "scheduled"
+        }
       ]
     },
     "privacy": {
@@ -311,18 +329,30 @@
   },
   "localeSwitcher": {
     "label": "Language",
-    "en": "EN", "enFull": "English",
-    "de": "DE", "deFull": "Deutsch",
-    "fr": "FR", "frFull": "Français",
-    "it": "IT", "itFull": "Italiano",
-    "es": "ES", "esFull": "Español",
-    "nl": "NL", "nlFull": "Nederlands",
-    "pl": "PL", "plFull": "Polski",
-    "sv": "SV", "svFull": "Svenska",
-    "pt": "PT", "ptFull": "Português",
-    "ro": "RO", "roFull": "Română",
-    "cs": "CS", "csFull": "Čeština",
-    "no": "NO", "noFull": "Norsk"
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   },
   "hubPage": {
     "crumbHome": "Cover",
@@ -362,5 +392,18 @@
     "bodyAfter": ".",
     "reject": "Reject",
     "accept": "Accept"
+  },
+  "peptide": {
+    "tagline": "An engineered pantry for peptide users.",
+    "heroH1": "An engineered pantry for peptide users.",
+    "heroDek": "Supplement stacks, pantry architecture, and real-cost math built for people on peptide therapy. Cited research. Zero vendor sponsorships.",
+    "calloutHeading": "Peptide context",
+    "dietitianBadge": "Reviewed by Dr. Maya Rao, RDN — peptide-therapy nutrition",
+    "educationalBanner": "Larderlab content is educational. Pantry, macro, and supplement guidance is not a substitute for medical advice. Consult your prescriber before starting, stopping, or stacking any supplement alongside peptide therapy.",
+    "hubMacros": "Macros & Protein for Peptide Users",
+    "hubPantry": "Pantry Systems for Peptide Protocols",
+    "hubIngredients": "Ingredient Deep-Dives — Peptide-Adjacent",
+    "hubMealPrep": "Meal Prep Architecture for Peptide Cycles",
+    "hubStack": "Peptide-Stack Support"
   }
 }

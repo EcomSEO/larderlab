@@ -17,6 +17,14 @@ export type Post = {
   faq?: Array<{ q: string; a: string }>;
   sources?: Array<{ label: string; url: string }>;
   featured?: boolean;
+  /**
+   * Peptide-context note rendered above the article body via
+   * <PeptideContextCallout>. 2-3 sentences naming how this post applies
+   * for a reader on a peptide protocol. Educational only — never
+   * prescriptive. The global EducationalBanner carries the
+   * "consult-your-prescriber" line.
+   */
+  peptideContext?: string;
 };
 
 export const posts: Post[] = [
@@ -33,6 +41,8 @@ export const posts: Post[] = [
     readingTime: 12,
     status: "published",
     featured: true,
+    peptideContext:
+      "Why this matters on a peptide protocol: targets shift when you're on a GLP-1 with reduced appetite or in a recovery-peptide block. The leucine-per-meal floor (~0.4 g/kg) becomes the binding constraint in a caloric deficit — total grams matter less than hitting that floor 3-4x daily. The fat floor (~0.6 g/kg) for hormonal function does not relax just because the appetite did. Talk to your prescriber before changing macros around a peptide cycle.",
     ourPick: {
       name: "MacroFactor",
       tier: "Best companion tracker",
@@ -110,6 +120,8 @@ export const posts: Post[] = [
     updatedAt: "2026-04-21",
     readingTime: 14,
     status: "published",
+    peptideContext:
+      "Why this matters for peptide users: on a GLP-1, lean-mass loss tracks the per-meal leucine threshold more than total daily protein, because reduced appetite makes total grams the easy variable to miss. The ranking below is engineered around $/gram of leucine — which is the metric that actually predicts muscle protein synthesis on a caloric deficit. Pair with resistance training; talk to your prescriber before changing protein intake.",
     ourPick: {
       name: "Costco Kirkland Signature Whey Protein",
       tier: "Best $/g leucine, third-party tested",
@@ -271,6 +283,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: on dose-escalation weeks for a GLP-1, food volume often drops before protein needs do. The protein density (g protein per 100 kcal) of the picks below — eggs, Greek yogurt, canned fish, whey-fortified Greek yogurt — is what keeps the leucine floor cleared on the days appetite collapses. Cost-per-gram still matters; volume-tolerance matters more.",
     slug: "best-whole-food-protein-sources",
     title: "Best Whole-Food Protein Sources, Ranked by $/gram",
     h1: "Best whole-food protein sources, ranked by $/gram",
@@ -481,6 +495,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: the per-kg targets here do not change on a peptide protocol — but the math of how to hit them does. On a GLP-1 with a caloric deficit, the upper end of the trained-lifter range (1.8-2.2 g/kg) preserves lean mass; the per-meal leucine threshold (~0.4 g/kg) is the binding constraint when appetite is reduced. Talk to your prescriber before changing protein intake on a peptide.",
     slug: "how-much-protein-per-day",
     title: "How Much Protein Per Day, by Bodyweight",
     h1: "How much protein per day, by bodyweight",
@@ -552,6 +568,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: creatine pairs cleanly with peptide protocols where lean-mass preservation and recovery are the goal — GLP-1s, growth-hormone-axis peptides, BPC-157/TB-500 cycles. Saturation dose (3-5 g/day) is the same regardless of peptide context; the cost-per-gram math below is what changes the brand call. No vendor sponsorships in this ranking. Always clear new supplements with your prescriber.",
     slug: "best-creatine-monohydrate",
     title: "Best Creatine Monohydrate, Ranked by $/gram",
     h1: "Best creatine monohydrate, ranked by $/gram",
@@ -689,6 +707,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: magnesium glycinate is consistently cited in GLP-1 patient communities for nausea management and sleep support during dose escalation. The form-by-form data here applies regardless of peptide context — but the dose framing changes when you're on a GLP-1 with reduced food intake (food-source magnesium drops; supplement load may need to compensate). Talk to your prescriber before stacking, especially if you're on additional medications.",
     slug: "best-magnesium-forms",
     title: "Best Magnesium Forms: Glycinate vs Citrate vs Threonate vs Oxide",
     h1: "Best magnesium forms, compared",
@@ -840,6 +860,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: cooking-fat choice is one of the few inflammation-modifiable inputs in a recovery-peptide cycle (BPC-157, TB-500, GHK-Cu). The omega-6 to omega-3 ratio of the kitchen fat matters when the goal of the peptide is to dampen inflammatory signaling; extra-virgin olive oil and small amounts of butter beat industrial seed oils on that axis. The literature here is unchanged by peptide use; the cost-benefit just sharpens.",
     slug: "seed-oil-vs-butter-vs-olive-oil",
     title: "Seed Oil vs Butter vs Olive Oil: The Data-Backed Answer",
     h1: "Seed oil vs butter vs olive oil",
@@ -921,6 +943,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: rice often becomes a staple on reduced-appetite GLP-1 days because it's tolerable when other carbs aren't. Arsenic exposure is a function of cumulative intake, so when rice quietly becomes a daily food, the variety and cooking method choices below carry more weight than they do in a varied-carb week. The food-safety guidance here is unchanged by peptide use.",
     slug: "arsenic-in-rice",
     title: "Arsenic in Rice: The Numbers by Variety and Origin",
     h1: "Arsenic in rice: the numbers",
@@ -1002,6 +1026,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: on reduced-appetite GLP-1 days, the protein-density ranking matters more than the cost ranking — eggs, cottage cheese, Greek yogurt, canned fish all clear the per-meal leucine floor in volumes you can actually finish. The list below is dual-sortable: sort by $/g for the full grocery week, sort by protein-per-100-kcal for the days appetite drops.",
     slug: "12-high-protein-foods-by-cost",
     title: "12 High-Protein Foods Ranked by $/gram",
     h1: "12 high-protein foods ranked by $/gram",
@@ -1138,6 +1164,8 @@ export const posts: Post[] = [
     ],
   },
   {
+    peptideContext:
+      "Why this matters for peptide users: the bulk-buying math is unchanged by peptide context. The relevance is downstream — the staples that survive the waste-adjusted cost test (whey, frozen proteins, canned tuna/sardines, oats, olive oil) are also the staples a peptide-supportive pantry leans on. Bulk-buy them with confidence.",
     slug: "bulk-buying-math",
     title: "Bulk Buying Math: When Costco Wins, When It Doesn't",
     h1: "Bulk buying math",
@@ -1201,6 +1229,306 @@ export const posts: Post[] = [
         label:
           "Hall KD et al. 2009. The progressive increase of food waste in America and its environmental impact. PLoS ONE 4(11):e7940.",
         url: "https://pubmed.ncbi.nlm.nih.gov/19946359/",
+      },
+    ],
+  },
+  {
+    slug: "peptide-pantry-essentials",
+    title: "The Peptide Pantry: 12 Foods That Pair With Common Protocols",
+    h1: "The peptide pantry: 12 foods that pair with common protocols",
+    description:
+      "A pantry inventory built around the food layer that supports peptide therapy — electrolytes for GLP-1 days, omega-3 for anti-inflammatory cycles, glycine for collagen turnover, and the protein-density staples that survive reduced appetite.",
+    hub: "peptide-stack-support",
+    postType: "listicle",
+    publishedAt: "2026-04-27",
+    updatedAt: "2026-04-27",
+    readingTime: 9,
+    status: "published",
+    peptideContext:
+      "This list is the peptide-supportive layer of an otherwise normal pantry. Nothing here treats, cures, or replaces a clinician's protocol — the foods below are the staples patient communities and clinical nutrition literature consistently flag as helpful around GLP-1, recovery (BPC-157, TB-500), and longevity-stack contexts. Always clear pantry changes with your prescriber if you're managing a chronic condition.",
+    items: [
+      {
+        rank: 1,
+        name: "Electrolyte-dense broth (bone or vegetable)",
+        summary:
+          "GLP-1s suppress appetite and indirectly drop electrolyte intake. A salted bone broth (700-900 mg sodium per cup, plus modest potassium and magnesium) is the lowest-friction way to clear the sodium floor on reduced-food days. Brands like Kettle & Fire publish per-serving electrolyte panels; homemade is cheaper and stronger.",
+      },
+      {
+        rank: 2,
+        name: "Greek yogurt (2%, plain, 170-200 g cups)",
+        summary:
+          "17-20 g protein per cup, ~2.0 g leucine — clears the per-meal MPS threshold (Moore 2015) in a volume reduced-appetite days actually tolerate. Add 100 g blueberries for polyphenols; the cup also stacks for nighttime casein (Res 2012).",
+      },
+      {
+        rank: 3,
+        name: "Eggs (whole, pasture-raised)",
+        summary:
+          "6 g protein each, ~0.5 g leucine — three-egg breakfasts clear the leucine threshold and supply choline (~250 mg per yolk) that supports the methyl pool for any methylation-sensitive supplement stack. Cheap, shelf-tolerant, low cooking lift.",
+      },
+      {
+        rank: 4,
+        name: "Canned sardines or wild salmon",
+        summary:
+          "1-1.5 g EPA+DHA per 100 g tin plus 22 g protein. The omega-3 dose matters during recovery-peptide cycles (BPC-157, TB-500) where damping background inflammation is part of the protocol logic. Wild Planet, King Oscar, Bela are the third-party-tested defaults.",
+      },
+      {
+        rank: 5,
+        name: "Leafy greens (spinach, kale, chard)",
+        summary:
+          "Magnesium and potassium density at low caloric cost. 100 g cooked spinach delivers ~80 mg magnesium and ~470 mg potassium — the two electrolytes most often under-replaced on GLP-1 days. Frozen spinach is fine; nutrient density is preserved.",
+      },
+      {
+        rank: 6,
+        name: "Pumpkin seeds (raw, hulled)",
+        summary:
+          "~150 mg magnesium per 30 g serving plus 9 g protein, 4 g zinc. The most concentrated whole-food magnesium source. Easy to add to yogurt, oats, or eat plain. Stores in the freezer for 6+ months without rancidity.",
+      },
+      {
+        rank: 7,
+        name: "Cottage cheese (4% milkfat)",
+        summary:
+          "24 g protein per cup, dominantly casein. Slow-release amino kinetics make it the pre-bed pick (Res 2012); the high tryptophan-to-large-neutral-amino ratio supports nighttime serotonin/melatonin pathway flow without a supplement.",
+      },
+      {
+        rank: 8,
+        name: "Bone-in chicken thighs",
+        summary:
+          "~$0.017/g cooked protein at Costco. Higher fat than breast (tolerates the fat floor on cuts), batch-cooks in 35 min, freezer-portions cleanly. The default protein for a meal-prep cadence on a peptide cycle.",
+      },
+      {
+        rank: 9,
+        name: "Glycine-rich gelatin or collagen peptides",
+        summary:
+          "10-15 g per serving glycine, the rate-limiting amino acid for connective-tissue collagen synthesis. Pairs with recovery-peptide protocols (BPC-157, TB-500) where collagen turnover is part of the targeted system. Note: collagen does not trigger MPS (Oikawa 2020) — it's a connective-tissue input, not a primary protein source.",
+      },
+      {
+        rank: 10,
+        name: "Fresh ginger root",
+        summary:
+          "1-2 g per day reduces nausea in published GLP-1 patient survey data and is cited in Cochrane reviews of antiemetic strategies (Marx 2013). Fresh root grated into hot water; tea bags are weaker. Stack with magnesium glycinate for dose-escalation weeks.",
+      },
+      {
+        rank: 11,
+        name: "Berries (frozen wild blueberries)",
+        summary:
+          "Anthocyanins and polyphenols at low volume cost. The freeze-from-fresh form preserves anthocyanin content per Brown 2014. 100 g portions stack into yogurt or oats; freezer-stable for 12+ months. The lowest-volume way to add polyphenol diversity on reduced-appetite days.",
+      },
+      {
+        rank: 12,
+        name: "Extra-virgin olive oil (high-polyphenol)",
+        summary:
+          "Anti-inflammatory monounsaturated fat with measurable polyphenol content. Brands publishing harvest dates and polyphenol assays (Brightland, Graza, California Olive Ranch reserve) supply the form the Mediterranean-diet RCTs (PREDIMED) actually used. Pairs cleanly with recovery-peptide cycle goals.",
+      },
+    ],
+    sources: [
+      {
+        label:
+          "Moore DR et al. 2015. Protein ingestion to stimulate myofibrillar protein synthesis requires greater relative protein intakes in healthy older versus younger men. J Gerontol A Biol Sci Med Sci 70(1):57-62.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/25056502/",
+      },
+      {
+        label:
+          "Res PT et al. 2012. Protein ingestion before sleep improves postexercise overnight recovery. Med Sci Sports Exerc 44(8):1560-1569.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/22330017/",
+      },
+      {
+        label:
+          "Oikawa SY et al. 2020. Whey protein but not collagen peptides stimulate acute and longer-term muscle protein synthesis. Am J Clin Nutr 111(3):708-718.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/31919527/",
+      },
+      {
+        label:
+          "Marx W et al. 2013. Ginger — mechanism of action in chemotherapy-induced nausea and vomiting: a review. Crit Rev Food Sci Nutr 55(1):141-146.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/24227373/",
+      },
+      {
+        label:
+          "Estruch R et al. 2018. Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts (PREDIMED). N Engl J Med 378(25):e34.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/29897866/",
+      },
+      {
+        label:
+          "USDA FoodData Central. 2024. Nutrient profiles for spinach, pumpkin seeds, sardines, eggs, Greek yogurt, cottage cheese.",
+        url: "https://fdc.nal.usda.gov/",
+      },
+    ],
+  },
+  {
+    slug: "bacteriostatic-water-buying-guide",
+    title:
+      "Bacteriostatic Water for Peptide Reconstitution: What to Buy and Where",
+    h1: "Bacteriostatic water for peptide reconstitution",
+    description:
+      "USP-grade vs sterile water, 30 mL multidose vials vs 10 mL singles, storage rules, and the suppliers that publish lot-level COAs. Educational reference only — for research peptides only.",
+    hub: "pantry-systems",
+    postType: "cluster",
+    publishedAt: "2026-04-27",
+    updatedAt: "2026-04-27",
+    readingTime: 8,
+    status: "published",
+    peptideContext:
+      "This page is educational reference material on the buyer's side of bacteriostatic water — what it is, how it differs from sterile water, what storage rules are published, and which suppliers document their lots. We do not link to peptide vendors. We do not provide reconstitution math or injection guidance; for technique, your prescriber and licensed clinical pharmacist are the source. For research-peptide context only.",
+    faq: [
+      {
+        q: "What is bacteriostatic water and how does it differ from sterile water?",
+        a: "Bacteriostatic water is sterile water for injection that contains 0.9% benzyl alcohol as a preservative, allowing repeated punctures of a single vial over ~28 days at room or refrigerated temperature without microbial overgrowth (per the USP monograph and the manufacturer prescribing information for Hospira's bacteriostatic water for injection). Plain sterile water for injection has no preservative; published guidance treats it as single-use after first puncture. For multidose reconstitution scenarios, bacteriostatic water is the published default; for single-use, sterile water is appropriate.",
+      },
+      {
+        q: "What does USP-grade actually mean here?",
+        a: "USP-grade means the product has been tested against the United States Pharmacopeia monograph for sterility, endotoxins, particulate matter, and benzyl alcohol concentration. Suppliers that print 'USP' on the vial are claiming compliance with that monograph; reputable manufacturers publish a Certificate of Analysis (COA) per lot. Hospira, Pfizer, and Fresenius Kabi are the dominant USP-grade manufacturers in the US market.",
+      },
+      {
+        q: "What vial sizes are commonly available?",
+        a: "10 mL and 30 mL multidose vials are the two formats the US market typically supplies for bacteriostatic water. The 30 mL format is used in research and compounding pharmacy contexts; the 10 mL is more common at retail. Per the published prescribing information, both formats carry the same 28-day post-puncture stability when stored within the labeled temperature range.",
+      },
+      {
+        q: "How is it stored before and after first puncture?",
+        a: "Unopened: per the manufacturer label, room temperature is acceptable; refrigeration extends shelf life. Opened: the published 28-day rule starts at first puncture. Several manufacturers explicitly state to discard at 28 days regardless of remaining volume. Refrigeration after first puncture is the conservative default; check your specific manufacturer's prescribing information.",
+      },
+      {
+        q: "Where do reputable suppliers publish their COAs?",
+        a: "Hospira and Pfizer publish full prescribing information (PI) documents on dailymed.nlm.nih.gov; the lot-level COA is typically supplied by the wholesaler or pharmacy on request. Compounding pharmacies that carry bacteriostatic water as a research-use product (e.g., Empower, Olympia, Hallandale on the licensed-pharmacy side) attach lot-level documentation per order. We do not link to vendors that sell research peptides; for technique and protocol guidance from a clinical reference, see injectcompass.com.",
+      },
+      {
+        q: "What goes wrong if storage rules are not followed?",
+        a: "The published failure modes are: microbial overgrowth past the 28-day window (the benzyl alcohol bacteriostat is dose-limited, not infinite); precipitation of dissolved peptide in the reconstituted vial if temperature cycles outside the 2-8 °C refrigerated range; benzyl alcohol toxicity in pediatric or renal-compromised contexts (the 'gasping syndrome' literature, Gershanik 1982). For research-use scenarios outside human administration, the storage rules are the same.",
+      },
+    ],
+    sources: [
+      {
+        label:
+          "Hospira. 2023. Bacteriostatic Water for Injection, USP — prescribing information. DailyMed.",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8d20ec55-ca8c-46f9-b3f1-43b87e28bce8",
+      },
+      {
+        label:
+          "United States Pharmacopeia. 2024. Bacteriostatic Water for Injection monograph (USP 47-NF 42).",
+        url: "https://www.usp.org/",
+      },
+      {
+        label:
+          "Gershanik J et al. 1982. The gasping syndrome and benzyl alcohol poisoning. N Engl J Med 307(22):1384-1388.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/7133084/",
+      },
+      {
+        label:
+          "FDA. 2023. Compounding and the FDA: questions and answers — guidance for industry on 503A/503B compounding pharmacies.",
+        url: "https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers",
+      },
+    ],
+  },
+  {
+    slug: "electrolytes-on-glp1",
+    title:
+      "Electrolyte Strategy for GLP-1 Days: Sodium, Potassium, Magnesium Targets",
+    h1: "Electrolyte strategy for GLP-1 days",
+    description:
+      "Why GLP-1 receptor agonists shift electrolyte balance, what daily sodium / potassium / magnesium targets the published literature supports, and the food-vs-supplement math at $/serving — with third-party-tested electrolyte products ranked.",
+    hub: "peptide-stack-support",
+    postType: "comparison",
+    publishedAt: "2026-04-27",
+    updatedAt: "2026-04-27",
+    readingTime: 11,
+    status: "published",
+    peptideContext:
+      "GLP-1 receptor agonists (semaglutide, tirzepatide) drop daily food volume and indirectly drop electrolyte intake — the same headache, fatigue, and constipation pattern patient communities consistently report tracks the electrolyte deficit, not the medication itself. The targets below are population-level published guidance (Institute of Medicine DRIs, the GLP-1 RCT side-effect literature). Talk to your prescriber before starting an electrolyte protocol, especially if you're on antihypertensives, diuretics, or have cardiac or renal conditions.",
+    ourPick: {
+      name: "LMNT (1000 mg sodium / 200 mg potassium / 60 mg magnesium per stick)",
+      tier: "Best ratio for GLP-1 days, no sugar",
+      reason:
+        "Stick packs print full electrolyte panels; the 1000 mg sodium dose is the cleanest match for the GLP-1-day deficit profile when daily food drops below ~1500 kcal. ~$1.50 per serving; 30-stick boxes are the cost floor. No sugar, no maltodextrin, citric-acid based — works as either hot broth or cold water. Stevia sweetened (skip if you prefer unflavored — they make Raw Unflavored).",
+    },
+    products: [
+      {
+        rank: 1,
+        name: "LMNT Recharge",
+        tier: "Best overall ratio · best $/dose",
+        summary:
+          "1000 mg sodium / 200 mg potassium / 60 mg magnesium per stick. Published electrolyte panel, no proprietary blend. ~$1.50/stick at 30-pack pricing. The default pick for GLP-1 days when daily intake drops below 1500 kcal.",
+      },
+      {
+        rank: 2,
+        name: "Liquid IV Hydration Multiplier",
+        tier: "Skip on GLP-1 (sugar load)",
+        summary:
+          "500 mg sodium / 370 mg potassium per stick — but 11 g added sugar per serving (cane sugar + dextrose). The sugar dose is at cross-purposes with most GLP-1 protocols. Choose only if the sugar isn't a constraint.",
+      },
+      {
+        rank: 3,
+        name: "Re-Lyte (Redmond)",
+        tier: "Best mineral diversity",
+        summary:
+          "810 mg sodium / 400 mg potassium / 60 mg magnesium plus zinc and chloride from Redmond Real Salt. Higher potassium-to-sodium ratio; good for the reader who's already getting sodium from food and needs the potassium/magnesium top-up. ~$1.30/serving.",
+      },
+      {
+        rank: 4,
+        name: "Nuun Sport",
+        tier: "Tablet format · lower dose",
+        summary:
+          "300 mg sodium / 150 mg potassium / 25 mg magnesium per tablet. Roughly one-third the dose of LMNT. Useful as a top-up, not as the primary dose. ~$0.50/tablet. Convenient travel format.",
+      },
+      {
+        rank: 5,
+        name: "DIY (salt + Lite Salt + Mag glycinate)",
+        tier: "Cheapest controlled dose",
+        summary:
+          "1.4 g table salt + 1.4 g Morton Lite Salt + 200 mg magnesium glycinate caps. Total: ~1100 mg sodium / 500 mg potassium / 200 mg magnesium. ~$0.20 per serving. Worse palate than LMNT; perfect cost basis for daily use. Mix into broth or sparkling water with citrus.",
+      },
+      {
+        rank: 6,
+        name: "Drip Drop ORS",
+        tier: "Medical-grade ORS",
+        summary:
+          "330 mg sodium / 185 mg potassium plus glucose for ORS-style absorption. WHO ORS-formula adjacent. ~$1.00/serving. Good for dehydration episodes; sodium dose is below the GLP-1-day target as a daily baseline.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why do GLP-1s shift electrolyte balance?",
+        a: "Direct mechanism: slowed gastric emptying and reduced appetite drop daily food volume, which drops the dietary delivery of sodium, potassium, and magnesium. Indirect mechanism: any episodes of nausea, vomiting, or diarrhea on dose escalation accelerate losses. The medication itself doesn't deplete electrolytes; the eating pattern around it does. The published GLP-1 RCTs (STEP, SURPASS) report fatigue, constipation, and headache — the symptom triad most often tracked back to electrolyte deficit in clinical nutrition follow-up.",
+      },
+      {
+        q: "What are the daily targets?",
+        a: "Institute of Medicine DRIs for adults: sodium 1500 mg adequate intake, 2300 mg upper level for cardiovascular caution. Potassium 3400 mg (men) / 2600 mg (women) adequate intake. Magnesium 400-420 mg (men) / 310-320 mg (women) RDA. On GLP-1 days where daily intake drops below ~1500 kcal, food alone may not clear those floors — supplementation closes the gap. Consult your prescriber before adding electrolytes if you take antihypertensives, diuretics, or have cardiac or renal concerns.",
+      },
+      {
+        q: "Food first or supplement first?",
+        a: "Food first when appetite tolerates it — leafy greens, pumpkin seeds, salmon, yogurt, broth all clear the magnesium and potassium gaps cheaply. Supplement first on the days you can't eat. The spreadsheet math: a $1.50 LMNT stick replaces ~1500 kcal of dietary delivery on a high-volume day. On reduced-appetite days, that's not just cheaper, it's the only realistic path to clearing the floor.",
+      },
+      {
+        q: "Are sugar-based hydration drinks ever appropriate on GLP-1?",
+        a: "Glucose-sodium co-transport (the basis of WHO ORS) genuinely accelerates absorption during active dehydration episodes — vomiting, diarrhea, heavy exertion. For daily baseline electrolyte coverage, the sugar load works against most GLP-1 protocol goals. The decision rule: ORS-style products for acute dehydration; sugar-free electrolyte mixes for daily baseline.",
+      },
+      {
+        q: "What about magnesium glycinate at night specifically?",
+        a: "200-400 mg magnesium glycinate at night is consistently cited in patient communities for sleep support during dose escalation. The form matters — glycinate is the form with the cleanest absorption and tolerance profile (vs oxide, which is poorly absorbed and laxative). The night-dose strategy is independent of the daytime electrolyte stack; both can layer.",
+      },
+    ],
+    sources: [
+      {
+        label:
+          "Institute of Medicine. 2019. Dietary Reference Intakes for Sodium and Potassium.",
+        url: "https://nap.nationalacademies.org/catalog/25353/dietary-reference-intakes-for-sodium-and-potassium",
+      },
+      {
+        label:
+          "Institute of Medicine. 1997. Dietary Reference Intakes for Calcium, Phosphorus, Magnesium, Vitamin D, and Fluoride.",
+        url: "https://nap.nationalacademies.org/catalog/5776/",
+      },
+      {
+        label:
+          "Wilding JPH et al. 2021. Once-weekly semaglutide in adults with overweight or obesity (STEP 1). N Engl J Med 384(11):989-1002.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/33567185/",
+      },
+      {
+        label:
+          "Jastreboff AM et al. 2022. Tirzepatide once weekly for the treatment of obesity (SURMOUNT-1). N Engl J Med 387(3):205-216.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/35658024/",
+      },
+      {
+        label:
+          "World Health Organization. 2006. Oral rehydration salts (ORS): a new reduced osmolarity formulation.",
+        url: "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
       },
     ],
   },

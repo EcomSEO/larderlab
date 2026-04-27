@@ -392,5 +392,18 @@
     "bodyAfter": ".",
     "reject": "Avvisa",
     "accept": "Acceptera"
+  },
+  "peptide": {
+    "tagline": "Ett genomtänkt skafferi för peptidanvändare.",
+    "heroH1": "Ett genomtänkt skafferi för peptidanvändare.",
+    "heroDek": "Kosttillskott-stackar, skafferi-arkitektur och verklig kostnadsmatte — byggt för människor i peptidterapi. Citerad forskning. Inga sponsorer.",
+    "calloutHeading": "Peptidkontext",
+    "dietitianBadge": "Granskad av Dr. Maya Rao, RDN — nutrition vid peptidterapi",
+    "educationalBanner": "Innehållet på Larderlab är utbildande. Råd om skafferi, makron och kosttillskott ersätter inte medicinsk rådgivning. Tala med din förskrivare innan du startar, avslutar eller staplar ett tillskott vid sidan av en peptidterapi.",
+    "hubMacros": "Makron och protein för peptidanvändare",
+    "hubPantry": "Skafferi-system för peptidprotokoll",
+    "hubIngredients": "Råvaru-reportage — peptidnära",
+    "hubMealPrep": "Meal-prep-arkitektur för peptidcykler",
+    "hubStack": "Stöd för peptid-stacken"
   }
 }

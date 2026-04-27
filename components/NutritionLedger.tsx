@@ -34,23 +34,30 @@ export function NutritionLedger({
       </div>
 
       {rows.map((row) => (
-        <div key={row.label} className="nutri-row">
-          <span className="label">{row.label}</span>
-          <span className="value">
-            {row.value}
-            <span className="text-ink-soft ml-1">{row.unit}</span>
-          </span>
-          {row.source === "USDA" && (
-            <span className="src-badge" title="USDA FoodData Central">
-              USDA
+        <div key={row.label}>
+          <div className="nutri-row">
+            <span className="label">{row.label}</span>
+            <span className="value">
+              {row.value}
+              <span className="text-ink-soft ml-1">{row.unit}</span>
             </span>
+            {row.source === "USDA" && (
+              <span className="src-badge" title="USDA FoodData Central">
+                USDA
+              </span>
+            )}
+            {row.source === "Calculated" && (
+              <span className="src-badge calc" title="Calculated from ingredients">
+                Calc.
+              </span>
+            )}
+            {row.source === "—" && <span className="src-badge empty">—</span>}
+          </div>
+          {row.peptideRelevance && (
+            <div className="text-[12px] text-olive-deep leading-snug pl-1 -mt-1 mb-2 italic">
+              {row.peptideRelevance}
+            </div>
           )}
-          {row.source === "Calculated" && (
-            <span className="src-badge calc" title="Calculated from ingredients">
-              Calc.
-            </span>
-          )}
-          {row.source === "—" && <span className="src-badge empty">—</span>}
         </div>
       ))}
 

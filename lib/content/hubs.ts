@@ -9,48 +9,48 @@ export type Hub = {
 export const hubs: Hub[] = [
   {
     slug: "macros-protein",
-    name: "Macros & Protein",
+    name: "Macros & Protein for Peptide Users",
     shortName: "Macros",
     oneLiner:
-      "Targets, sources, distribution, cost. With a live Macro Calculator.",
+      "Protein targets, leucine thresholds, and per-meal math for peptide protocols.",
     thesis:
-      "Protein, fats, and carbs — not as diet dogma, but as measurable daily targets with real cost-per-unit math. The entry-level hub for the optimizer reader.",
+      "Protein, fats, and carbs as measurable daily targets — recalibrated for the reader on a peptide protocol. The leucine threshold matters more during a GLP-1 caloric deficit than total grams. The fat floor matters more on a recovery-peptide cycle than percent of calories. Real cost-per-unit math, USDA-cited tables, no diet dogma.",
   },
   {
     slug: "pantry-systems",
-    name: "Pantry Systems",
+    name: "Pantry Systems for Peptide Protocols",
     shortName: "Pantry",
     oneLiner:
-      "Storage science, shelf life, bulk-buy math, rotation frameworks.",
+      "Fridge, freezer, and pantry architecture that supports peptide therapy — including pen storage and bacteriostatic-water handling.",
     thesis:
-      "A functional pantry is engineered, not stocked. Storage science, shelf life, bulk-buying math, rotation systems, and the architecture of a kitchen that produces meals without friction.",
+      "A functional pantry is engineered, not stocked — and a peptide-supportive pantry adds a layer the wellness blogs miss: temperature-stable zones for prefilled pens, food-grade storage for reconstitution supplies, and a fridge layout that keeps high-protein, electrolyte-dense, low-volume meals at hand for the days appetite drops.",
   },
   {
     slug: "ingredient-deep-dives",
-    name: "Ingredient Deep-Dives",
+    name: "Ingredient Deep-Dives — Peptide-Adjacent",
     shortName: "Ingredients",
     oneLiner:
-      "Seed oils, rice arsenic, fish mercury — what the literature actually says.",
+      "Anti-inflammatory ingredients, omega-3 sources, electrolyte-dense foods — what the literature shows and how it lands in peptide context.",
     thesis:
-      "Specific foods analyzed from the research angle. Not 'is it healthy' — 'what does the literature show, what's the real exposure, what's the cost-benefit calculus?'",
+      "Specific foods analyzed from the research angle, with the peptide-context layer named: which omega-3 sources matter on an anti-inflammatory protocol, which electrolytes shift on a GLP-1, which low-volume foods clear the protein and micronutrient floor on reduced-appetite days. Not 'is it healthy' — what the literature shows, what the real exposure is, what the cost-benefit calculus is.",
   },
   {
     slug: "meal-prep",
-    name: "Meal Prep Architecture",
+    name: "Meal Prep Architecture for Peptide Cycles",
     shortName: "Meal Prep",
     oneLiner:
-      "Component-based frameworks, batch cooking math, freeze-thaw logic. No recipes.",
+      "Batch-cooking frameworks calibrated to dose-escalation weeks: low-volume, high-density, freezer-portioned.",
     thesis:
-      "Meal prep as a system — batch cooking, component-based frameworks, freeze-thaw logic, not recipes. Build a repeatable weekly cadence without writing out a single recipe.",
+      "Meal prep as a system that adapts to peptide cycles. Batch cook for the days when appetite is full; portion smaller for the days it isn't. High-density, low-volume meals that clear the protein and micronutrient floor without forcing food through reduced appetite. Component-based frameworks, freeze-thaw logic, no recipes.",
   },
   {
-    slug: "supplements",
-    name: "Supplements & Functional Foods",
-    shortName: "Supplements",
+    slug: "peptide-stack-support",
+    name: "Peptide-Stack Support",
+    shortName: "Stack",
     oneLiner:
-      "What's worth taking, from which brand, at what $/unit. Third-party-tested only.",
+      "The supplements that pair with peptide protocols — electrolytes, taurine, magnesium glycinate, omega-3 — with $/serving math and third-party-tested filters.",
     thesis:
-      "Supplements as a mechanical category, not a wellness category. What's worth taking, at what dose, from what brands, at what $/mg of bioactive.",
+      "Supplements as a mechanical category, scoped to what actually pairs with peptide therapy: electrolytes for GLP-1 dehydration, taurine for nausea on dose escalation, magnesium glycinate for sleep, omega-3 for inflammation around recovery peptides. Educational only, never prescriptive — talk to your prescriber before stacking. What's worth taking, at what dose, from what brand, at what $/mg of bioactive.",
   },
 ];
 

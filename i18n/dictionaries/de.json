@@ -213,12 +213,30 @@
       "drafted": "Entwurf, in der Schlussredaktion",
       "scheduled": "Eingeplant für Heft 05",
       "items": [
-        { "title": "Die zwölf Saucen, die jedes Regal verdient", "status": "researching" },
-        { "title": "Olivenöl altert — auf Deutsch erklärt", "status": "researching" },
-        { "title": "Ein Feldführer durch die Fermentationsregeln", "status": "drafted" },
-        { "title": "Warum getrocknete Bohnen mit Salz zäher werden", "status": "drafted" },
-        { "title": "Reis, sortiert nach Kosten pro Portion", "status": "scheduled" },
-        { "title": "Die Fünf-Minuten-Vorratstriage", "status": "scheduled" }
+        {
+          "title": "Die zwölf Saucen, die jedes Regal verdient",
+          "status": "researching"
+        },
+        {
+          "title": "Olivenöl altert — auf Deutsch erklärt",
+          "status": "researching"
+        },
+        {
+          "title": "Ein Feldführer durch die Fermentationsregeln",
+          "status": "drafted"
+        },
+        {
+          "title": "Warum getrocknete Bohnen mit Salz zäher werden",
+          "status": "drafted"
+        },
+        {
+          "title": "Reis, sortiert nach Kosten pro Portion",
+          "status": "scheduled"
+        },
+        {
+          "title": "Die Fünf-Minuten-Vorratstriage",
+          "status": "scheduled"
+        }
       ]
     },
     "privacy": {
@@ -310,18 +328,30 @@
   },
   "localeSwitcher": {
     "label": "Sprache",
-    "en": "EN", "enFull": "English",
-    "de": "DE", "deFull": "Deutsch",
-    "fr": "FR", "frFull": "Français",
-    "it": "IT", "itFull": "Italiano",
-    "es": "ES", "esFull": "Español",
-    "nl": "NL", "nlFull": "Nederlands",
-    "pl": "PL", "plFull": "Polski",
-    "sv": "SV", "svFull": "Svenska",
-    "pt": "PT", "ptFull": "Português",
-    "ro": "RO", "roFull": "Română",
-    "cs": "CS", "csFull": "Čeština",
-    "no": "NO", "noFull": "Norsk"
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   },
   "hubPage": {
     "crumbHome": "Cover",
@@ -361,5 +391,18 @@
     "bodyAfter": ".",
     "reject": "Ablehnen",
     "accept": "Akzeptieren"
+  },
+  "peptide": {
+    "tagline": "Eine durchdachte Vorratskammer für Peptid-Anwender.",
+    "heroH1": "Eine durchdachte Vorratskammer für Peptid-Anwender.",
+    "heroDek": "Supplement-Stacks, Vorratskammer-Architektur und echte Kostenrechnung — gebaut für Menschen in einer Peptid-Therapie. Belegte Forschung. Keine bezahlten Empfehlungen.",
+    "calloutHeading": "Peptid-Kontext",
+    "dietitianBadge": "Geprüft von Dr. Maya Rao, RDN — Ernährung in der Peptid-Therapie",
+    "educationalBanner": "Larderlab-Inhalte dienen der Aufklärung. Hinweise zu Vorrat, Makros und Nahrungsergänzungsmitteln ersetzen keine ärztliche Beratung. Sprich mit deinem behandelnden Arzt, bevor du Supplemente mit einer Peptid-Therapie kombinierst, beginnst oder absetzt.",
+    "hubMacros": "Makros & Eiweiß für Peptid-Anwender",
+    "hubPantry": "Vorratskammer-Systeme für Peptid-Protokolle",
+    "hubIngredients": "Zutaten-Reportagen — peptidnah",
+    "hubMealPrep": "Meal-Prep-Architektur für Peptid-Zyklen",
+    "hubStack": "Peptid-Stack-Unterstützung"
   }
 }

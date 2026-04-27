@@ -392,5 +392,18 @@
     "bodyAfter": ".",
     "reject": "Refuză",
     "accept": "Accept"
+  },
+  "peptide": {
+    "tagline": "O cămară gândită pentru utilizatorii de peptide.",
+    "heroH1": "O cămară gândită pentru utilizatorii de peptide.",
+    "heroDek": "Stack-uri de suplimente, arhitectura cămării și calcule reale de cost — pentru persoanele în terapie cu peptide. Cercetare citată. Fără sponsorizări.",
+    "calloutHeading": "Context peptidic",
+    "dietitianBadge": "Verificat de Dr. Maya Rao, RDN — nutriție în terapia cu peptide",
+    "educationalBanner": "Conținutul Larderlab este educațional. Recomandările despre cămară, macro și suplimente nu înlocuiesc sfatul medical. Consultă-ți medicul înainte de a începe, opri sau combina un supliment cu o terapie peptidică.",
+    "hubMacros": "Macro și proteină pentru utilizatorii de peptide",
+    "hubPantry": "Sisteme de cămară pentru protocoale peptidice",
+    "hubIngredients": "Reportaje despre ingrediente — adiacente peptidelor",
+    "hubMealPrep": "Arhitectura meal-prep pentru cicluri peptidice",
+    "hubStack": "Sprijin pentru stack-ul peptidic"
   }
 }
