@@ -54,25 +54,34 @@ export function Hero({
 
           {/* Featured-recipe panel */}
           <aside className="lg:col-span-5">
-            <Link
-              href={`/${featured.slug}`}
-              className="block rcard"
-              aria-label={`Read: ${featured.title}`}
-            >
-              <div
-                className="rcard-photo plate-warm"
-                style={{
-                  aspectRatio: "4 / 3.4",
-                  background: `radial-gradient(ellipse at 30% 30%, #F8E5C8 0%, ${featured.plateColor} 55%, #A8884E 100%)`,
-                }}
-                aria-hidden="true"
-              />
+            <article className="rcard block">
+              <Link
+                href={`/${featured.slug}`}
+                aria-label={`Read: ${featured.title}`}
+                className="block"
+              >
+                <div
+                  className="rcard-photo plate-warm"
+                  style={{
+                    aspectRatio: "4 / 3.4",
+                    background: `radial-gradient(ellipse at 30% 30%, #F8E5C8 0%, ${featured.plateColor} 55%, #A8884E 100%)`,
+                  }}
+                  aria-hidden="true"
+                />
+              </Link>
               <div className="rcard-body" style={{ padding: "1.25rem 1.4rem 1.4rem" }}>
                 <div className="flex items-center justify-between gap-3 mb-2">
                   <div className="rcard-eyebrow">{featured.department}</div>
                   <TestKitchenStamp testCount={featured.testCount} />
                 </div>
-                <h3 style={{ fontSize: "1.55rem", lineHeight: 1.18 }}>{featured.title}</h3>
+                <h3 style={{ fontSize: "1.55rem", lineHeight: 1.18 }}>
+                  <Link
+                    href={`/${featured.slug}`}
+                    className="text-[--color-ink] hover:text-[--color-tomato] transition no-underline"
+                  >
+                    {featured.title}
+                  </Link>
+                </h3>
                 <div className="rcard-dek">{featured.dek}</div>
                 <div className="rcard-meta">
                   <span>
@@ -84,7 +93,7 @@ export function Hero({
                   <span>{featured.difficulty}</span>
                 </div>
               </div>
-            </Link>
+            </article>
           </aside>
         </div>
       </div>
