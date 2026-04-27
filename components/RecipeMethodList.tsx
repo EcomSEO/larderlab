@@ -1,8 +1,8 @@
 import type { RecipeStep } from "@/lib/content/recipes";
 
 /**
- * RecipeMethodList — numbered method, italic step labels (Fraunces),
- * Inter body. Step numbers in olive circles.
+ * RecipeMethodList — clean-medical numbered method.
+ * Olive-circle step numbers, Inter step labels (NOT italic), Inter body.
  */
 export function RecipeMethodList({
   steps,
@@ -13,7 +13,7 @@ export function RecipeMethodList({
 }) {
   return (
     <div>
-      <h3 className="font-display italic font-medium text-[1.5rem] mb-3">
+      <h3 className="font-semibold text-[20px] md:text-[22px] text-ink mb-3 tracking-tight">
         {heading}
       </h3>
       <ol className="meth-list">

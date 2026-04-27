@@ -2,9 +2,8 @@ import type { Recipe } from "@/lib/content/recipes";
 import { RecipeCardCompact } from "./RecipeCardCompact";
 
 /**
- * Horizontal scroll-snap row of RecipeCards. Used on the home for the
- * "Five things to cook this weekend" strip and at the foot of recipe
- * pages for related-recipe rails.
+ * Horizontal scroll-snap row of RecipeCards. Used on home for the
+ * "Cook this weekend" strip and at the foot of recipe pages.
  */
 export function FeaturedRecipeCarousel({
   recipes,
@@ -18,16 +17,18 @@ export function FeaturedRecipeCarousel({
   dek?: string;
 }) {
   return (
-    <section className="border-b border-[--color-border-subtle]">
-      <div className="mx-auto max-w-spread px-6 py-14 md:py-16">
-        <div className="flex items-end justify-between gap-6 mb-6 md:mb-8">
-          <div>
-            <div className="dept-label mb-3">{eyebrow}</div>
-            <h2 className="font-display italic font-medium text-3xl md:text-[2.4rem] leading-[1.1]">
+    <section className="border-b border-rule bg-surface-alt">
+      <div className="mx-auto max-w-container px-6 py-16 md:py-20">
+        <div className="flex items-end justify-between gap-6 mb-8">
+          <div className="max-w-2xl">
+            <div className="eyebrow mb-3">{eyebrow}</div>
+            <h2 className="text-[28px] md:text-[36px] font-bold leading-tight text-ink tracking-tight">
               {heading}
             </h2>
             {dek && (
-              <p className="dek mt-3 max-w-[58ch]">{dek}</p>
+              <p className="mt-3 text-[16px] text-ink-muted leading-relaxed">
+                {dek}
+              </p>
             )}
           </div>
         </div>

@@ -1,62 +1,128 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Larderlab — Healthline-grade clean-medical design system.
+ *
+ * Locked tokens. Body bg is white (#FFFFFF). Olive (#5C6F3C) is the
+ * brand primary on white — keeps larderlab botanically distinct from
+ * injectcompass's medical teal. Tomato is sparingly secondary.
+ *
+ * Type: Inter for body/UI, Source Serif 4 for editorial H1, Plex Mono
+ * for nutrition values. NO Fraunces. NO italic display.
+ *
+ * Legacy magazine class aliases (cream, ink, tomato, etc.) are kept so
+ * the components/_legacy/ folder still compiles after the redesign.
+ */
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        // Warm magazine palette — cream paper, olive, tomato, ink
-        cream: "#F4EAD5",
-        "cream-deep": "#EADBBE",
-        "cream-soft": "#F8F1E1",
-        olive: "#5C6F3C",
-        "olive-deep": "#3F4D27",
-        tomato: "#C4452D",
-        "tomato-deep": "#9C2F1C",
-        ink: "#2A1A12",
-        "ink-soft": "#4A3A2E",
-        ash: "#8A7A6E",
-        ledger: "#FCF6E9",
+        // -------- Clean-medical surface --------
+        ink: {
+          DEFAULT: "#1A1F2E",
+          muted: "#5A6573",
+          soft: "#8A92A1",
+        },
+        surface: {
+          DEFAULT: "#FFFFFF",
+          alt: "#F7F9FB",
+          warm: "#EEF2E8",
+        },
+        rule: {
+          DEFAULT: "#E5E9EE",
+          strong: "#CDD3DA",
+        },
 
-        // Legacy aliases so any older shared template classes still resolve
-        // during the redesign — all map to the new warm palette.
+        // -------- Brand accents --------
+        olive: {
+          50: "#EEF2E8",
+          100: "#DCE4CC",
+          200: "#B8C99B",
+          500: "#5C6F3C",
+          600: "#445129",
+          700: "#3F4D27",
+          900: "#2A3419",
+          DEFAULT: "#5C6F3C",
+        },
+        tomato: {
+          50: "#FBEDEA",
+          500: "#C4452D",
+          600: "#A8371F",
+          DEFAULT: "#C4452D",
+        },
+        reviewed: {
+          bg: "#EEF2E8",
+          text: "#445129",
+        },
+        success: "#10A26A",
+        warn: "#B8782F",
+        danger: "#C8463C",
+
+        // -------- Legacy aliases (kept so older imports still compile) --------
+        cream: "#FFFFFF",
+        "cream-deep": "#F7F9FB",
+        "cream-soft": "#F7F9FB",
+        "cream-lighter": "#F7F9FB",
+        "olive-deep": "#445129",
+        "tomato-deep": "#A8371F",
+        ledger: "#F7F9FB",
+        ash: "#5A6573",
+        "ink-soft": "#5A6573",
+        "ink-deep": "#1A1F2E",
         sage: "#5C6F3C",
         forest: "#3F4D27",
         terracotta: "#C4452D",
-        copper: "#C4452D",
-        "copper-deep": "#9C2F1C",
-        steel: "#8A7A6E",
-        "steel-light": "#A89687",
-        charcoal: "#2A1A12",
-        paper: "#F4EAD5",
-        "paper-deep": "#EADBBE",
-        "ink-deep": "#1B1009",
-        stone: "#8A7A6E",
+        copper: "#5C6F3C",
+        "copper-deep": "#445129",
+        steel: "#5A6573",
+        "steel-light": "#8A92A1",
+        charcoal: "#1A1F2E",
+        paper: "#FFFFFF",
+        "paper-deep": "#F7F9FB",
+        stone: "#5A6573",
       },
       fontFamily: {
-        // Editorial serif (display) — Fraunces variable, used at large sizes
-        // for cover titles, feature heads, and italic pull quotes.
-        serif: ['"Fraunces"', '"Tiempos Display"', "Georgia", "serif"],
-        display: ['"Fraunces"', '"Tiempos Display"', "Georgia", "serif"],
-        // Clean grotesque sans for body, byline, captions, masthead nav.
-        sans: ['"Inter Tight"', "Inter", "system-ui", "sans-serif"],
-        // Handwritten / script for editor's note + magazine flourishes.
-        script: ['"Caveat"', '"Homemade Apple"', "cursive"],
-        // Mono kept for time, page numbers and small ledger numerics.
+        // Body sans — Inter variable. Default everywhere.
+        sans: ['"Inter"', "Inter", "system-ui", "-apple-system", "sans-serif"],
+        // Editorial accent serif — Source Serif 4. NOT italic. Used on H1.
+        serif: ['"Source Serif 4"', '"Source Serif Pro"', "Georgia", "serif"],
+        display: ['"Source Serif 4"', '"Source Serif Pro"', "Georgia", "serif"],
+        // Mono — Plex Mono for nutrition values, total time, yield.
         mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
+        // Legacy aliases kept so the magazine _legacy folder still compiles
+        script: ['"Inter"', "system-ui", "sans-serif"],
+        condensed: ['"Inter"', "system-ui", "sans-serif"],
       },
       maxWidth: {
-        prose: "62ch",
-        reading: "40rem",
-        wiki: "82rem",
-        spread: "88rem",
-      },
-      boxShadow: {
-        card: "0 1px 0 rgba(42, 26, 18, 0.05), 0 8px 28px rgba(42, 26, 18, 0.08)",
-        plate: "0 2px 0 rgba(42, 26, 18, 0.06), 0 30px 60px rgba(42, 26, 18, 0.12)",
+        prose: "720px",
+        reading: "720px",
+        container: "1200px",
+        rail: "280px",
+        // Legacy aliases
+        wiki: "1200px",
+        spread: "1200px",
       },
       letterSpacing: {
-        masthead: "0.32em",
+        tightest: "-0.02em",
+        eyebrow: "0.05em",
+        masthead: "0.18em",
+      },
+      borderRadius: {
+        sm: "6px",
+        md: "12px",
+        lg: "20px",
+        pill: "999px",
+      },
+      boxShadow: {
+        subtle: "0 1px 2px rgb(0 0 0 / 0.04)",
+        card: "0 4px 12px rgb(0 0 0 / 0.06)",
+        cardHover: "0 8px 24px rgb(0 0 0 / 0.08)",
+        soft: "0 1px 2px rgb(0 0 0 / 0.04), 0 4px 12px rgb(0 0 0 / 0.06)",
+        plate: "0 8px 24px rgb(0 0 0 / 0.08)",
+      },
+      transitionTimingFunction: {
+        out: "cubic-bezier(0.2, 0.7, 0.2, 1)",
       },
     },
   },

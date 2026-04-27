@@ -2,12 +2,13 @@ import Link from "next/link";
 import type { NutritionRow } from "@/lib/content/recipes";
 
 /**
- * NutritionLedger — the larderlab differentiator.
+ * NutritionLedger — larderlab's signature differentiator.
  *
- * A clean per-serving nutrition table with USDA / Calculated source pills
- * on every row. Lives in the right rail of recipe pages on desktop;
- * inlines on mobile. Never headlines calories; presents the values as a
- * structured reference table with sourcing methodology.
+ * Per-serving nutrition table. Each row gets a USDA / Calculated
+ * source pill. Lives in the right rail on desktop; inlines on mobile.
+ *
+ * Does NOT headline calories. No weight-loss numbers. Presents the
+ * values as a structured reference.
  */
 export function NutritionLedger({
   rows,
@@ -24,7 +25,9 @@ export function NutritionLedger({
 }) {
   return (
     <aside className="nutri-card" aria-labelledby="nutri-h">
-      <h3 id="nutri-h" className="nutri-eyebrow">Nutrition · per serving</h3>
+      <h3 id="nutri-h" className="nutri-eyebrow">
+        Nutrition · per serving
+      </h3>
       <div className="nutri-serving">{servingSize}</div>
       <div className="nutri-yield">
         Yield · {yieldText} ({servings} servings)
@@ -35,10 +38,12 @@ export function NutritionLedger({
           <span className="label">{row.label}</span>
           <span className="value">
             {row.value}
-            <span className="text-[--color-text-muted] ml-1">{row.unit}</span>
+            <span className="text-ink-soft ml-1">{row.unit}</span>
           </span>
           {row.source === "USDA" && (
-            <span className="src-badge" title="USDA FoodData Central">USDA</span>
+            <span className="src-badge" title="USDA FoodData Central">
+              USDA
+            </span>
           )}
           {row.source === "Calculated" && (
             <span className="src-badge calc" title="Calculated from ingredients">
@@ -50,8 +55,9 @@ export function NutritionLedger({
       ))}
 
       <div className="nutri-foot">
-        Values rounded to nearest whole number. Sourced from USDA FoodData
-        Central where flagged; otherwise calculated from listed ingredients.{" "}
+        Values rounded to nearest whole number. Sourced from USDA
+        FoodData Central where flagged; otherwise calculated from listed
+        ingredients.{" "}
         <Link href={sourcingHref}>Sourcing methodology →</Link>
       </div>
     </aside>

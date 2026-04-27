@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { fraunces, inter, plexMono } from "./fonts";
+import { sourceSerif, inter, plexMono } from "./fonts";
 import { Header } from "@/components/Header";
-import { MastheadFooter } from "@/components/magazine/MastheadFooter";
+import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SITE } from "@/lib/content/site";
@@ -39,14 +39,14 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
+      className={`${sourceSerif.variable} ${inter.variable} ${plexMono.variable}`}
     >
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <OrganizationJsonLd />
           <Header />
           {children}
-          <MastheadFooter />
+          <Footer />
           <CookieBanner />
         </NextIntlClientProvider>
       </body>

@@ -1,8 +1,8 @@
 import type { RecipeIngredient } from "@/lib/content/recipes";
 
 /**
- * RecipeIngredientList — structured ingredient list with tomato bullets.
- * Quantity column uses IBM Plex Mono tabular-nums for clean alignment.
+ * RecipeIngredientList — clean-medical ingredient list with olive
+ * bullet markers, Plex Mono qty column, Inter ingredient name.
  */
 export function RecipeIngredientList({
   ingredients,
@@ -13,7 +13,7 @@ export function RecipeIngredientList({
 }) {
   return (
     <div>
-      <h3 className="font-display italic font-medium text-[1.5rem] mb-3">
+      <h3 className="font-semibold text-[20px] md:text-[22px] text-ink mb-3 tracking-tight">
         {heading}
       </h3>
       <ul className="ing-list">

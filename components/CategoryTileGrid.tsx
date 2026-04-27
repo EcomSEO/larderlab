@@ -6,52 +6,57 @@ export type CategoryTile = {
   title: string;
   dek: string;
   count: number;
-  /** Two hex colors for the warm gradient placeholder. */
+  /** Two hex colors for the soft-olive gradient placeholder. */
   gradient: [string, string];
 };
 
 /**
- * CategoryTileGrid — the home departments grid. 4 → 2 → 1 cols.
- * Each tile lifts on hover, has a 16:10 plate placeholder, eyebrow,
- * Fraunces H3, two-line dek, recipe count.
+ * CategoryTileGrid — clean-medical departments grid. 4 → 2 → 1 cols.
+ * White cards lift on hover. Inter sans throughout. Olive eyebrow.
  */
 export function CategoryTileGrid({
   tiles,
   eyebrow,
   heading,
   dek,
+  id,
 }: {
   tiles: CategoryTile[];
   eyebrow: string;
   heading: string;
   dek?: string;
+  id?: string;
 }) {
   return (
-    <section className="border-b border-[--color-border-subtle] bg-[--color-cream-lighter]">
-      <div className="mx-auto max-w-spread px-6 py-14 md:py-16">
-        <div className="mb-8">
-          <div className="dept-label mb-3">{eyebrow}</div>
-          <h2 className="font-display italic font-medium text-3xl md:text-[2.4rem] leading-[1.1]">
+    <section id={id} className="border-b border-rule bg-white">
+      <div className="mx-auto max-w-container px-6 py-16 md:py-20">
+        <div className="max-w-2xl mb-10">
+          <div className="eyebrow mb-3">{eyebrow}</div>
+          <h2 className="text-[28px] md:text-[36px] font-bold leading-tight text-ink tracking-tight">
             {heading}
           </h2>
-          {dek && <p className="dek mt-3 max-w-[58ch]">{dek}</p>}
+          {dek && (
+            <p className="mt-3 text-[16px] text-ink-muted leading-relaxed">
+              {dek}
+            </p>
+          )}
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {tiles.map((t) => (
-            <Link key={t.href} href={t.href} className="cat-tile">
+            <Link key={t.href + t.title} href={t.href} className="cat-tile">
               <div
                 className="tile-photo"
                 style={{
                   background: `linear-gradient(135deg, ${t.gradient[0]} 0%, ${t.gradient[1]} 100%)`,
                 }}
-                aria-hidden="true"
+                aria-hidden
               />
               <div className="tile-body">
                 <div className="tile-eyebrow">{t.eyebrow}</div>
                 <h3>{t.title}</h3>
                 <p className="tile-dek">{t.dek}</p>
                 <div className="tile-count">
-                  {String(t.count).padStart(2, "0")} recipes &amp; features
+                  {String(t.count).padStart(2, "0")} recipes & guides
                 </div>
               </div>
             </Link>

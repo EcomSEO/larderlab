@@ -2,19 +2,24 @@ import Link from "next/link";
 import type { Recipe } from "@/lib/content/recipes";
 
 /**
- * Compact RecipeCard for carousels + 3-up grids. Differs from the printed
- * `magazine/RecipeCard` (which is the full structured card with
- * ingredients + method) — this is the link tile.
+ * RecipeCard — clean-medical compact tile. 16:10 olive gradient
+ * placeholder, olive eyebrow, Inter H3 (clamp-2), two-line dek, then
+ * an Inter meta row with mono-numeric values for total time + cal/serv.
+ *
+ * Used in carousels and 3-up related grids.
  */
 export function RecipeCardCompact({ recipe }: { recipe: Recipe }) {
+  // Pull cal + protein from nutrition rows for the mini-row.
+  const cal = recipe.nutrition.find((r) => r.label.toLowerCase().includes("cal"))?.value;
+  const protein = recipe.nutrition.find((r) => r.label.toLowerCase().includes("protein"))?.value;
   return (
     <Link href={`/${recipe.slug}`} className="rcard">
       <div
         className="rcard-photo plate-warm"
         style={{
-          background: `radial-gradient(ellipse at 30% 30%, #F8E5C8 0%, ${recipe.plateColor} 60%, #C4A878 100%)`,
+          background: `linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 50%, ${recipe.plateColor} 100%)`,
         }}
-        aria-hidden="true"
+        aria-hidden
       />
       <div className="rcard-body">
         <div className="rcard-eyebrow">{recipe.department}</div>
@@ -22,12 +27,21 @@ export function RecipeCardCompact({ recipe }: { recipe: Recipe }) {
         <div className="rcard-dek">{recipe.dek}</div>
         <div className="rcard-meta">
           <span>
-            Total · <strong>{recipe.totalTime}</strong>
+            By <strong>{recipe.developer.name.split(" ")[0]}</strong>
           </span>
           <span>
-            Serves · <strong>{recipe.serves}</strong>
+            Total <strong>{recipe.totalTime}</strong>
           </span>
-          <span>{recipe.difficulty}</span>
+          {cal && (
+            <span>
+              <strong>{cal}</strong> cal
+            </span>
+          )}
+          {protein && (
+            <span>
+              <strong>{protein}g</strong> protein
+            </span>
+          )}
         </div>
       </div>
     </Link>

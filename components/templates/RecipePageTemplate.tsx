@@ -1,4 +1,5 @@
 import { TestKitchenStamp } from "@/components/TestKitchenStamp";
+import { DietitianReviewedBadge } from "@/components/DietitianReviewedBadge";
 import { RecipeDeveloperByline } from "@/components/RecipeDeveloperByline";
 import { NutritionLedger } from "@/components/NutritionLedger";
 import { SourcesAccordion } from "@/components/SourcesAccordion";
@@ -12,24 +13,30 @@ import { ArticleJsonLd } from "@/components/schema/ArticleJsonLd";
 import type { Recipe } from "@/lib/content/recipes";
 
 /**
- * RecipePageTemplate — the killer recipe page.
+ * RecipePageTemplate — clean-medical recipe page.
  *
- * Layout:
- *  · BreadcrumbNav
- *  · Full-bleed plate hero + department eyebrow + H1 (Fraunces 56-64) + dek
- *  · RecipeDeveloperByline + TestKitchenStamp + share row
+ * Layout (mirrors injectcompass ArticleTemplate):
+ *  · BreadcrumbNav top
+ *  · Full-bleed soft-olive plate placeholder
+ *  · Olive eyebrow → H1 (Source Serif 4 weight 600, NOT italic) → dek
+ *  · RecipeDeveloperByline + TestKitchenStamp + DietitianReviewedBadge +
+ *    LastTestedLine + total time + servings + difficulty + share-icons
  *  · 12-col grid:
- *      main col (1-8, max-w 720): summary drop-cap, why-it-works,
- *        ingredients + method, variations, storage, sources accordion
- *      right rail (9-12): NutritionLedger top + sticky TOC
+ *      main col (1-8, max-w 720): summary, why-it-works, ingredients +
+ *        method (2-col inset on md+), variations, storage, sources
+ *      right rail (9-12): NutritionLedger + sticky TOC
  *  · RelatedRecipes 3-up
  */
 export function RecipePageTemplate({
   recipe,
   related = [],
+  reviewedBy = "Dr. Maya Rao",
+  reviewerCredentials = "RDN",
 }: {
   recipe: Recipe;
   related?: Recipe[];
+  reviewedBy?: string;
+  reviewerCredentials?: string;
 }) {
   const tocItems = [
     { id: "summary", label: "Summary" },
@@ -59,128 +66,157 @@ export function RecipePageTemplate({
         dateModified={recipe.updatedAt}
       />
 
-      {/* Top breadcrumb strip */}
-      <div className="mx-auto max-w-spread px-6 pt-6">
-        <BreadcrumbNav crumbs={crumbs} />
-      </div>
-
-      {/* Hero — full-bleed plate placeholder */}
-      <header className="mx-auto max-w-spread px-6 pt-6 pb-10 md:pb-14">
-        <div
-          className="plate-warm rounded-md mb-8"
-          style={{
-            aspectRatio: "16 / 9",
-            background: `radial-gradient(ellipse at 30% 30%, #F8E5C8 0%, ${recipe.plateColor} 55%, #A8884E 100%)`,
-            maxHeight: "440px",
-          }}
-          aria-label={`${recipe.title} — photographed in the test kitchen`}
-          role="img"
-        />
-        <div className="dept-label">{recipe.department}</div>
-        <h1 className="cover-headline mt-3 text-[2.6rem] sm:text-[3.4rem] md:text-[3.8rem] lg:text-[4.2rem]">
-          {recipe.title}
-        </h1>
-        <p className="dek mt-5 max-w-[60ch]">{recipe.dek}</p>
-
-        {/* Trust + meta row */}
-        <div className="mt-7 flex flex-wrap gap-4 items-center">
-          <TestKitchenStamp testCount={recipe.testCount} />
-          <span className="byline-italic text-[--color-text-secondary]">
-            Total · {recipe.totalTime} · Serves {recipe.serves} · {recipe.difficulty}
-          </span>
+      <main className="bg-white">
+        {/* Breadcrumb */}
+        <div className="mx-auto max-w-container px-6 pt-6">
+          <BreadcrumbNav crumbs={crumbs} />
         </div>
 
-        <div className="mt-5">
-          <RecipeDeveloperByline
-            name={recipe.developer.name}
-            credential={recipe.developer.credential}
-            lastTested={recipe.lastTested}
-            photoColor={recipe.developer.photoColor}
+        {/* Hero — soft olive plate placeholder + title block */}
+        <header className="mx-auto max-w-container px-6 pt-6 pb-10 md:pb-14">
+          <div
+            className="plate-warm rounded-md mb-8"
+            style={{
+              aspectRatio: "16 / 9",
+              background: `linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 40%, ${recipe.plateColor} 100%)`,
+              maxHeight: "440px",
+              boxShadow: "0 1px 2px rgb(0 0 0 / 0.04)",
+            }}
+            aria-label={`${recipe.title} — photographed in the test kitchen`}
+            role="img"
           />
-        </div>
-      </header>
+          <div className="eyebrow">{recipe.department}</div>
+          <h1 className="h1-display mt-3 text-[40px] md:text-[48px] leading-[1.1] tracking-tightest text-ink max-w-[22ch]">
+            {recipe.title}
+          </h1>
+          <p className="mt-5 text-[18px] md:text-[20px] leading-[1.55] text-ink-muted max-w-[60ch]">
+            {recipe.dek}
+          </p>
 
-      {/* Body — 12-col split */}
-      <div className="mx-auto max-w-spread px-6 pb-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
-          {/* Main reading column */}
-          <article className="lg:col-span-8 xl:col-span-8" style={{ maxWidth: "720px" }}>
-            {/* Mobile-only nutrition ledger inlined at top */}
-            <div className="lg:hidden mb-8">
-              <NutritionLedger
-                rows={recipe.nutrition}
-                servingSize={recipe.servingSize}
-                servings={recipe.serves}
-                yieldText={recipe.yield}
-              />
-            </div>
+          {/* Trust + meta row */}
+          <div className="mt-7 flex flex-wrap gap-3 items-center">
+            <TestKitchenStamp testCount={recipe.testCount} />
+            <DietitianReviewedBadge
+              reviewerName={reviewedBy}
+              credentials={reviewerCredentials}
+            />
+          </div>
 
-            <section id="summary">
-              <p className="recipe-summary">{recipe.summary}</p>
-            </section>
+          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-[14px] text-ink-muted">
+            <span>
+              Total <strong className="font-mono text-ink">{recipe.totalTime}</strong>
+            </span>
+            <span aria-hidden>·</span>
+            <span>
+              Serves <strong className="font-mono text-ink">{recipe.serves}</strong>
+            </span>
+            <span aria-hidden>·</span>
+            <span>{recipe.difficulty}</span>
+            <span aria-hidden>·</span>
+            <span>
+              Yield <strong className="text-ink">{recipe.yield}</strong>
+            </span>
+          </div>
 
-            <section id="why-it-works" className="why-block">
-              <h4>Why this recipe works</h4>
-              <ul>
-                {recipe.whyItWorks.map((p, i) => (
-                  <li key={i}>{p}</li>
+          <div className="mt-5">
+            <RecipeDeveloperByline
+              name={recipe.developer.name}
+              credential={recipe.developer.credential}
+              lastTested={recipe.lastTested}
+              reviewedBy={reviewedBy}
+              reviewerCredentials={reviewerCredentials}
+              photoColor={recipe.developer.photoColor}
+            />
+          </div>
+        </header>
+
+        {/* Body — 12-col split */}
+        <div className="mx-auto max-w-container px-6 pb-10">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
+            {/* Main reading column */}
+            <article className="lg:col-span-8" style={{ maxWidth: "720px" }}>
+              {/* Mobile-only nutrition ledger inlined at top */}
+              <div className="lg:hidden mb-8">
+                <NutritionLedger
+                  rows={recipe.nutrition}
+                  servingSize={recipe.servingSize}
+                  servings={recipe.serves}
+                  yieldText={recipe.yield}
+                />
+              </div>
+
+              <section id="summary">
+                <p className="recipe-summary">{recipe.summary}</p>
+              </section>
+
+              <section id="why-it-works" className="why-block">
+                <h4>Why this recipe works</h4>
+                <ul>
+                  {recipe.whyItWorks.map((p, i) => (
+                    <li key={i}>{p}</li>
+                  ))}
+                </ul>
+              </section>
+
+              <div className="grid md:grid-cols-[1fr_1.5fr] gap-8 md:gap-10 mt-10">
+                <section id="ingredients">
+                  <RecipeIngredientList ingredients={recipe.ingredients} />
+                </section>
+                <section id="method">
+                  <RecipeMethodList steps={recipe.method} />
+                </section>
+              </div>
+
+              <section id="variations" className="variations">
+                <h3>Variations</h3>
+                {recipe.variations.map((v, i) => (
+                  <div key={i} className="var-item">
+                    <div className="var-title">{v.title}</div>
+                    <div className="var-body">{v.body}</div>
+                  </div>
                 ))}
-              </ul>
-            </section>
-
-            <div className="grid md:grid-cols-[1fr_1.5fr] gap-8 md:gap-10 mt-10">
-              <section id="ingredients">
-                <RecipeIngredientList ingredients={recipe.ingredients} />
               </section>
-              <section id="method">
-                <RecipeMethodList steps={recipe.method} />
+
+              <section id="storage" className="mt-10">
+                <h3 className="font-semibold text-[20px] md:text-[22px] text-ink mb-3 tracking-tight">
+                  Storage &amp; make-ahead
+                </h3>
+                <p className="font-sans text-[16px] leading-relaxed text-ink">
+                  {recipe.storage}
+                </p>
+                <p className="mt-4 font-sans text-[15px] leading-relaxed text-ink-muted">
+                  <strong className="font-semibold text-ink">Notes:</strong>{" "}
+                  {recipe.notes}
+                </p>
               </section>
-            </div>
 
-            <section id="variations" className="variations">
-              <h3 className="font-display italic font-medium">Variations</h3>
-              {recipe.variations.map((v, i) => (
-                <div key={i} className="var-item">
-                  <div className="var-title">{v.title}</div>
-                  <div className="var-body">{v.body}</div>
-                </div>
-              ))}
-            </section>
+              <SourcesAccordion sources={recipe.sources} />
 
-            <section id="storage" className="mt-10">
-              <h3 className="font-display italic font-medium text-[1.5rem] mb-3">
-                Storage &amp; make-ahead
-              </h3>
-              <p className="font-sans text-[0.96rem] leading-relaxed text-[--color-ink]">
-                {recipe.storage}
+              <p className="mt-8 text-[12px] text-ink-soft leading-relaxed">
+                Larderlab provides general information for educational
+                purposes. It is not a substitute for medical advice. Consult
+                a registered dietitian or your healthcare provider for
+                personalised nutrition guidance.
               </p>
-              <p className="mt-4 font-sans text-[0.92rem] leading-relaxed text-[--color-text-secondary] italic">
-                <strong className="not-italic font-semibold text-[--color-ink]">
-                  Notes:
-                </strong>{" "}
-                {recipe.notes}
-              </p>
-            </section>
+            </article>
 
-            <SourcesAccordion sources={recipe.sources} />
-          </article>
-
-          {/* Right rail */}
-          <aside className="hidden lg:block lg:col-span-4 xl:col-span-4">
-            <div className="sticky top-24 space-y-6">
-              <NutritionLedger
-                rows={recipe.nutrition}
-                servingSize={recipe.servingSize}
-                servings={recipe.serves}
-                yieldText={recipe.yield}
-              />
-              <TableOfContents items={tocItems} />
-            </div>
-          </aside>
+            {/* Right rail */}
+            <aside className="hidden lg:block lg:col-span-4">
+              <div className="sticky top-24 space-y-6">
+                <NutritionLedger
+                  rows={recipe.nutrition}
+                  servingSize={recipe.servingSize}
+                  servings={recipe.serves}
+                  yieldText={recipe.yield}
+                />
+                <TableOfContents items={tocItems} />
+              </div>
+            </aside>
+          </div>
         </div>
-      </div>
 
-      <RelatedRecipes recipes={related} />
+        <RelatedRecipes recipes={related} />
+      </main>
     </>
   );
 }

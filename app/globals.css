@@ -3,112 +3,118 @@
 @tailwind utilities;
 
 /* ================================================================
-   LARDERLAB — Warm Magazine system
-   Cream paper. Olive. Tomato red. Editorial serif first.
-   Inspired by Bon Appétit, NYT Cooking, Saveur, Cherry Bombe.
+   LARDERLAB — Healthline-grade clean-medical system
+   White surface. Olive primary. Sans-dominant (Inter). H1 in
+   Source Serif 4 weight 600 — NOT italic. Tomato is sparing accent.
+   Mirrors injectcompass shell; nutrition/pantry content register.
 ================================================================= */
 
 :root {
   color-scheme: light;
-  /* Font variables — assigned by next/font on <html>, with web-safe
-     fallbacks so the cascade never sees a bare `var()`. */
-  --font-fraunces: "Fraunces", "Tiempos Display", Georgia, serif;
-  --font-inter: "Inter Tight", "Inter", system-ui, -apple-system, sans-serif;
+  /* Font variables — assigned by next/font on <html>. Source Serif 4
+     replaces the old Fraunces. The variable name `--font-fraunces` is
+     kept as an alias so legacy magazine components keep compiling. */
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --font-fraunces: "Source Serif 4", "Source Serif Pro", Georgia, serif;
   --font-plex-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  --color-cream: #F4EAD5;
-  --color-cream-deep: #EADBBE;
-  --color-cream-soft: #F8F1E1;
-  --color-cream-lighter: #FAF1DD;
-  --color-olive: #5C6F3C;
-  --color-olive-deep: #3F4D27;
-  --color-tomato: #C4452D;
-  --color-tomato-deep: #9C2F1C;
-  --color-tomato-hover: #A8371F;
-  --color-ink: #2A1A12;
-  --color-ink-soft: #4A3A2E;
-  --color-text-secondary: #6B5949;
-  --color-text-muted: #9B8978;
-  --color-ash: #8A7A6E;
-  --color-ledger: #FCF6E9;
-  --color-border-subtle: #E0D2B5;
-  --color-border-accent: #C4A878;
-  --color-stamp-bg: #E8DCC8;
+  /* -------- Clean-medical surface -------- */
   --color-paper-white: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F7F9FB;
+  --color-surface-warm: #EEF2E8;
+  --color-rule: #E5E9EE;
+  --color-rule-strong: #CDD3DA;
 
-  /* Legacy aliases used by template chrome that still references the
-     engineering palette names. Mapped to the warm palette so nothing
-     looks out of place during the redesign. */
+  /* -------- Text -------- */
+  --color-ink: #1A1F2E;
+  --color-ink-soft: #5A6573;
+  --color-text-secondary: #5A6573;
+  --color-text-muted: #8A92A1;
+
+  /* -------- Brand olive -------- */
+  --color-olive: #5C6F3C;
+  --color-olive-50: #EEF2E8;
+  --color-olive-100: #DCE4CC;
+  --color-olive-200: #B8C99B;
+  --color-olive-deep: #445129;
+  --color-olive-700: #3F4D27;
+
+  /* -------- Tomato (sparing) -------- */
+  --color-tomato: #C4452D;
+  --color-tomato-deep: #A8371F;
+  --color-tomato-hover: #A8371F;
+
+  /* -------- Reviewed pill -------- */
+  --color-reviewed-bg: #EEF2E8;
+  --color-reviewed-text: #445129;
+
+  /* -------- Legacy aliases — keep magazine _legacy folder compiling. */
+  --color-cream: #FFFFFF;
+  --color-cream-deep: #F7F9FB;
+  --color-cream-soft: #F7F9FB;
+  --color-cream-lighter: #F7F9FB;
+  --color-ink-deep: #1A1F2E;
+  --color-ledger: #F7F9FB;
+  --color-ash: #5A6573;
+  --color-border-subtle: #E5E9EE;
+  --color-border-accent: #B8C99B;
+  --color-stamp-bg: #EEF2E8;
   --color-sage: #5C6F3C;
   --color-forest: #3F4D27;
   --color-terracotta: #C4452D;
-  --color-copper: #C4452D;
-  --color-copper-deep: #9C2F1C;
-  --color-steel: #8A7A6E;
-  --color-paper: #F4EAD5;
-  --color-paper-deep: #EADBBE;
-  --color-charcoal: #2A1A12;
-  --color-ink-deep: #1B1009;
+  --color-copper: #5C6F3C;
+  --color-copper-deep: #445129;
+  --color-steel: #5A6573;
+  --color-paper: #FFFFFF;
+  --color-paper-deep: #F7F9FB;
+  --color-charcoal: #1A1F2E;
 }
 
 html {
-  font-family: "Inter Tight", "Inter", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter);
   scroll-behavior: smooth;
   font-feature-settings: "ss01", "cv11", "tnum";
 }
 
 body {
-  background-color: var(--color-cream);
+  background-color: var(--color-paper-white);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-inter);
 }
 
-/* Subtle paper-grain. Sits behind everything; never competes with
-   plate photography or pull quotes. */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    radial-gradient(rgba(42, 26, 18, 0.04) 1px, transparent 1px);
-  background-size: 3px 3px;
-  opacity: 0.6;
-  mix-blend-mode: multiply;
-}
-body > * { position: relative; z-index: 1; }
-
-/* Custom scrollbar — tomato thumb on cream track. */
+/* Custom scrollbar — neutral on white. */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-tomato) var(--color-cream-deep);
+  scrollbar-color: var(--color-rule-strong) transparent;
 }
 *::-webkit-scrollbar { width: 10px; height: 10px; }
-*::-webkit-scrollbar-track { background: var(--color-cream-deep); }
+*::-webkit-scrollbar-track { background: transparent; }
 *::-webkit-scrollbar-thumb {
-  background: var(--color-tomato);
-  border: 2px solid var(--color-cream-deep);
-  border-radius: 1px;
+  background: var(--color-rule-strong);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
 }
-*::-webkit-scrollbar-thumb:hover { background: var(--color-tomato-deep); }
+*::-webkit-scrollbar-thumb:hover { background: var(--color-ink-soft); background-clip: padding-box; }
 
-/* Default heading family — editorial serif. Sans only when we
-   explicitly opt out via .font-sans. */
+/* Default headings — Inter. The H1 editorial accent override happens
+   on .h1-display (opt-in), used only on Hero + RecipeTemplate. */
 h1, h2, h3, h4, h5 {
-  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
-  font-weight: 500;
+  font-family: var(--font-inter);
+  font-weight: 600;
   letter-spacing: -0.012em;
   color: var(--color-ink);
-  font-variation-settings: "opsz" 144, "SOFT" 50;
 }
 
-::selection { background: var(--color-tomato); color: var(--color-cream); }
+::selection { background: var(--color-olive-50); color: var(--color-olive-deep); }
 
-/* Focus ring — tomato, matches editorial accents. */
+/* Focus ring — olive. */
 :focus { outline: none; }
 a:focus-visible,
 button:focus-visible,
@@ -118,140 +124,81 @@ select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible,
 [tabindex]:not([tabindex="-1"]):focus-visible {
-  outline: 2px solid var(--color-tomato);
+  outline: 2px solid var(--color-olive);
   outline-offset: 2px;
-  border-radius: 1px;
+  border-radius: 4px;
 }
 
 /* ================================================================
-   TYPOGRAPHY UTILITIES
+   TYPOGRAPHY UTILITIES — clean-medical
 ================================================================= */
 
-.font-display {
-  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-}
-
-.font-script {
-  font-family: "Caveat", "Homemade Apple", cursive;
-  letter-spacing: -0.01em;
-}
-
-/* The big magazine cover headline — generous, italic-friendly. */
-.cover-headline {
-  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
-  font-weight: 400;
-  font-variation-settings: "opsz" 144, "SOFT" 80;
-  letter-spacing: -0.02em;
-  line-height: 0.96;
-  color: var(--color-ink);
-}
-
-/* Smaller serif H1 used on feature pages. */
-.feature-headline {
-  font-family: "Fraunces", "Tiempos Display", Georgia, serif;
-  font-weight: 450;
-  font-variation-settings: "opsz" 96, "SOFT" 50;
-  letter-spacing: -0.014em;
-  line-height: 1.04;
-  color: var(--color-ink);
-}
-
-/* Italic dek — magazine subhead. */
-.dek {
-  font-family: "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.32rem;
-  line-height: 1.45;
-  color: var(--color-ink-soft);
-  letter-spacing: -0.005em;
-}
-
-/* Masthead — the LARDERLAB · ISSUE 04 · APR 2026 strip. */
-.masthead-line {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  font-size: 0.74rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--color-ink);
-}
-
-.dept-label {
-  font-family: "Inter Tight", sans-serif;
+/* H1 editorial accent — Source Serif 4 weight 600. NOT italic. */
+.h1-display {
+  font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 0.66rem;
-  letter-spacing: 0.24em;
+  letter-spacing: -0.018em;
+  color: var(--color-ink);
+}
+
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+/* Caps small label — Inter 12/16, weight 600, tracking 0.05em, olive. */
+.eyebrow {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-tomato);
+  color: var(--color-olive-deep);
 }
+.eyebrow-muted { color: var(--color-ink-soft); }
+.eyebrow-danger { color: var(--color-tomato); }
 
-.byline {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-ink-soft);
-  font-weight: 500;
-}
-
-.byline-italic {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 0.96rem;
-  color: var(--color-ink-soft);
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-.page-number {
-  font-family: "Inter Tight", sans-serif;
+/* Plex Mono numerics. */
+.font-mono, .tnum {
+  font-family: var(--font-plex-mono);
   font-variant-numeric: tabular-nums;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  font-weight: 500;
-  color: var(--color-ink-soft);
 }
-
-.tnum { font-variant-numeric: tabular-nums; }
 
 /* ================================================================
    PROSE — feature article body
 ================================================================= */
 
-.prose { max-width: 62ch; color: var(--color-ink); }
-
-.prose p {
-  margin-bottom: 1.15em;
-  line-height: 1.72;
-  font-size: 1.08rem;
+.prose {
+  max-width: 720px;
+  color: var(--color-ink);
+  font-family: var(--font-inter);
 }
 
-.prose > p:first-of-type::first-letter {
-  font-family: "Fraunces", serif;
-  font-weight: 500;
-  font-size: 4.6rem;
-  line-height: 0.88;
-  float: left;
-  margin: 0.06em 0.1em 0 -0.04em;
-  color: var(--color-tomato);
-  font-variation-settings: "opsz" 144;
+.prose p {
+  margin-bottom: 1.1em;
+  line-height: 1.65;
+  font-size: 18px;
 }
 
 .prose h2 {
-  font-size: 1.85rem;
-  margin-top: 2.6rem;
+  font-family: var(--font-inter);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  margin-top: 2.2rem;
   margin-bottom: 0.7rem;
-  font-weight: 500;
   color: var(--color-ink);
+  letter-spacing: -0.012em;
 }
 
 .prose h3 {
-  font-size: 1.32rem;
-  margin-top: 1.85rem;
-  margin-bottom: 0.55rem;
-  font-weight: 500;
+  font-family: var(--font-inter);
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 1.7rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .prose ul, .prose ol {
@@ -261,63 +208,23 @@ summary:focus-visible,
 
 .prose ul { list-style: disc; }
 .prose ol { list-style: decimal; }
-.prose li { margin-bottom: 0.4em; }
+.prose li { margin-bottom: 0.4em; line-height: 1.6; }
 
 .prose a {
-  color: var(--color-ink);
+  color: var(--color-olive-deep);
   text-decoration: underline;
-  text-decoration-color: var(--color-tomato);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 4px;
-  transition: text-decoration-color 0.15s ease;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
 }
-
-.prose a:hover {
-  text-decoration-color: var(--color-ink);
-}
+.prose a:hover { color: var(--color-olive); }
 
 .prose blockquote {
-  border-left: 3px solid var(--color-tomato);
+  border-left: 3px solid var(--color-olive);
   padding-left: 1.2em;
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 1.18rem;
+  font-size: 18px;
   color: var(--color-ink);
   margin: 1.6em 0;
-}
-
-/* ================================================================
-   NAV — paper bar header
-================================================================= */
-
-.nav-link {
-  position: relative;
-  color: var(--color-ink);
-  transition: color 0.15s ease;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
-  height: 1.5px;
-  background: var(--color-tomato);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.nav-link:hover { color: var(--color-tomato); }
-.nav-link:hover::after,
-.nav-link[aria-current="page"]::after {
-  transform: scaleX(1);
 }
 
 /* ================================================================
@@ -328,765 +235,186 @@ summary:focus-visible,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.4rem;
-  background: var(--color-tomato);
-  color: var(--color-cream);
-  font-family: "Inter Tight", sans-serif;
+  padding: 0.7rem 1.2rem;
+  background: var(--color-olive);
+  color: #FFFFFF;
+  font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  border-radius: 1px;
-  border: 1px solid var(--color-tomato);
-  transition: background 0.15s ease, transform 0.1s ease;
+  font-size: 15px;
+  border-radius: 999px;
+  border: 1px solid var(--color-olive);
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
-
 .btn-primary:hover {
-  background: var(--color-tomato-deep);
-  border-color: var(--color-tomato-deep);
+  background: var(--color-olive-deep);
+  border-color: var(--color-olive-deep);
 }
 
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.4rem;
+  padding: 0.7rem 1.2rem;
   color: var(--color-ink);
   background: transparent;
-  border: 1px solid var(--color-ink);
-  font-family: "Inter Tight", sans-serif;
+  border: 1px solid var(--color-rule-strong);
+  font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  border-radius: 1px;
-  transition: background 0.15s ease, color 0.15s ease;
+  font-size: 15px;
+  border-radius: 999px;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
-
 .btn-secondary:hover {
-  background: var(--color-ink);
-  color: var(--color-cream);
+  border-color: var(--color-olive);
+  color: var(--color-olive-deep);
 }
 
-.btn-primary:active, .btn-secondary:active { transform: translateY(1px); }
-
-/* ================================================================
-   RECIPE CARD
-   The signature unit. Printed-recipe-card feeling.
-================================================================= */
-
-.recipe-card {
-  background: var(--color-ledger);
-  border: 1px solid rgba(42, 26, 18, 0.16);
-  position: relative;
-  padding: 2.2rem 2rem;
-}
-
-.recipe-card::before {
-  content: "";
-  position: absolute;
-  left: 1.8rem;
-  right: 1.8rem;
-  top: 1rem;
-  height: 2px;
-  background: var(--color-tomato);
-}
-
-.recipe-card-meta {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.8rem;
-  border-top: 1px solid rgba(42, 26, 18, 0.18);
-  border-bottom: 1px solid rgba(42, 26, 18, 0.18);
-  padding: 0.9rem 0;
-  margin: 1rem 0 1.6rem;
-}
-
-@media (min-width: 640px) {
-  .recipe-card-meta { grid-template-columns: repeat(4, 1fr); }
-}
-
-.recipe-meta-cell {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.recipe-meta-label {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-ash);
-  font-weight: 600;
-}
-
-.recipe-meta-value {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--color-ink);
-}
-
-.recipe-section-title {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.4rem;
-  color: var(--color-ink);
-  margin-bottom: 0.7rem;
-  position: relative;
-}
-
-.recipe-section-title::before {
-  content: "·";
-  color: var(--color-tomato);
-  margin-right: 0.4rem;
-  font-style: normal;
-}
-
-.recipe-ingredients li {
-  position: relative;
-  list-style: none;
-  padding-left: 1.5rem;
-  padding-bottom: 0.55rem;
-  border-bottom: 1px dotted rgba(42, 26, 18, 0.18);
-  margin-bottom: 0.55rem;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.96rem;
-  line-height: 1.4;
-}
-
-.recipe-ingredients li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.4rem;
-  width: 0.95rem;
-  height: 0.95rem;
-  border: 1.5px solid var(--color-ink-soft);
-  border-radius: 1px;
-  background: transparent;
-}
-
-.recipe-method {
-  counter-reset: method;
-}
-
-.recipe-method li {
-  counter-increment: method;
-  list-style: none;
-  position: relative;
-  padding-left: 2.4rem;
-  padding-bottom: 1rem;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.98rem;
-  line-height: 1.55;
-}
-
-.recipe-method li::before {
-  content: counter(method);
-  position: absolute;
-  left: 0;
-  top: -0.05rem;
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--color-tomato);
-  line-height: 1;
-}
-
-.recipe-notes,
-.recipe-storage {
-  background: rgba(244, 234, 213, 0.6);
-  border-left: 2px solid var(--color-olive);
-  padding: 0.8rem 1rem;
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 0.98rem;
-  color: var(--color-ink-soft);
-  margin-top: 0.8rem;
-}
-
-.recipe-storage {
-  border-left-color: var(--color-tomato);
-  font-style: normal;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.92rem;
-}
-
-/* ================================================================
-   PULL QUOTE — hangs slightly into margin
-================================================================= */
-
-.pull-quote {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-weight: 400;
-  font-variation-settings: "opsz" 144;
-  font-size: 2.1rem;
-  line-height: 1.18;
-  color: var(--color-ink);
-  border-left: 3px solid var(--color-tomato);
-  padding: 0.4rem 0 0.4rem 1.2rem;
-  margin: 2.2rem 0;
-}
-
-@media (min-width: 1024px) {
-  .pull-quote {
-    margin-left: -2.5rem;
-  }
-}
-
-.pull-quote-attrib {
-  display: block;
-  font-style: normal;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.74rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-ash);
-  margin-top: 0.7rem;
-}
-
-/* ================================================================
-   COVER LINES (right column on the cover)
-================================================================= */
-
-.cover-lines {
-  border-top: 2px solid var(--color-ink);
-  padding-top: 1rem;
-}
-
-.cover-lines li {
-  list-style: none;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid rgba(42, 26, 18, 0.16);
-  font-family: "Fraunces", serif;
-  font-size: 1rem;
-  line-height: 1.3;
-}
-
-.cover-lines li .num {
-  font-family: "Inter Tight", sans-serif;
-  font-variant-numeric: tabular-nums;
-  font-size: 0.74rem;
-  letter-spacing: 0.18em;
-  color: var(--color-tomato);
-  margin-right: 0.6rem;
-}
-
-/* ================================================================
-   TOC
-================================================================= */
-
-.toc-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.2rem;
-  align-items: baseline;
-  padding: 0.8rem 0;
-  border-bottom: 1px dotted rgba(42, 26, 18, 0.28);
-}
-
-.toc-row .title {
-  font-family: "Fraunces", serif;
-  font-size: 1.18rem;
-  font-weight: 500;
-  color: var(--color-ink);
-  line-height: 1.25;
-}
-
-.toc-row .dek {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 0.96rem;
-  color: var(--color-ink-soft);
-  margin-top: 0.18rem;
-  line-height: 1.4;
-}
-
-.toc-row .page-no {
-  font-family: "Inter Tight", sans-serif;
-  font-variant-numeric: tabular-nums;
-  font-size: 1rem;
-  color: var(--color-tomato);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-/* ================================================================
-   EDITOR'S NOTE — script font block
-================================================================= */
-
-.editors-note {
-  background: var(--color-cream-soft);
-  border: 1px solid rgba(42, 26, 18, 0.12);
-  padding: 1.6rem 1.8rem;
-  position: relative;
-  font-family: "Caveat", cursive;
-  font-size: 1.4rem;
-  line-height: 1.4;
-  color: var(--color-ink);
-}
-
-.editors-note::before {
-  content: "Editor's note";
-  position: absolute;
-  top: -0.65rem;
-  left: 1.4rem;
-  background: var(--color-cream-soft);
-  padding: 0 0.5rem;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--color-tomato);
-}
-
-.editors-signature {
-  display: block;
-  margin-top: 0.8rem;
-  font-family: "Caveat", cursive;
-  font-size: 1.6rem;
-  color: var(--color-tomato);
-}
-
-/* ================================================================
-   DEPARTMENT BLOCK — recurring 5-numbered list
-================================================================= */
-
-.department {
-  border-top: 2px solid var(--color-ink);
-  padding-top: 1.2rem;
-}
-
-.department-list li {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 2.6rem 1fr;
-  gap: 0.6rem;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid rgba(42, 26, 18, 0.12);
-  align-items: baseline;
-}
-
-.department-list .num {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 1.8rem;
-  color: var(--color-tomato);
-  line-height: 1;
-}
-
-.department-list .title {
-  font-family: "Fraunces", serif;
-  font-size: 1.08rem;
-  font-weight: 500;
-  color: var(--color-ink);
-  line-height: 1.32;
-}
-
-.department-list .dek {
-  font-family: "Inter Tight", sans-serif;
-  font-style: normal;
-  font-size: 0.86rem;
-  color: var(--color-ink-soft);
-  margin-top: 0.18rem;
-  line-height: 1.4;
-}
-
-/* ================================================================
-   PLATE PHOTO — full-bleed art-directed placeholder
-================================================================= */
-
-.plate {
-  position: relative;
-  background: linear-gradient(135deg, #C4452D 0%, #9C2F1C 38%, #5C6F3C 78%, #3F4D27 100%);
-  overflow: hidden;
-}
-
-.plate::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 30% 35%, rgba(244, 234, 213, 0.18), transparent 38%),
-    radial-gradient(circle at 70% 65%, rgba(252, 246, 233, 0.12), transparent 42%),
-    radial-gradient(circle at 50% 50%, rgba(42, 26, 18, 0.4), transparent 70%);
-  mix-blend-mode: screen;
-}
-
-.plate::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(rgba(244, 234, 213, 0.06) 1px, transparent 1px);
-  background-size: 4px 4px;
-  opacity: 0.5;
-}
-
-.plate-caption {
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  font-size: 0.92rem;
-  color: var(--color-ink-soft);
-  margin-top: 0.7rem;
-  max-width: 56ch;
-}
-
-/* ================================================================
-   TABLE (kept for legacy comparison templates) — restyled warm.
-================================================================= */
-
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-  background: var(--color-ledger);
-  border: 1px solid rgba(42, 26, 18, 0.18);
-  font-variant-numeric: tabular-nums;
-}
-
-.data-table thead th {
-  background: var(--color-ink);
-  color: var(--color-cream);
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  padding: 0.85rem;
-  text-align: left;
-  border-bottom: 2px solid var(--color-tomato);
-}
-
-.data-table thead th.num,
-.data-table tbody td.num {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-.data-table tbody td {
-  padding: 0.75rem 0.85rem;
-  border-bottom: 1px solid rgba(42, 26, 18, 0.1);
-  color: var(--color-ink);
-  vertical-align: top;
-  font-family: "Inter Tight", sans-serif;
-}
-
-.data-table tbody tr:hover { background: rgba(244, 234, 213, 0.7); }
-.data-table tbody tr:last-child td { border-bottom: 0; }
-.data-table .cell-name { font-weight: 600; color: var(--color-ink); font-family: "Fraunces", serif; font-size: 1rem; }
-.data-table .cell-sub { display: block; margin-top: 0.18rem; font-size: 0.8rem; color: var(--color-ash); font-family: "Inter Tight", sans-serif; }
-
-.data-table-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border: 1px solid rgba(42, 26, 18, 0.14);
-  background: var(--color-ledger);
-}
-
-.data-table-wrap .data-table { border: 0; }
-
-/* ================================================================
-   TIER BADGE / EYEBROW — softened to magazine register
-================================================================= */
-
-.eyebrow {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-tomato);
-}
-
-.eyebrow-copper { color: var(--color-tomato); }
-.eyebrow-ink { color: var(--color-ink); }
-.eyebrow-steel { color: var(--color-ash); }
-
-.caps-label {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-ash);
-}
-
-.dateline {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--color-ash);
-}
-
-.tier-badge {
+.btn-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.22rem 0.6rem;
-  background: var(--color-ink);
-  color: var(--color-cream);
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.66rem;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--color-olive);
+  color: #FFFFFF;
+  font-family: var(--font-inter);
   font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  border-radius: 1px;
-}
-
-.tier-badge::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: var(--color-tomato);
-  border-radius: 1px;
-}
-
-.tier-badge-mid { background: var(--color-olive); }
-.tier-badge-budget { background: var(--color-tomato); }
-.tier-badge-budget::before { background: var(--color-cream); }
-.tier-badge-skip { background: var(--color-ash); }
-
-.conf-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.15rem 0.5rem;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border-radius: 1px;
-  border: 1px solid rgba(42, 26, 18, 0.2);
-  background: var(--color-cream-deep);
-  color: var(--color-ink);
-}
-.conf-pill::before { content: ""; width: 5px; height: 5px; border-radius: 50%; }
-.conf-high { border-color: var(--color-ink); }
-.conf-high::before { background: var(--color-ink); }
-.conf-med { border-color: var(--color-tomato); color: var(--color-tomato); }
-.conf-med::before { background: var(--color-tomato); }
-.conf-low { border-color: var(--color-ash); color: var(--color-ash); }
-.conf-low::before { background: var(--color-ash); }
-
-/* ================================================================
-   COVER STAMP — issue circle / red dot
-================================================================= */
-
-.issue-stamp {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 6.5rem;
-  height: 6.5rem;
-  border-radius: 50%;
-  background: var(--color-tomato);
-  color: var(--color-cream);
-  font-family: "Fraunces", serif;
-  font-style: italic;
-  text-align: center;
-  line-height: 1;
-  transform: rotate(-6deg);
-  box-shadow: 0 6px 16px rgba(196, 69, 45, 0.35);
-}
-
-.issue-stamp .label {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.issue-stamp .num {
-  font-size: 2.4rem;
-  font-weight: 500;
-  margin-top: 0.1rem;
-}
-
-/* ================================================================
-   MAGAZINE GRID HELPERS
-================================================================= */
-
-.col-rule {
-  column-rule: 1px solid rgba(42, 26, 18, 0.18);
-}
-
-.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-}
-
-/* ================================================================
-   ANIMATIONS — soft, magazine. Nothing dynamic.
-================================================================= */
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.fade-up { animation: fadeUp 0.55s ease-out both; }
-.fade-up-delay-1 { animation: fadeUp 0.55s ease-out 0.08s both; }
-.fade-up-delay-2 { animation: fadeUp 0.55s ease-out 0.16s both; }
-.fade-up-delay-3 { animation: fadeUp 0.55s ease-out 0.24s both; }
-.fade-up-delay-4 { animation: fadeUp 0.55s ease-out 0.32s both; }
-.fade-up-delay-5 { animation: fadeUp 0.55s ease-out 0.40s both; }
-.fade-up-delay-6 { animation: fadeUp 0.55s ease-out 0.48s both; }
-
-.reveal {
-  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
-  will-change: opacity, transform;
-}
-.reveal[data-reveal="off"] { opacity: 0; transform: translateY(14px); }
-.reveal[data-reveal="on"] { opacity: 1; transform: translateY(0); }
-
-/* Email input — warm magazine. */
-.email-input {
-  background: var(--color-cream-soft);
-  border: 1px solid rgba(42, 26, 18, 0.25);
-  border-bottom: 2px solid var(--color-ink);
-  padding: 0.8rem 1rem;
-  font-family: "Inter Tight", sans-serif;
   font-size: 14px;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
-  border-radius: 1px;
+  border: 1px solid var(--color-olive);
+  transition: background 0.15s ease;
 }
-.email-input:focus {
-  outline: none;
-  border-color: var(--color-tomato);
-  box-shadow: 0 0 0 3px rgba(196, 69, 45, 0.25);
-}
-
-/* Reading progress bar — tomato ribbon. */
-.reading-progress-bar {
-  height: 2px;
-  background: var(--color-tomato);
-  transform-origin: left;
-  width: 100%;
-  transition: transform 0.08s linear;
-}
-
-/* Legacy mono body classes still used by old templates */
-.font-mono, code, pre, .numeric { font-family: "IBM Plex Mono", ui-monospace, monospace; }
-
-/* Reduce motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  .reveal { opacity: 1; transform: none; }
-}
+.btn-pill:hover { background: var(--color-olive-deep); border-color: var(--color-olive-deep); }
 
 /* ================================================================
-   HEALTHLINE-GRADE LAYER — food-publisher trust + recipe components
-   Layered on top of the magazine system; cream paper feel preserved.
+   NAV — clean white sticky bar
 ================================================================= */
 
-/* Test-kitchen stamp (food-publisher equivalent of medically-reviewed). */
+.nav-link {
+  position: relative;
+  color: var(--color-ink);
+  transition: color 0.15s ease;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.nav-link:hover { color: var(--color-olive-deep); background: var(--color-olive-50); }
+.nav-link[aria-current="page"] { color: var(--color-olive-deep); }
+
+/* ================================================================
+   TRUST BADGES — Test-kitchen + Dietitian-reviewed + Last-tested
+================================================================= */
+
 .tk-stamp {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: var(--color-stamp-bg);
-  color: var(--color-olive);
-  padding: 0.36rem 0.72rem;
+  background: var(--color-olive-50);
+  color: var(--color-olive-deep);
+  padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  border: 1px solid var(--color-border-accent);
   font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.74rem;
-  letter-spacing: 0.04em;
+  font-size: 13px;
+  letter-spacing: 0;
   text-decoration: none;
+  border: 1px solid var(--color-olive-100);
   transition: background 0.15s ease;
 }
-.tk-stamp:hover { background: #DDCDB2; color: var(--color-olive-deep); }
+.tk-stamp:hover { background: var(--color-olive-100); }
 .tk-stamp svg { flex-shrink: 0; }
-
-/* Last-tested line (small, secondary). */
-.last-tested {
-  font-family: var(--font-inter);
-  font-size: 0.84rem;
-  color: var(--color-text-secondary);
-  letter-spacing: 0.005em;
+.tk-stamp .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-tomato);
 }
 
-/* Recipe-developer byline (round photo + name + credentials). */
+.dietitian-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-reviewed-bg);
+  color: var(--color-reviewed-text);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: none;
+}
+.dietitian-pill a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.dietitian-pill a:hover { color: var(--color-olive-deep); }
+
+.last-tested {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
 .dev-byline {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.85rem 1rem;
   align-items: center;
-  padding: 1rem 0;
-  border-top: 1px solid var(--color-border-subtle);
-  border-bottom: 1px solid var(--color-border-subtle);
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
 }
 .dev-photo {
   width: 56px;
   height: 56px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #C4A878 0%, #5C6F3C 100%);
+  background: linear-gradient(135deg, #DCE4CC 0%, #5C6F3C 100%);
   border: 2px solid #FFF;
-  box-shadow: 0 0 0 1px var(--color-border-subtle);
+  box-shadow: 0 0 0 1px var(--color-rule);
 }
 .dev-name {
-  font-family: var(--font-fraunces);
-  font-weight: 500;
-  font-size: 1.05rem;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 16px;
   color: var(--color-ink);
-  font-style: italic;
 }
 .dev-cred {
   font-family: var(--font-inter);
-  font-size: 0.82rem;
+  font-size: 13px;
   color: var(--color-text-secondary);
-  margin-top: 0.05rem;
+  margin-top: 0.1rem;
 }
 
-/* Nutrition ledger — right rail differentiator. */
+/* ================================================================
+   NUTRITION LEDGER — right-rail differentiator
+================================================================= */
+
 .nutri-card {
   background: var(--color-paper-white);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: 8px;
+  border: 1px solid var(--color-rule);
+  border-radius: 12px;
   padding: 1.1rem 1.15rem 1rem;
-  box-shadow: 0 1px 0 rgba(42, 26, 18, 0.04);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
 }
 .nutri-eyebrow {
   font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.66rem;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-tomato);
+  color: var(--color-olive-deep);
   margin: 0 0 0.65rem;
 }
 .nutri-serving {
-  font-family: var(--font-fraunces);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 16px;
   color: var(--color-ink);
   line-height: 1.3;
 }
 .nutri-yield {
   font-family: var(--font-inter);
-  font-size: 0.78rem;
+  font-size: 13px;
   color: var(--color-text-secondary);
   margin-top: 0.18rem;
   margin-bottom: 0.85rem;
@@ -1096,13 +424,13 @@ summary:focus-visible,
   grid-template-columns: 1fr auto auto;
   gap: 0 0.7rem;
   align-items: baseline;
-  padding: 0.5rem 0;
-  border-top: 1px solid var(--color-border-subtle);
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--color-rule);
   font-family: var(--font-inter);
 }
 .nutri-row:first-of-type { border-top: 1px solid var(--color-ink); }
 .nutri-row .label {
-  font-size: 0.86rem;
+  font-size: 14px;
   color: var(--color-ink);
   font-weight: 500;
 }
@@ -1110,32 +438,32 @@ summary:focus-visible,
   font-family: var(--font-plex-mono);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
-  font-size: 0.92rem;
+  font-size: 14px;
   color: var(--color-ink);
 }
 .nutri-row .src-badge {
   font-family: var(--font-inter);
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
+  font-size: 10px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 0.16rem 0.4rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 999px;
-  background: rgba(92, 111, 60, 0.12);
+  background: var(--color-olive-50);
   color: var(--color-olive-deep);
   white-space: nowrap;
 }
 .nutri-row .src-badge.calc {
-  background: rgba(155, 137, 120, 0.16);
+  background: #F1F2F4;
   color: var(--color-text-secondary);
 }
 .nutri-row .src-badge.empty { background: transparent; color: transparent; }
 .nutri-foot {
   margin-top: 0.85rem;
   padding-top: 0.65rem;
-  border-top: 1px solid var(--color-border-subtle);
+  border-top: 1px solid var(--color-rule);
   font-family: var(--font-inter);
-  font-size: 0.74rem;
+  font-size: 13px;
   color: var(--color-text-secondary);
 }
 .nutri-foot a {
@@ -1145,19 +473,22 @@ summary:focus-visible,
   text-underline-offset: 3px;
 }
 
-/* Sticky table of contents (recipe page right rail). */
+/* ================================================================
+   STICKY TOC
+================================================================= */
+
 .toc-sticky {
   font-family: var(--font-inter);
-  font-size: 0.85rem;
-  border-left: 1px solid var(--color-border-subtle);
+  font-size: 14px;
+  border-left: 1px solid var(--color-rule);
   padding-left: 1rem;
 }
 .toc-sticky h4 {
   font-family: var(--font-inter);
-  font-size: 0.66rem;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-tomato);
+  color: var(--color-olive-deep);
   font-weight: 600;
   margin-bottom: 0.6rem;
 }
@@ -1173,58 +504,63 @@ summary:focus-visible,
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 .toc-sticky a:hover, .toc-sticky a[aria-current="true"] {
-  color: var(--color-tomato);
-  border-color: var(--color-tomato);
+  color: var(--color-olive-deep);
+  border-color: var(--color-olive);
 }
 
-/* Category tile grid (home departments). */
+/* ================================================================
+   CATEGORY TILES
+================================================================= */
+
 .cat-tile {
   display: block;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   background: var(--color-paper-white);
-  border: 1px solid var(--color-border-subtle);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--color-rule);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   text-decoration: none;
   color: inherit;
 }
 .cat-tile:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(42, 26, 18, 0.10);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+  border-color: var(--color-rule-strong);
 }
 .cat-tile .tile-photo {
   aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #E8DCC8 0%, #D8B89A 50%, #C4A878 100%);
+  background: linear-gradient(135deg, #EEF2E8 0%, #B8C99B 100%);
   position: relative;
 }
 .cat-tile .tile-photo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at top, rgba(255,255,255,0.25), transparent 60%);
+  background: radial-gradient(ellipse at top, rgba(255,255,255,0.4), transparent 60%);
   pointer-events: none;
 }
 .cat-tile .tile-body { padding: 1rem 1.1rem 1.15rem; }
 .cat-tile .tile-eyebrow {
   font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.66rem;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-tomato);
+  color: var(--color-olive-deep);
 }
 .cat-tile h3 {
-  font-family: var(--font-fraunces);
-  font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.25;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
   margin: 0.35rem 0 0.4rem;
+  color: var(--color-ink);
 }
 .cat-tile .tile-dek {
   font-family: var(--font-inter);
-  font-size: 0.88rem;
+  font-size: 14px;
   color: var(--color-text-secondary);
-  line-height: 1.45;
+  line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1234,11 +570,14 @@ summary:focus-visible,
   margin-top: 0.55rem;
   font-family: var(--font-plex-mono);
   font-variant-numeric: tabular-nums;
-  font-size: 0.74rem;
-  color: var(--color-text-muted);
+  font-size: 12px;
+  color: var(--color-text-secondary);
 }
 
-/* Featured recipe carousel — horizontal scroll-snap. */
+/* ================================================================
+   RECIPE CAROUSEL + RCARD
+================================================================= */
+
 .rec-carousel {
   display: grid;
   grid-auto-flow: column;
@@ -1251,55 +590,54 @@ summary:focus-visible,
 }
 .rec-carousel > * { scroll-snap-align: start; }
 
-/* Compact recipe card (carousel + grid). */
 .rcard {
   display: block;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   background: var(--color-paper-white);
-  border: 1px solid var(--color-border-subtle);
+  border: 1px solid var(--color-rule);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .rcard:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(42, 26, 18, 0.10);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+  border-color: var(--color-rule-strong);
 }
 .rcard .rcard-photo {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #EEF2E8 0%, #B8C99B 100%);
 }
-.rcard .rcard-photo::before {
-  content: "";
-  position: absolute; inset: 0;
-  background-size: cover;
-  transition: transform 0.4s ease;
-}
-.rcard:hover .rcard-photo::before { transform: scale(1.03); }
-.rcard .rcard-body { padding: 0.95rem 1.05rem 1.05rem; }
+.rcard .rcard-body { padding: 1rem 1.1rem 1.15rem; }
 .rcard .rcard-eyebrow {
   font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-tomato);
+  color: var(--color-olive-deep);
 }
 .rcard h3 {
-  font-family: var(--font-fraunces);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.18rem;
-  line-height: 1.2;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.3;
   margin: 0.32rem 0 0.4rem;
+  color: var(--color-ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
+.rcard:hover h3 { color: var(--color-olive-deep); }
 .rcard .rcard-dek {
   font-family: var(--font-inter);
-  font-size: 0.86rem;
+  font-size: 14px;
   color: var(--color-text-secondary);
-  line-height: 1.45;
+  line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1311,9 +649,8 @@ summary:focus-visible,
   gap: 0.35rem 0.85rem;
   margin-top: 0.7rem;
   font-family: var(--font-inter);
-  font-size: 0.74rem;
-  color: var(--color-text-muted);
-  letter-spacing: 0.04em;
+  font-size: 12px;
+  color: var(--color-text-secondary);
 }
 .rcard .rcard-meta strong {
   font-family: var(--font-plex-mono);
@@ -1322,7 +659,10 @@ summary:focus-visible,
   color: var(--color-ink);
 }
 
-/* Numbered ingredient list (tomato bullets). */
+/* ================================================================
+   RECIPE TEMPLATE — ingredient + method lists
+================================================================= */
+
 .ing-list {
   list-style: none;
   padding: 0;
@@ -1334,29 +674,38 @@ summary:focus-visible,
   display: grid;
   grid-template-columns: 5.5rem 1fr;
   gap: 0.5rem 0.9rem;
-  padding: 0.65rem 0;
-  border-bottom: 1px solid var(--color-border-subtle);
-  font-size: 0.95rem;
-  line-height: 1.45;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--color-rule);
+  font-size: 15px;
+  line-height: 1.5;
+  position: relative;
+}
+.ing-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--color-olive);
+  border-radius: 999px;
+  position: absolute;
+  left: -14px;
+  top: 1.05rem;
 }
 .ing-list .qty {
   font-family: var(--font-plex-mono);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
-  font-size: 0.85rem;
-  color: var(--color-tomato);
+  font-size: 14px;
+  color: var(--color-ink);
   padding-top: 0.05rem;
 }
 .ing-list .name { color: var(--color-ink); }
 .ing-list .ing-note {
   display: block;
-  font-style: italic;
   color: var(--color-text-secondary);
-  font-size: 0.86rem;
+  font-size: 13px;
   margin-top: 0.1rem;
 }
 
-/* Numbered method list — italic step labels + Inter body. */
 .meth-list {
   list-style: none;
   padding: 0;
@@ -1366,49 +715,51 @@ summary:focus-visible,
 .meth-list li {
   counter-increment: meth;
   display: grid;
-  grid-template-columns: 2.6rem 1fr;
+  grid-template-columns: 2.4rem 1fr;
   gap: 0.6rem 1rem;
-  padding: 1rem 0;
-  border-top: 1px solid var(--color-border-subtle);
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--color-rule);
 }
 .meth-list li:first-child { border-top: 1px solid var(--color-ink); }
 .meth-list li::before {
   content: counter(meth);
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
   background: var(--color-olive);
-  color: var(--color-cream);
+  color: #FFFFFF;
   font-family: var(--font-plex-mono);
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 13px;
   font-variant-numeric: tabular-nums;
   flex-shrink: 0;
 }
 .meth-list .step-label {
   display: block;
-  font-family: var(--font-fraunces);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1rem;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 15px;
   color: var(--color-ink);
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.15rem;
 }
 .meth-list .step-body {
   font-family: var(--font-inter);
-  font-size: 0.96rem;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--color-ink);
 }
 
-/* Sources accordion. */
+/* ================================================================
+   SOURCES ACCORDION
+================================================================= */
+
 .sources-wrap {
   margin-top: 2rem;
   border-top: 1px solid var(--color-ink);
-  border-bottom: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-rule);
 }
 .sources-wrap summary {
   list-style: none;
@@ -1416,10 +767,10 @@ summary:focus-visible,
   padding: 0.95rem 0;
   font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  font-size: 13px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-ink);
+  color: var(--color-olive-deep);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1428,8 +779,8 @@ summary:focus-visible,
 .sources-wrap summary::after {
   content: "+";
   font-family: var(--font-plex-mono);
-  font-size: 1.1rem;
-  color: var(--color-tomato);
+  font-size: 18px;
+  color: var(--color-olive-deep);
 }
 .sources-wrap[open] summary::after { content: "−"; }
 .sources-list {
@@ -1445,246 +796,149 @@ summary:focus-visible,
   grid-template-columns: 1.6rem 1fr auto;
   gap: 0.5rem 0.7rem;
   padding: 0.7rem 0;
-  border-top: 1px solid var(--color-border-subtle);
-  font-size: 0.86rem;
+  border-top: 1px solid var(--color-rule);
+  font-size: 14px;
   line-height: 1.5;
 }
 .sources-list li::before {
   content: counter(src);
   font-family: var(--font-plex-mono);
   font-variant-numeric: tabular-nums;
-  color: var(--color-tomato);
+  color: var(--color-olive-deep);
   font-weight: 500;
-  font-size: 0.78rem;
+  font-size: 13px;
   padding-top: 0.05rem;
 }
 .sources-list .src-link {
   color: var(--color-ink);
   text-decoration: underline;
-  text-decoration-color: var(--color-tomato);
+  text-decoration-color: var(--color-rule-strong);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
+.sources-list .src-link:hover { text-decoration-color: var(--color-olive); color: var(--color-olive-deep); }
 .sources-list .src-tag {
   font-family: var(--font-inter);
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
+  font-size: 10px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 0.16rem 0.46rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 999px;
   white-space: nowrap;
   height: fit-content;
   align-self: start;
   margin-top: 0.1rem;
 }
-.sources-list .src-tag.usda { background: rgba(92, 111, 60, 0.14); color: var(--color-olive-deep); }
-.sources-list .src-tag.peer { background: rgba(196, 69, 45, 0.12); color: var(--color-tomato-deep); }
-.sources-list .src-tag.gov  { background: rgba(196, 168, 120, 0.22); color: #6B5121; }
-.sources-list .src-tag.ed   { background: rgba(155, 137, 120, 0.18); color: var(--color-text-secondary); }
+.sources-list .src-tag.usda { background: var(--color-olive-50); color: var(--color-olive-deep); }
+.sources-list .src-tag.peer { background: #FBEDEA; color: var(--color-tomato-deep); }
+.sources-list .src-tag.gov  { background: #FFF6E1; color: #6B5121; }
+.sources-list .src-tag.ed   { background: #F1F2F4; color: var(--color-text-secondary); }
 
-/* Recipe summary drop-cap (Fraunces italic). */
+/* ================================================================
+   RECIPE BODY HELPERS
+================================================================= */
+
 .recipe-summary {
-  font-family: var(--font-fraunces);
-  font-style: italic;
+  font-family: var(--font-inter);
   font-weight: 400;
-  font-size: 1.36rem;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.55;
   color: var(--color-ink);
   margin: 0 0 1.6rem;
 }
-.recipe-summary::first-letter {
-  font-family: var(--font-fraunces);
-  font-weight: 500;
-  font-size: 4rem;
-  line-height: 0.9;
-  float: left;
-  margin: 0.06em 0.1em 0 -0.05em;
-  color: var(--color-tomato);
-  font-style: normal;
-}
 
-/* Why-this-recipe-works block. */
 .why-block {
-  background: var(--color-cream-lighter);
+  background: var(--color-olive-50);
   border-left: 3px solid var(--color-olive);
-  padding: 1.1rem 1.25rem;
+  padding: 1.2rem 1.35rem;
   margin: 1.6rem 0;
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 8px 8px 0;
 }
 .why-block h4 {
   font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 0.66rem;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-olive-deep);
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.7rem;
 }
 .why-block ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.6rem;
+  gap: 0.7rem;
 }
 .why-block li {
   font-family: var(--font-inter);
-  font-size: 0.94rem;
+  font-size: 15px;
   line-height: 1.55;
   color: var(--color-ink);
-  padding-left: 1.1rem;
+  padding-left: 1.2rem;
   position: relative;
 }
 .why-block li::before {
   content: "→";
   position: absolute;
   left: 0;
-  top: 0.05rem;
+  top: 0;
   color: var(--color-olive);
   font-weight: 500;
 }
 
-/* Variations block. */
 .variations h3 {
-  font-family: var(--font-fraunces);
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 24px;
   margin: 2rem 0 0.85rem;
+  color: var(--color-ink);
 }
 .variations .var-item {
   padding: 0.8rem 0;
-  border-top: 1px solid var(--color-border-subtle);
+  border-top: 1px solid var(--color-rule);
 }
-.variations .var-item:last-child { border-bottom: 1px solid var(--color-border-subtle); }
+.variations .var-item:last-child { border-bottom: 1px solid var(--color-rule); }
 .variations .var-title {
-  font-family: var(--font-fraunces);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.05rem;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 16px;
   color: var(--color-ink);
   margin-bottom: 0.2rem;
 }
 .variations .var-body {
   font-family: var(--font-inter);
-  font-size: 0.94rem;
+  font-size: 15px;
   line-height: 1.55;
   color: var(--color-text-secondary);
 }
 
-/* Hero (food-publisher home hero) — masthead + 12-col grid. */
-.home-hero { background: var(--color-cream); border-bottom: 1px solid var(--color-border-subtle); }
-.home-hero .masthead-strip {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--color-ink);
-  padding: 0.9rem 0;
-  font-family: var(--font-inter);
-  font-weight: 600;
-  font-size: 0.7rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--color-ink);
+/* Plate gradient — for hero placeholder where no photo yet. Soft olive. */
+.plate-warm {
+  width: 100%;
+  background: linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 40%, #B8C99B 100%);
+  position: relative;
+  overflow: hidden;
 }
-.home-hero .masthead-strip .right { color: var(--color-tomato); }
-
-/* Subscribe button (header CTA) — tomato pill. */
-.btn-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: var(--color-tomato);
-  color: var(--color-cream);
-  font-family: var(--font-inter);
-  font-weight: 600;
-  font-size: 0.74rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border: 1px solid var(--color-tomato);
-  transition: background 0.15s ease;
-}
-.btn-pill:hover { background: var(--color-tomato-hover); border-color: var(--color-tomato-hover); }
-
-/* Mega-menu drop panel. */
-.mega-panel {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 720px;
-  max-width: 92vw;
-  background: var(--color-paper-white);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 18px 48px rgba(42, 26, 18, 0.14);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.1fr;
-  gap: 1.5rem;
-  z-index: 50;
-}
-.mega-panel h5 {
-  font-family: var(--font-inter);
-  font-weight: 600;
-  font-size: 0.66rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-tomato);
-  margin: 0 0 0.55rem;
-}
-.mega-panel ul { list-style: none; padding: 0; margin: 0; }
-.mega-panel li { margin: 0.32rem 0; }
-.mega-panel a {
-  font-family: var(--font-inter);
-  font-size: 0.92rem;
-  color: var(--color-ink);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-.mega-panel a:hover { color: var(--color-tomato); }
-
-/* Newsletter inline (Sunday Larder magazine block). */
-.nl-inline {
-  background: var(--color-cream-lighter);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: 8px;
-  padding: 1.2rem 1.35rem 1.35rem;
-}
-.nl-inline h4 {
-  font-family: var(--font-fraunces);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin: 0 0 0.35rem;
-}
-.nl-inline p {
-  font-family: var(--font-inter);
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  margin: 0 0 0.85rem;
-}
-.nl-inline form { display: flex; gap: 0.5rem; }
-.nl-inline input[type="email"] {
-  flex: 1;
-  padding: 0.7rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--color-border-accent);
-  font-family: var(--font-inter);
-  background: var(--color-paper-white);
-  font-size: 0.9rem;
+.plate-warm::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.6), transparent 55%);
+  mix-blend-mode: overlay;
 }
 
-/* Breadcrumbs (recipe page top). */
+/* ================================================================
+   BREADCRUMBS
+================================================================= */
+
 .bcrumb {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.4rem;
   font-family: var(--font-inter);
-  font-size: 0.78rem;
+  font-size: 13px;
   color: var(--color-text-secondary);
 }
 .bcrumb a {
@@ -1692,20 +946,300 @@ summary:focus-visible,
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.bcrumb a:hover { color: var(--color-tomato); }
-.bcrumb .sep { color: var(--color-border-accent); }
+.bcrumb a:hover { color: var(--color-olive-deep); }
+.bcrumb .sep { color: var(--color-rule-strong); }
 .bcrumb .current { color: var(--color-ink); font-weight: 500; }
 
-/* Hero plate placeholder (warm gradient when no photo). */
-.plate-warm {
-  width: 100%;
-  background: radial-gradient(ellipse at 30% 30%, #F8E5C8 0%, #E8C8A0 45%, #C4A878 100%);
-  position: relative;
-  overflow: hidden;
+/* ================================================================
+   NEWSLETTER INLINE
+================================================================= */
+
+.nl-inline {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-rule);
+  border-radius: 12px;
+  padding: 1.5rem 1.7rem;
 }
-.plate-warm::after {
+.nl-inline h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 0 0 0.4rem;
+  color: var(--color-ink);
+  letter-spacing: -0.012em;
+}
+.nl-inline p {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+.nl-inline form { display: flex; gap: 0.5rem; }
+.nl-inline input[type="email"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-rule-strong);
+  font-family: var(--font-inter);
+  background: var(--color-paper-white);
+  font-size: 14px;
+  color: var(--color-ink);
+}
+.nl-inline input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-olive);
+  box-shadow: 0 0 0 3px var(--color-olive-50);
+}
+
+/* ================================================================
+   MEGA MENU PANEL
+================================================================= */
+
+.mega-panel {
+  background: var(--color-paper-white);
+  border: 1px solid var(--color-rule);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 48px rgb(0 0 0 / 0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.1fr;
+  gap: 1.5rem;
+}
+.mega-panel h5 {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-olive-deep);
+  margin: 0 0 0.55rem;
+}
+.mega-panel ul { list-style: none; padding: 0; margin: 0; }
+.mega-panel li { margin: 0.35rem 0; }
+.mega-panel a {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.mega-panel a:hover { color: var(--color-olive-deep); }
+
+/* ================================================================
+   LEGACY CLASSES — keep /_legacy/magazine compiling. Tones mapped to
+   the new clean-medical palette so anything that still references
+   them won't crash but also won't reintroduce magazine warmth.
+================================================================= */
+
+.cover-headline {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  line-height: 1.05;
+  color: var(--color-ink);
+}
+.feature-headline {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.014em;
+  line-height: 1.1;
+  color: var(--color-ink);
+}
+.dek {
+  font-family: var(--font-inter);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+.dept-label {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-olive-deep);
+}
+.byline {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+.byline-italic {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+.page-number {
+  font-family: var(--font-plex-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+.masthead-line { display: none; } /* magazine masthead — stripped */
+.font-script { font-family: var(--font-inter); font-style: normal; }
+
+/* Legacy data table — keep compiling. */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-rule);
+  font-variant-numeric: tabular-nums;
+}
+.data-table thead th {
+  background: var(--color-ink);
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem;
+  text-align: left;
+  border-bottom: 2px solid var(--color-olive);
+}
+.data-table thead th.num,
+.data-table tbody td.num {
+  text-align: right;
+}
+.data-table tbody td {
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--color-rule);
+  color: var(--color-ink);
+  font-family: var(--font-inter);
+}
+.data-table tbody tr:hover { background: var(--color-surface-alt); }
+
+/* Legacy email input. */
+.email-input {
+  background: var(--color-paper-white);
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.7rem 1rem;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  border-radius: 999px;
+}
+.email-input:focus {
+  outline: none;
+  border-color: var(--color-olive);
+  box-shadow: 0 0 0 3px var(--color-olive-50);
+}
+
+/* Tier / confidence pills, used by older comparison templates. */
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.22rem 0.6rem;
+  background: var(--color-olive);
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+.tier-badge::before {
   content: "";
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 75%, rgba(196, 69, 45, 0.18), transparent 55%);
-  mix-blend-mode: multiply;
+  width: 5px;
+  height: 5px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+.tier-badge-mid { background: var(--color-olive-deep); }
+.tier-badge-budget { background: var(--color-text-secondary); }
+.tier-badge-skip { background: var(--color-text-muted); }
+
+.conf-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.18rem 0.55rem;
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid var(--color-rule-strong);
+  background: var(--color-surface-alt);
+  color: var(--color-ink);
+}
+.conf-pill::before { content: ""; width: 5px; height: 5px; border-radius: 50%; }
+.conf-high::before { background: var(--color-olive); }
+.conf-med::before { background: var(--color-tomato); }
+.conf-low::before { background: var(--color-text-muted); }
+
+/* Reading progress bar — olive ribbon. */
+.reading-progress-bar {
+  height: 2px;
+  background: var(--color-olive);
+  transform-origin: left;
+  width: 100%;
+  transition: transform 0.08s linear;
+}
+
+/* Pull quote (kept for legacy article bodies). */
+.pull-quote {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--color-ink);
+  border-left: 3px solid var(--color-olive);
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  margin: 2.2rem 0;
+}
+.pull-quote-attrib {
+  display: block;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-top: 0.7rem;
+  font-weight: 500;
+}
+
+/* ================================================================
+   UTILITIES
+================================================================= */
+
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.5s ease-out both; }
+.fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.06s both; }
+.fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.12s both; }
+.fade-up-delay-3 { animation: fadeUp 0.5s ease-out 0.18s both; }
+
+.reveal {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  will-change: opacity, transform;
+}
+.reveal[data-reveal="off"] { opacity: 0; transform: translateY(14px); }
+.reveal[data-reveal="on"] { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
 }

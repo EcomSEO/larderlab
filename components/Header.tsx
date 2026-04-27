@@ -1,104 +1,413 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { MegaMenu, type MegaMenuColumn } from "./MegaMenu";
 
 /**
- * Magazine paper-bar header. Cream paper, italic serif wordmark on the
- * left, thin uppercase tracked nav across the middle, and a small italic
- * issue indicator on the right. No dark bar, no rounded search field —
- * this is the inside front cover of a printed magazine.
+ * Larderlab — healthline-grade publisher header.
+ *
+ * Sticky white bar, h-16. Olive wordmark "larderlab" left (Source Serif 4
+ * weight 600 — NOT italic), MegaMenu nav center, 320px rounded
+ * olive-bordered search, "Newsletter" olive-pill right, 1px subtle
+ * border-bottom.
+ *
+ * Mobile: hamburger drawer + collapsed search icon.
  */
-export function Header() {
-  const t = useTranslations("header");
-  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const nav = [
-    { href: "/recipes", label: t("navRecipes") },
-    { href: "/guides/pantry-systems", label: t("navPantry") },
-    { href: "/guides/ingredient-deep-dives", label: t("navLarder") },
-    { href: "/guides/meal-prep", label: t("navFeatures") },
-    { href: "/methodology", label: t("navMethodology") },
-  ];
+type SimpleNav = { href: string; label: string };
+type MegaNav = {
+  label: string;
+  megaMenu: MegaMenuColumn[];
+  featured?: { eyebrow: string; title: string; href: string; dek: string };
+};
+type NavItem = SimpleNav | MegaNav;
+
+function isMega(item: NavItem): item is MegaNav {
+  return (item as MegaNav).megaMenu !== undefined;
+}
+
+const NAV: NavItem[] = [
+  {
+    label: "Pantry",
+    megaMenu: [
+      {
+        title: "Pantry essentials",
+        items: [
+          { label: "Olive oil", href: "/guides/ingredient-deep-dives" },
+          { label: "Beans & legumes", href: "/guides/ingredient-deep-dives" },
+          { label: "Salt & seasoning", href: "/guides/ingredient-deep-dives" },
+        ],
+      },
+      {
+        title: "Storage & systems",
+        items: [
+          { label: "Pantry architecture", href: "/guides/pantry-systems" },
+          { label: "Shelf-life math", href: "/guides/pantry-systems" },
+          { label: "Fermentation rules", href: "/guides/meal-prep" },
+        ],
+      },
+      {
+        title: "Sourcing",
+        items: [
+          { label: "What we buy", href: "/guides/ingredient-deep-dives" },
+          { label: "Affiliate disclosure", href: "/affiliate-disclosure" },
+          { label: "Methodology", href: "/methodology" },
+        ],
+      },
+    ],
+    featured: {
+      eyebrow: "Trending",
+      title: "Why olive oil ages in the bottle — and how to slow it",
+      href: "/guides/ingredient-deep-dives",
+      dek: "Oxidation, dating, and what the literature actually says.",
+    },
+  },
+  {
+    label: "Recipes",
+    megaMenu: [
+      {
+        title: "By time",
+        items: [
+          { label: "30-minute pantry suppers", href: "/recipes" },
+          { label: "Weekend projects", href: "/recipes" },
+          { label: "Confit & preserve", href: "/recipes" },
+        ],
+      },
+      {
+        title: "By style",
+        items: [
+          { label: "Anti-inflammatory", href: "/recipes" },
+          { label: "Mediterranean", href: "/recipes" },
+          { label: "One-pan dinners", href: "/recipes" },
+        ],
+      },
+      {
+        title: "By ingredient",
+        items: [
+          { label: "Beans", href: "/recipes" },
+          { label: "Tomatoes", href: "/recipes" },
+          { label: "Olive oil", href: "/recipes" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Nutrition",
+    megaMenu: [
+      {
+        title: "Macronutrients",
+        items: [
+          { label: "Protein essentials", href: "/macro-calculator" },
+          { label: "Carb quality guide", href: "/macro-calculator" },
+          { label: "Healthy fats", href: "/guides/ingredient-deep-dives" },
+        ],
+      },
+      {
+        title: "Micronutrients",
+        items: [
+          { label: "Magnesium-rich foods", href: "/guides/ingredient-deep-dives" },
+          { label: "Iron & B12 sources", href: "/guides/ingredient-deep-dives" },
+          { label: "Fiber primer", href: "/guides/pantry-systems" },
+        ],
+      },
+      {
+        title: "Eating patterns",
+        items: [
+          { label: "Mediterranean", href: "/guides/meal-prep" },
+          { label: "Anti-inflammatory", href: "/guides/meal-prep" },
+          { label: "Gut health", href: "/guides/meal-prep" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Tools",
+    megaMenu: [
+      {
+        title: "Calculators",
+        items: [
+          { label: "Macro Calculator", href: "/macro-calculator" },
+        ],
+      },
+      {
+        title: "Reference",
+        items: [
+          { label: "Methodology v1.2", href: "/methodology/v1-2" },
+          { label: "Editorial standards", href: "/editorial-standards" },
+          { label: "Pipeline", href: "/pipeline" },
+        ],
+      },
+    ],
+  },
+  { href: "/newsletter", label: "Newsletter" },
+];
+
+export function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeMega, setActiveMega] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const t = useTranslations("header");
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const openMega = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveMega(label);
+  };
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setActiveMega(null), 120);
+  };
+
+  const activeItem = activeMega
+    ? NAV.find((n) => isMega(n) && n.label === activeMega)
+    : null;
 
   return (
-    <header className="bg-cream/95 backdrop-blur sticky top-0 z-40 border-b border-ink/15">
-      <div className="mx-auto max-w-spread px-6 py-4 md:py-5 flex items-center justify-between gap-6">
-        {/* Wordmark — italic serif. */}
-        <Link href="/" aria-label={t("logoAria")} className="group">
-          <span className="font-display italic text-2xl md:text-[1.7rem] text-ink leading-none tracking-tight group-hover:text-tomato transition">
-            Larderlab
+    <header className="sticky top-0 z-40 bg-white border-b border-rule">
+      <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-6">
+        <Link
+          href="/"
+          aria-label={(() => { try { return t("logoAria"); } catch { return "Larderlab — home"; } })()}
+          className="flex items-center gap-2 group shrink-0"
+        >
+          <LarderMark />
+          <span className="font-display text-[18px] font-semibold tracking-tight text-olive-deep group-hover:text-olive transition-colors">
+            larderlab
           </span>
-          <span className="sr-only">— {t("issue")}</span>
         </Link>
 
-        {/* Centre nav */}
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Primary">
-          {nav.map((link) => (
-            <Link key={link.href} href={link.href} className="nav-link">
-              {link.label}
-            </Link>
-          ))}
+        <nav
+          className="hidden lg:flex items-center gap-1 ml-4 flex-1"
+          aria-label="Primary"
+          onMouseLeave={scheduleClose}
+        >
+          {NAV.map((item) => {
+            if (isMega(item)) {
+              const isOpen = activeMega === item.label;
+              return (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => openMega(item.label)}
+                  onFocus={() => openMega(item.label)}
+                >
+                  <button
+                    type="button"
+                    className={`px-3 py-2 text-[15px] font-medium rounded-md transition-colors ${
+                      isOpen ? "text-olive-deep bg-olive-50" : "text-ink hover:text-olive-deep hover:bg-olive-50"
+                    }`}
+                    aria-haspopup="true"
+                    aria-expanded={isOpen}
+                  >
+                    {item.label}
+                  </button>
+                </div>
+              );
+            }
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="px-3 py-2 text-[15px] font-medium text-ink hover:text-olive-deep hover:bg-olive-50 transition-colors rounded-md"
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
-        {/* Right indicator + subscribe pill */}
-        <div className="hidden md:flex items-center gap-4">
-          <span className="byline-italic text-ink-soft hidden xl:inline">
-            {t("issue")}
-          </span>
-          <span className="dept-label tnum hidden lg:inline">{t("issueDate")}</span>
-          <Link href="/newsletter" className="btn-pill">
-            Subscribe
-          </Link>
-        </div>
-
-        {/* Mobile open button */}
-        <button
-          onClick={() => setMobileOpen(true)}
-          className="lg:hidden text-ink"
-          aria-label={t("logoAria")}
+        <form
+          role="search"
+          action="/recipes"
+          className="hidden md:flex items-center w-[320px] h-10 px-4 rounded-pill bg-white border border-olive-100 focus-within:border-olive focus-within:bg-white transition-colors"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-            <line x1="3" y1="7" x2="21" y2="7" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="17" x2="21" y2="17" />
-          </svg>
-        </button>
+          <SearchIcon className="w-4 h-4 text-ink-muted shrink-0" />
+          <input
+            type="search"
+            name="q"
+            placeholder="Search recipes, ingredients, guides…"
+            className="ml-2 bg-transparent w-full text-[14px] text-ink placeholder:text-ink-soft outline-none"
+            aria-label="Search the site"
+          />
+        </form>
+
+        <div className="flex items-center gap-2 shrink-0">
+          <Link
+            href="/newsletter"
+            className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-olive text-white text-[14px] font-semibold hover:bg-olive-deep transition-colors"
+          >
+            Newsletter
+          </Link>
+
+          <button
+            type="button"
+            aria-label="Search"
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
+          >
+            <SearchIcon className="w-5 h-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open menu"
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+              <line x1="3" y1="7" x2="21" y2="7" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="17" x2="21" y2="17" />
+            </svg>
+          </button>
+        </div>
       </div>
 
+      {activeItem && isMega(activeItem) && (
+        <div
+          className="absolute left-0 right-0 bg-white border-b border-rule shadow-card"
+          onMouseEnter={() => openMega(activeItem.label)}
+          onMouseLeave={scheduleClose}
+        >
+          <MegaMenu columns={activeItem.megaMenu} featured={activeItem.featured} />
+        </div>
+      )}
+
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-cream lg:hidden overflow-auto">
-          <div className="flex items-center justify-between px-6 py-4 border-b border-ink/15">
-            <span className="font-display italic text-2xl text-ink leading-none">
-              Larderlab
-            </span>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site navigation"
+          className="fixed inset-0 z-50 bg-white overflow-auto lg:hidden"
+        >
+          <div className="flex items-center justify-between px-6 h-16 border-b border-rule">
+            <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+              <LarderMark />
+              <span className="font-display text-[18px] font-semibold text-olive-deep">larderlab</span>
+            </Link>
             <button
+              type="button"
               onClick={() => setMobileOpen(false)}
-              aria-label="Close"
-              className="text-ink"
+              aria-label="Close menu"
+              className="inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
           </div>
-          <nav className="flex flex-col px-6 py-8 gap-1">
-            <div className="dept-label mb-3">{t("issue")} · {t("issueDate")}</div>
-            {nav.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="py-3 text-xl font-display text-ink border-b border-ink/10"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="p-6">
+            <form role="search" action="/recipes" className="flex items-center w-full h-12 px-4 rounded-pill bg-white border border-olive-100 mb-6">
+              <SearchIcon className="w-5 h-5 text-ink-muted shrink-0" />
+              <input
+                type="search"
+                name="q"
+                placeholder="Search recipes, ingredients…"
+                className="ml-3 bg-transparent w-full text-[15px] outline-none"
+                aria-label="Search the site"
+              />
+            </form>
+            <nav className="flex flex-col">
+              {NAV.map((item) => {
+                if (isMega(item)) {
+                  return (
+                    <details key={item.label} className="border-b border-rule">
+                      <summary className="cursor-pointer flex items-center justify-between py-4 text-[18px] font-semibold text-ink list-none">
+                        {item.label}
+                        <ChevronDown />
+                      </summary>
+                      <div className="pb-4 pl-2">
+                        {item.megaMenu.map((col) => (
+                          <div key={col.title} className="mb-3">
+                            <div className="eyebrow mb-2">{col.title}</div>
+                            <ul className="space-y-2">
+                              {col.items.map((sub) => (
+                                <li key={sub.href}>
+                                  <Link
+                                    href={sub.href}
+                                    onClick={() => setMobileOpen(false)}
+                                    className="text-[15px] text-ink hover:text-olive-deep"
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-4 text-[18px] font-semibold text-ink border-b border-rule"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+            <Link
+              href="/newsletter"
+              onClick={() => setMobileOpen(false)}
+              className="mt-8 inline-flex w-full items-center justify-center h-12 px-4 rounded-pill bg-olive text-white text-[15px] font-semibold"
+            >
+              Newsletter
+            </Link>
+          </div>
         </div>
       )}
     </header>
+  );
+}
+
+function LarderMark() {
+  // Olive leaf-circle. Botanical, distinct from injectcompass compass.
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      <circle cx="14" cy="14" r="12" stroke="#5C6F3C" strokeWidth="1.6" />
+      <path
+        d="M14 6c-3 2.5-3 7 0 12 3-5 3-9.5 0-12z"
+        fill="#5C6F3C"
+      />
+      <path
+        d="M14 18c0-2 0-4 0-6"
+        stroke="#FFFFFF"
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function SearchIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" className={className}>
+      <circle cx="9" cy="9" r="6" />
+      <line x1="13.5" y1="13.5" x2="17.5" y2="17.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ChevronDown() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <polyline points="3,6 8,11 13,6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }

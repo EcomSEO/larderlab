@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 /**
- * NewsletterInline — magazine-flavoured Sunday Larder block.
- * Inline form, no JS round-trip required for layout.
+ * NewsletterInline — clean white panel, olive border, headline +
+ * dek + email input + olive Subscribe pill.
  */
 export function NewsletterInline({
-  heading = "Get the Sunday Larder, weekly.",
-  body = "One short editorial letter, one tested recipe card, one well-edited pantry pick. Sundays only.",
+  heading = "Get evidence-based pantry guidance, every Sunday.",
+  body = "One short letter, one tested recipe, one nutritionist-reviewed pantry pick. Sundays only. No diet hype.",
   cta = "Subscribe",
 }: {
   heading?: string;
@@ -22,8 +22,8 @@ export function NewsletterInline({
       <h4>{heading}</h4>
       <p>{body}</p>
       {done ? (
-        <p style={{ color: "var(--color-olive-deep)", fontWeight: 600 }}>
-          Thanks. The next Sunday Larder is on its way.
+        <p style={{ color: "var(--color-olive-deep)", fontWeight: 600, margin: 0 }}>
+          Thanks. The next Sunday letter is on its way.
         </p>
       ) : (
         <form

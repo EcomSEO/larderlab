@@ -13,10 +13,10 @@ export function RelatedRecipes({
 }) {
   if (!recipes.length) return null;
   return (
-    <section className="border-t border-[--color-border-subtle]">
-      <div className="mx-auto max-w-spread px-6 py-12 md:py-14">
-        <div className="dept-label mb-3">From the same shelf</div>
-        <h2 className="font-display italic font-medium text-3xl md:text-[2.2rem] leading-[1.1] mb-6">
+    <section className="border-t border-rule bg-white">
+      <div className="mx-auto max-w-container px-6 py-14 md:py-16">
+        <div className="eyebrow mb-3">More from larderlab</div>
+        <h2 className="text-[24px] md:text-[28px] font-bold leading-tight text-ink tracking-tight mb-8">
           {heading}
         </h2>
         <div className="grid md:grid-cols-3 gap-5">
