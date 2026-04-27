@@ -22,6 +22,7 @@ const tiles = [
     dek: "Recipes a stocked pantry already wants to make. Beans, grains, slow-cooked things.",
     count: 12,
     gradient: ["#EEF2E8", "#B8C99B"] as [string, string],
+    imageUrl: "/images/categories/dinner.jpg",
   },
   {
     href: "/recipes#pantry-projects",
@@ -30,6 +31,7 @@ const tiles = [
     dek: "One afternoon of work, half a year of dinners. Confit, ferment, preserve.",
     count: 7,
     gradient: ["#DCE4CC", "#5C6F3C"] as [string, string],
+    imageUrl: "/images/categories/preserving.jpg",
   },
   {
     href: "/recipes#weeknight",
@@ -38,6 +40,7 @@ const tiles = [
     dek: "Forty minutes, one pan, no shopping. Built around what's already on the shelf.",
     count: 9,
     gradient: ["#EEF2E8", "#445129"] as [string, string],
+    imageUrl: "/images/categories/lunch.jpg",
   },
   {
     href: "/recipes#weekend",
@@ -46,6 +49,7 @@ const tiles = [
     dek: "Slower projects — bread, braises, things that improve overnight.",
     count: 6,
     gradient: ["#DCE4CC", "#3F4D27"] as [string, string],
+    imageUrl: "/images/categories/breakfast.jpg",
   },
 ];
 

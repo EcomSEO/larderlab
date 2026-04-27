@@ -12,6 +12,7 @@ const tiles = [
     dek: "Recipes a stocked pantry already wants to make.",
     count: 12,
     gradient: ["#EEF2E8", "#B8C99B"] as [string, string],
+    imageUrl: "/images/categories/dinner.jpg",
   },
   {
     href: "/recipes",
@@ -20,6 +21,7 @@ const tiles = [
     dek: "One afternoon of work, half a year of dinners. Confit, ferment, preserve.",
     count: 7,
     gradient: ["#DCE4CC", "#5C6F3C"] as [string, string],
+    imageUrl: "/images/categories/preserving.jpg",
   },
   {
     href: "/guides/ingredient-deep-dives",
@@ -28,6 +30,7 @@ const tiles = [
     dek: "Olive oil, beans, salt — the literature behind a well-stocked shelf.",
     count: 9,
     gradient: ["#EEF2E8", "#445129"] as [string, string],
+    imageUrl: "/images/categories/pantry-essentials.jpg",
   },
   {
     href: "/guides/pantry-systems",
@@ -36,6 +39,7 @@ const tiles = [
     dek: "Storage science, shelf-life math, the way a kitchen feeds itself.",
     count: 8,
     gradient: ["#DCE4CC", "#3F4D27"] as [string, string],
+    imageUrl: "/images/categories/fermentation.jpg",
   },
 ];
 
@@ -65,6 +69,7 @@ const pantryEssentials = [
     dek: "Harvest dates, polyphenol counts, and what 'extra virgin' actually verifies.",
     count: 6,
     gradient: ["#EEF2E8", "#B8C99B"] as [string, string],
+    imageUrl: "/images/pantry/olive-oil.jpg",
   },
   {
     href: "/guides/ingredient-deep-dives",
@@ -73,6 +78,7 @@ const pantryEssentials = [
     dek: "Skin thickness, age, soak ratio — the five variables behind a creamy pot.",
     count: 5,
     gradient: ["#DCE4CC", "#5C6F3C"] as [string, string],
+    imageUrl: "/images/pantry/dried-beans.jpg",
   },
   {
     href: "/guides/ingredient-deep-dives",
@@ -81,14 +87,16 @@ const pantryEssentials = [
     dek: "Diamond Crystal vs. Morton vs. flaky finishing — same teaspoon, different sodium.",
     count: 4,
     gradient: ["#EEF2E8", "#445129"] as [string, string],
+    imageUrl: "/images/pantry/sea-salt.jpg",
   },
   {
     href: "/guides/ingredient-deep-dives",
-    eyebrow: "Vinegar",
-    title: "Vinegar acidity, decoded",
-    dek: "Why a 5%-acid bottle is shelf-stable and a 4%-acid bottle isn't.",
+    eyebrow: "Spices",
+    title: "Whole vs. ground — and how spices age",
+    dek: "Volatile oils, oxidation, and why the jars in your cupboard already smell of nothing.",
     count: 3,
     gradient: ["#DCE4CC", "#3F4D27"] as [string, string],
+    imageUrl: "/images/pantry/spices.jpg",
   },
 ];
 

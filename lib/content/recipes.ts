@@ -73,8 +73,10 @@ export type Recipe = {
     credential: string;
     photoColor: string;
   };
-  /** Plate placeholder gradient color (no images yet). */
+  /** Plate placeholder gradient color (used as a fallback bg behind the photo). */
   plateColor: string;
+  /** Hero photo (16:9). Lives under /public/images/recipes/{slug}.jpg. */
+  imageUrl?: string;
   ingredients: RecipeIngredient[];
   method: RecipeStep[];
   notes: string;
@@ -120,6 +122,7 @@ export const recipes: Recipe[] = [
       photoColor: "#C4A878",
     },
     plateColor: "#E8DCC8",
+    imageUrl: "/images/recipes/one-pan-white-beans.jpg",
     ingredients: [
       { qty: "1 cup", name: "dried white beans", note: "cannellini, alubia blanca, or runner — soaked overnight" },
       { qty: "2 tbsp", name: "good olive oil", note: "single-estate, harvest-dated if you have it" },
@@ -235,6 +238,7 @@ export const recipes: Recipe[] = [
       photoColor: "#C4A878",
     },
     plateColor: "#D8B89A",
+    imageUrl: "/images/recipes/tomato-confit-twelve-ways.jpg",
     ingredients: [
       { qty: "2 lb", name: "plum tomatoes", note: "ripe, halved lengthwise" },
       { qty: "1 cup", name: "good olive oil" },
@@ -324,6 +328,7 @@ export const recipes: Recipe[] = [
       photoColor: "#C4A878",
     },
     plateColor: "#E0CFA8",
+    imageUrl: "/images/recipes/garlic-confit-from-scratch.jpg",
     ingredients: [
       { qty: "2 heads", name: "garlic", note: "cloves separated and peeled" },
       { qty: "1 cup", name: "olive oil", note: "or enough to submerge cloves fully" },

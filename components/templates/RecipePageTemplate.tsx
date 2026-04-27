@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { TestKitchenStamp } from "@/components/TestKitchenStamp";
 import { DietitianReviewedBadge } from "@/components/DietitianReviewedBadge";
 import { RecipeDeveloperByline } from "@/components/RecipeDeveloperByline";
@@ -74,17 +75,37 @@ export function RecipePageTemplate({
 
         {/* Hero — soft olive plate placeholder + title block */}
         <header className="mx-auto max-w-container px-6 pt-6 pb-10 md:pb-14">
-          <div
-            className="plate-warm rounded-md mb-8"
-            style={{
-              aspectRatio: "16 / 9",
-              background: `linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 40%, ${recipe.plateColor} 100%)`,
-              maxHeight: "440px",
-              boxShadow: "0 1px 2px rgb(0 0 0 / 0.04)",
-            }}
-            aria-label={`${recipe.title} — photographed in the test kitchen`}
-            role="img"
-          />
+          {recipe.imageUrl ? (
+            <div
+              className="relative rounded-md mb-8 overflow-hidden"
+              style={{
+                aspectRatio: "16 / 9",
+                maxHeight: "440px",
+                boxShadow: "0 1px 2px rgb(0 0 0 / 0.04)",
+              }}
+            >
+              <Image
+                src={recipe.imageUrl}
+                alt={`${recipe.title} — photographed in the test kitchen`}
+                fill
+                sizes="(max-width: 1100px) 100vw, 1100px"
+                priority
+                className="object-cover"
+              />
+            </div>
+          ) : (
+            <div
+              className="plate-warm rounded-md mb-8"
+              style={{
+                aspectRatio: "16 / 9",
+                background: `linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 40%, ${recipe.plateColor} 100%)`,
+                maxHeight: "440px",
+                boxShadow: "0 1px 2px rgb(0 0 0 / 0.04)",
+              }}
+              aria-label={`${recipe.title} — photographed in the test kitchen`}
+              role="img"
+            />
+          )}
           <div className="eyebrow">{recipe.department}</div>
           <h1 className="h1-display mt-3 text-[40px] md:text-[48px] leading-[1.1] tracking-tightest text-ink max-w-[22ch]">
             {recipe.title}

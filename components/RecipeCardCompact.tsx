@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Recipe } from "@/lib/content/recipes";
 
 /**
@@ -14,13 +15,25 @@ export function RecipeCardCompact({ recipe }: { recipe: Recipe }) {
   const protein = recipe.nutrition.find((r) => r.label.toLowerCase().includes("protein"))?.value;
   return (
     <Link href={`/${recipe.slug}`} className="rcard">
-      <div
-        className="rcard-photo plate-warm"
-        style={{
-          background: `linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 50%, ${recipe.plateColor} 100%)`,
-        }}
-        aria-hidden
-      />
+      {recipe.imageUrl ? (
+        <div className="rcard-photo relative overflow-hidden">
+          <Image
+            src={recipe.imageUrl}
+            alt={`${recipe.title} — photographed in the test kitchen`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <div
+          className="rcard-photo plate-warm"
+          style={{
+            background: `linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 50%, ${recipe.plateColor} 100%)`,
+          }}
+          aria-hidden
+        />
+      )}
       <div className="rcard-body">
         <div className="rcard-eyebrow">{recipe.department}</div>
         <h3>{recipe.title}</h3>

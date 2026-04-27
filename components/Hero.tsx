@@ -1,7 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TestKitchenStamp } from "./TestKitchenStamp";
 import { DietitianReviewedBadge } from "./DietitianReviewedBadge";
 import type { Recipe } from "@/lib/content/recipes";
+
+const HERO_IMAGE = "/images/hero/featured-recipe.jpg";
 
 /**
  * Larderlab — clean-medical home Hero.
@@ -99,12 +102,13 @@ export function Hero({
                 className="block"
               >
                 <div className="relative aspect-[5/3] overflow-hidden">
-                  <div
-                    className="w-full h-full transition-transform duration-300 ease-out group-hover:scale-[1.03] plate-warm"
-                    style={{
-                      background: `linear-gradient(135deg, #EEF2E8 0%, #DCE4CC 40%, ${featured.plateColor} 100%)`,
-                    }}
-                    aria-hidden
+                  <Image
+                    src={HERO_IMAGE}
+                    alt={`${featured.title} — photographed in the test kitchen`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 42vw"
+                    priority
+                    className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
                   />
                   <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-pill bg-white/95 text-reviewed-text text-[12px] font-semibold">
                     <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>

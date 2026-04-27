@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export type CategoryTile = {
   href: string;
@@ -6,8 +7,10 @@ export type CategoryTile = {
   title: string;
   dek: string;
   count: number;
-  /** Two hex colors for the soft-olive gradient placeholder. */
+  /** Two hex colors for the soft-olive gradient placeholder (fallback). */
   gradient: [string, string];
+  /** Optional photo path under /public. If set, replaces the gradient. */
+  imageUrl?: string;
 };
 
 /**
@@ -44,13 +47,25 @@ export function CategoryTileGrid({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {tiles.map((t) => (
             <Link key={t.href + t.title} href={t.href} className="cat-tile">
-              <div
-                className="tile-photo"
-                style={{
-                  background: `linear-gradient(135deg, ${t.gradient[0]} 0%, ${t.gradient[1]} 100%)`,
-                }}
-                aria-hidden
-              />
+              {t.imageUrl ? (
+                <div className="tile-photo relative overflow-hidden">
+                  <Image
+                    src={t.imageUrl}
+                    alt={t.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="tile-photo"
+                  style={{
+                    background: `linear-gradient(135deg, ${t.gradient[0]} 0%, ${t.gradient[1]} 100%)`,
+                  }}
+                  aria-hidden
+                />
+              )}
               <div className="tile-body">
                 <div className="tile-eyebrow">{t.eyebrow}</div>
                 <h3>{t.title}</h3>
