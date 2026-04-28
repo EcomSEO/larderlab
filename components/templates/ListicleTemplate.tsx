@@ -15,6 +15,10 @@ import { Eyebrow } from "../editorial/Eyebrow";
 import { DotRule, SpecRule } from "../editorial/DotRule";
 import { RankNumeral } from "../editorial/RankNumeral";
 import { Dateline } from "../editorial/Dateline";
+import { MethodologyBlock } from "../editorial/MethodologyBlock";
+import { EvidencePill } from "../EvidencePill";
+import { MacroCalculatorTeaser } from "../MacroCalculatorTeaser";
+import { CostPerUnitCallout } from "../CostPerUnitCallout";
 
 export function ListicleTemplate({ post }: { post: Post }) {
   const hub = getHub(post.hub);
@@ -56,6 +60,8 @@ export function ListicleTemplate({ post }: { post: Post }) {
           {post.h1}
         </h1>
 
+        <EvidencePill sourceCount={(post.sources ?? []).length} />
+
         <Dateline className="mt-5" stamp={post.updatedAt} />
 
         <div className="mt-6">
@@ -69,6 +75,17 @@ export function ListicleTemplate({ post }: { post: Post }) {
         <p className="mt-8 text-[1.06rem] md:text-[1.12rem] leading-[1.65] text-charcoal/90 max-w-[60ch]">
           {post.description}
         </p>
+
+        {post.costPerUnit && (
+          <CostPerUnitCallout
+            metric={post.costPerUnit.metric}
+            cheapest={post.costPerUnit.cheapest}
+            median={post.costPerUnit.median}
+            premium={post.costPerUnit.premium}
+            note={post.costPerUnit.note}
+            pricedAt={post.costPerUnit.pricedAt}
+          />
+        )}
 
         {post.items && post.items.length > 0 && (
           <ol className="mt-12 space-y-0 border-t border-ink/15">
@@ -95,8 +112,11 @@ export function ListicleTemplate({ post }: { post: Post }) {
 
         <DotRule className="my-14" />
 
+        <MethodologyBlock />
+
         <SourcesList sources={post.sources ?? []} />
         <AuthorBio />
+        {post.hub === "macros-protein" && <MacroCalculatorTeaser />}
         <RelatedPosts posts={related} />
 
         <div className="mt-14">

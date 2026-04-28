@@ -15,6 +15,9 @@ import { Eyebrow } from "../editorial/Eyebrow";
 import { DotRule, SpecRule } from "../editorial/DotRule";
 import { KeyTakeaway } from "../editorial/KeyTakeaway";
 import { Dateline } from "../editorial/Dateline";
+import { MethodologyBlock } from "../editorial/MethodologyBlock";
+import { EvidencePill } from "../EvidencePill";
+import { MacroCalculatorTeaser } from "../MacroCalculatorTeaser";
 
 export function PillarTemplate({ post }: { post: Post }) {
   const hub = getHub(post.hub);
@@ -107,6 +110,8 @@ export function PillarTemplate({ post }: { post: Post }) {
           {post.h1}
         </h1>
 
+        <EvidencePill sourceCount={(post.sources ?? []).length} />
+
         <Dateline className="mt-5" stamp={post.updatedAt} />
 
         <div className="mt-6">
@@ -174,11 +179,14 @@ export function PillarTemplate({ post }: { post: Post }) {
 
         <DotRule className="my-14" />
 
+        <MethodologyBlock />
+
         <div id="sources">
           <SourcesList sources={post.sources ?? []} />
         </div>
 
         <AuthorBio />
+        {post.hub === "macros-protein" && <MacroCalculatorTeaser />}
         <RelatedPosts posts={related} />
 
         <div className="mt-14">

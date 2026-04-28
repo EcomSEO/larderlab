@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
+import { PersonJsonLd } from "@/components/schema/PersonJsonLd";
 import { SITE } from "@/lib/content/site";
 import { robotsMeta } from "@/lib/seo";
 import { NextIntlClientProvider } from "next-intl";
@@ -52,6 +53,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <OrganizationJsonLd />
+          <PersonJsonLd />
           <Header />
           {children}
           <Footer />

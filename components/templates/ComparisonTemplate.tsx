@@ -4,6 +4,7 @@ import { relatedPosts } from "@/lib/content/posts";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { EducationalBanner } from "../EducationalBanner";
 import { AffiliateDisclosure } from "../AffiliateDisclosure";
+import { CostPerUnitCallout } from "../CostPerUnitCallout";
 import { AuthorBio } from "../AuthorBio";
 import { RelatedPosts } from "../RelatedPosts";
 import { SourcesList } from "../SourcesList";
@@ -19,6 +20,8 @@ import { MethodologyBlock } from "../editorial/MethodologyBlock";
 import { WhatWouldChangeOurMind } from "../editorial/WhatWouldChangeOurMind";
 import { ProductsSystemsTable } from "../editorial/SystemsTable";
 import { Dateline } from "../editorial/Dateline";
+import { EvidencePill } from "../EvidencePill";
+import { MacroCalculatorTeaser } from "../MacroCalculatorTeaser";
 
 export function ComparisonTemplate({ post }: { post: Post }) {
   const hub = getHub(post.hub);
@@ -123,6 +126,8 @@ export function ComparisonTemplate({ post }: { post: Post }) {
           {post.h1}
         </h1>
 
+        <EvidencePill sourceCount={(post.sources ?? []).length} />
+
         <p className="mt-5 text-lg md:text-[1.2rem] text-charcoal/85 max-w-[60ch] leading-[1.5]">
           {post.description}
         </p>
@@ -140,6 +145,17 @@ export function ComparisonTemplate({ post }: { post: Post }) {
         <div className="mt-8">
           <SpecRule />
         </div>
+
+        {post.costPerUnit && (
+          <CostPerUnitCallout
+            metric={post.costPerUnit.metric}
+            cheapest={post.costPerUnit.cheapest}
+            median={post.costPerUnit.median}
+            premium={post.costPerUnit.premium}
+            note={post.costPerUnit.note}
+            pricedAt={post.costPerUnit.pricedAt}
+          />
+        )}
 
         {/* Editor's pick — the hero callout */}
         {post.ourPick && (
@@ -282,6 +298,7 @@ export function ComparisonTemplate({ post }: { post: Post }) {
         </div>
 
         <AuthorBio />
+        {post.hub === "macros-protein" && <MacroCalculatorTeaser />}
         <RelatedPosts posts={related} />
 
         <div className="mt-14">

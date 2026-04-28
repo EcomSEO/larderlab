@@ -15,6 +15,8 @@ import { Eyebrow } from "../editorial/Eyebrow";
 import { DotRule, SpecRule } from "../editorial/DotRule";
 import { KeyTakeaway } from "../editorial/KeyTakeaway";
 import { Dateline } from "../editorial/Dateline";
+import { EvidencePill } from "../EvidencePill";
+import { MacroCalculatorTeaser } from "../MacroCalculatorTeaser";
 
 export function ClusterTemplate({ post }: { post: Post }) {
   const hub = getHub(post.hub);
@@ -51,6 +53,8 @@ export function ClusterTemplate({ post }: { post: Post }) {
         <h1 className="display-headline mt-4 text-[2rem] md:text-[2.6rem] leading-[1.05]">
           {post.h1}
         </h1>
+
+        <EvidencePill sourceCount={(post.sources ?? []).length} />
 
         <Dateline className="mt-5" stamp={post.updatedAt} />
 
@@ -102,6 +106,7 @@ export function ClusterTemplate({ post }: { post: Post }) {
 
         <SourcesList sources={post.sources ?? []} />
         <AuthorBio />
+        {post.hub === "macros-protein" && <MacroCalculatorTeaser />}
         <RelatedPosts posts={related} />
 
         <div className="mt-12">

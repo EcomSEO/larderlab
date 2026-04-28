@@ -25,20 +25,9 @@ export function ArticleJsonLd({
         mainEntityOfPage: { "@type": "WebPage", "@id": canonical(path) },
         datePublished,
         dateModified,
-        author: {
-          "@type": "Organization",
-          name: "The Larderlab Team",
-          url: SITE.url,
-        },
-        publisher: {
-          "@type": "Organization",
-          name: SITE.name,
-          url: SITE.url,
-          logo: {
-            "@type": "ImageObject",
-            url: `${SITE.url}/logo.png`,
-          },
-        },
+        author: { "@id": `${SITE.url}#author-team` },
+        reviewedBy: { "@id": `${SITE.url}#reviewer-rao` },
+        publisher: { "@id": `${SITE.url}#org` },
       }}
     />
   );

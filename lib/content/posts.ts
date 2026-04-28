@@ -12,6 +12,19 @@ export type Post = {
   readingTime: number;
   status: "draft" | "stub" | "published";
   ourPick?: { name: string; tier: string; reason: string };
+  /**
+   * Optional cost-per-unit math surfaced via <CostPerUnitCallout>. Use on
+   * comparison + listicle posts where the buying decision is framed
+   * against $/g, $/mg, or $/serving of a measurable nutrient.
+   */
+  costPerUnit?: {
+    metric: string;
+    cheapest: string;
+    median: string;
+    premium: string;
+    note?: string;
+    pricedAt: string;
+  };
   products?: Array<{ rank: number; name: string; tier: string; summary: string }>;
   items?: Array<{ rank: number; name: string; summary: string }>;
   faq?: Array<{ q: string; a: string }>;
@@ -110,6 +123,14 @@ export const posts: Post[] = [
     updatedAt: "2026-04-21",
     readingTime: 14,
     status: "published",
+    costPerUnit: {
+      metric: "$/g of leucine",
+      cheapest: "$0.42/g",
+      median: "$0.78/g",
+      premium: "$1.95/g",
+      note: "Costco Kirkland is the cheapest per gram of leucine across the 14 brands measured; premium grass-fed isolates run 4-5× the price for the same leucine yield. Re-checked quarterly.",
+      pricedAt: "2026-04-21",
+    },
     ourPick: {
       name: "Costco Kirkland Signature Whey Protein",
       tier: "Best $/g leucine, third-party tested",
@@ -282,6 +303,14 @@ export const posts: Post[] = [
     updatedAt: "2026-04-21",
     readingTime: 10,
     status: "published",
+    costPerUnit: {
+      metric: "$/g of protein",
+      cheapest: "$0.013/g",
+      median: "$0.030/g",
+      premium: "$0.080/g",
+      note: "Eggs in bulk and chicken thighs at warehouse pricing are the floor; deli rotisserie and salmon are the median; wild fish + grass-fed beef set the ceiling.",
+      pricedAt: "2026-04-21",
+    },
     ourPick: {
       name: "Whole chicken (bone-in) at Costco",
       tier: "Best $/g for sustained daily intake",
@@ -563,6 +592,14 @@ export const posts: Post[] = [
     updatedAt: "2026-04-21",
     readingTime: 10,
     status: "published",
+    costPerUnit: {
+      metric: "$/g of creatine monohydrate",
+      cheapest: "$0.04/g",
+      median: "$0.08/g",
+      premium: "$0.18/g",
+      note: "Bulk Supplements third-party tested powder is the cheapest by a meaningful margin. Creapure-licensed brands cluster around the median; pre-mixed flavoured products sit at the premium tier with the same active gram count.",
+      pricedAt: "2026-04-21",
+    },
     ourPick: {
       name: "Bulk Supplements Creatine Monohydrate (Creapure)",
       tier: "Best $/g Creapure",
@@ -700,6 +737,14 @@ export const posts: Post[] = [
     updatedAt: "2026-04-21",
     readingTime: 12,
     status: "published",
+    costPerUnit: {
+      metric: "$/100mg elemental Mg",
+      cheapest: "$0.05",
+      median: "$0.15",
+      premium: "$0.40",
+      note: "Glycinate sits in the median tier — cheaper than threonate (premium for cognitive claims), more expensive than oxide (cheapest but ~4% bioavailable, so the real $/absorbed-mg flips the math).",
+      pricedAt: "2026-04-21",
+    },
     ourPick: {
       name: "Thorne Magnesium Bisglycinate",
       tier: "Best default (glycinate)",
@@ -1013,6 +1058,14 @@ export const posts: Post[] = [
     updatedAt: "2026-04-21",
     readingTime: 9,
     status: "published",
+    costPerUnit: {
+      metric: "$/g of protein",
+      cheapest: "$0.013/g",
+      median: "$0.028/g",
+      premium: "$0.075/g",
+      note: "Eggs and chicken thighs anchor the cheap end at warehouse pricing. Greek yogurt and cottage cheese fill the median band. Wild fish and grass-fed beef set the ceiling.",
+      pricedAt: "2026-04-21",
+    },
     items: [
       {
         rank: 1,
