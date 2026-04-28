@@ -13,9 +13,9 @@ export function EducationalBanner() {
     >
       <strong className="font-semibold text-olive-deep">Educational use only.</strong>{" "}
       Larderlab content is educational. Pantry, macro, and supplement
-      guidance is not a substitute for medical advice. Consult your
-      prescriber before starting, stopping, or stacking any supplement
-      alongside peptide therapy.
+      guidance is not a substitute for medical advice. Consult a registered
+      dietitian or your physician before making material changes to your
+      diet or supplementation.
     </div>
   );
 }

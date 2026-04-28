@@ -392,18 +392,5 @@
     "bodyAfter": ".",
     "reject": "Odrzuć",
     "accept": "Akceptuj"
-  },
-  "peptide": {
-    "tagline": "Przemyślana spiżarnia dla osób stosujących peptydy.",
-    "heroH1": "Przemyślana spiżarnia dla osób stosujących peptydy.",
-    "heroDek": "Stosy suplementów, architektura spiżarni i realna matematyka kosztów — dla osób na terapii peptydami. Cytowane badania. Bez sponsoringu.",
-    "calloutHeading": "Kontekst peptydowy",
-    "dietitianBadge": "Zweryfikowane przez dr Mayę Rao, RDN — żywienie w terapii peptydami",
-    "educationalBanner": "Treści Larderlab mają charakter edukacyjny. Wskazówki dotyczące spiżarni, makro i suplementów nie zastępują porady lekarskiej. Skonsultuj się z lekarzem przed rozpoczęciem, przerwaniem lub łączeniem suplementu z terapią peptydami.",
-    "hubMacros": "Makro i białko dla osób stosujących peptydy",
-    "hubPantry": "Systemy spiżarni dla protokołów peptydowych",
-    "hubIngredients": "Analizy składników — okołopeptydowe",
-    "hubMealPrep": "Architektura meal-prep dla cykli peptydowych",
-    "hubStack": "Wsparcie stacku peptydowego"
   }
 }

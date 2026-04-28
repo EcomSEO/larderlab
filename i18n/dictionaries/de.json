@@ -391,18 +391,5 @@
     "bodyAfter": ".",
     "reject": "Ablehnen",
     "accept": "Akzeptieren"
-  },
-  "peptide": {
-    "tagline": "Eine durchdachte Vorratskammer für Peptid-Anwender.",
-    "heroH1": "Eine durchdachte Vorratskammer für Peptid-Anwender.",
-    "heroDek": "Supplement-Stacks, Vorratskammer-Architektur und echte Kostenrechnung — gebaut für Menschen in einer Peptid-Therapie. Belegte Forschung. Keine bezahlten Empfehlungen.",
-    "calloutHeading": "Peptid-Kontext",
-    "dietitianBadge": "Geprüft von Dr. Maya Rao, RDN — Ernährung in der Peptid-Therapie",
-    "educationalBanner": "Larderlab-Inhalte dienen der Aufklärung. Hinweise zu Vorrat, Makros und Nahrungsergänzungsmitteln ersetzen keine ärztliche Beratung. Sprich mit deinem behandelnden Arzt, bevor du Supplemente mit einer Peptid-Therapie kombinierst, beginnst oder absetzt.",
-    "hubMacros": "Makros & Eiweiß für Peptid-Anwender",
-    "hubPantry": "Vorratskammer-Systeme für Peptid-Protokolle",
-    "hubIngredients": "Zutaten-Reportagen — peptidnah",
-    "hubMealPrep": "Meal-Prep-Architektur für Peptid-Zyklen",
-    "hubStack": "Peptid-Stack-Unterstützung"
   }
 }

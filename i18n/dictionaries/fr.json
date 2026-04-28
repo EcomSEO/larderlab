@@ -391,18 +391,5 @@
     "bodyAfter": ".",
     "reject": "Refuser",
     "accept": "Accepter"
-  },
-  "peptide": {
-    "tagline": "Un garde-manger pensé pour les utilisateurs de peptides.",
-    "heroH1": "Un garde-manger pensé pour les utilisateurs de peptides.",
-    "heroDek": "Piles de compléments, architecture du garde-manger et calculs de coûts réels — pour les personnes en thérapie peptidique. Recherche citée. Aucune sponsorisation.",
-    "calloutHeading": "Contexte peptide",
-    "dietitianBadge": "Validé par Dr Maya Rao, RDN — nutrition en thérapie peptidique",
-    "educationalBanner": "Le contenu de Larderlab est à visée éducative. Les conseils sur le garde-manger, les macros et les compléments ne remplacent pas un avis médical. Consultez votre prescripteur avant de commencer, arrêter ou empiler un complément en parallèle d'une thérapie peptidique.",
-    "hubMacros": "Macros & protéines pour utilisateurs de peptides",
-    "hubPantry": "Systèmes de garde-manger pour protocoles peptidiques",
-    "hubIngredients": "Enquêtes ingrédients — proches des peptides",
-    "hubMealPrep": "Architecture meal-prep pour cycles peptidiques",
-    "hubStack": "Soutien de la stack peptidique"
   }
 }

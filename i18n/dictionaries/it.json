@@ -391,18 +391,5 @@
     "bodyAfter": ".",
     "reject": "Rifiuta",
     "accept": "Accetta"
-  },
-  "peptide": {
-    "tagline": "Una dispensa progettata per chi usa peptidi.",
-    "heroH1": "Una dispensa progettata per chi usa peptidi.",
-    "heroDek": "Stack di integratori, architettura della dispensa e matematica dei costi reali — pensati per chi segue una terapia con peptidi. Ricerca citata. Zero sponsorizzazioni.",
-    "calloutHeading": "Contesto peptidi",
-    "dietitianBadge": "Validato dalla Dr.ssa Maya Rao, RDN — nutrizione nella terapia con peptidi",
-    "educationalBanner": "I contenuti di Larderlab sono educativi. Le indicazioni su dispensa, macro e integratori non sostituiscono il parere medico. Consulta il tuo medico prima di iniziare, sospendere o combinare integratori con una terapia peptidica.",
-    "hubMacros": "Macro e proteine per chi usa peptidi",
-    "hubPantry": "Sistemi di dispensa per protocolli peptidici",
-    "hubIngredients": "Approfondimenti su ingredienti vicini ai peptidi",
-    "hubMealPrep": "Architettura del meal prep per cicli peptidici",
-    "hubStack": "Supporto allo stack peptidico"
   }
 }

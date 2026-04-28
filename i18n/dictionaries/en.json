@@ -392,18 +392,5 @@
     "bodyAfter": ".",
     "reject": "Reject",
     "accept": "Accept"
-  },
-  "peptide": {
-    "tagline": "An engineered pantry for peptide users.",
-    "heroH1": "An engineered pantry for peptide users.",
-    "heroDek": "Supplement stacks, pantry architecture, and real-cost math built for people on peptide therapy. Cited research. Zero vendor sponsorships.",
-    "calloutHeading": "Peptide context",
-    "dietitianBadge": "Reviewed by Dr. Maya Rao, RDN — peptide-therapy nutrition",
-    "educationalBanner": "Larderlab content is educational. Pantry, macro, and supplement guidance is not a substitute for medical advice. Consult your prescriber before starting, stopping, or stacking any supplement alongside peptide therapy.",
-    "hubMacros": "Macros & Protein for Peptide Users",
-    "hubPantry": "Pantry Systems for Peptide Protocols",
-    "hubIngredients": "Ingredient Deep-Dives — Peptide-Adjacent",
-    "hubMealPrep": "Meal Prep Architecture for Peptide Cycles",
-    "hubStack": "Peptide-Stack Support"
   }
 }

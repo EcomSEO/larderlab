@@ -3,7 +3,6 @@ import { getHub } from "@/lib/content/hubs";
 import { relatedPosts } from "@/lib/content/posts";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { EducationalBanner } from "../EducationalBanner";
-import { PeptideContextCallout } from "../PeptideContextCallout";
 import { AuthorBio } from "../AuthorBio";
 import { RelatedPosts } from "../RelatedPosts";
 import { SourcesList } from "../SourcesList";
@@ -109,10 +108,6 @@ export function PillarTemplate({ post }: { post: Post }) {
         </h1>
 
         <Dateline className="mt-5" stamp={post.updatedAt} />
-
-        {post.peptideContext && (
-          <PeptideContextCallout context={post.peptideContext} />
-        )}
 
         <div className="mt-6">
           <EducationalBanner />

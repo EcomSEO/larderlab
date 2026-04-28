@@ -40,11 +40,10 @@ export function DietitianReviewedBadge({
       )}
       <CheckShield className="w-4 h-4 shrink-0" />
       <span>
-        Reviewed by{" "}
+        Nutritionally reviewed by{" "}
         <Link href={reviewerHref}>
           {reviewerName}, {credentials}
         </Link>
-        {" "}— peptide-therapy nutrition
       </span>
     </div>
   );

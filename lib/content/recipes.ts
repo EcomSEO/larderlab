@@ -34,12 +34,6 @@ export type NutritionRow = {
   unit: string;
   /** "USDA" pill = green; "Calculated" = ash; "—" = no badge. */
   source: "USDA" | "Calculated" | "—";
-  /**
-   * Optional peptide-context note for this row. Surfaces beneath the
-   * value (e.g. "Protein: 38 g — exceeds the 30 g leucine threshold for
-   * MPS, important during GLP-1 dose escalation"). Educational only.
-   */
-  peptideRelevance?: string;
 };
 
 export type Source = {

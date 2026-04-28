@@ -392,18 +392,5 @@
     "bodyAfter": ".",
     "reject": "Rechazar",
     "accept": "Aceptar"
-  },
-  "peptide": {
-    "tagline": "Una despensa diseñada para usuarios de péptidos.",
-    "heroH1": "Una despensa diseñada para usuarios de péptidos.",
-    "heroDek": "Stacks de suplementos, arquitectura de despensa y matemática real de costes — pensados para personas en terapia con péptidos. Investigación citada. Sin patrocinios.",
-    "calloutHeading": "Contexto de péptidos",
-    "dietitianBadge": "Revisado por la Dra. Maya Rao, RDN — nutrición en terapia con péptidos",
-    "educationalBanner": "El contenido de Larderlab es educativo. Las recomendaciones sobre despensa, macros y suplementos no sustituyen al consejo médico. Consulta a tu prescriptor antes de iniciar, suspender o combinar un suplemento con una terapia peptídica.",
-    "hubMacros": "Macros y proteína para usuarios de péptidos",
-    "hubPantry": "Sistemas de despensa para protocolos de péptidos",
-    "hubIngredients": "Análisis de ingredientes — adyacentes a péptidos",
-    "hubMealPrep": "Arquitectura de meal prep para ciclos de péptidos",
-    "hubStack": "Soporte del stack peptídico"
   }
 }
