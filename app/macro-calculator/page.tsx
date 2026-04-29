@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MacroCalculator } from "@/components/MacroCalculator";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { WebApplicationJsonLd } from "@/components/schema/WebApplicationJsonLd";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -22,6 +23,20 @@ export default function MacroCalculatorPage() {
   return (
     <>
       <BreadcrumbJsonLd crumbs={crumbs} />
+      <WebApplicationJsonLd
+        path="/macro-calculator"
+        name="The Larderlab Macro Calculator"
+        description="Calculate daily protein, fat, and carb targets using four expert-recommended ranges (IOM RDA, Phillips 2017, Morton 2018, ISSN). Per-meal split + $/gram protein cost chart."
+        applicationCategory="HealthApplication"
+        featureList={[
+          "Bodyweight + activity-level + goal inputs (cut / maintain / recomp / bulk)",
+          "Four protein-target ranges sourced from peer-reviewed literature",
+          "Per-meal protein split with leucine threshold",
+          "Twelve protein sources ranked by $/gram",
+          "TDEE estimate with cut deficit adjustment",
+          "Fat floor at 0.9 g/kg for hormonal-health support",
+        ]}
+      />
       <main className="mx-auto max-w-5xl px-6 py-10 md:py-14">
         <Breadcrumbs crumbs={crumbs} />
 
