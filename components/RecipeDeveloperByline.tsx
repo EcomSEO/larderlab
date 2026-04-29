@@ -3,7 +3,7 @@ import { LastTestedLine } from "./LastTestedLine";
 
 /** Map developer name -> headshot photo path. */
 const DEVELOPER_PHOTOS: Record<string, string> = {
-  "Helena Brookes": "/images/authors/recipe-developer-1.jpg",
+  "Javier Ortiz": "/images/authors/recipe-developer-1.jpg",
 };
 
 const DEFAULT_DEVELOPER_PHOTO = "/images/authors/recipe-developer-1.jpg";

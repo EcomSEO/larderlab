@@ -31,7 +31,7 @@ import type { Recipe } from "@/lib/content/recipes";
 export function RecipePageTemplate({
   recipe,
   related = [],
-  reviewedBy = "Dr. Maya Rao",
+  reviewedBy = "Dr. Soraya Khan",
   reviewerCredentials = "RDN",
 }: {
   recipe: Recipe;
