@@ -108,8 +108,8 @@ export default function HomePage() {
       <Hero
         featured={featured}
         trending={trending}
-        headline="Cook from the pantry. Eat by the evidence."
-        dek="Larderlab is a nutrition + pantry information site. Every recipe is tested in our test kitchen and reviewed by a registered dietitian. USDA-cited nutrition tables on every page. No brand sponsorships."
+        headline="An engineered larder for the modern lifter."
+        dek="Larderlab is a nutrition-systems wiki for the optimizer who lifts and tracks. USDA-cited macros, $/g math, evidence tiers on every supplement. No brand sponsorships, no recipes. Recipe-intent traffic routes to thatcleanchef."
       />
 
       <CategoryTileGrid

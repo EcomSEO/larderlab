@@ -28,12 +28,12 @@ type Trending = {
 export function Hero({
   featured,
   trending = [],
-  reviewedBy = "Dr. Maya Rao",
-  reviewerCredentials = "RDN",
+  reviewedBy = "Dr. Soraya Khan",
+  reviewerCredentials = "PhD, RDN, CSSD",
   eyebrow = "Evidence-based pantry & nutrition",
   headline,
   dek,
-  ctaPrimary = "Browse the recipes",
+  ctaPrimary = "Open the macro calculator",
   ctaSecondary = "Open the macro calculator",
   trendingLabel = "Trending now",
 }: {
@@ -48,10 +48,10 @@ export function Hero({
   ctaSecondary?: string;
   trendingLabel?: string;
 }) {
-  const h1 = headline ?? "Cook from the pantry. Eat by the evidence.";
+  const h1 = headline ?? "An engineered larder for the modern lifter.";
   const sub =
     dek ??
-    "A nutrition and pantry information site for cooks who want what's on the plate to actually be the right thing. Each recipe tested in our test kitchen and reviewed by a registered dietitian.";
+    "Nutrition-systems wiki for the optimiser who lifts and tracks. USDA-cited macros, $/g math on every staple, evidence tiers on every supplement.";
 
   return (
     <section className="border-b border-rule bg-white">

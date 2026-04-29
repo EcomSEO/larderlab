@@ -116,9 +116,9 @@ export const recipes: Recipe[] = [
     publishedAt: "2026-04-21",
     updatedAt: "2026-04-26",
     developer: {
-      name: "Helena Brookes",
+      name: "Javier Ortiz",
       credential:
-        "Recipe developer · 12 years restaurant kitchens · Editor, Larderlab",
+        "Sports-nutrition writer · Lifts 4×/wk · Editor, Larderlab",
       photoColor: "#C4A878",
     },
     plateColor: "#E8DCC8",
@@ -232,9 +232,9 @@ export const recipes: Recipe[] = [
     publishedAt: "2026-04-21",
     updatedAt: "2026-04-22",
     developer: {
-      name: "Helena Brookes",
+      name: "Javier Ortiz",
       credential:
-        "Recipe developer · 12 years restaurant kitchens · Editor, Larderlab",
+        "Sports-nutrition writer · Lifts 4×/wk · Editor, Larderlab",
       photoColor: "#C4A878",
     },
     plateColor: "#D8B89A",
@@ -322,9 +322,9 @@ export const recipes: Recipe[] = [
     publishedAt: "2026-04-21",
     updatedAt: "2026-04-21",
     developer: {
-      name: "Helena Brookes",
+      name: "Javier Ortiz",
       credential:
-        "Recipe developer · 12 years restaurant kitchens · Editor, Larderlab",
+        "Sports-nutrition writer · Lifts 4×/wk · Editor, Larderlab",
       photoColor: "#C4A878",
     },
     plateColor: "#E0CFA8",

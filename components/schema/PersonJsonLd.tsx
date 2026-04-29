@@ -37,7 +37,7 @@ export function PersonJsonLd() {
           {
             "@type": "Person",
             "@id": `${SITE.url}#reviewer-rao`,
-            name: "Dr. Maya Rao, RDN",
+            name: "Dr. Soraya Khan, RDN",
             jobTitle: "Registered Dietitian Nutritionist · Editorial Reviewer",
             description:
               "Registered Dietitian Nutritionist (RDN). Reviews Larderlab's macros, supplement, and ingredient deep-dive content for clinical accuracy.",

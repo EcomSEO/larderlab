@@ -8,7 +8,7 @@
  */
 export function EvidencePill({
   sourceCount,
-  reviewer = "Dr. Maya Rao, RDN",
+  reviewer = "Dr. Soraya Khan, RDN",
 }: {
   sourceCount: number;
   reviewer?: string;

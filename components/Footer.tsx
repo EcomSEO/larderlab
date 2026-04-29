@@ -8,19 +8,11 @@ const tools = [
   { slug: "macro-calculator", name: "Macro Calculator" },
 ];
 
-const sisterSites = [
-  { name: "PepTips", href: "https://peptips.com" },
-  { name: "PepVise", href: "https://pepvise.com" },
-  { name: "InjectCompass", href: "https://injectcompass.com" },
-  { name: "ThatCleanChef", href: "https://thatcleanchef.com" },
-  { name: "CircadianStack", href: "https://circadianstack.com" },
-  { name: "PlasticFreeLab", href: "https://plasticfreelab.com" },
-];
-
 /**
  * Footer — healthline-grade publisher footer.
  * 4-col link grid (Pantry / Recipes / Nutrition / Company), medical
- * disclaimer block, sister-sites, imprint strip.
+ * disclaimer block, imprint strip. Sister-site cross-links removed
+ * per the 2026-04-29 operator-isolation lock.
  *
  * White surface (surface-alt #F7F9FB), olive accents, no dark masthead.
  */
@@ -112,20 +104,17 @@ export function Footer() {
               </p>
             </div>
             <div className="md:col-span-5">
-              <h4 className="eyebrow mb-2">From the network</h4>
-              <ul className="flex flex-wrap gap-x-4 gap-y-2 text-[13px]">
-                {sisterSites.map((s) => (
-                  <li key={s.name}>
-                    <a
-                      href={s.href}
-                      rel="noopener"
-                      className="text-ink-muted hover:text-olive-deep transition-colors"
-                    >
-                      {s.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <h4 className="eyebrow mb-2">Newsletter</h4>
+              <p className="text-[13px] text-ink-muted leading-relaxed">
+                Lift &amp; Lab — weekly. New deep-dives, $/g price refreshes,
+                evidence-tier updates. No brand sponsorships.{" "}
+                <Link
+                  href="/newsletter"
+                  className="text-copper hover:text-ink underline decoration-copper/40 hover:decoration-ink underline-offset-4"
+                >
+                  Subscribe →
+                </Link>
+              </p>
             </div>
           </div>
         </div>

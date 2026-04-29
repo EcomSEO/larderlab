@@ -27,7 +27,7 @@ export const TERMS: TermsContent = {
   title: "Terms of service",
   lastUpdated: "Last updated: 27 April 2026",
   intro:
-    "These Terms govern your use of larderlab.com (the 'Site'). By accessing the Site you agree to these Terms. If you do not agree, please do not use the Site. Larderlab is an independent editorial publication about pantry architecture, food systems, and supplement context for peptide users — it is not a clinic, not a pharmacy, and not a marketplace.",
+    "These Terms govern your use of larderlab.com (the 'Site'). By accessing the Site you agree to these Terms. If you do not agree, please do not use the Site. Larderlab is an independent editorial publication about pantry architecture, food systems, ingredient deep-dives, and supplement evidence tiers for the optimiser audience — it is not a clinic, not a pharmacy, and not a marketplace.",
   sections: [
     {
       heading: "1. Scope and acceptance",
@@ -38,7 +38,7 @@ export const TERMS: TermsContent = {
       body: "Larderlab is an educational publication. Every article, recipe, supplement page, and pantry guide is written for general information only.",
       bullets: [
         "Content is not medical advice, not nutritional advice for an individual, and not a substitute for consultation with a registered dietitian, medical doctor, or qualified clinician.",
-        "Where we discuss peptide-supportive nutrition we are describing the food and pantry context only — we do not prescribe peptides, recommend specific peptide products, or dose any therapy.",
+        "We do not prescribe medications, recommend specific therapies, or provide individualised dosing guidance. Pharmaceuticals and any prescription products are out of scope; nutrition coverage is general-population only.",
         "Every health claim is cited to peer-reviewed research, EFSA / national-authority guidance, or official manufacturer disclosures. Citations are visible inline.",
         "Where the science is genuinely mixed we say so; we do not pretend to certainty we do not have.",
         "Always consult a qualified professional before changing your diet, starting supplements, or making decisions about a medical condition — particularly during pregnancy or while managing a chronic illness.",
