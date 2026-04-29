@@ -80,13 +80,23 @@ for (let i = 0; i < slugs.length; i++) {
   if (!hub || !HUBSET.has(hub)) continue;
 
   const wc = bodyWordCount(slice);
-  const usdaCited = /fdc\.nal\.usda\.gov/.test(slice);
+  const usdaCited =
+    /fdc\.nal\.usda\.gov/.test(slice) || /\busdaSlug:\s*"/.test(slice);
   const pubmedCited =
     /pubmed\.ncbi\.nlm\.nih\.gov|clinicaltrials\.gov|nejm\.org|examine\.com/.test(slice);
-  const hasLedger = hasMarker(slice, "NutritionLedger");
-  const hasCost = hasMarker(slice, "CostPerUnitCallout");
+  // Differentiator wiring is detected via either:
+  //   - explicit component name in the post body / template, OR
+  //   - opt-in field flag on the Post record (usdaSlug, costPerUnit,
+  //     evidenceTierSlug) which the article templates pick up
+  //     conditionally.
+  const hasLedger =
+    hasMarker(slice, "NutritionLedger") || /\busdaSlug:\s*"/.test(slice);
+  const hasCost =
+    hasMarker(slice, "CostPerUnitCallout") || /\bcostPerUnit:\s*\{/.test(slice);
   const hasEvidence =
-    hasMarker(slice, "EvidenceTierBadge") || hasMarker(slice, "EvidencePill");
+    hasMarker(slice, "EvidenceTierBadge") ||
+    hasMarker(slice, "EvidencePill") ||
+    /\bevidenceTierSlug:\s*"/.test(slice);
 
   hubCounts[hub] += 1;
 

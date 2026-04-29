@@ -21,6 +21,8 @@ import { WhatWouldChangeOurMind } from "../editorial/WhatWouldChangeOurMind";
 import { ProductsSystemsTable } from "../editorial/SystemsTable";
 import { Dateline } from "../editorial/Dateline";
 import { EvidencePill } from "../EvidencePill";
+import { EvidenceTierBadge } from "../EvidenceTierBadge";
+import { UsdaNutritionRef } from "../UsdaNutritionRef";
 import { MacroCalculatorTeaser } from "../MacroCalculatorTeaser";
 
 export function ComparisonTemplate({ post }: { post: Post }) {
@@ -126,7 +128,12 @@ export function ComparisonTemplate({ post }: { post: Post }) {
           {post.h1}
         </h1>
 
-        <EvidencePill sourceCount={(post.sources ?? []).length} />
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          <EvidencePill sourceCount={(post.sources ?? []).length} />
+          {post.evidenceTierSlug && (
+            <EvidenceTierBadge slug={post.evidenceTierSlug} />
+          )}
+        </div>
 
         <p className="mt-5 text-lg md:text-[1.2rem] text-charcoal/85 max-w-[60ch] leading-[1.5]">
           {post.description}
@@ -242,6 +249,8 @@ export function ComparisonTemplate({ post }: { post: Post }) {
             </div>
           </section>
         )}
+
+        {post.usdaSlug && <UsdaNutritionRef slug={post.usdaSlug} />}
 
         {/* Methodology */}
         <div id="methodology">

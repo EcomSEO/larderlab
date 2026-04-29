@@ -29,6 +29,19 @@ export type Post = {
   items?: Array<{ rank: number; name: string; summary: string }>;
   faq?: Array<{ q: string; a: string }>;
   sources?: Array<{ label: string; url: string }>;
+  /**
+   * Slug into lib/content/evidence-tiers.ts EVIDENCE_TIERS. When set,
+   * the article template renders an <EvidenceTierBadge> next to the
+   * H1 with the A/B/C/D/F letter + click-to-open rationale. Required
+   * on every supplement-review post per the 2026-04-29 hard rule.
+   */
+  evidenceTierSlug?: string;
+  /**
+   * Slug into lib/content/usda-ledger.ts USDA_LEDGER. When set, the
+   * article template can render a USDA-cited NutritionLedger block.
+   * Required on Ingredient Deep-Dives posts.
+   */
+  usdaSlug?: string;
   featured?: boolean;
 };
 
@@ -113,6 +126,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-protein-powders",
+    evidenceTierSlug: "whey-protein-isolate",
     title: "Best Protein Powders Ranked by $/gram of Leucine",
     h1: "Best protein powders, ranked by $/gram of leucine",
     description:
@@ -293,6 +307,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-whole-food-protein-sources",
+    usdaSlug: "chicken-breast-cooked",
     title: "Best Whole-Food Protein Sources, Ranked by $/gram",
     h1: "Best whole-food protein sources, ranked by $/gram",
     description:
@@ -582,6 +597,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-creatine-monohydrate",
+    evidenceTierSlug: "creatine-monohydrate",
     title: "Best Creatine Monohydrate, Ranked by $/gram",
     h1: "Best creatine monohydrate, ranked by $/gram",
     description:
@@ -727,6 +743,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-magnesium-forms",
+    evidenceTierSlug: "magnesium-glycinate",
     title: "Best Magnesium Forms: Glycinate vs Citrate vs Threonate vs Oxide",
     h1: "Best magnesium forms, compared",
     description:
@@ -886,6 +903,7 @@ export const posts: Post[] = [
   },
   {
     slug: "seed-oil-vs-butter-vs-olive-oil",
+    usdaSlug: "olive-oil-extra-virgin",
     title: "Seed Oil vs Butter vs Olive Oil: The Data-Backed Answer",
     h1: "Seed oil vs butter vs olive oil",
     description:
@@ -967,6 +985,7 @@ export const posts: Post[] = [
   },
   {
     slug: "arsenic-in-rice",
+    usdaSlug: "white-rice-cooked",
     title: "Arsenic in Rice: The Numbers by Variety and Origin",
     h1: "Arsenic in rice: the numbers",
     description:
@@ -1048,6 +1067,7 @@ export const posts: Post[] = [
   },
   {
     slug: "12-high-protein-foods-by-cost",
+    usdaSlug: "chicken-breast-cooked",
     title: "12 High-Protein Foods Ranked by $/gram",
     h1: "12 high-protein foods ranked by $/gram",
     description:
@@ -1192,6 +1212,14 @@ export const posts: Post[] = [
   },
   {
     slug: "bulk-buying-math",
+    costPerUnit: {
+      metric: "$/g of product",
+      cheapest: "$0.0072/g",
+      median: "$0.012/g",
+      premium: "$0.029/g",
+      note: "Sample SKUs (April 2026): rolled oats $0.0072/g (Bob's Red Mill 907 g, Amazon), pinto beans $0.005/g (16 oz dry, Costco), olive oil $0.029/g (extra virgin, 1 L Costco). Bulk wins when shelf-stability > 6 months and unit-cost gap > 25%; loses when item-perishability < 2 weeks at household consumption rate.",
+      pricedAt: "2026-04-29",
+    },
     title: "Bulk Buying Math: When Costco Wins, When It Doesn't",
     h1: "Bulk buying math",
     description:
@@ -1259,6 +1287,7 @@ export const posts: Post[] = [
   },
   {
     slug: "high-protein-meal-prep-protocol",
+    usdaSlug: "chicken-breast-cooked",
     title: "High Protein Meal Prep — The 4-Hour Sunday System",
     h1: "High protein meal prep: the 4-hour Sunday system",
     description:
@@ -1375,6 +1404,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-electrolyte-powders-2026",
+    evidenceTierSlug: "electrolytes-na-k-mg",
     title: "Best Electrolyte Powders, 2026 — Ranked by $/mg of Sodium",
     h1: "Best electrolyte powders, 2026 — ranked by $/mg of sodium",
     description:
@@ -1507,6 +1537,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-multivitamin-2026",
+    evidenceTierSlug: "vitamin-d3",
     title: "Best Multivitamin, 2026 — Ranked by Nutrient Coverage Per Dollar",
     h1: "Best multivitamin, 2026 — ranked by nutrient coverage per dollar",
     description:

@@ -17,6 +17,8 @@ import { RankNumeral } from "../editorial/RankNumeral";
 import { Dateline } from "../editorial/Dateline";
 import { MethodologyBlock } from "../editorial/MethodologyBlock";
 import { EvidencePill } from "../EvidencePill";
+import { EvidenceTierBadge } from "../EvidenceTierBadge";
+import { UsdaNutritionRef } from "../UsdaNutritionRef";
 import { MacroCalculatorTeaser } from "../MacroCalculatorTeaser";
 import { CostPerUnitCallout } from "../CostPerUnitCallout";
 
@@ -60,7 +62,12 @@ export function ListicleTemplate({ post }: { post: Post }) {
           {post.h1}
         </h1>
 
-        <EvidencePill sourceCount={(post.sources ?? []).length} />
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          <EvidencePill sourceCount={(post.sources ?? []).length} />
+          {post.evidenceTierSlug && (
+            <EvidenceTierBadge slug={post.evidenceTierSlug} />
+          )}
+        </div>
 
         <Dateline className="mt-5" stamp={post.updatedAt} />
 
@@ -109,6 +116,8 @@ export function ListicleTemplate({ post }: { post: Post }) {
             ))}
           </ol>
         )}
+
+        {post.usdaSlug && <UsdaNutritionRef slug={post.usdaSlug} />}
 
         <DotRule className="my-14" />
 
