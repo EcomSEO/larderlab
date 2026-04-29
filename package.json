@@ -8,7 +8,8 @@
     "start": "next start --port 3001",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "audit:claims": "node scripts/audit-claims.mjs"
+    "audit:claims": "node scripts/audit-claims.mjs",
+    "audit:posts": "node scripts/audit-posts.mjs"
   },
   "dependencies": {
     "next": "^14.2.15",

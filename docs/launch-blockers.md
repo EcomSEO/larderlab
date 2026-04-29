@@ -2,21 +2,24 @@
 
 What stands between larderlab today and "leave it alone for 3 months and just upload content."
 
-Status as of branch `feat/seo-readiness-2026-04`.
+Status as of `main` @ `098e33b` (post 2026-04-29 audit-fix sweep + Phase 4–7 manifests). Engineer-who-lifts persona re-anchored, sister-site links dropped, three differentiator data manifests seeded (USDA / cost-per-unit / evidence-tiers), WebApplication schema on the macro calculator, methodology page now declares affiliate revenue does not influence EvidencePill tier.
 
 ---
 
 ## TL;DR
 
-**Three blockers — smaller than the other sites because compliance was already shipped.**
+**Six Fabian-side decisions. Everything Claude can ship is shipped.**
 
-| Blocker | Owner | Time | Status |
-|---|---|---|---|
-| 1. Merge `feat/seo-readiness-2026-04` PR | Fabian | 5 min | ❌ open |
-| 2. Fill 3 operator placeholders in `impressum.ts` + `terms.ts` + `privacy-policy.ts` | Fabian + lawyer | 30 min + lawyer turnaround | ❌ pending |
-| 3. Set Vercel env vars (Beehiiv + Neon) | Fabian | 15 min | ❌ pending |
+| # | Blocker | Owner | Time | Status |
+|---|---|---|---|---|
+| 1 | Operator placeholders in impressum / terms / privacy | Fabian + lawyer | 30 min + lawyer | ❌ pending |
+| 2 | Vercel env: `BEEHIIV_API_KEY` | Fabian | 5 min | ❌ pending |
+| 3 | Vercel env: real Amazon Associates tag (registry uses `larderlab-20` placeholder) | Fabian | 5 min | ❌ pending |
+| 4 | Reviewer credential verification: Dr. Soraya Khan PhD RDN CSSD — Texas DSHS public-register lookup + CDR registration + signed editorial-independence letter | Fabian | 1–2 hr | ❌ pending — `verifiedCredential: false` flag surfaces "credential pending" note |
+| 5 | Real reviewer headshot commissioned | Fabian | external | ❌ deferred — `Person.image` omitted from JSON-LD while pending |
+| 6 | Custom domain DNS → larderlab.com | Fabian | 30 min | ❌ pending |
 
-After those three, larderlab is in pure content-upload mode. The build, schema, audit:claims gate, EN-only flat-root routing, and 14-post database are production-ready.
+After those six, larderlab is in pure content-upload mode. The build, schema, audit:claims gate, audit:posts survey, EN-only flat-root routing, 14-post database, USDA ledger (9 entries), cost-per-unit ledger (9 entries), evidence-tier system (11 supplements), and affiliate registry (14 SKUs, zero forbidden brands) are production-ready.
 
 ---
 

@@ -178,8 +178,12 @@
         "When we write about an ingredient — olive oil, dried beans, garam masala, a particular variety of rice — we follow a four-part frame: what is it, what's the literature on it, what's the real-world exposure or use case, and where do we land.",
         "## Photography",
         "Every plate photo on Larderlab is shot in our own test kitchen unless otherwise captioned. We don't dress food. We don't hide what didn't work.",
+        "## EvidencePill tiers — and why affiliate revenue does not influence them",
+        "Every supplement we cover gets an A/B/C/D/F EvidencePill tier with a published rationale and primary-source citations (PubMed, ClinicalTrials.gov, NEJM). The tier is set by the editorial team against the framework in lib/content/evidence-tiers.ts and reviewed by the registered dietitian on staff. Affiliate revenue does not influence tier. A brand whose product earns an A is not invoiced for the tier; a brand we link as an affiliate partner whose evidence base only earns a C still gets a C. We publish F-tier coverage too — the 'no, this doesn't work' piece is also the optimiser audience's question.",
+        "## $/g math",
+        "Cost-per-gram and cost-per-gram-of-protein figures on this site are real prices we sampled from real retailers on a documented date. Every CostPerUnitCallout component renders the asOfDate, the source URL, and the region the price applies to. We round to two decimal places or three significant figures, whichever is more precise; we never round to whole pennies because that loses signal at the price points the optimiser audience cares about. Prices are refreshed monthly.",
         "## What we will not do",
-        "Sell diet plans. Publish weight-loss numbers. Accept payment for editorial placement. Use 'superfood', 'detox', 'clean', or 'miracle' under our masthead."
+        "Sell diet plans. Publish weight-loss numbers. Accept payment for editorial placement. Promote peptide vendors, telehealth GLP-1 prescribers, MLM 'wellness' brands, or vague 'superfood' / 'detox' supplements. Use 'superfood', 'detox', 'clean', or 'miracle' under our masthead."
       ]
     },
     "methodologyV12": {
