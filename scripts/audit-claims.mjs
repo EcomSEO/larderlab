@@ -223,9 +223,10 @@ for (const rel of TARGETS) {
       const re = buildRegex(f.pattern);
       if (re.test(line)) {
         // Lines that explicitly enumerate forbidden vocabulary for
-        // awareness (style guide, disclaimer copy) are suppressed.
+        // awareness (style guide, disclaimer copy, editorial-standards
+        // "things we don't do" lists) are suppressed.
         if (
-          /forbidden|prohibited|verboten|interdit|vietat|prohibido|verboden|zakazany|förbjuden|proibido|interzis|zakázán|forbudt|disclaimer|claim/iu.test(
+          /forbidden|prohibited|verboten|interdit|vietat|prohibido|verboden|zakazany|förbjuden|proibido|interzis|zakázán|forbudt|disclaimer|claim|under our masthead|things we (do not|don't|never)|we (never|don't) (use|publish|sell|accept)|nicht verwenden|n'utilisons pas|non usiamo|no usamos|niet gebruiken|wörter wie|benutzen|usare «|usar «|gebruik geen|użyj słów|använd ord/iu.test(
             line
           )
         ) {
@@ -240,6 +241,11 @@ for (const rel of TARGETS) {
         )
           continue;
         if (f.pattern === "trata" && /trata-se|trata de|maltrata/i.test(line)) continue;
+        // "Anti-inflammatory" used as a category tag for foods is a
+        // descriptive recipe / ingredient classifier, not a medical
+        // claim. The pattern still flags free-text usage like
+        // "this herb is anti-inflammatory and treats pain".
+        if (f.pattern === "anti-inflammatory" && /category|tag|filter|"Anti-inflammatory"/i.test(line)) continue;
 
         violations++;
         const trimmed = line.trim().slice(0, 160);

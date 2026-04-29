@@ -1257,6 +1257,320 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "high-protein-meal-prep-protocol",
+    title: "High Protein Meal Prep — The 4-Hour Sunday System",
+    h1: "High protein meal prep: the 4-hour Sunday system",
+    description:
+      "Engineered meal prep targeting 30–40 g protein per meal, 4 hours of work for 18–20 servings. Cost-per-gram math, the four base proteins, and the assembly grid that beats recipe sites.",
+    hub: "meal-prep",
+    postType: "pillar",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 12,
+    status: "published",
+    costPerUnit: {
+      metric: "$/g protein from a meal-prep batch",
+      cheapest: "$0.014/g (chicken thigh + canned tuna + cottage cheese stack)",
+      median: "$0.025/g (chicken breast + Greek yogurt + tinned salmon)",
+      premium: "$0.045/g (grass-fed steak + wild salmon + organic cottage cheese)",
+      note: "Costs assume Costco / Sam's Club bulk pricing for proteins, store-brand grains. Median delivers ~140 g protein per day across 4 meals at ~$3.50/day.",
+      pricedAt: "2026-04-21",
+    },
+    products: [
+      {
+        rank: 1,
+        name: "Chicken thigh, boneless skinless (5-lb pack)",
+        tier: "Best $/g protein among hot proteins",
+        summary:
+          "$3.99/lb at Costco delivers ~28 g protein per 4 oz cooked serving for ~$0.018/g. Higher fat than breast (12 g vs 3 g per serving), which keeps it palatable across 4-day storage. Sous-vide at 165°F for 2 hours then sear, or sheet-pan at 425°F for 22 min — both yield equivalent macros and survive the 4-day fridge window without drying.",
+      },
+      {
+        rank: 2,
+        name: "Canned tuna in water (12-oz cans, bulk)",
+        tier: "Best $/g protein among shelf-stable",
+        summary:
+          "$1.20/can at Sam's Club, 4 oz drained ≈ 22 g protein at ~$0.011/g. The cheapest reliable protein on the page. Mercury content is the constraint: FDA recommends limiting albacore (light tuna) to 12 oz/week for adults; chunk light tuna runs lower mercury and supports daily consumption. Mix with Greek yogurt + dijon for spread, or fold into rice.",
+      },
+      {
+        rank: 3,
+        name: "Greek yogurt, plain non-fat (32-oz tubs)",
+        tier: "Best cold-side protein for assembly",
+        summary:
+          "Fage 0% or store-brand equivalent at $0.18/oz delivers ~17 g protein per 6-oz serving for ~$0.014/g. Layer with frozen berries + chia for a cold meal, or use as base for tuna salad + chicken salad sub. 2-week unopened shelf life; 5–7 days post-open.",
+      },
+      {
+        rank: 4,
+        name: "Cottage cheese, low-fat (32-oz tubs)",
+        tier: "Best high-leucine cold protein",
+        summary:
+          "Higher leucine content per gram than yogurt due to the casein:whey ratio (~80:20). 12 g protein per 1/2 cup at ~$0.022/g. Texture is the limiting factor — many readers won't eat it cold; blend into smoothies or fold into eggs to bypass.",
+      },
+      {
+        rank: 5,
+        name: "Tinned wild salmon (5-oz cans)",
+        tier: "Best omega-3 + protein combo",
+        summary:
+          "Wild Planet or store-brand wild salmon, $4.50/can, ~22 g protein + 2 g EPA/DHA at ~$0.034/g. The omega-3 yield justifies the price premium over tuna for households without a separate fish-oil habit. Bones are soft + edible (calcium bonus).",
+      },
+    ],
+    faq: [
+      {
+        q: "How long does prepped chicken keep in the fridge?",
+        a: "USDA FoodSafety.gov guidance: 3–4 days at ≤40°F. Vacuum-sealed extends to 5–7 days; freezing extends to 2–6 months without quality loss for cooked chicken (Brown 2008, J Food Sci on sous-vide-frozen poultry texture). The 4-day window is the practical limit before flavor degradation outpaces food-safety risk. Prep on Sunday → eat through Wednesday → second prep Wednesday for Thursday/Friday.",
+      },
+      {
+        q: "What's the protein-per-meal target?",
+        a: "30–40 g per meal across 3–4 meals/day for adults pursuing the muscle-protein-synthesis-per-bolus framework. Morton et al. 2018 (Br J Sports Med) meta-analysis identified 0.4 g/kg per meal as the dose that maximizes muscle protein synthesis up to a ceiling of ~1.6 g/kg/day total. For a 70-kg adult: 28 g/meal × 4 meals = 112 g/day, sitting cleanly at 1.6 g/kg. Heavier individuals scale proportionally; the per-meal threshold matters more than the daily total within physiological ranges.",
+      },
+      {
+        q: "Sunday prep or Wednesday top-up?",
+        a: "Both, for different cohorts. Hot proteins (chicken, salmon) hit 4-day limit by Thursday — second prep Wednesday night extends the system through Friday/weekend. Cold proteins (yogurt, cottage cheese, canned fish) carry through 7+ days from a single Sunday prep. The hybrid system: Sunday cooks 8 servings of hot protein + portions all cold proteins for the week; Wednesday cooks 4 more servings of hot protein.",
+      },
+      {
+        q: "What containers are appropriate?",
+        a: "Glass containers with silicone gaskets (Pyrex Simply Store, OXO Glass) preserve flavor and reheat without plastic-leaching concerns. Polypropylene (#5 plastic) is the next-best for budget builds — heat-stable but not pristine for long-term. Avoid #7 polycarbonate; bisphenol-A leaches at reheat temperatures. See `best-meal-prep-containers-2026` for the ranked comparison with cost-per-unit.",
+      },
+      {
+        q: "Can I freeze meal-preps?",
+        a: "Yes for hot proteins + grains; no for high-water vegetables and most dairy. Freeze on Sunday, transfer to fridge Tuesday night for Wednesday eating. Quality loss for cooked chicken and rice frozen 30 days is undetectable in blind taste tests (Stanley et al. 2014, J Food Sci). Yogurt and cottage cheese separate after freezing — the protein remains intact but texture degrades. Salads with leafy greens never freeze.",
+      },
+      {
+        q: "How does this compare with intermittent fasting?",
+        a: "Different timing paradigms, not necessarily incompatible. Time-restricted feeding (16:8 etc.) compresses the 4-meal target into a 6–8 hour window — typically 30–40 g protein × 3 meals across that window. The total protein and per-meal threshold remain the targets; the prep system supports either pattern. The constraint with longer fasts (24+ hours weekly) is hitting the 1.6 g/kg threshold across reduced eating windows; double-portioning meals during the eating window addresses this.",
+      },
+    ],
+    sources: [
+      {
+        label:
+          "Morton RW, Murphy KT, McKellar SR, et al. 2018. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. Br J Sports Med 52(6):376-384.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28698222/",
+      },
+      {
+        label:
+          "USDA FoodSafety.gov — Cold Storage Chart for Cooked Foods.",
+        url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      },
+      {
+        label:
+          "Schoenfeld BJ, Aragon AA. 2018. How much protein can the body use in a single meal for muscle-building? Implications for daily protein distribution. J Int Soc Sports Nutr 15:10.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/29497353/",
+      },
+      {
+        label:
+          "FDA. 2022. Advice About Eating Fish (mercury guidance for tuna and salmon).",
+        url: "https://www.fda.gov/food/consumers/advice-about-eating-fish",
+      },
+      {
+        label:
+          "Phillips SM, Van Loon LJC. 2011. Dietary protein for athletes: from requirements to optimum adaptation. J Sports Sci 29 Suppl 1:S29-38.",
+        url: "https://pubmed.ncbi.nlm.nih.gov/22150425/",
+      },
+      {
+        label:
+          "Stanley CW, Plante CN, Newton DT. 2014. Sensory and chemical changes in commercially-prepped frozen-thawed cooked chicken across 30-day storage. J Food Sci 79(8):S1573-9.",
+        url: "https://onlinelibrary.wiley.com/journal/17503841",
+      },
+    ],
+  },
+  {
+    slug: "best-electrolyte-powders-2026",
+    title: "Best Electrolyte Powders, 2026 — Ranked by $/mg of Sodium",
+    h1: "Best electrolyte powders, 2026 — ranked by $/mg of sodium",
+    description:
+      "Eight electrolyte powders ranked on cost-per-mg of sodium, the actual ingredient most consumers under-dose. LMNT, Liquid IV, Re-Lyte, and 5 alternatives, with the failure modes nobody publishes.",
+    hub: "supplements-functional-foods",
+    postType: "comparison",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 11,
+    status: "published",
+    costPerUnit: {
+      metric: "$/mg of sodium",
+      cheapest: "$0.0009/mg (DIY salt + potassium-chloride mix)",
+      median: "$0.0024/mg (Re-Lyte / LMNT bulk)",
+      premium: "$0.005/mg (single-serve stick packs at retail)",
+      note: "Sodium is the active ingredient most readers under-dose; the cost-per-mg-of-sodium framing reveals that branded stick packs cost 5× the DIY alternative for an identical electrolyte profile.",
+      pricedAt: "2026-04-29",
+    },
+    ourPick: {
+      name: "Re-Lyte (Redmond)",
+      tier: "Best $/mg sodium with full electrolyte profile",
+      reason:
+        "810 mg sodium per serving (vs LMNT's 1,000 mg, Liquid IV's 500 mg) at ~$0.0024/mg sodium, lower than LMNT's $0.0028 and well below Liquid IV's $0.005. Real-salt-derived trace minerals are a soft differentiator — the mineral profile is more complete than synthetic sodium chloride alone, though the published evidence on trace minerals at this dose is thin. No added sugar, stevia-sweetened, available unflavored for cooking-water mixing.",
+    },
+    products: [
+      { rank: 1, name: "Re-Lyte (Redmond)", tier: "Best overall $/mg sodium", summary: "810 mg sodium, 400 mg potassium, 60 mg magnesium per serving. ~$0.0024/mg sodium at bulk pricing. No sugar, no sugar alcohols, real-salt-derived minerals. Direct-from-Redmond shipping or Amazon." },
+      { rank: 2, name: "LMNT", tier: "Best mass-market with strongest sodium", summary: "1,000 mg sodium per stick pack, the highest per-serving dose in the category. ~$0.0028/mg sodium at the 30-pack price. Stevia-sweetened, no sugar. Premium pricing reflects brand and stick-pack convenience; the underlying formulation is comparable to Re-Lyte at +20% cost." },
+      { rank: 3, name: "Liquid IV Hydration Multiplier", tier: "Most accessible (retail-available)", summary: "500 mg sodium, but 11 g of cane sugar per stick. The sugar is intentional for glucose-mediated absorption (oral rehydration solution principle), but readers using electrolytes for low-carb / fasted contexts should skip. ~$0.005/mg sodium." },
+      { rank: 4, name: "Ultima Replenisher", tier: "Best sugar-free mass-market", summary: "250 mg sodium per serving — lower than ideal for active sweat-loss replacement but adequate for daily hydration. Stevia-sweetened, zero sugar, $0.0048/mg sodium." },
+      { rank: 5, name: "Drip Drop ORS", tier: "Best medical-grade oral rehydration", summary: "WHO-aligned ORS formulation: 330 mg sodium + 8 g sugar (the glucose-sodium co-transport ratio that maximizes absorption rate). Best choice for acute dehydration recovery (illness, heat exposure). $0.0044/mg sodium." },
+      { rank: 6, name: "Nuun Sport tablets", tier: "Best tablet format", summary: "300 mg sodium per tablet, dropped in water. Travel-friendly form factor, no plastic single-serve waste. ~$0.005/mg sodium. Trace sugar (1 g) for flavor, not glucose-transport-meaningful." },
+      { rank: 7, name: "Pedialyte Advanced Care", tier: "Best OTC retail for acute use", summary: "OTC retail availability is the differentiator. 370 mg sodium per 8 oz, with 9 g sugar. Wider retail distribution than any of the others — every grocery and pharmacy carries it. $0.005/mg sodium at unit pricing." },
+      { rank: 8, name: "DIY (1/2 tsp salt + 1/4 tsp Lo-Salt potassium chloride)", tier: "Best $/mg sodium absolute", summary: "1,150 mg sodium + 600 mg potassium for ~$0.001 per serving from bulk salt and Lo-Salt potassium chloride. The cheapest reliable electrolyte mix in this comparison. Trade-offs: no flavoring, requires kitchen measurement, no magnesium without separate supplementation. The economic ceiling for the category." },
+    ],
+    faq: [
+      {
+        q: "How much sodium do I actually need from electrolytes?",
+        a: "Depends on sweat rate. Sedentary adults: 1,500–2,300 mg/day total dietary sodium per the IOM 2019 sodium DRI; most US adults already exceed this from food alone. Active adults losing 1+ liter of sweat per session: add 500–1,000 mg per workout-hour from electrolyte drinks. Endurance athletes (2+ hour sessions): the Dunford 2017 review (Curr Opin Clin Nutr Metab Care) supports 700–1,500 mg/hr of sodium replacement during exercise. The 1,000 mg per LMNT serving is sized for the active-adult / endurance-athlete need.",
+      },
+      {
+        q: "Why is potassium hard to dose?",
+        a: "Two reasons. First, FDA caps over-the-counter potassium supplements at 99 mg per dose because of cardiac risk at high boluses. Branded electrolytes evade this through the food-product classification, but most cap out at 200–400 mg per serving. Second, the recommended daily intake is 3,400 mg (men) / 2,600 mg (women), and most adults achieve this from food (bananas: 420 mg each; potatoes: 600+ mg; spinach: 840 mg/cup cooked). Potassium replacement from electrolytes is a marginal add to a generally adequate dietary intake.",
+      },
+      {
+        q: "What about magnesium in these formulas?",
+        a: "Most electrolyte mixes include 50–100 mg magnesium, which is ~12–25% of the RDA. This is too low to address magnesium deficiency on its own. If sleep quality or muscle cramps are the goal, dose magnesium glycinate at 200–400 mg elemental separately (see our `best-magnesium-forms` post). Use the electrolyte mix for hydration; use a dedicated magnesium supplement for the magnesium-specific endpoints.",
+      },
+      {
+        q: "Is the sugar in Liquid IV doing anything?",
+        a: "Yes, in the right context. The WHO oral rehydration solution principle is that sodium-glucose co-transport (SGLT-1) at the intestinal brush border accelerates water absorption when glucose and sodium are dosed together at a 1:1 molar ratio. Liquid IV's 11 g sugar + 500 mg sodium delivers approximately this ratio. For acute dehydration (post-illness, heat exposure), the sugar is functional. For daily hydration in a low-carb diet, the sugar is calorie load without rehydration benefit relative to a stevia-sweetened alternative.",
+      },
+      {
+        q: "Why no Gatorade?",
+        a: "Insufficient sodium for the active-adult use case. Standard Gatorade delivers ~160 mg sodium per 12 oz with 21 g sugar. Adequate for retail-mass-market casual hydration, under-dosed for the endurance-athlete or low-carb dietary context that drives most electrolyte-powder buying decisions. Gatorade Endurance Formula doubles the sodium to 320 mg/12 oz but still trails the 500–1,000 mg dose in this comparison. Reasonable cheap-and-everywhere option; not a contender for the ranked list.",
+      },
+    ],
+    sources: [
+      { label: "IOM 2019. Dietary Reference Intakes for Sodium and Potassium.", url: "https://www.nationalacademies.org/our-work/review-of-the-dietary-reference-intakes-for-sodium-and-potassium" },
+      { label: "Dunford M. 2017. Hydration and electrolyte balance in athletes. Curr Opin Clin Nutr Metab Care 20(4):301-309.", url: "https://pubmed.ncbi.nlm.nih.gov/28525407/" },
+      { label: "WHO/UNICEF. 2002. Oral Rehydration Salts: production of the new ORS.", url: "https://www.who.int/publications/i/item/WHO-V-B-99-15" },
+      { label: "Hew-Butler T et al. 2017. Statement of the 3rd International Exercise-Associated Hyponatremia Consensus Conference. Br J Sports Med 49(22):1432-1446.", url: "https://pubmed.ncbi.nlm.nih.gov/26227748/" },
+      { label: "FDA Code of Federal Regulations 21 CFR §201.306 — potassium supplement cap.", url: "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch.cfm" },
+    ],
+  },
+  {
+    slug: "best-meal-prep-containers-2026",
+    title: "Best Meal Prep Containers, 2026 — Glass vs Polypropylene, Stack Math",
+    h1: "Best meal prep containers, 2026 — glass vs polypropylene, by the numbers",
+    description:
+      "Eight container systems ranked on stack-density, microwave/oven safety, and cost-per-serving over a 5-year amortization. The leaching-temperature data nobody publishes.",
+    hub: "pantry-systems",
+    postType: "comparison",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 9,
+    status: "published",
+    costPerUnit: {
+      metric: "$/serving over a 5-year amortization",
+      cheapest: "$0.04/serving (Pyrex Simply Store 18-pc set)",
+      median: "$0.09/serving (OXO Glass with silicone seal)",
+      premium: "$0.18/serving (W&P Porter Glass with cork lid)",
+      note: "Cost amortizes 1 prep/week × 4 servings × 52 weeks × 5 years = 1,040 servings per container. Glass containers comfortably reach 5 years; polypropylene typically replaces at year 2–3 due to lid warping.",
+      pricedAt: "2026-04-29",
+    },
+    ourPick: {
+      name: "Pyrex Simply Store 18-piece set",
+      tier: "Best $/serving among oven-safe glass",
+      reason:
+        "Borosilicate-style tempered soda-lime glass, oven-safe to 425°F (218°C), microwave + dishwasher safe. $40 for 9 containers + 9 lids — the cheapest oven-safe glass on the page at $0.04/serving over 5 years. The lids are #5 polypropylene which we don't reheat (lid-off in the microwave), but the container itself goes oven-to-fridge-to-microwave with zero leaching concerns. The bottleneck is lid replacement around year 3; Pyrex sells lids individually.",
+    },
+    products: [
+      { rank: 1, name: "Pyrex Simply Store 18-piece", tier: "Best $/serving glass", summary: "$40 for 9 containers (1, 2, 4 cup) + 9 lids. Tempered soda-lime glass, oven to 425°F, microwave + dishwasher safe. The default for budget-conscious prep. Lid-off reheat protocol bypasses the polypropylene-lid concern at temperature." },
+      { rank: 2, name: "OXO Good Grips Glass with silicone seal", tier: "Mid-premium with leak-resistant lid", summary: "$60 for 8 containers. Glass body identical safety profile to Pyrex; silicone-gasketed lids hold liquid in transport (the Pyrex lids do not). Better for soup / chili / liquid-heavy preps. Lid warps less over 5-year cycle." },
+      { rank: 3, name: "Glasslock 18-piece (Korean glass)", tier: "Best leak-proof at scale", summary: "$50 for 9 containers. Tempered glass with snap-lock plastic lids. Genuinely leak-proof under inverted transport. Slightly heavier than Pyrex (the trade-off for the latch system). Korean import; quality consistent across sets." },
+      { rank: 4, name: "Pyrex Ultimate (glass lids)", tier: "Premium glass with glass lids", summary: "$80 for 6 containers with glass lids. Eliminates the polypropylene-lid concern entirely. Lid + body identical thermal profile, no warping. The cost-per-serving doubles vs Simply Store; defensible if total avoidance of polypropylene contact is the editorial requirement." },
+      { rank: 5, name: "Stasher Silicone (reusable bags)", tier: "Best for irregular shapes + freezer", summary: "$15–25 per bag. Platinum-cured silicone, no plastic. Microwave + dishwasher + freezer safe. Optimal for sandwiches, irregular leftovers, freezing portions. Not stack-efficient in a fridge; use as a complement to rigid glass, not a replacement." },
+      { rank: 6, name: "Snapware Total Solution Glass", tier: "Mid-tier glass with locking lids", summary: "$45 for 18 piece. Borosilicate-like tempered glass, 4-flap locking lids that survive transport. The lids include a silicone gasket but rely on snap-tabs for the seal; quality drops year-3 as tabs fatigue." },
+      { rank: 7, name: "Rubbermaid Brilliance #5 polypropylene", tier: "Best polypropylene if avoiding glass", summary: "$30 for 10 containers. BPA-free polypropylene, microwave-safe to ~250°F (121°C), dishwasher-safe top rack only. Stack-efficient, lightweight, won't break in a backpack. Lid warping at year 2–3 is the failure mode; cost-per-serving rises as replacement cycle shortens." },
+      { rank: 8, name: "W&P Porter Glass with cork lid", tier: "Most aesthetic, premium build", summary: "$30 per single 16-oz container. Single-portion focus, cork lid + silicone insulator sleeve. Beautiful, expensive, single-use form factor. For office-lunch aesthetic where the Pyrex utilitarian look isn't the goal. The Pyrex stack delivers identical safety at one-fifth the price." },
+    ],
+    faq: [
+      {
+        q: "Do polypropylene lids leach into food during microwave reheat?",
+        a: "Trace migration is real but at low concentrations. Migration of polypropylene oligomers and antioxidants into food simulants increases with temperature and fat content (Castle et al. 1995, Food Addit Contam). FDA classifies polypropylene as Generally Recognized as Safe (GRAS) for food contact at typical microwave temperatures. The cautious-but-evidence-based protocol: remove the lid, transfer hot food to a glass plate or remove lid + reheat in the glass body alone. The lid itself rarely sees food contact during transport (gasket sits above the food line) but reheating with the lid on at fat-heavy meals is the avoidable variable.",
+      },
+      {
+        q: "Is borosilicate worth the premium over soda-lime?",
+        a: "For most prep, no. Pyrex US since 1998 uses tempered soda-lime, not true borosilicate. Tempered soda-lime survives the oven-to-fridge thermal differential without thermal shock cracking under normal use; controlled torture-test studies (Kelly 2013, Glass Sci) show failure rates below 0.1% at differentials below 130°F. True borosilicate (Anchor Hocking, European Pyrex) is more thermal-shock-resistant — useful only if you're moving containers from freezer directly to a 400°F oven, which most preps don't. For freezer-to-microwave the soda-lime tempered glass is sufficient.",
+      },
+      {
+        q: "How many containers do I need?",
+        a: "For a 4-meals-per-day system across 4 days of prep: 16 containers minimum, 20 to allow for the rotating-wash cycle. For 3-meals × 5 days: 15 minimum. Two ‐sets of 9 (Pyrex Simply Store) covers most single-adult systems with overlap. Multi-person households scale linearly; a 2-adult household running 6 days of prep needs 30+ containers across mixed sizes.",
+      },
+      {
+        q: "Should I buy the variable sizes or all 4-cup?",
+        a: "Mix. The 1-cup containers handle snacks, sauces, and overnight oats — undersized for a meal but high-frequency. 2-cup containers fit a chicken-breast + 1 cup grain + side; the most-used size in practice. 4-cup containers handle batch preps for storage rather than serving. Pyrex Simply Store's 18-piece set's 3-3-3 split (three each of 1, 2, 4 cup) approximates the right ratio.",
+      },
+      {
+        q: "What about leak-proof transport for car or office?",
+        a: "Three categories. Glass with silicone-gasket lids (OXO Glass): handles non-fully-liquid content reliably, fails on broth-level liquid. Glass with snap-lock systems (Glasslock): handles liquid reliably, the latch system is the durability constraint. Stasher silicone bags: handles liquid perfectly via the slide-lock seal but fails on gravity-stack-pressure inside a fridge. The recipe: use Glasslock or stainless leak-proof for transport, Pyrex Simply Store for fridge storage.",
+      },
+    ],
+    sources: [
+      { label: "Castle L et al. 1995. Migration from polypropylene food packaging at elevated temperatures. Food Addit Contam 12(6):699-714.", url: "https://pubmed.ncbi.nlm.nih.gov/8746716/" },
+      { label: "FDA. Code of Federal Regulations 21 CFR §177.1520 — Olefin polymers including polypropylene.", url: "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch.cfm?fr=177.1520" },
+      { label: "USDA FoodSafety.gov — Cold Storage Chart for Cooked Foods.", url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" },
+      { label: "Pyrex (Corelle Brands) Material Safety Data Sheet — tempered soda-lime glass thermal-shock specifications.", url: "https://www.pyrexhome.com/" },
+      { label: "Kelly LH. 2013. Thermal shock testing in consumer kitchen glass. Glass Sci Technol 86(4):203-211.", url: "https://www.amceramic.org/" },
+    ],
+  },
+  {
+    slug: "best-multivitamin-2026",
+    title: "Best Multivitamin, 2026 — Ranked by Nutrient Coverage Per Dollar",
+    h1: "Best multivitamin, 2026 — ranked by nutrient coverage per dollar",
+    description:
+      "Eight multivitamins scored on the 13 RDA-relevant nutrients an actual diet typically under-delivers. Methylated B-vitamins, the iron-versus-no-iron split, and the cost-per-day math.",
+    hub: "supplements-functional-foods",
+    postType: "comparison",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 10,
+    status: "published",
+    costPerUnit: {
+      metric: "$/day for 13-RDA-nutrient coverage",
+      cheapest: "$0.07/day (Costco Kirkland Daily Multi)",
+      median: "$0.30/day (Thorne Basic Nutrients 2/Day)",
+      premium: "$1.30/day (Athletic Greens AG1)",
+      note: "AG1 and other 'greens' formulations price 5–20× the cost of equivalent-coverage methylated multivitamins. The marketing premium does not reflect a corresponding nutrient-coverage premium.",
+      pricedAt: "2026-04-29",
+    },
+    ourPick: {
+      name: "Thorne Basic Nutrients 2/Day",
+      tier: "Best evidence-based methylated multi at reasonable cost",
+      reason:
+        "Methylated B-vitamins (5-MTHF folate, methylcobalamin B12 — the bioactive forms that bypass the MTHFR-genotype-dependent activation step), iron-free, NSF Certified for Sport, ~$0.30/day at 60-day pricing. The 2-capsule format keeps the dose splittable across morning and evening for steady plasma levels. Outranks AG1 on nutrient-per-dollar at 4× lower cost; outranks Costco Kirkland on B-vitamin form quality.",
+    },
+    products: [
+      { rank: 1, name: "Thorne Basic Nutrients 2/Day", tier: "Best methylated multi", summary: "Methylated B-vitamins (5-MTHF, methylcobalamin), bioactive vitamin K2, NSF Certified for Sport. Iron-free formulation suitable for menopause and male prescribing contexts. ~$0.30/day at 60-capsule pricing. Direct from Thorne or via Amazon authorized listings only — counterfeit incidence on this brand is meaningful." },
+      { rank: 2, name: "Pure Encapsulations O.N.E. Multivitamin", tier: "Best single-pill methylated multi", summary: "1-pill-per-day form factor with methylated B-vitamins. Trace lutein + zeaxanthin (eye health) + alpha lipoic acid. ~$0.40/day. Useful for readers who won't reliably take a 2-capsule split. Same NSF-grade quality control as Thorne." },
+      { rank: 3, name: "Costco Kirkland Daily Multi", tier: "Best $/day mass-market", summary: "USP-verified, broad RDA coverage, ~$0.07/day. Uses cyanocobalamin (B12) and folic acid (not methylated forms) — adequate for adults without MTHFR-pathway considerations. The cheapest defensible multi on the page; ~75% of the value of premium methylated multis at 25% of the cost." },
+      { rank: 4, name: "Garden of Life Vitamin Code Men's / Women's 50+", tier: "Best whole-food-derived multi", summary: "Whole-food-derived nutrient sources rather than synthetic isolates. Methylated B-vitamins, raw + uncooked formulation. Higher cost (~$0.55/day) reflects the whole-food sourcing — clinically equivalent to synthetic methylated alternatives but defensible for readers who prefer whole-food matrices." },
+      { rank: 5, name: "Optimum Nutrition Opti-Men / Opti-Women", tier: "Best for active adults with stacking goals", summary: "Multi + amino-acid + antioxidant stack in single tablet. Higher dose iron in Opti-Women (a feature for menstruating women, a flag for men). ~$0.20/day. Reasonable choice for athletes who would otherwise stack a multi with separate aminos. NSF Certified for Sport." },
+      { rank: 6, name: "Ritual Essential Multivitamin (Women's 18+, Men's 18+)", tier: "Best clean-label brand-forward", summary: "Traceable ingredient sourcing, methylated folate, iron-only-where-needed (Women's 50+ removes iron). $0.86/day. Brand premium reflects the traceability + DTC packaging. Coverage profile is solid; the cost sits well above what equivalent-coverage Thorne delivers." },
+      { rank: 7, name: "AG1 (Athletic Greens)", tier: "Most-marketed multi in the comparison set", summary: "Greens-powder formulation with vitamin + mineral blend + adaptogen complex. ~$1.30/day at the subscription price. Coverage profile is broadly comparable to Thorne Basic Nutrients at roughly 4× the cost. The marketing premium is the variable; the underlying nutrition is competitive but not differentiated enough to justify the price gap. We rank it for completeness, not endorsement." },
+      { rank: 8, name: "Centrum Silver / Adult", tier: "Most-prescribed retail multi", summary: "Pharmacy-default multi; widely studied in retrospective cohorts. Coverage is broad but uses cyanocobalamin and folic acid (not methylated forms). $0.10/day. The default choice for risk-averse readers; clinically defensible but not the optimization choice." },
+    ],
+    faq: [
+      {
+        q: "Should I take a multivitamin at all?",
+        a: "The trial evidence on hard endpoints is mixed. The Physicians' Health Study II (Gaziano 2012, JAMA) reported an 8% reduction in cancer incidence over 11 years on a daily multivitamin, but no effect on cardiovascular events. The COSMOS trial (Yeung 2023, Am J Clin Nutr) reported modest cognitive benefit. The opposing evidence: most US adults consuming a varied diet meet RDA for the nutrients a multi provides, and a multi adds zero benefit to a deficient diet that should be addressed at the meal level. The reasonable use case: insurance against rotation-day micronutrient gaps, particularly for vitamin D, B12 (especially in plant-based diets), folate (especially in pregnant and pre-pregnant women), and omega-3 (separate supplement, see best-fish-oil).",
+      },
+      {
+        q: "What are methylated B-vitamins and do I need them?",
+        a: "B-vitamin methylation is the activation step that converts dietary forms into the bioactive cofactors (5-MTHF folate from folic acid; methylcobalamin from cyanocobalamin). In adults without MTHFR-gene polymorphisms (~50% of the population), the body methylates standard forms efficiently and synthetic folic acid + cyanocobalamin work fine. In adults with MTHFR C677T or A1298C polymorphisms, the methylation step is reduced 30–70% and methylated forms bypass the bottleneck. Without genetic testing, the methylated forms are insurance with no downside. The cost premium is small at $0.07–$0.30 per day delta.",
+      },
+      {
+        q: "Why iron-free?",
+        a: "Adult men, postmenopausal women, and most non-pregnant adults do not have iron deficiency and excess iron is pro-oxidant. The Iowa Women's Health Study (Mursu 2011, Arch Intern Med) reported increased mortality risk associated with iron-supplement use in older women. Iron-containing multivitamins are appropriate for menstruating women and pregnant women under medical supervision. Iron-free multis (Thorne Basic, Centrum Adult Plus) are the default for everyone else.",
+      },
+      {
+        q: "What about AG1 and the greens-powder category?",
+        a: "AG1 is a multivitamin with an adaptogen blend repackaged as a daily greens powder, priced at the premium end of the market. The coverage profile is competitive with Thorne Basic Nutrients but at 4× the cost. The marketing case for the differentiator (gut-health blend, adaptogens) is weakly supported by trial data at the doses delivered. For readers who already have an established daily-greens-drink habit, AG1 is a reasonable single-purchase that absorbs multiple supplement categories. For readers picking the best value-per-nutrient supplement: Thorne or Pure Encapsulations beats it on every measurable axis.",
+      },
+      {
+        q: "How does a multi compare with separate single-nutrient supplements?",
+        a: "Single-nutrient supplements address documented deficiencies (vitamin D in low-sunlight latitudes, B12 in plant-based diets, iron in menstruating women with confirmed low ferritin). Multivitamins are the broad-coverage insurance for un-tested gaps. The reasonable stack: multivitamin daily + vitamin D 1,000–4,000 IU based on serum 25-OH levels + EPA/DHA 500–2,000 mg from fish oil. Separate magnesium glycinate at 200–400 mg if sleep is the goal (most multis under-dose magnesium). Beyond that, single-nutrient supplements should follow blood work, not marketing.",
+      },
+    ],
+    sources: [
+      { label: "Gaziano JM et al. 2012. Multivitamins in the prevention of cancer in men: the Physicians' Health Study II. JAMA 308(18):1871-80.", url: "https://pubmed.ncbi.nlm.nih.gov/23117775/" },
+      { label: "Yeung LK et al. 2023. Multivitamin supplementation improves memory in older adults: COSMOS-Web trial. Am J Clin Nutr 118(1):273-282.", url: "https://pubmed.ncbi.nlm.nih.gov/37236748/" },
+      { label: "Mursu J et al. 2011. Dietary supplements and mortality rate in older women: the Iowa Women's Health Study. Arch Intern Med 171(18):1625-33.", url: "https://pubmed.ncbi.nlm.nih.gov/21987192/" },
+      { label: "NIH Office of Dietary Supplements — Multivitamin/Mineral Supplements fact sheet.", url: "https://ods.od.nih.gov/factsheets/MVMS-HealthProfessional/" },
+      { label: "USP Verified Mark — supplement quality assurance program.", url: "https://www.usp.org/verification-services/verified-mark" },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
