@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Tiráž — Larderlab",
+      "metaTitle": "Tiráž",
       "metaDescription": "Kdo jsme, co vydáváme a proč jsme udělali časopis pro kuchaře, kteří už umí vařit.",
       "h1": "Tiráž",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Redakční standardy — Larderlab",
+      "metaTitle": "Redakční standardy",
       "metaDescription": "Jak Larderlab pracuje se zdroji, edituje a píše.",
       "h1": "Redakční standardy",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Jak vaříme — Larderlab",
+      "metaTitle": "Jak vaříme",
       "metaDescription": "Jak Larderlab vyvíjí recept, testuje strategii spíže a hodnotí ingredienci.",
       "h1": "Jak vaříme",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Jak vaříme · v1.2 — Larderlab",
+      "metaTitle": "Jak vaříme · v1.2",
       "metaDescription": "Plná specifikace redakční metody Larderlab, verzovaná a datovaná.",
       "eyebrow": "Jak vaříme · v1.2",
       "h1": "Kuchyňská rubrika, podrobně.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · leden 2026 · První veřejná specifikace — pravidlo tří uvaření, požadavky na zdroje."
     },
     "pipeline": {
-      "metaTitle": "Co se vaří — Larderlab",
+      "metaTitle": "Co se vaří",
       "metaDescription": "Otevřený záznam toho, co testujeme, píšeme a fotíme pro příští číslo.",
       "eyebrow": "Co se vaří",
       "h1": "Co je na plotně.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Zásady ochrany soukromí — Larderlab",
+      "metaTitle": "Zásady ochrany soukromí",
       "metaDescription": "Co sbíráme, co nesbíráme a jak nakládáme s daty čtenářů.",
       "h1": "Zásady ochrany soukromí",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Podmínky služby — Larderlab",
+      "metaTitle": "Podmínky služby",
       "metaDescription": "Podmínky, které platí, když používáte larderlab.com.",
       "h1": "Podmínky služby",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate prohlášení — Larderlab",
+      "metaTitle": "Affiliate prohlášení",
       "metaDescription": "Jak fungují affiliate odkazy na Larderlab a co ovlivňují — a co ne.",
       "h1": "Affiliate prohlášení",
       "body": [
@@ -291,7 +291,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Dopisy redakci — Larderlab",
+      "metaTitle": "Dopisy redakci",
       "metaDescription": "Jak nás kontaktovat — opravy, návrhy témat, zpětná vazba k receptům.",
       "h1": "Dopisy redakci",
       "body": [
@@ -308,7 +308,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaTitle": "The Sunday Larder",
       "metaDescription": "Jeden krátký redakční dopis, jedna otestovaná kartička s receptem, každou neděli.",
       "h1": "The Sunday Larder",
       "body": [

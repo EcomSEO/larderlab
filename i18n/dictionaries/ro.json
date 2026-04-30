@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Caseta redacțională — Larderlab",
+      "metaTitle": "Caseta redacțională",
       "metaDescription": "Cine suntem, ce publicăm și de ce am făcut o revistă pentru bucătari care știu deja să gătească.",
       "h1": "Caseta redacțională",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Standarde editoriale — Larderlab",
+      "metaTitle": "Standarde editoriale",
       "metaDescription": "Cum documentează, citează și editează Larderlab.",
       "h1": "Standarde editoriale",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Cum gătim — Larderlab",
+      "metaTitle": "Cum gătim",
       "metaDescription": "Cum dezvoltă Larderlab o rețetă, testează o strategie de cămară și evaluează un ingredient.",
       "h1": "Cum gătim",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Cum gătim · v1.2 — Larderlab",
+      "metaTitle": "Cum gătim · v1.2",
       "metaDescription": "Specificația completă a metodei editoriale Larderlab, versionată și datată.",
       "eyebrow": "Cum gătim · v1.2",
       "h1": "Rubrica bucătăriei, în detaliu.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · ianuarie 2026 · Specificație publică inițială — regula celor trei gătiri, cerințe de sursă."
     },
     "pipeline": {
-      "metaTitle": "Ce se gătește — Larderlab",
+      "metaTitle": "Ce se gătește",
       "metaDescription": "Un jurnal deschis cu ce testăm, scriem și fotografiem pentru următorul număr.",
       "eyebrow": "Ce se gătește",
       "h1": "Ce e pe foc.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Politica de confidențialitate — Larderlab",
+      "metaTitle": "Politica de confidențialitate",
       "metaDescription": "Ce colectăm, ce nu colectăm și cum tratăm datele cititorului.",
       "h1": "Politica de confidențialitate",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Termeni și condiții — Larderlab",
+      "metaTitle": "Termeni și condiții",
       "metaDescription": "Termenii care se aplică atunci când folosești larderlab.com.",
       "h1": "Termeni și condiții",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Notă de afiliere — Larderlab",
+      "metaTitle": "Notă de afiliere",
       "metaDescription": "Cum funcționează linkurile de afiliere pe Larderlab și ce afectează — și ce nu.",
       "h1": "Notă de afiliere",
       "body": [
@@ -291,7 +291,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Scrisori către redacție — Larderlab",
+      "metaTitle": "Scrisori către redacție",
       "metaDescription": "Cum ne contactați — corecturi, propuneri de articole, comentarii la rețete.",
       "h1": "Scrisori către redacție",
       "body": [
@@ -308,7 +308,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaTitle": "The Sunday Larder",
       "metaDescription": "O scrisoare editorială scurtă, o fișă de rețetă testată, în fiecare duminică.",
       "h1": "The Sunday Larder",
       "body": [

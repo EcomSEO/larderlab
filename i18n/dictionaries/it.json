@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Colofone — Larderlab",
+      "metaTitle": "Colofone",
       "metaDescription": "Chi siamo, cosa pubblichiamo, perché esistiamo.",
       "h1": "Il colofone",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Linea editoriale — Larderlab",
+      "metaTitle": "Linea editoriale",
       "metaDescription": "Come lavoriamo, sourciamo, editiamo.",
       "h1": "Linea editoriale",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Come cuciniamo — Larderlab",
+      "metaTitle": "Come cuciniamo",
       "metaDescription": "Come sviluppiamo una ricetta, testiamo una strategia di dispensa, valutiamo un ingrediente.",
       "h1": "Come cuciniamo",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Come cuciniamo · v1.2 — Larderlab",
+      "metaTitle": "Come cuciniamo · v1.2",
       "metaDescription": "Versione lunga del nostro metodo editoriale.",
       "eyebrow": "Come cuciniamo · v1.2",
       "h1": "La griglia di cucina, in dettaglio.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · gennaio 2026 · Prima versione — regola dei tre passaggi, fonti, quadro in quattro tempi."
     },
     "pipeline": {
-      "metaTitle": "In cottura — Larderlab",
+      "metaTitle": "In cottura",
       "metaDescription": "Diario aperto di cosa stiamo testando, scrivendo e fotografando per il prossimo numero.",
       "eyebrow": "In cottura",
       "h1": "Cosa c'è sul fuoco.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Privacy — Larderlab",
+      "metaTitle": "Privacy",
       "metaDescription": "Cosa raccogliamo, cosa no.",
       "h1": "Informativa privacy",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Condizioni — Larderlab",
+      "metaTitle": "Condizioni",
       "metaDescription": "Le condizioni che si applicano all'uso di larderlab.com.",
       "h1": "Condizioni d'uso",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliazione — Larderlab",
+      "metaTitle": "Affiliazione",
       "metaDescription": "Come funzionano i link affiliati.",
       "h1": "Affiliazione",
       "body": [
@@ -290,7 +290,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Lettere alla redazione — Larderlab",
+      "metaTitle": "Lettere alla redazione",
       "metaDescription": "Come scriverci — correzioni, idee, riscontri sulle ricette.",
       "h1": "Lettere alla redazione",
       "body": [
@@ -307,7 +307,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "La Dispensa della domenica — Larderlab",
+      "metaTitle": "La Dispensa della domenica",
       "metaDescription": "Una lettera editoriale, una scheda-ricetta, ogni domenica.",
       "h1": "La Dispensa della domenica",
       "body": [

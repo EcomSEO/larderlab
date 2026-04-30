@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
+import { TranslationStub } from "@/components/TranslationStub";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Contact Larderlab",
-  description: "How to reach us.",
-  path: "/contact",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("trustPages.contact");
+  return pageMetadata({
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    path: "/contact",
+  });
+}
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const t = await getTranslations("trustPages.contact");
   return (
-    <TrustPageTemplate title="Contact">
+    <TrustPageTemplate title={t("h1")}>
+      <TranslationStub />
       <h2>General</h2>
       <p>
         <strong>hello@larderlab.com</strong> — feedback, questions,

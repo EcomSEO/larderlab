@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
+import { TranslationStub } from "@/components/TranslationStub";
 import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 import {
   PRIVACY_POLICY,
@@ -7,16 +9,20 @@ import {
 } from "@/lib/content/privacy-policy";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: PRIVACY_POLICY.title,
-  description:
-    "What personal data we collect, why, how long we keep it, and the rights you have under EU data-protection law.",
-  path: "/privacy",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("trustPages.privacy");
+  return pageMetadata({
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    path: "/privacy",
+  });
+}
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  const t = await getTranslations("trustPages.privacy");
   return (
-    <TrustPageTemplate title={PRIVACY_POLICY.title}>
+    <TrustPageTemplate title={t("h1")}>
+      <TranslationStub />
       <p className="text-sm text-charcoal/60">{PRIVACY_POLICY.lastUpdated}</p>
       <p>{PRIVACY_POLICY.intro}</p>
 

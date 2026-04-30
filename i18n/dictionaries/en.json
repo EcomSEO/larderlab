@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Masthead — Larderlab",
+      "metaTitle": "Masthead",
       "metaDescription": "Who we are, what we publish, and why we built a magazine for cooks who already run the kitchen.",
       "h1": "The masthead",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Editorial standards — Larderlab",
+      "metaTitle": "Editorial standards",
       "metaDescription": "How Larderlab reports, sources, and edits.",
       "h1": "Editorial standards",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "How we cook — Larderlab",
+      "metaTitle": "How we cook",
       "metaDescription": "How Larderlab develops a recipe, tests a pantry strategy, and rates an ingredient.",
       "h1": "How we cook",
       "body": [
@@ -187,7 +187,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "How we cook · v1.2 — Larderlab",
+      "metaTitle": "How we cook · v1.2",
       "metaDescription": "The long-form spec for Larderlab's editorial method, versioned and dated.",
       "eyebrow": "How we cook · v1.2",
       "h1": "The kitchen rubric, in detail.",
@@ -208,7 +208,7 @@
       "changeLog10": "v1.0 · January 2026 · Initial public spec — three-cook rule, sourcing requirements, the four-part ingredient frame."
     },
     "pipeline": {
-      "metaTitle": "What's cooking — Larderlab",
+      "metaTitle": "What's cooking",
       "metaDescription": "An open log of what we're testing, drafting, and shooting for the next issue.",
       "eyebrow": "What's cooking",
       "h1": "What's on the burner.",
@@ -244,7 +244,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Privacy policy — Larderlab",
+      "metaTitle": "Privacy policy",
       "metaDescription": "What we collect, what we don't, and how we handle reader data.",
       "h1": "Privacy policy",
       "body": [
@@ -262,7 +262,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Terms of service — Larderlab",
+      "metaTitle": "Terms of service",
       "metaDescription": "The terms that apply when you use larderlab.com.",
       "h1": "Terms of service",
       "body": [
@@ -280,7 +280,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate disclosure — Larderlab",
+      "metaTitle": "Affiliate disclosure",
       "metaDescription": "How affiliate links work on Larderlab and what they do — and don't — affect.",
       "h1": "Affiliate disclosure",
       "body": [
@@ -295,7 +295,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Letters to the editor — Larderlab",
+      "metaTitle": "Letters to the editor",
       "metaDescription": "How to reach us — corrections, story tips, recipe feedback.",
       "h1": "Letters to the editor",
       "body": [
@@ -312,7 +312,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaTitle": "The Sunday Larder",
       "metaDescription": "One short editorial letter, one tested recipe card, every Sunday.",
       "h1": "The Sunday Larder",
       "body": [

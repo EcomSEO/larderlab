@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
+import { TranslationStub } from "@/components/TranslationStub";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Editorial Standards",
-  description:
-    "Our public-facing editorial policies — sourcing, corrections, affiliate disclosure, AI tooling.",
-  path: "/editorial-standards",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("trustPages.editorialStandards");
+  return pageMetadata({
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    path: "/editorial-standards",
+  });
+}
 
-export default function EditorialStandardsPage() {
+export default async function EditorialStandardsPage() {
+  const t = await getTranslations("trustPages.editorialStandards");
   return (
-    <TrustPageTemplate title="Editorial Standards">
+    <TrustPageTemplate title={t("h1")}>
+      <TranslationStub />
       <p>
         Every site promises to be trustworthy. Here&apos;s what that actually means
         on Larderlab.

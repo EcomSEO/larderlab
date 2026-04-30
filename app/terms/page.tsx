@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
+import { TranslationStub } from "@/components/TranslationStub";
 import { TERMS } from "@/lib/content/terms";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: TERMS.title,
-  description: "The terms that govern your use of larderlab.com.",
-  path: "/terms",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("trustPages.terms");
+  return pageMetadata({
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    path: "/terms",
+  });
+}
 
-export default function TermsPage() {
+export default async function TermsPage() {
+  const t = await getTranslations("trustPages.terms");
   return (
-    <TrustPageTemplate title={TERMS.title}>
+    <TrustPageTemplate title={t("h1")}>
+      <TranslationStub />
       <p className="text-sm text-charcoal/60">{TERMS.lastUpdated}</p>
       <p>{TERMS.intro}</p>
 

@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Stopka redakcyjna — Larderlab",
+      "metaTitle": "Stopka redakcyjna",
       "metaDescription": "Kim jesteśmy, co publikujemy i dlaczego zrobiliśmy magazyn dla kucharzy, którzy już umieją gotować.",
       "h1": "Stopka redakcyjna",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Standardy redakcyjne — Larderlab",
+      "metaTitle": "Standardy redakcyjne",
       "metaDescription": "Jak Larderlab pisze, dobiera źródła i redaguje.",
       "h1": "Standardy redakcyjne",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Jak gotujemy — Larderlab",
+      "metaTitle": "Jak gotujemy",
       "metaDescription": "Jak Larderlab opracowuje przepis, testuje strategię spiżarni i ocenia składnik.",
       "h1": "Jak gotujemy",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Jak gotujemy · v1.2 — Larderlab",
+      "metaTitle": "Jak gotujemy · v1.2",
       "metaDescription": "Pełna specyfikacja metody redakcyjnej Larderlab, wersjonowana i datowana.",
       "eyebrow": "Jak gotujemy · v1.2",
       "h1": "Rubryka kuchenna, szczegółowo.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · styczeń 2026 · Pierwsza wersja publiczna — zasada trzech gotowań, wymogi źródłowe."
     },
     "pipeline": {
-      "metaTitle": "Co się gotuje — Larderlab",
+      "metaTitle": "Co się gotuje",
       "metaDescription": "Otwarty rejestr tego, co testujemy, piszemy i fotografujemy do następnego numeru.",
       "eyebrow": "Co się gotuje",
       "h1": "Co stoi na palniku.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Polityka prywatności — Larderlab",
+      "metaTitle": "Polityka prywatności",
       "metaDescription": "Co zbieramy, czego nie zbieramy i jak obchodzimy się z danymi czytelników.",
       "h1": "Polityka prywatności",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Regulamin — Larderlab",
+      "metaTitle": "Regulamin",
       "metaDescription": "Warunki, które obowiązują, gdy korzystasz z larderlab.com.",
       "h1": "Regulamin",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Informacja o afiliacji — Larderlab",
+      "metaTitle": "Informacja o afiliacji",
       "metaDescription": "Jak działają linki afiliacyjne w Larderlab i na co wpływają — a na co nie.",
       "h1": "Informacja o afiliacji",
       "body": [
@@ -291,7 +291,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Listy do redakcji — Larderlab",
+      "metaTitle": "Listy do redakcji",
       "metaDescription": "Jak się z nami skontaktować — sprostowania, propozycje tekstów, opinie o przepisach.",
       "h1": "Listy do redakcji",
       "body": [
@@ -308,7 +308,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaTitle": "The Sunday Larder",
       "metaDescription": "Jeden krótki list redakcyjny, jedna sprawdzona karta przepisu, w każdą niedzielę.",
       "h1": "The Sunday Larder",
       "body": [

@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Ours — Larderlab",
+      "metaTitle": "Ours",
       "metaDescription": "Qui nous sommes, ce que nous publions, et pourquoi.",
       "h1": "L'ours",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Charte éditoriale — Larderlab",
+      "metaTitle": "Charte éditoriale",
       "metaDescription": "Comment nous enquêtons, sourçons et éditons.",
       "h1": "Charte éditoriale",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Comment on cuisine — Larderlab",
+      "metaTitle": "Comment on cuisine",
       "metaDescription": "Comment on développe une recette, teste une stratégie de garde-manger, juge un ingrédient.",
       "h1": "Comment on cuisine",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Comment on cuisine · v1.2 — Larderlab",
+      "metaTitle": "Comment on cuisine · v1.2",
       "metaDescription": "La version longue de notre méthode éditoriale, datée et versionnée.",
       "eyebrow": "Comment on cuisine · v1.2",
       "h1": "La grille de cuisine, en détail.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · janvier 2026 · Première version — règle des trois cuissons, sources, cadre en quatre temps."
     },
     "pipeline": {
-      "metaTitle": "En cuisine — Larderlab",
+      "metaTitle": "En cuisine",
       "metaDescription": "Le journal ouvert de ce qu'on teste, écrit et photographie pour le prochain numéro.",
       "eyebrow": "En cuisine",
       "h1": "Sur le feu en ce moment.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Politique de confidentialité — Larderlab",
+      "metaTitle": "Politique de confidentialité",
       "metaDescription": "Ce qu'on collecte, ce qu'on ne collecte pas.",
       "h1": "Politique de confidentialité",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Conditions d'utilisation — Larderlab",
+      "metaTitle": "Conditions d'utilisation",
       "metaDescription": "Les conditions qui s'appliquent à l'usage de larderlab.com.",
       "h1": "Conditions d'utilisation",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Mentions d'affiliation — Larderlab",
+      "metaTitle": "Mentions d'affiliation",
       "metaDescription": "Comment fonctionnent les liens affiliés sur Larderlab et ce qu'ils ne changent pas.",
       "h1": "Mentions d'affiliation",
       "body": [
@@ -290,7 +290,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Courrier de la rédaction — Larderlab",
+      "metaTitle": "Courrier de la rédaction",
       "metaDescription": "Comment nous écrire — corrections, idées, retours sur recettes.",
       "h1": "Courrier de la rédaction",
       "body": [
@@ -307,7 +307,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "Le Garde-Manger du dimanche — Larderlab",
+      "metaTitle": "Le Garde-Manger du dimanche",
       "metaDescription": "Une courte lettre éditoriale, une fiche-recette testée, chaque dimanche.",
       "h1": "Le Garde-Manger du dimanche",
       "body": [

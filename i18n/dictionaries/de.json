@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Impressum — Larderlab",
+      "metaTitle": "Impressum",
       "metaDescription": "Wer wir sind, was wir veröffentlichen — und warum es uns gibt.",
       "h1": "Das Impressum",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Redaktionsstandards — Larderlab",
+      "metaTitle": "Redaktionsstandards",
       "metaDescription": "Wie wir recherchieren, belegen und redigieren.",
       "h1": "Redaktionsstandards",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Wie wir kochen — Larderlab",
+      "metaTitle": "Wie wir kochen",
       "metaDescription": "Wie wir Rezepte entwickeln, Vorratsstrategien testen und Zutaten bewerten.",
       "h1": "Wie wir kochen",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Wie wir kochen · v1.2 — Larderlab",
+      "metaTitle": "Wie wir kochen · v1.2",
       "metaDescription": "Die Langfassung unserer redaktionellen Methode, datiert und versioniert.",
       "eyebrow": "Wie wir kochen · v1.2",
       "h1": "Die Küchen-Rubrik im Detail.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · Januar 2026 · Erstausgabe — Drei-Köche-Regel, Quellen, Vier-Teile-Rahmen für Zutaten."
     },
     "pipeline": {
-      "metaTitle": "Was kocht — Larderlab",
+      "metaTitle": "Was kocht",
       "metaDescription": "Ein offenes Logbuch dessen, was wir für das nächste Heft testen, schreiben und fotografieren.",
       "eyebrow": "Was kocht",
       "h1": "Was auf dem Herd steht.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Datenschutz — Larderlab",
+      "metaTitle": "Datenschutz",
       "metaDescription": "Was wir erheben, was nicht — und wie wir mit Leserdaten umgehen.",
       "h1": "Datenschutzhinweise",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Nutzungsbedingungen — Larderlab",
+      "metaTitle": "Nutzungsbedingungen",
       "metaDescription": "Die Bedingungen, die für die Nutzung von larderlab.com gelten.",
       "h1": "Nutzungsbedingungen",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate-Hinweis — Larderlab",
+      "metaTitle": "Affiliate-Hinweis",
       "metaDescription": "Wie Affiliate-Links bei Larderlab funktionieren — und was sie nicht ändern.",
       "h1": "Affiliate-Hinweis",
       "body": [
@@ -290,7 +290,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Leserbriefe — Larderlab",
+      "metaTitle": "Leserbriefe",
       "metaDescription": "So erreichen Sie uns — Korrekturen, Themenhinweise, Rezeptrückmeldungen.",
       "h1": "Leserbriefe an die Redaktion",
       "body": [
@@ -307,7 +307,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "Sonntagsvorrat — Larderlab",
+      "metaTitle": "Sonntagsvorrat",
       "metaDescription": "Ein kurzer redaktioneller Brief, eine getestete Rezeptkarte, jeden Sonntag.",
       "h1": "Sonntagsvorrat",
       "body": [

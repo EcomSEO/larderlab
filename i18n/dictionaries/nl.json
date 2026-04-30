@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Colofon — Larderlab",
+      "metaTitle": "Colofon",
       "metaDescription": "Wie we zijn, wat we publiceren en waarom we een blad maken voor koks die al kunnen koken.",
       "h1": "Het colofon",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Redactionele standaarden — Larderlab",
+      "metaTitle": "Redactionele standaarden",
       "metaDescription": "Hoe Larderlab onderzoekt, bronnen kiest en redigeert.",
       "h1": "Redactionele standaarden",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Hoe we koken — Larderlab",
+      "metaTitle": "Hoe we koken",
       "metaDescription": "Hoe Larderlab een recept ontwikkelt, een voorraadkast-strategie test en een ingrediënt beoordeelt.",
       "h1": "Hoe we koken",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Hoe we koken · v1.2 — Larderlab",
+      "metaTitle": "Hoe we koken · v1.2",
       "metaDescription": "De volledige spec voor de redactionele methode van Larderlab, geversioneerd en gedateerd.",
       "eyebrow": "Hoe we koken · v1.2",
       "h1": "De keukenrubriek, in detail.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · januari 2026 · Eerste publieke spec — drie-koks-regel, broneisen."
     },
     "pipeline": {
-      "metaTitle": "Wat er kookt — Larderlab",
+      "metaTitle": "Wat er kookt",
       "metaDescription": "Een open log van wat we testen, schrijven en fotograferen voor het volgende nummer.",
       "eyebrow": "Wat er kookt",
       "h1": "Wat er op het vuur staat.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Privacybeleid — Larderlab",
+      "metaTitle": "Privacybeleid",
       "metaDescription": "Wat we verzamelen, wat niet, en hoe we lezersdata behandelen.",
       "h1": "Privacybeleid",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Servicevoorwaarden — Larderlab",
+      "metaTitle": "Servicevoorwaarden",
       "metaDescription": "De voorwaarden die gelden wanneer je larderlab.com gebruikt.",
       "h1": "Servicevoorwaarden",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate-vermelding — Larderlab",
+      "metaTitle": "Affiliate-vermelding",
       "metaDescription": "Hoe affiliate-links werken op Larderlab en wat ze wel — en niet — beïnvloeden.",
       "h1": "Affiliate-vermelding",
       "body": [
@@ -291,7 +291,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Brieven aan de redactie — Larderlab",
+      "metaTitle": "Brieven aan de redactie",
       "metaDescription": "Hoe je ons bereikt — correcties, tips voor verhalen, feedback op recepten.",
       "h1": "Brieven aan de redactie",
       "body": [
@@ -308,7 +308,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaTitle": "The Sunday Larder",
       "metaDescription": "Eén korte redactionele brief, één geteste receptenkaart, elke zondag.",
       "h1": "The Sunday Larder",
       "body": [

@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Redaksjonen — Larderlab",
+      "metaTitle": "Redaksjonen",
       "metaDescription": "Hvem vi er, hva vi publiserer og hvorfor vi laget et magasin for kokker som allerede kan lage mat.",
       "h1": "Redaksjonen",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Redaksjonelle standarder — Larderlab",
+      "metaTitle": "Redaksjonelle standarder",
       "metaDescription": "Hvordan Larderlab researcher, kildehenviser og redigerer.",
       "h1": "Redaksjonelle standarder",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Slik lager vi mat — Larderlab",
+      "metaTitle": "Slik lager vi mat",
       "metaDescription": "Hvordan Larderlab utvikler en oppskrift, tester en spiskammer-strategi og vurderer en ingrediens.",
       "h1": "Slik lager vi mat",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Slik lager vi mat · v1.2 — Larderlab",
+      "metaTitle": "Slik lager vi mat · v1.2",
       "metaDescription": "Den fullstendige spec-en for Larderlabs redaksjonelle metode, versjonert og datert.",
       "eyebrow": "Slik lager vi mat · v1.2",
       "h1": "Kjøkkenrubrikken, i detalj.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · januar 2026 · Første offentlige spec — tre-kokke-regelen, kildekrav."
     },
     "pipeline": {
-      "metaTitle": "Det som koker — Larderlab",
+      "metaTitle": "Det som koker",
       "metaDescription": "En åpen logg over hva vi tester, skriver og fotograferer til neste utgave.",
       "eyebrow": "Det som koker",
       "h1": "Det som står på platen.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Personvernerklæring — Larderlab",
+      "metaTitle": "Personvernerklæring",
       "metaDescription": "Hva vi samler inn, hva vi ikke samler inn og hvordan vi behandler leserdata.",
       "h1": "Personvernerklæring",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Vilkår for bruk — Larderlab",
+      "metaTitle": "Vilkår for bruk",
       "metaDescription": "Vilkårene som gjelder når du bruker larderlab.com.",
       "h1": "Vilkår for bruk",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate-erklæring — Larderlab",
+      "metaTitle": "Affiliate-erklæring",
       "metaDescription": "Hvordan affiliate-lenker fungerer på Larderlab og hva de påvirker — og ikke.",
       "h1": "Affiliate-erklæring",
       "body": [
@@ -291,7 +291,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Brev til redaktøren — Larderlab",
+      "metaTitle": "Brev til redaktøren",
       "metaDescription": "Slik når du oss — rettelser, reportasjetips, tilbakemelding på oppskrifter.",
       "h1": "Brev til redaktøren",
       "body": [
@@ -308,7 +308,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaTitle": "The Sunday Larder",
       "metaDescription": "Ett kort redaksjonelt brev, ett testet oppskriftskort, hver søndag.",
       "h1": "The Sunday Larder",
       "body": [

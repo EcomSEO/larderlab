@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
+import { TranslationStub } from "@/components/TranslationStub";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: "About Larderlab",
-  description: "Who we are, what we do, and why we built this.",
-  path: "/about",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("trustPages.about");
+  return pageMetadata({
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    path: "/about",
+  });
+}
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations("trustPages.about");
   return (
-    <TrustPageTemplate title="About Larderlab">
+    <TrustPageTemplate title={t("h1")}>
+      <TranslationStub />
       <p>Larderlab exists because the information about non-toxic living is a mess.</p>
       <p>
         Some of it is real — peer-reviewed science on microplastics, PFAS, and

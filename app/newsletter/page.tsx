@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { EmailCapture } from "@/components/EmailCapture";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Newsletter",
-  description:
-    "One calm email a week — the most-useful post we published, plus the swap we'd make first. Free. Unsubscribe anytime.",
-  path: "/newsletter",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("trustPages.newsletter");
+  return pageMetadata({
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    path: "/newsletter",
+  });
+}
 
 export default function NewsletterPage() {
   return (

@@ -132,7 +132,7 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Quiénes somos — Larderlab",
+      "metaTitle": "Quiénes somos",
       "metaDescription": "Quiénes somos, qué publicamos y por qué montamos una revista para cocineros que ya saben de cocina.",
       "h1": "Quiénes somos",
       "body": [
@@ -147,7 +147,7 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Criterios editoriales — Larderlab",
+      "metaTitle": "Criterios editoriales",
       "metaDescription": "Cómo informa Larderlab, de dónde toma sus fuentes y cómo edita.",
       "h1": "Criterios editoriales",
       "body": [
@@ -165,7 +165,7 @@
       ]
     },
     "methodology": {
-      "metaTitle": "Cómo cocinamos — Larderlab",
+      "metaTitle": "Cómo cocinamos",
       "metaDescription": "Cómo Larderlab desarrolla una receta, prueba una estrategia de despensa y valora un ingrediente.",
       "h1": "Cómo cocinamos",
       "body": [
@@ -183,7 +183,7 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "Cómo cocinamos · v1.2 — Larderlab",
+      "metaTitle": "Cómo cocinamos · v1.2",
       "metaDescription": "La especificación extendida del método editorial de Larderlab, versionada y datada.",
       "eyebrow": "Cómo cocinamos · v1.2",
       "h1": "La rúbrica de cocina, en detalle.",
@@ -204,7 +204,7 @@
       "changeLog10": "v1.0 · enero 2026 · Especificación pública inicial — regla de tres cocciones, requisitos de fuente."
     },
     "pipeline": {
-      "metaTitle": "Lo que se cuece — Larderlab",
+      "metaTitle": "Lo que se cuece",
       "metaDescription": "Un registro abierto de lo que probamos, redactamos y fotografiamos para el próximo número.",
       "eyebrow": "Lo que se cuece",
       "h1": "Lo que está en el fuego.",
@@ -240,7 +240,7 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Política de privacidad — Larderlab",
+      "metaTitle": "Política de privacidad",
       "metaDescription": "Qué recopilamos, qué no y cómo tratamos los datos del lector.",
       "h1": "Política de privacidad",
       "body": [
@@ -258,7 +258,7 @@
       ]
     },
     "terms": {
-      "metaTitle": "Términos del servicio — Larderlab",
+      "metaTitle": "Términos del servicio",
       "metaDescription": "Los términos que se aplican cuando usas larderlab.com.",
       "h1": "Términos del servicio",
       "body": [
@@ -276,7 +276,7 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Aviso de afiliación — Larderlab",
+      "metaTitle": "Aviso de afiliación",
       "metaDescription": "Cómo funcionan los enlaces de afiliación en Larderlab y a qué afectan — y a qué no.",
       "h1": "Aviso de afiliación",
       "body": [
@@ -291,7 +291,7 @@
       ]
     },
     "contact": {
-      "metaTitle": "Cartas a la redacción — Larderlab",
+      "metaTitle": "Cartas a la redacción",
       "metaDescription": "Cómo contactarnos — correcciones, propuestas de reportajes, comentarios sobre recetas.",
       "h1": "Cartas a la redacción",
       "body": [
@@ -308,7 +308,7 @@
       ]
     },
     "newsletter": {
-      "metaTitle": "The Sunday Larder — Larderlab",
+      "metaTitle": "The Sunday Larder",
       "metaDescription": "Una carta editorial corta, una ficha de receta probada, cada domingo.",
       "h1": "El Sunday Larder",
       "body": [
