@@ -132,9 +132,9 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Masthead — Larderlab",
-      "metaDescription": "Who we are, what we publish, and why we built a magazine for cooks who already run the kitchen.",
-      "h1": "The masthead",
+      "metaTitle": "Stopka redakcyjna — Larderlab",
+      "metaDescription": "Kim jesteśmy, co publikujemy i dlaczego zrobiliśmy magazyn dla kucharzy, którzy już umieją gotować.",
+      "h1": "Stopka redakcyjna",
       "body": [
         "Larderlab is a small, independent food magazine. We write about pantry architecture, ingredients, technique, and the slow craft of stocking a kitchen well.",
         "We started Larderlab because the cooking internet had two registers — chase-the-trend recipe blogs and shouty diet talk — and almost nothing in between. So we built the in-between. A magazine for the cook who already runs the kitchen.",
@@ -147,9 +147,9 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Editorial standards — Larderlab",
-      "metaDescription": "How Larderlab reports, sources, and edits.",
-      "h1": "Editorial standards",
+      "metaTitle": "Standardy redakcyjne — Larderlab",
+      "metaDescription": "Jak Larderlab pisze, dobiera źródła i redaguje.",
+      "h1": "Standardy redakcyjne",
       "body": [
         "Larderlab is independent food writing. The reader trust we want to earn is built on the same boring habits the best magazines have always practised.",
         "## Sourcing",
@@ -165,9 +165,9 @@
       ]
     },
     "methodology": {
-      "metaTitle": "How we cook — Larderlab",
-      "metaDescription": "How Larderlab develops a recipe, tests a pantry strategy, and rates an ingredient.",
-      "h1": "How we cook",
+      "metaTitle": "Jak gotujemy — Larderlab",
+      "metaDescription": "Jak Larderlab opracowuje przepis, testuje strategię spiżarni i ocenia składnik.",
+      "h1": "Jak gotujemy",
       "body": [
         "This is the editorial standards page for Larderlab — what we test, how we cite, and what we'll never do under the byline.",
         "## Recipes",
@@ -183,35 +183,35 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "How we cook · v1.2 — Larderlab",
-      "metaDescription": "The long-form spec for Larderlab's editorial method, versioned and dated.",
-      "eyebrow": "How we cook · v1.2",
-      "h1": "The kitchen rubric, in detail.",
-      "intro": "Five short standards a feature has to clear before it goes into the issue. We version them like software. The page below is the long-form one.",
-      "step1Title": "Cooked, more than once",
-      "step1Body": "Every recipe in Larderlab is cooked at least three times by two cooks. The recipe card on the page is the version that survived round three.",
-      "step2Title": "Cited where numbers live",
-      "step2Body": "Storage temperatures, oxidation rates, salt percentages — anything with a number behind it is sourced. Taste calls are signed by the cook who made them.",
-      "step3Title": "Pantry-real, not staged",
-      "step3Body": "We cook on a domestic range. Pots and pans you can buy. We test recipes against the pantry we describe — if the cover story names twelve sauces, the recipes lean on those twelve.",
-      "step4Title": "Edited for warmth",
-      "step4Body": "Every draft passes a voice review. No hectoring, no diet talk, no surprise upsells. The reader is a cook, not a target.",
-      "step5Title": "Errors corrected in the open",
-      "step5Body": "When we're wrong, the page carries a dated note at the bottom and we link to the new version.",
-      "changeLogTitle": "Change log",
-      "changeLog12": "v1.2 · April 2026 · Recipe-card structure standardised. Plate-photo provenance now visible in caption. Added storage block to every recipe.",
-      "changeLog11": "v1.1 · February 2026 · Test-kitchen sign-off line introduced. Pantry strategy frame documented.",
-      "changeLog10": "v1.0 · January 2026 · Initial public spec — three-cook rule, sourcing requirements, the four-part ingredient frame."
+      "metaTitle": "Jak gotujemy · v1.2 — Larderlab",
+      "metaDescription": "Pełna specyfikacja metody redakcyjnej Larderlab, wersjonowana i datowana.",
+      "eyebrow": "Jak gotujemy · v1.2",
+      "h1": "Rubryka kuchenna, szczegółowo.",
+      "intro": "Pięć krótkich standardów, które tekst musi spełnić, zanim wejdzie do numeru. Wersjonowane i datowane.",
+      "step1Title": "Gotowane, więcej niż raz",
+      "step1Body": "Każdy przepis w Larderlab gotowany jest co najmniej trzy razy przez dwóch kucharzy. Przepis wchodzi do druku tylko wtedy, gdy oboje podpisują wynik.",
+      "step2Title": "Cytowane tam, gdzie żyją liczby",
+      "step2Body": "Temperatury przechowywania, tempo utleniania, procenty soli — wszystko, co ma liczbę, cytujemy do źródła pierwotnego.",
+      "step3Title": "Spiżarnio-realne, nie inscenizowane",
+      "step3Body": "Gotujemy na domowej kuchence. Garnki, które można kupić. Przepisy testujemy ponownie w prawdziwych kuchniach przed publikacją.",
+      "step4Title": "Redagowane z ciepłem",
+      "step4Body": "Każda wersja przechodzi review tonu. Bez kazań, bez gadania o dietach, bez ukrytych sprzedaży.",
+      "step5Title": "Błędy poprawiane jawnie",
+      "step5Body": "Kiedy się mylimy, strona nosi datowaną notatkę u dołu i linkujemy do poprzedniej wersji.",
+      "changeLogTitle": "Lista zmian",
+      "changeLog12": "v1.2 · kwiecień 2026 · Standaryzacja struktury karty przepisu. Pochodzenie zdjęcia talerza.",
+      "changeLog11": "v1.1 · luty 2026 · Wprowadzono podpis testowej kuchni. Sformalizowano strategię spiżarni.",
+      "changeLog10": "v1.0 · styczeń 2026 · Pierwsza wersja publiczna — zasada trzech gotowań, wymogi źródłowe."
     },
     "pipeline": {
-      "metaTitle": "What's cooking — Larderlab",
-      "metaDescription": "An open log of what we're testing, drafting, and shooting for the next issue.",
-      "eyebrow": "What's cooking",
-      "h1": "What's on the burner.",
-      "intro": "An open log of every feature, recipe card, and ingredient deep-dive we're testing for the next issue. Updated each week. We share this because secrecy belongs to ad agencies.",
-      "researching": "On the test bench",
-      "drafted": "Drafted, in copy edit",
-      "scheduled": "Scheduled for issue 05",
+      "metaTitle": "Co się gotuje — Larderlab",
+      "metaDescription": "Otwarty rejestr tego, co testujemy, piszemy i fotografujemy do następnego numeru.",
+      "eyebrow": "Co się gotuje",
+      "h1": "Co stoi na palniku.",
+      "intro": "Otwarty rejestr każdego tekstu, karty przepisu i pogłębionej analizy składnika, którą testujemy.",
+      "researching": "Na stole testowym",
+      "drafted": "Napisane, w korekcie",
+      "scheduled": "Zaplanowane na numer 05",
       "items": [
         {
           "title": "The twelve sauces every pantry earns",
@@ -240,9 +240,9 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Privacy policy — Larderlab",
-      "metaDescription": "What we collect, what we don't, and how we handle reader data.",
-      "h1": "Privacy policy",
+      "metaTitle": "Polityka prywatności — Larderlab",
+      "metaDescription": "Co zbieramy, czego nie zbieramy i jak obchodzimy się z danymi czytelników.",
+      "h1": "Polityka prywatności",
       "body": [
         "This page describes how Larderlab collects, uses, and shares information when you visit larderlab.com.",
         "## What we collect",
@@ -258,9 +258,9 @@
       ]
     },
     "terms": {
-      "metaTitle": "Terms of service — Larderlab",
-      "metaDescription": "The terms that apply when you use larderlab.com.",
-      "h1": "Terms of service",
+      "metaTitle": "Regulamin — Larderlab",
+      "metaDescription": "Warunki, które obowiązują, gdy korzystasz z larderlab.com.",
+      "h1": "Regulamin",
       "body": [
         "By using larderlab.com you agree to these terms.",
         "## Editorial, not advice",
@@ -276,9 +276,9 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate disclosure — Larderlab",
-      "metaDescription": "How affiliate links work on Larderlab and what they do — and don't — affect.",
-      "h1": "Affiliate disclosure",
+      "metaTitle": "Informacja o afiliacji — Larderlab",
+      "metaDescription": "Jak działają linki afiliacyjne w Larderlab i na co wpływają — a na co nie.",
+      "h1": "Informacja o afiliacji",
       "body": [
         "Larderlab participates in a small number of affiliate programs. Some product links earn us a commission when you buy through them, at no additional cost to you.",
         "## How we use them",
@@ -291,9 +291,9 @@
       ]
     },
     "contact": {
-      "metaTitle": "Letters to the editor — Larderlab",
-      "metaDescription": "How to reach us — corrections, story tips, recipe feedback.",
-      "h1": "Letters to the editor",
+      "metaTitle": "Listy do redakcji — Larderlab",
+      "metaDescription": "Jak się z nami skontaktować — sprostowania, propozycje tekstów, opinie o przepisach.",
+      "h1": "Listy do redakcji",
       "body": [
         "## General",
         "hello@larderlab.com — feedback, story tips, pantry questions, everything else.",
@@ -309,7 +309,7 @@
     },
     "newsletter": {
       "metaTitle": "The Sunday Larder — Larderlab",
-      "metaDescription": "One short editorial letter, one tested recipe card, every Sunday.",
+      "metaDescription": "Jeden krótki list redakcyjny, jedna sprawdzona karta przepisu, w każdą niedzielę.",
       "h1": "The Sunday Larder",
       "body": [
         "One short editorial letter, one tested recipe card you can cook from a stocked pantry, and the picks we'd put on the shelf this week. No fire-hose, no hype, no upsells. Sundays only."
@@ -328,7 +328,7 @@
     "backHome": "Wróć na okładkę"
   },
   "localeSwitcher": {
-    "label": "Language",
+    "label": "Język",
     "en": "EN",
     "enFull": "English",
     "de": "DE",
@@ -371,7 +371,7 @@
     "checklistsEyebrow": "Listy",
     "checklistsTitle": "Do druku, użyteczne.",
     "emptyBefore": "Reportaże pojawią się tu po korekcie. Sprawdź",
-    "emptyHomeLink": "okładkę",
+    "emptyHomeLink": "okładka",
     "emptyAfter": "by zobaczyć, co już opublikowane."
   },
   "postType": {

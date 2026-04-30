@@ -132,9 +132,9 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Masthead — Larderlab",
-      "metaDescription": "Who we are, what we publish, and why we built a magazine for cooks who already run the kitchen.",
-      "h1": "The masthead",
+      "metaTitle": "Colofon — Larderlab",
+      "metaDescription": "Wie we zijn, wat we publiceren en waarom we een blad maken voor koks die al kunnen koken.",
+      "h1": "Het colofon",
       "body": [
         "Larderlab is a small, independent food magazine. We write about pantry architecture, ingredients, technique, and the slow craft of stocking a kitchen well.",
         "We started Larderlab because the cooking internet had two registers — chase-the-trend recipe blogs and shouty diet talk — and almost nothing in between. So we built the in-between. A magazine for the cook who already runs the kitchen.",
@@ -147,9 +147,9 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Editorial standards — Larderlab",
-      "metaDescription": "How Larderlab reports, sources, and edits.",
-      "h1": "Editorial standards",
+      "metaTitle": "Redactionele standaarden — Larderlab",
+      "metaDescription": "Hoe Larderlab onderzoekt, bronnen kiest en redigeert.",
+      "h1": "Redactionele standaarden",
       "body": [
         "Larderlab is independent food writing. The reader trust we want to earn is built on the same boring habits the best magazines have always practised.",
         "## Sourcing",
@@ -165,9 +165,9 @@
       ]
     },
     "methodology": {
-      "metaTitle": "How we cook — Larderlab",
-      "metaDescription": "How Larderlab develops a recipe, tests a pantry strategy, and rates an ingredient.",
-      "h1": "How we cook",
+      "metaTitle": "Hoe we koken — Larderlab",
+      "metaDescription": "Hoe Larderlab een recept ontwikkelt, een voorraadkast-strategie test en een ingrediënt beoordeelt.",
+      "h1": "Hoe we koken",
       "body": [
         "This is the editorial standards page for Larderlab — what we test, how we cite, and what we'll never do under the byline.",
         "## Recipes",
@@ -183,35 +183,35 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "How we cook · v1.2 — Larderlab",
-      "metaDescription": "The long-form spec for Larderlab's editorial method, versioned and dated.",
-      "eyebrow": "How we cook · v1.2",
-      "h1": "The kitchen rubric, in detail.",
-      "intro": "Five short standards a feature has to clear before it goes into the issue. We version them like software. The page below is the long-form one.",
-      "step1Title": "Cooked, more than once",
-      "step1Body": "Every recipe in Larderlab is cooked at least three times by two cooks. The recipe card on the page is the version that survived round three.",
-      "step2Title": "Cited where numbers live",
-      "step2Body": "Storage temperatures, oxidation rates, salt percentages — anything with a number behind it is sourced. Taste calls are signed by the cook who made them.",
-      "step3Title": "Pantry-real, not staged",
-      "step3Body": "We cook on a domestic range. Pots and pans you can buy. We test recipes against the pantry we describe — if the cover story names twelve sauces, the recipes lean on those twelve.",
-      "step4Title": "Edited for warmth",
-      "step4Body": "Every draft passes a voice review. No hectoring, no diet talk, no surprise upsells. The reader is a cook, not a target.",
-      "step5Title": "Errors corrected in the open",
-      "step5Body": "When we're wrong, the page carries a dated note at the bottom and we link to the new version.",
-      "changeLogTitle": "Change log",
-      "changeLog12": "v1.2 · April 2026 · Recipe-card structure standardised. Plate-photo provenance now visible in caption. Added storage block to every recipe.",
-      "changeLog11": "v1.1 · February 2026 · Test-kitchen sign-off line introduced. Pantry strategy frame documented.",
-      "changeLog10": "v1.0 · January 2026 · Initial public spec — three-cook rule, sourcing requirements, the four-part ingredient frame."
+      "metaTitle": "Hoe we koken · v1.2 — Larderlab",
+      "metaDescription": "De volledige spec voor de redactionele methode van Larderlab, geversioneerd en gedateerd.",
+      "eyebrow": "Hoe we koken · v1.2",
+      "h1": "De keukenrubriek, in detail.",
+      "intro": "Vijf korte standaarden die een artikel moet halen voordat het in het nummer komt. Geversioneerd en gedateerd.",
+      "step1Title": "Gekookt, meer dan eens",
+      "step1Body": "Elk recept in Larderlab wordt minstens drie keer gekookt door twee koks. Het recept gaat pas live als beiden het resultaat onderschrijven.",
+      "step2Title": "Gerefereerd waar de getallen wonen",
+      "step2Body": "Bewaartemperaturen, oxidatiesnelheden, zoutpercentages — alles met een getal wordt geciteerd uit primaire bron.",
+      "step3Title": "Voorraadkast-echt, niet ge-staged",
+      "step3Body": "We koken op een huiselijk fornuis. Pannen die je kunt kopen. We testen recepten opnieuw in echte keukens voor publicatie.",
+      "step4Title": "Geredigeerd met warmte",
+      "step4Body": "Elke versie krijgt een toon-review. Geen preken, geen dieet-praat, geen verrassende verkooppraatjes.",
+      "step5Title": "Fouten openlijk gecorrigeerd",
+      "step5Body": "Als we ernaast zitten, krijgt de pagina onderaan een gedateerde noot en linken we naar de oude versie.",
+      "changeLogTitle": "Wijzigingslog",
+      "changeLog12": "v1.2 · april 2026 · Structuur receptenkaart gestandaardiseerd. Herkomst plaatfoto.",
+      "changeLog11": "v1.1 · februari 2026 · Goedkeuringslijn testkeuken toegevoegd. Voorraadkast-strategie geformaliseerd.",
+      "changeLog10": "v1.0 · januari 2026 · Eerste publieke spec — drie-koks-regel, broneisen."
     },
     "pipeline": {
-      "metaTitle": "What's cooking — Larderlab",
-      "metaDescription": "An open log of what we're testing, drafting, and shooting for the next issue.",
-      "eyebrow": "What's cooking",
-      "h1": "What's on the burner.",
-      "intro": "An open log of every feature, recipe card, and ingredient deep-dive we're testing for the next issue. Updated each week. We share this because secrecy belongs to ad agencies.",
-      "researching": "On the test bench",
-      "drafted": "Drafted, in copy edit",
-      "scheduled": "Scheduled for issue 05",
+      "metaTitle": "Wat er kookt — Larderlab",
+      "metaDescription": "Een open log van wat we testen, schrijven en fotograferen voor het volgende nummer.",
+      "eyebrow": "Wat er kookt",
+      "h1": "Wat er op het vuur staat.",
+      "intro": "Een open log van elk artikel, receptenkaart en ingrediëntenstudie die we testen.",
+      "researching": "Op de testbank",
+      "drafted": "Geschreven, in eindredactie",
+      "scheduled": "Gepland voor nummer 05",
       "items": [
         {
           "title": "The twelve sauces every pantry earns",
@@ -240,9 +240,9 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Privacy policy — Larderlab",
-      "metaDescription": "What we collect, what we don't, and how we handle reader data.",
-      "h1": "Privacy policy",
+      "metaTitle": "Privacybeleid — Larderlab",
+      "metaDescription": "Wat we verzamelen, wat niet, en hoe we lezersdata behandelen.",
+      "h1": "Privacybeleid",
       "body": [
         "This page describes how Larderlab collects, uses, and shares information when you visit larderlab.com.",
         "## What we collect",
@@ -258,9 +258,9 @@
       ]
     },
     "terms": {
-      "metaTitle": "Terms of service — Larderlab",
-      "metaDescription": "The terms that apply when you use larderlab.com.",
-      "h1": "Terms of service",
+      "metaTitle": "Servicevoorwaarden — Larderlab",
+      "metaDescription": "De voorwaarden die gelden wanneer je larderlab.com gebruikt.",
+      "h1": "Servicevoorwaarden",
       "body": [
         "By using larderlab.com you agree to these terms.",
         "## Editorial, not advice",
@@ -276,9 +276,9 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate disclosure — Larderlab",
-      "metaDescription": "How affiliate links work on Larderlab and what they do — and don't — affect.",
-      "h1": "Affiliate disclosure",
+      "metaTitle": "Affiliate-vermelding — Larderlab",
+      "metaDescription": "Hoe affiliate-links werken op Larderlab en wat ze wel — en niet — beïnvloeden.",
+      "h1": "Affiliate-vermelding",
       "body": [
         "Larderlab participates in a small number of affiliate programs. Some product links earn us a commission when you buy through them, at no additional cost to you.",
         "## How we use them",
@@ -291,9 +291,9 @@
       ]
     },
     "contact": {
-      "metaTitle": "Letters to the editor — Larderlab",
-      "metaDescription": "How to reach us — corrections, story tips, recipe feedback.",
-      "h1": "Letters to the editor",
+      "metaTitle": "Brieven aan de redactie — Larderlab",
+      "metaDescription": "Hoe je ons bereikt — correcties, tips voor verhalen, feedback op recepten.",
+      "h1": "Brieven aan de redactie",
       "body": [
         "## General",
         "hello@larderlab.com — feedback, story tips, pantry questions, everything else.",
@@ -309,7 +309,7 @@
     },
     "newsletter": {
       "metaTitle": "The Sunday Larder — Larderlab",
-      "metaDescription": "One short editorial letter, one tested recipe card, every Sunday.",
+      "metaDescription": "Eén korte redactionele brief, één geteste receptenkaart, elke zondag.",
       "h1": "The Sunday Larder",
       "body": [
         "One short editorial letter, one tested recipe card you can cook from a stocked pantry, and the picks we'd put on the shelf this week. No fire-hose, no hype, no upsells. Sundays only."
@@ -328,7 +328,7 @@
     "backHome": "Terug naar de cover"
   },
   "localeSwitcher": {
-    "label": "Language",
+    "label": "Taal",
     "en": "EN",
     "enFull": "English",
     "de": "DE",

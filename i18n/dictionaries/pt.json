@@ -17,7 +17,7 @@
   "header": {
     "logoAria": "Larderlab — capa",
     "issue": "Número 04",
-    "issueDate": "Abril de 2026",
+    "issueDate": "Abril 2026",
     "navLarder": "Despensa",
     "navRecipes": "Receitas",
     "navPantry": "Provisões",
@@ -132,9 +132,9 @@
   },
   "trustPages": {
     "about": {
-      "metaTitle": "Masthead — Larderlab",
-      "metaDescription": "Who we are, what we publish, and why we built a magazine for cooks who already run the kitchen.",
-      "h1": "The masthead",
+      "metaTitle": "Ficha técnica — Larderlab",
+      "metaDescription": "Quem somos, o que publicamos e por que fizemos uma revista para cozinheiros que já sabem cozinhar.",
+      "h1": "A ficha técnica",
       "body": [
         "Larderlab is a small, independent food magazine. We write about pantry architecture, ingredients, technique, and the slow craft of stocking a kitchen well.",
         "We started Larderlab because the cooking internet had two registers — chase-the-trend recipe blogs and shouty diet talk — and almost nothing in between. So we built the in-between. A magazine for the cook who already runs the kitchen.",
@@ -147,9 +147,9 @@
       ]
     },
     "editorialStandards": {
-      "metaTitle": "Editorial standards — Larderlab",
-      "metaDescription": "How Larderlab reports, sources, and edits.",
-      "h1": "Editorial standards",
+      "metaTitle": "Padrões editoriais — Larderlab",
+      "metaDescription": "Como o Larderlab investiga, cita as fontes e edita.",
+      "h1": "Padrões editoriais",
       "body": [
         "Larderlab is independent food writing. The reader trust we want to earn is built on the same boring habits the best magazines have always practised.",
         "## Sourcing",
@@ -165,9 +165,9 @@
       ]
     },
     "methodology": {
-      "metaTitle": "How we cook — Larderlab",
-      "metaDescription": "How Larderlab develops a recipe, tests a pantry strategy, and rates an ingredient.",
-      "h1": "How we cook",
+      "metaTitle": "Como cozinhamos — Larderlab",
+      "metaDescription": "Como o Larderlab desenvolve uma receita, testa uma estratégia de despensa e avalia um ingrediente.",
+      "h1": "Como cozinhamos",
       "body": [
         "This is the editorial standards page for Larderlab — what we test, how we cite, and what we'll never do under the byline.",
         "## Recipes",
@@ -183,35 +183,35 @@
       ]
     },
     "methodologyV12": {
-      "metaTitle": "How we cook · v1.2 — Larderlab",
-      "metaDescription": "The long-form spec for Larderlab's editorial method, versioned and dated.",
-      "eyebrow": "How we cook · v1.2",
-      "h1": "The kitchen rubric, in detail.",
-      "intro": "Five short standards a feature has to clear before it goes into the issue. We version them like software. The page below is the long-form one.",
-      "step1Title": "Cooked, more than once",
-      "step1Body": "Every recipe in Larderlab is cooked at least three times by two cooks. The recipe card on the page is the version that survived round three.",
-      "step2Title": "Cited where numbers live",
-      "step2Body": "Storage temperatures, oxidation rates, salt percentages — anything with a number behind it is sourced. Taste calls are signed by the cook who made them.",
-      "step3Title": "Pantry-real, not staged",
-      "step3Body": "We cook on a domestic range. Pots and pans you can buy. We test recipes against the pantry we describe — if the cover story names twelve sauces, the recipes lean on those twelve.",
-      "step4Title": "Edited for warmth",
-      "step4Body": "Every draft passes a voice review. No hectoring, no diet talk, no surprise upsells. The reader is a cook, not a target.",
-      "step5Title": "Errors corrected in the open",
-      "step5Body": "When we're wrong, the page carries a dated note at the bottom and we link to the new version.",
-      "changeLogTitle": "Change log",
-      "changeLog12": "v1.2 · April 2026 · Recipe-card structure standardised. Plate-photo provenance now visible in caption. Added storage block to every recipe.",
-      "changeLog11": "v1.1 · February 2026 · Test-kitchen sign-off line introduced. Pantry strategy frame documented.",
-      "changeLog10": "v1.0 · January 2026 · Initial public spec — three-cook rule, sourcing requirements, the four-part ingredient frame."
+      "metaTitle": "Como cozinhamos · v1.2 — Larderlab",
+      "metaDescription": "A especificação extensa do método editorial do Larderlab, versionada e datada.",
+      "eyebrow": "Como cozinhamos · v1.2",
+      "h1": "A rubrica da cozinha, em detalhe.",
+      "intro": "Cinco padrões curtos que uma peça tem de cumprir antes de entrar no número. Versionados e datados.",
+      "step1Title": "Cozinhada, mais do que uma vez",
+      "step1Body": "Cada receita no Larderlab é cozinhada pelo menos três vezes por dois cozinheiros. A receita só é publicada quando ambos assinam o resultado.",
+      "step2Title": "Citado onde vivem os números",
+      "step2Body": "Temperaturas de conservação, taxas de oxidação, percentagens de sal — tudo com um número é citado à fonte primária.",
+      "step3Title": "Da despensa real, não encenada",
+      "step3Body": "Cozinhamos numa placa doméstica. Tachos e frigideiras que se compram. Testamos as receitas de novo em cozinhas reais antes da publicação.",
+      "step4Title": "Editada com calma",
+      "step4Body": "Cada rascunho passa por uma revisão de tom. Sem sermões, sem conversa de dietas, sem vendas surpresa.",
+      "step5Title": "Erros corrigidos à vista",
+      "step5Body": "Quando erramos, a página leva uma nota datada no fim e ligamos à versão anterior.",
+      "changeLogTitle": "Registo de alterações",
+      "changeLog12": "v1.2 · abril 2026 · Estrutura da ficha de receita normalizada. Proveniência da foto do prato.",
+      "changeLog11": "v1.1 · fevereiro 2026 · Linha de validação da cozinha de testes introduzida. Estratégia de despensa formalizada.",
+      "changeLog10": "v1.0 · janeiro 2026 · Especificação pública inicial — regra das três cozeduras, requisitos de fonte."
     },
     "pipeline": {
-      "metaTitle": "What's cooking — Larderlab",
-      "metaDescription": "An open log of what we're testing, drafting, and shooting for the next issue.",
-      "eyebrow": "What's cooking",
-      "h1": "What's on the burner.",
-      "intro": "An open log of every feature, recipe card, and ingredient deep-dive we're testing for the next issue. Updated each week. We share this because secrecy belongs to ad agencies.",
-      "researching": "On the test bench",
-      "drafted": "Drafted, in copy edit",
-      "scheduled": "Scheduled for issue 05",
+      "metaTitle": "O que está ao lume — Larderlab",
+      "metaDescription": "Um registo aberto do que testamos, escrevemos e fotografamos para o próximo número.",
+      "eyebrow": "O que está ao lume",
+      "h1": "O que está no fogão.",
+      "intro": "Um registo aberto de cada reportagem, ficha de receita e estudo de ingrediente que estamos a testar.",
+      "researching": "Na bancada de testes",
+      "drafted": "Escrito, em revisão",
+      "scheduled": "Agendado para o número 05",
       "items": [
         {
           "title": "The twelve sauces every pantry earns",
@@ -240,9 +240,9 @@
       ]
     },
     "privacy": {
-      "metaTitle": "Privacy policy — Larderlab",
-      "metaDescription": "What we collect, what we don't, and how we handle reader data.",
-      "h1": "Privacy policy",
+      "metaTitle": "Política de privacidade — Larderlab",
+      "metaDescription": "O que recolhemos, o que não recolhemos e como tratamos os dados do leitor.",
+      "h1": "Política de privacidade",
       "body": [
         "This page describes how Larderlab collects, uses, and shares information when you visit larderlab.com.",
         "## What we collect",
@@ -258,9 +258,9 @@
       ]
     },
     "terms": {
-      "metaTitle": "Terms of service — Larderlab",
-      "metaDescription": "The terms that apply when you use larderlab.com.",
-      "h1": "Terms of service",
+      "metaTitle": "Termos do serviço — Larderlab",
+      "metaDescription": "Os termos que se aplicam quando usa larderlab.com.",
+      "h1": "Termos do serviço",
       "body": [
         "By using larderlab.com you agree to these terms.",
         "## Editorial, not advice",
@@ -276,9 +276,9 @@
       ]
     },
     "affiliateDisclosure": {
-      "metaTitle": "Affiliate disclosure — Larderlab",
-      "metaDescription": "How affiliate links work on Larderlab and what they do — and don't — affect.",
-      "h1": "Affiliate disclosure",
+      "metaTitle": "Aviso de afiliação — Larderlab",
+      "metaDescription": "Como funcionam os links de afiliação no Larderlab e o que afetam — e não afetam.",
+      "h1": "Aviso de afiliação",
       "body": [
         "Larderlab participates in a small number of affiliate programs. Some product links earn us a commission when you buy through them, at no additional cost to you.",
         "## How we use them",
@@ -291,9 +291,9 @@
       ]
     },
     "contact": {
-      "metaTitle": "Letters to the editor — Larderlab",
-      "metaDescription": "How to reach us — corrections, story tips, recipe feedback.",
-      "h1": "Letters to the editor",
+      "metaTitle": "Cartas à redação — Larderlab",
+      "metaDescription": "Como contactar-nos — correções, sugestões de reportagens, comentários sobre receitas.",
+      "h1": "Cartas à redação",
       "body": [
         "## General",
         "hello@larderlab.com — feedback, story tips, pantry questions, everything else.",
@@ -309,7 +309,7 @@
     },
     "newsletter": {
       "metaTitle": "The Sunday Larder — Larderlab",
-      "metaDescription": "One short editorial letter, one tested recipe card, every Sunday.",
+      "metaDescription": "Uma carta editorial curta, uma ficha de receita testada, todos os domingos.",
       "h1": "The Sunday Larder",
       "body": [
         "One short editorial letter, one tested recipe card you can cook from a stocked pantry, and the picks we'd put on the shelf this week. No fire-hose, no hype, no upsells. Sundays only."
@@ -328,7 +328,7 @@
     "backHome": "Voltar à capa"
   },
   "localeSwitcher": {
-    "label": "Language",
+    "label": "Idioma",
     "en": "EN",
     "enFull": "English",
     "de": "DE",
