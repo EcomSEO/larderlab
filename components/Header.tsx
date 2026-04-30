@@ -176,20 +176,20 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-rule">
-      <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-6">
+      <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-4">
         <Link
           href="/"
           aria-label={(() => { try { return t("logoAria"); } catch { return "Larderlab — home"; } })()}
-          className="flex items-center gap-2 group shrink-0"
+          className="flex items-center gap-2.5 group shrink-0 focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper rounded-sm"
         >
           <LarderMark />
-          <span className="font-display text-[18px] font-semibold tracking-tight text-olive-deep group-hover:text-olive transition-colors">
+          <span className="font-display text-[19px] font-semibold tracking-tight text-olive-700 group-hover:text-olive transition-colors duration-fast">
             larderlab
           </span>
         </Link>
 
         <nav
-          className="hidden lg:flex items-center gap-1 ml-4 flex-1"
+          className="hidden lg:flex items-center gap-0.5 flex-1 min-w-0"
           aria-label="Primary"
           onMouseLeave={scheduleClose}
         >
@@ -199,14 +199,14 @@ export function Header() {
               return (
                 <div
                   key={item.label}
-                  className="relative"
+                  className="relative shrink-0"
                   onMouseEnter={() => openMega(item.label)}
                   onFocus={() => openMega(item.label)}
                 >
                   <button
                     type="button"
-                    className={`px-3 py-2 text-[15px] font-medium rounded-md transition-colors ${
-                      isOpen ? "text-olive-deep bg-olive-50" : "text-ink hover:text-olive-deep hover:bg-olive-50"
+                    className={`whitespace-nowrap px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-fast focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper ${
+                      isOpen ? "text-olive-700 bg-olive-50" : "text-ink hover:text-olive-700 hover:bg-olive-50"
                     }`}
                     aria-haspopup="true"
                     aria-expanded={isOpen}
@@ -220,7 +220,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-[15px] font-medium text-ink hover:text-olive-deep hover:bg-olive-50 transition-colors rounded-md"
+                className="whitespace-nowrap shrink-0 px-3 py-2 text-[14px] font-medium text-ink hover:text-olive-700 hover:bg-olive-50 transition-colors duration-fast rounded-md focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
               >
                 {item.label}
               </Link>
@@ -228,25 +228,10 @@ export function Header() {
           })}
         </nav>
 
-        <form
-          role="search"
-          action="/recipes"
-          className="hidden md:flex items-center w-[320px] h-10 px-4 rounded-pill bg-white border border-olive-100 focus-within:border-olive focus-within:bg-white transition-colors"
-        >
-          <SearchIcon className="w-4 h-4 text-ink-muted shrink-0" />
-          <input
-            type="search"
-            name="q"
-            placeholder="Search recipes, ingredients, guides…"
-            className="ml-2 bg-transparent w-full text-[14px] text-ink placeholder:text-ink-soft outline-none"
-            aria-label="Search the site"
-          />
-        </form>
-
         <div className="flex items-center gap-2 shrink-0">
           <Link
             href="/newsletter"
-            className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-olive text-white text-[14px] font-semibold hover:bg-olive-deep transition-colors"
+            className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-olive text-white text-[14px] font-semibold hover:bg-olive-600 active:bg-olive-700 transition-colors duration-fast focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
           >
             Newsletter
           </Link>
@@ -275,7 +260,7 @@ export function Header() {
 
       {activeItem && isMega(activeItem) && (
         <div
-          className="absolute left-0 right-0 bg-white border-b border-rule shadow-card"
+          className="absolute left-0 right-0 bg-white border-b border-rule shadow-notebook-hover"
           onMouseEnter={() => openMega(activeItem.label)}
           onMouseLeave={scheduleClose}
         >

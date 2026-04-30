@@ -8,49 +8,47 @@ const tools = [
   { slug: "macro-calculator", name: "Macro Calculator" },
 ];
 
-/**
- * Footer — healthline-grade publisher footer.
- * 4-col link grid (Pantry / Recipes / Nutrition / Company), medical
- * disclaimer block, imprint strip. Sister-site cross-links removed
- * per the 2026-04-29 operator-isolation lock.
- *
- * White surface (surface-alt #F7F9FB), olive accents, no dark masthead.
- */
 export function Footer() {
+  const linkClass =
+    "text-ink-muted hover:text-olive-700 transition-colors duration-fast focus-visible:outline-none focus-visible:text-olive-700";
+  const imprintLink =
+    "hover:text-olive-700 transition-colors duration-fast focus-visible:outline-none focus-visible:text-olive-700";
+
   return (
-    <footer className="mt-24 bg-surface-alt border-t border-rule">
-      <div className="mx-auto max-w-container px-6 pt-14 pb-8">
+    <footer className="mt-32 bg-surface-alt border-t border-rule">
+      <div className="mx-auto max-w-container px-6 pt-16 pb-10">
         {/* Brand row */}
-        <div className="grid md:grid-cols-12 gap-8 pb-10 border-b border-rule">
+        <div className="grid md:grid-cols-12 gap-10 pb-12 border-b border-rule">
           <div className="md:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2" aria-label="Larderlab — home">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper rounded-sm"
+              aria-label="Larderlab — home"
+            >
               <LarderMark />
-              <span className="font-display text-[20px] font-semibold tracking-tight text-olive-deep">
+              <span className="font-display text-[22px] font-semibold tracking-tight text-olive-700">
                 larderlab
               </span>
             </Link>
-            <p className="mt-4 text-[14px] text-ink-muted leading-relaxed max-w-md">
-              Evidence-led nutrition + pantry information. Every recipe
-              tested in our test kitchen and reviewed by a registered
-              dietitian. Independent — no brand sponsorships.
+            <p className="mt-5 text-body-sm text-ink-muted leading-relaxed max-w-md">
+              Evidence-led nutrition and pantry information. Independent —
+              no brand sponsorships, no detox/superfood/hack copy. Every
+              cost-per-gram figure is dated; every claim is tiered.
             </p>
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="eyebrow mb-3">Pantry</h4>
-            <ul className="space-y-2 text-[14px]">
+            <h4 className="text-eyebrow uppercase text-olive-700 mb-4">Pantry</h4>
+            <ul className="space-y-2.5 text-body-sm">
               {hubs.slice(0, 5).map((hub) => (
                 <li key={hub.slug}>
-                  <Link
-                    href={`/guides/${hub.slug}`}
-                    className="text-ink hover:text-olive-deep transition-colors"
-                  >
+                  <Link href={`/guides/${hub.slug}`} className={linkClass}>
                     {hub.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/recipes" className="text-ink hover:text-olive-deep transition-colors">
+                <Link href="/recipes" className={linkClass}>
                   All recipes
                 </Link>
               </li>
@@ -58,17 +56,17 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="eyebrow mb-3">Tools</h4>
-            <ul className="space-y-2 text-[14px]">
+            <h4 className="text-eyebrow uppercase text-olive-700 mb-4">Tools</h4>
+            <ul className="space-y-2.5 text-body-sm">
               {tools.map((t) => (
                 <li key={t.slug}>
-                  <Link href={`/${t.slug}`} className="text-ink hover:text-olive-deep transition-colors">
+                  <Link href={`/${t.slug}`} className={linkClass}>
                     {t.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/pipeline" className="text-ink hover:text-olive-deep transition-colors">
+                <Link href="/pipeline" className={linkClass}>
                   Pipeline
                 </Link>
               </li>
@@ -76,26 +74,26 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="eyebrow mb-3">Company</h4>
-            <ul className="space-y-2 text-[14px]">
-              <li><Link href="/about" className="text-ink hover:text-olive-deep">About</Link></li>
-              <li><Link href="/editorial-standards" className="text-ink hover:text-olive-deep">Editorial standards</Link></li>
-              <li><Link href="/methodology" className="text-ink hover:text-olive-deep">Methodology</Link></li>
-              <li><Link href="/contact" className="text-ink hover:text-olive-deep">Contact</Link></li>
-              <li><Link href="/newsletter" className="text-ink hover:text-olive-deep">Newsletter</Link></li>
+            <h4 className="text-eyebrow uppercase text-olive-700 mb-4">Company</h4>
+            <ul className="space-y-2.5 text-body-sm">
+              <li><Link href="/about" className={linkClass}>About</Link></li>
+              <li><Link href="/editorial-standards" className={linkClass}>Editorial standards</Link></li>
+              <li><Link href="/methodology" className={linkClass}>Methodology</Link></li>
+              <li><Link href="/contact" className={linkClass}>Contact</Link></li>
+              <li><Link href="/newsletter" className={linkClass}>Newsletter</Link></li>
             </ul>
           </div>
         </div>
 
-        {/* Regulatory authorities — per-locale food + DPA list */}
+        {/* Regulatory authorities */}
         <RegulatoryAuthoritiesStrip />
 
-        {/* Disclaimer block */}
-        <div className="py-8 border-b border-rule">
-          <div className="grid md:grid-cols-12 gap-6">
+        {/* Disclaimer block + newsletter */}
+        <div className="py-10 border-b border-rule">
+          <div className="grid md:grid-cols-12 gap-8">
             <div className="md:col-span-7">
-              <h4 className="eyebrow eyebrow-danger mb-2">Important — read this</h4>
-              <p className="text-[13px] text-ink-muted leading-relaxed">
+              <h4 className="text-eyebrow uppercase text-tomato mb-3">Important — read this</h4>
+              <p className="text-body-sm text-ink-muted leading-relaxed">
                 Larderlab provides general information for educational
                 purposes. It is not a substitute for medical advice. Consult
                 a registered dietitian or your healthcare provider for
@@ -104,13 +102,13 @@ export function Footer() {
               </p>
             </div>
             <div className="md:col-span-5">
-              <h4 className="eyebrow mb-2">Newsletter</h4>
-              <p className="text-[13px] text-ink-muted leading-relaxed">
+              <h4 className="text-eyebrow uppercase text-olive-700 mb-3">Newsletter</h4>
+              <p className="text-body-sm text-ink-muted leading-relaxed">
                 Lift &amp; Lab — weekly. New deep-dives, $/g price refreshes,
                 evidence-tier updates. No brand sponsorships.{" "}
                 <Link
                   href="/newsletter"
-                  className="text-copper hover:text-ink underline decoration-copper/40 hover:decoration-ink underline-offset-4"
+                  className="text-olive-700 hover:text-olive underline decoration-olive-200 hover:decoration-olive underline-offset-4 transition-colors duration-fast"
                 >
                   Subscribe →
                 </Link>
@@ -120,20 +118,19 @@ export function Footer() {
         </div>
 
         {/* Imprint strip */}
-        <div className="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-[12px] text-ink-muted">
+        <div className="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-caption text-ink-muted">
           <div>
             © {new Date().getFullYear()} {SITE.name}. Independent — no brand sponsorships.
           </div>
-          <ul className="flex flex-wrap gap-x-4">
-            <li><Link href="/editorial-standards" className="hover:text-olive-deep">Editorial standards</Link></li>
-            <li><Link href="/privacy" className="hover:text-olive-deep">Privacy</Link></li>
-            <li><Link href="/cookies" className="hover:text-olive-deep">Cookies</Link></li>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2">
+            <li><Link href="/editorial-standards" className={imprintLink}>Editorial standards</Link></li>
+            <li><Link href="/privacy" className={imprintLink}>Privacy</Link></li>
+            <li><Link href="/cookies" className={imprintLink}>Cookies</Link></li>
             <li><CookiePreferencesLink /></li>
-            <li><Link href="/terms" className="hover:text-olive-deep">Terms</Link></li>
-            <li><Link href="/affiliate-disclosure" className="hover:text-olive-deep">Affiliate disclosure</Link></li>
-            <li><Link href="/impressum" className="hover:text-olive-deep">Impressum</Link></li>
-            <li><Link href="/contact" className="hover:text-olive-deep">Contact</Link></li>
-            <li><Link href="/newsletter" className="hover:text-olive-deep">Newsletter</Link></li>
+            <li><Link href="/terms" className={imprintLink}>Terms</Link></li>
+            <li><Link href="/affiliate-disclosure" className={imprintLink}>Affiliate disclosure</Link></li>
+            <li><Link href="/impressum" className={imprintLink}>Impressum</Link></li>
+            <li><Link href="/contact" className={imprintLink}>Contact</Link></li>
           </ul>
         </div>
       </div>
