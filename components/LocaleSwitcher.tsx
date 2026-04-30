@@ -2,7 +2,6 @@
 
 import { useEffect, useId, useRef, useState, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 
 /**
@@ -21,17 +20,19 @@ export function LocaleSwitcher({
   onNavigate?: () => void;
   variant?: "header" | "footer";
 } = {}) {
-  const router = useRouter();
-  const pathname = usePathname();
   const active = useLocale() as Locale;
   const t = useTranslations("localeSwitcher");
   const [isPending, startTransition] = useTransition();
 
+  // app/ tree is flat (no [locale] segment) and there's no middleware,
+  // so locale switching is cookie + reload. Every URL stays canonical;
+  // i18n/request.ts reads NEXT_LOCALE on the next request.
   const handleChange = (next: Locale) => {
     if (next === active) return;
     startTransition(() => {
-      router.replace(pathname, { locale: next });
+      document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000; samesite=lax`;
       onNavigate?.();
+      window.location.reload();
     });
   };
 

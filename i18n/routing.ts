@@ -28,8 +28,16 @@ export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
 
+/**
+ * Locale prefix is "never" because the app/ tree is flat (no [locale]
+ * segment). Locale is resolved from the NEXT_LOCALE cookie by the
+ * middleware; the LocaleSwitcher sets that cookie and reloads. This
+ * keeps every public URL canonical (no /de or /fr duplicates) and
+ * dodges a full app/ restructure for a phase-one launch where slugs
+ * stay in English.
+ */
 export const routing = defineRouting({
   locales,
   defaultLocale,
-  localePrefix: "as-needed",
+  localePrefix: "never",
 });
