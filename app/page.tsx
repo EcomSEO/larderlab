@@ -2,6 +2,8 @@ import { Hero } from "@/components/Hero";
 import { CategoryTileGrid } from "@/components/CategoryTileGrid";
 import { FeaturedRecipeCarousel } from "@/components/FeaturedRecipeCarousel";
 import { NewsletterInline } from "@/components/NewsletterInline";
+import { DataStrip } from "@/components/DataStrip";
+import { EvidenceTierLegend } from "@/components/EvidenceTierLegend";
 import { recipes, getRecipe, featuredRecipeSlug } from "@/lib/content/recipes";
 
 const tiles = [
@@ -109,8 +111,13 @@ export default function HomePage() {
         featured={featured}
         trending={trending}
         headline="An engineered larder for the modern lifter."
-        dek="Larderlab is a nutrition-systems wiki for the optimizer who lifts and tracks. USDA-cited macros, $/g math, evidence tiers on every supplement. No brand sponsorships, no recipes. Recipe-intent traffic routes to thatcleanchef."
+        dek="A nutrition-systems wiki for the optimiser who lifts and tracks. USDA-cited macros, dated $/g math, evidence tiers on every supplement. Independent — no brand sponsorships."
+        ctaPrimary="Open the macro calculator"
+        ctaSecondary="How we tier evidence"
       />
+
+      <DataStrip />
+      <EvidenceTierLegend />
 
       <CategoryTileGrid
         tiles={tiles}

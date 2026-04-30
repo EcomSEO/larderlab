@@ -59,36 +59,36 @@ export function Hero({
         <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-start">
           {/* Left — headline */}
           <div className="md:col-span-7">
-            <div className="eyebrow mb-4">{eyebrow}</div>
-            <h1 className="h1-display text-[40px] md:text-[48px] leading-[1.1] tracking-tightest text-ink max-w-[18ch]">
+            <div className="text-eyebrow uppercase text-olive-700 mb-5">{eyebrow}</div>
+            <h1 className="font-display text-display-lg text-ink max-w-[18ch] [&::first-line]:text-ink">
               {h1}
             </h1>
-            <p className="mt-6 text-[18px] md:text-[20px] leading-[1.55] text-ink-muted max-w-[58ch]">
+            <p className="mt-6 text-body md:text-[19px] md:leading-[1.55] text-ink-muted max-w-[58ch]">
               {sub}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/recipes"
-                className="inline-flex items-center h-12 px-6 rounded-pill bg-olive text-white text-[15px] font-semibold hover:bg-olive-deep transition-colors"
+                href="/macro-calculator"
+                className="inline-flex items-center h-12 px-6 rounded-pill bg-olive text-white text-[15px] font-semibold hover:bg-olive-600 active:bg-olive-700 transition-colors duration-fast focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
               >
                 {ctaPrimary}
               </Link>
               <Link
-                href="/macro-calculator"
-                className="inline-flex items-center h-12 px-6 rounded-pill border border-rule-strong text-ink text-[15px] font-semibold hover:border-olive hover:text-olive-deep transition-colors"
+                href="/methodology"
+                className="inline-flex items-center h-12 px-6 rounded-pill border border-rule-strong bg-white text-ink text-[15px] font-semibold hover:border-olive hover:text-olive-700 transition-colors duration-fast focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
               >
                 {ctaSecondary}
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] text-ink-muted">
-              <span className="inline-flex items-center gap-1.5 text-reviewed-text">
+            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-caption text-ink-muted">
+              <span className="inline-flex items-center gap-1.5 text-olive-700 font-medium">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
                   <path d="M8 1.5 2.5 3.5v4c0 3 2.3 5.7 5.5 7 3.2-1.3 5.5-4 5.5-7v-4L8 1.5Z" />
                   <path d="m5.5 8 2 2 3.5-4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 Reviewed by registered dietitians
               </span>
-              <span aria-hidden>·</span>
+              <span aria-hidden className="text-ink-soft">·</span>
               <span>Cited to USDA FoodData Central + peer-reviewed literature</span>
             </div>
           </div>
