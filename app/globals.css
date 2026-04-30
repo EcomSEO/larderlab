@@ -159,10 +159,23 @@ summary:focus-visible,
 .eyebrow-muted { color: var(--color-ink-soft); }
 .eyebrow-danger { color: var(--color-tomato); }
 
-/* Plex Mono numerics. */
-.font-mono, .tnum {
+/* Plex Mono numerics. The .num utility is the canonical numeric type
+   token — use it on every cost-per-gram, macro, percent, dose, or
+   yield value so columns line up regardless of glyph width. */
+.font-mono, .tnum, .num {
   font-family: var(--font-plex-mono);
   font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* Honor user motion preference site-wide */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ================================================================
