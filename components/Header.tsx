@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { MegaMenu, type MegaMenuColumn } from "./MegaMenu";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 /**
  * Larderlab — healthline-grade publisher header.
@@ -141,7 +142,6 @@ const NAV: NavItem[] = [
       },
     ],
   },
-  { href: "/newsletter", label: "Newsletter" },
 ];
 
 export function Header() {
@@ -229,6 +229,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 shrink-0">
+          <div className="hidden md:inline-flex">
+            <LocaleSwitcher />
+          </div>
           <Link
             href="/newsletter"
             className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-olive text-white text-[14px] font-semibold hover:bg-olive-600 active:bg-olive-700 transition-colors duration-fast focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
